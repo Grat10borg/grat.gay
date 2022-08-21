@@ -26,7 +26,9 @@ let faviconSrcs = Array("MotherBrainIconGrat.png",
 "MotherBrainIconIllu.png",
 "MotherBrainIconTessa.png");
 let favicon = document.getElementById("Favicon") as HTMLElement;
-favicon.setAttribute("href", `.\\styling\\icon\\${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}`);
+// lets us select where the start of the filepath should be inside the HTML files
+let P_path = document.getElementById("path") as HTMLElement;
+favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}`);
 //#endregion
 
 

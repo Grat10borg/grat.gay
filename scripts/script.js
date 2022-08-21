@@ -4,4 +4,4 @@ document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)]
 let faviconSrcs = Array("MotherBrainIconGrat.png", "MotherBrainIconChar.png", "MotherBrainIconCRT.png", "MotherBrainIconIllu.png", "MotherBrainIconTessa.png");
 let favicon = document.getElementById("Favicon");
 let P_path = document.getElementById("path");
-favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}`);
+favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}?v=${Math.random() * 10}`);

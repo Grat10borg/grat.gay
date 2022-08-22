@@ -19,7 +19,7 @@ let DocTitlenames = Array(
 document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
 //#endregion
 
-//#region Favicon Selector
+//#region Random Favicon Selector
 let faviconSrcs = Array("MotherBrainIconGrat.png",
 "MotherBrainIconChar.png",
 "MotherBrainIconCRT.png",

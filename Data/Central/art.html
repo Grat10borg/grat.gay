@@ -22,36 +22,47 @@
     />
   </head>
   <body>
+    <main class="background container">
     <p id="path" hidden>../../styling/icon/</p>
         <h2 class="m-2 text-center">Artwork dump (W.I.P)</h2>
         <!-- Images used to open the lightbox -->
-<div class="row d-flex justify-content-evenly">
-    <div class="column d-flex justify-content-center">
-        <div class="container">
-        <img class="img-thumb rounded alt" src="./Artwork/GratFumo.png" alt="Fumo Grat" onclick="openModal();currentSlide(1)" class="hover-shadow">
-      <p class="row mx-3">Fumo Grat</p>
+<div>
+    <div class="row d-flex justify-content-evenly">
+      <div class="d-flex align-items-center col m-2">
+        <div>
+          <div class="d-flex justify-content-center">
+            <img class="img-thumb rounded alt" src="./Artwork/GratFumo.png" alt="Fumo Grat" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          </div>
+            <p class="text-center mx-3">Fumo Grat</p>
+        </div>
+        </div>
+      <div class="d-flex align-items-center col m-2">
+        <div>
+          <div class="d-flex justify-content-center">
+            <img class="row img-thumb rounded alt" src="./Artwork/IlluProfile.png" alt="Illu Wink" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <p class="text-center mx-3">Illu Wink</p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center col m-2">
+        <div>
+          <div class="d-flex justify-content-center">
+            <img class="img-thumb rounded alt"  src="./Artwork/Lampreyhole.png" alt="Lampryhole" onclick="openModal();currentSlide(3)" class="hover-shadow">
+          </div>      
+        <p class="text-center mx-3">Lampryhole</p>
         </div>
     </div>
-    <div class="column d-flex justify-content-center">
-      <div class="container">
-        <img class="row img-thumb rounded alt" src="./Artwork/IlluProfile.png" alt="Illu Wink" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        <p class="row mx-3">Illu Wink</p>
-      </div>
-    </div>
-    <div class="column d-flex justify-content-center">
-        <div class="container">
-      <img class="img-thumb rounded alt "  src="./Artwork/Lampreyhole.png" alt="Lampryhole" onclick="openModal();currentSlide(3)" class="hover-shadow">
-      <p class="row mx-3">Lampryhole</p>
-    </div>
-    </div>
-    <div class="column d-flex justify-content-center">
-        <div class="container">
-        <img class="img-thumb rounded alt" src="./Artwork/Skærmbillede 2022-08-04 230758.png" alt="H.O.T's Mascot" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        <p class="row mx-3">H.O.T's Mascot</p>
+      <div class="d-flex align-items-center col m-2 ">
+        <div>
+          <div class="d-flex justify-content-center">
+            <img class="img-thumb rounded alt" src="./Artwork/Skærmbillede 2022-08-04 230758.png" alt="H.O.T's Mascot" onclick="openModal();currentSlide(4)" class="hover-shadow">
+          </div>  
+            <p class="text-center mx-3 ">H.O.T's Mascot</p>
         </div>
     </div>
   </div>
-  <div class="d-flex justify-content-center">
+    </div>
+  <div class="row d-flex justify-content-center">
     <a class="" href="https://mother1brain.neocities.org/">Go back? <img src="../../styling/icon/MotherBrainIconCRT.png" alt=""></a>
   </div>
   
@@ -89,6 +100,7 @@
         <p id="caption"></p>
       </div>
   </div>
+</main>
   <script>
     // Open the Modal
     function openModal() {

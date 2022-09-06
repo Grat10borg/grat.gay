@@ -38,12 +38,6 @@ img{
 }
 h2{
   text-transform: capitalize;
-
-  // stolen
-  position: absolute; 
-  top: 200px; 
-  left: 0; 
-  width: 100%; 
 }
 nav,
 ul {
@@ -66,6 +60,17 @@ a:hover {
 
 
 // Stolen
+
+.CenterH {
+    // stolen
+    position: absolute; 
+    top: 200px; 
+    left: 0; 
+    width: 100%; 
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
 
 .imageText {
   position: relative;

@@ -48,10 +48,6 @@ img {
 
 h2 {
   text-transform: capitalize;
-  position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100%;
 }
 
 nav,
@@ -75,6 +71,16 @@ a {
 a:hover {
   color: #5d2f8c;
   background-color: #c1d9f2;
+}
+
+.CenterH {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
 .imageText {

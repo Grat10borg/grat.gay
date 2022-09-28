@@ -53,7 +53,11 @@ let ArtworkSrcs = Array(
   "Lampreyhole.png",
   "OfflineScreenGratVer1.png",
   "Sprite-0001.png",
-  "Skærmbillede 2022-08-04 230758.png"
+  "Skærmbillede 2022-08-04 230758.png",
+  "GratMebo.gif",
+  "RotatePanties.gif",
+  "Skærmbillede 2022-09-10 173921.png",
+  "SpinGifHOT.gif"
 );
 let ArtworkAlt = Array(
   "Fumo Grat",
@@ -63,7 +67,11 @@ let ArtworkAlt = Array(
   "Lampreyhole",
   "OfflineScreen",
   "Sprite-0001",
-  "H.O.T's Mascot!"
+  "H.O.T's Mascot!",
+  "Please Place on a Skylanders™ portal",
+  "Around The World",
+  "A N G E R Y",
+  "H.O.T's Model!"
 );
 
 let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;

@@ -49,7 +49,7 @@ let ArtworkSrcs = Array(
   "GratFumo.png",
   "Butt.gif",
   "Butt2.gif",
-  "illuProfile.png",
+  "IlluProfile.png",
   "Lampreyhole.png",
   "OfflineScreenGratVer1.png",
   "Sprite-0001.png",

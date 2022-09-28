@@ -68,6 +68,14 @@ a:hover {
   background-color: #c1d9f2;
 }
 
+.GobackBtn {
+  background-color: #c1e3f2;
+}
+
+.GoToTopBtn {
+  background-color: #c1d9f2;
+}
+
 .CenterH {
   position: absolute;
   top: 200px;

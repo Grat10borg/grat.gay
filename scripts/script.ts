@@ -45,7 +45,6 @@ favicon.setAttribute(
 
 //#region Artwork Page Modal Import & Handling
 
-// Modal Import.
 let ArtworkSrcs = Array(
   "GratFumo.png",
   "Butt.gif",
@@ -53,28 +52,100 @@ let ArtworkSrcs = Array(
   "illuProfile.png",
   "Lampreyhole.png",
   "OfflineScreenGratVer1.png",
-  "Sprite-0001.png"
+  "Sprite-0001.png",
+  "Skærmbillede 2022-08-04 230758.png"
 );
-let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
+let ArtworkAlt = Array(
+  "Fumo Grat",
+  "Icon of the Motherbrain Discord",
+  "Prototype Icon",
+  "Illu Winks!",
+  "Lampreyhole",
+  "OfflineScreen",
+  "Sprite-0001",
+  "H.O.T's Mascot!"
+);
 
-function printArtModals(ArtworkSrc: string, Alt: string) {
+let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
+if(ArtworkModels != null) { // if ArtWork Models is on the page.
+
+let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
+let CloseBtn = document.createElement("span") as HTMLElement;
+CloseBtn.classList.add("close", "cursor");
+CloseBtn.setAttribute("onclick", "closeModal()&times;");
+ArtworkModels.append(CloseBtn);
+let ModalContentDiv = document.createElement("div") as HTMLElement;
+ModalContentDiv.classList.add("modal-content");
+ModalContentDiv.setAttribute("id", "modal-content");
+ArtworkModels.append(ModalContentDiv);
+for (let index = 0; index < ArtworkSrcs.length; index++) {
+  // print all images
+  printArtModals(ArtworkSrcs[index], ArtworkAlt[index], index);
+}
+let prev = document.createElement("a") as HTMLElement;
+prev.classList.add("prev");
+prev.setAttribute("onclick", "plusSlides(-1)");
+prev.innerHTML = "&#10094;";
+
+let next = document.createElement("a") as HTMLElement;
+next.classList.add("next");
+next.setAttribute("onclick", "plusSlides(1)");
+next.innerHTML = "&#10095;";
+
+let captionContainer = document.createElement("div") as HTMLElement;
+let captionP = document.createElement("p") as HTMLElement;
+captionContainer.classList.add("caption-container");
+captionP.setAttribute("id", "caption");
+
+ModalContentDiv.append(prev);
+ModalContentDiv.append(next);
+captionContainer.append(captionP);
+ModalContentDiv.append(captionContainer);
+}
+// Modal Import.
+
+function printArtModals(ArtworkSrc: string, Alt: string, index: number) {
+  let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
+
+  // Setting up Images on Page
   let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
   let OverDiv = document.createElement("div") as HTMLElement;
   let UnderDiv = document.createElement("div") as HTMLElement;
   let ImgThumbnail = document.createElement("img") as HTMLElement;
   let CaptionP = document.createElement("p") as HTMLElement;
-  OverDiv.classList.add("d-flex", "align-items-center", "justify-content-center", "col", "m-2");
+  OverDiv.classList.add(
+    "d-flex",
+    "align-items-center",
+    "justify-content-center",
+    "col",
+    "m-2"
+  );
   CaptionP.classList.add("text-center", "mx-3");
-  CaptionP.innerHTML=Alt;
-  ImgThumbnail.classList.add("img-thumb", "rounded", "alt", "hover-shadow");
+  CaptionP.innerHTML = Alt;
+  ImgThumbnail.classList.add("img-thumb", "rounded", "alt", "hover-shadow", "m-auto","d-block");
   ImgThumbnail.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
   ImgThumbnail.setAttribute("alt", Alt);
-  ImgThumbnail.setAttribute("onclick", "1");
+  ImgThumbnail.setAttribute("onclick", `openModal();currentSlide(${index+1})`);
 
   UnderDiv.append(ImgThumbnail);
   UnderDiv.append(CaptionP);
   OverDiv.append(UnderDiv);
   ArtworkImages.append(OverDiv);
+
+  // Setting up Lightboxes
+  let ModalContentDiv = document.getElementById("modal-content") as HTMLElement;
+  let DivSlideImage = document.createElement("div") as HTMLElement;
+  let DivNumber = document.createElement("div") as HTMLElement;
+  let FullImage = document.createElement("img") as HTMLElement;
+  DivSlideImage.classList.add("SlideImage");
+  DivNumber.classList.add("numbertext");
+  DivNumber.innerHTML = `${index+1} / ${ArtworkSrcs.length}`;
+  FullImage.classList.add("fullimg");
+  FullImage.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
+
+  DivSlideImage.append(DivNumber);
+  DivSlideImage.append(FullImage);
+  ModalContentDiv.append(DivSlideImage);
 }
 
 // Modal Handling
@@ -122,4 +193,5 @@ function showSlides(number: number) {
   }
   // else you arent on the correct page
 }
+
 //#endregion

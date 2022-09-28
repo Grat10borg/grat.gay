@@ -23,72 +23,35 @@
   </head>
   <body>
     <main class="background container">
-    <p id="path" hidden>../../styling/icon/</p>
-    <p id="ArtPath" hidden>./Artwork/</p>
-        <h2 class="p-2 text-center">Artwork dump (W.I.P)</h2>
-        <!-- Images used to open the lightbox -->
-<div>
-    <div class="row d-flex justify-content-evenly" id="ArtworkImages">
-      <div class="d-flex align-items-center justify-content-center col m-2">
-          <div>
-            <img class="img-thumb rounded alt hover-shadow" src="./Artwork/GratFumo.png" alt="Fumo Grat" onclick="openModal();currentSlide(1)">
-            <p class="text-center mx-3">Fumo Grat</p>
-          </div>
+      <p id="path" hidden>../../styling/icon/</p>
+      <p id="ArtPath" hidden>./Artwork/</p>
+      <h2 class="p-2 text-center">Artwork dump (W.I.P)</h2>
+      <p class="text-center">
+        A Lotta my Artwork was also posted on my twitter before being arkived
+        here!
+      </p>
+      <a class="text-center btn" href="../../index.html"
+        >Go back? <img src="../../styling/icon/MotherBrainIconCRT.png" alt=""
+      /></a>
+
+      <br />
+      <!-- Images used to open the lightbox -->
+      <div>
+        <div class="row d-flex justify-content-evenly" id="ArtworkImages">
+          <!-- Javascript Adds Content Here -->
         </div>
-      <div class="d-flex align-items-center justify-content-center col m-2">
-          <div class="">
-            <img class="row img-thumb rounded alt hover-shadow" src="./Artwork/IlluProfile.png" alt="Illu Wink" onclick="openModal();currentSlide(2)" >
-            <p class="text-center mx-3">Illu Wink</p>
-          </div>
       </div>
-      <div class="d-flex align-items-center justify-content-center col m-2">
-          <div class="">
-            <img class="img-thumb rounded alt hover-shadow"  src="./Artwork/Lampreyhole.png" alt="Lampryhole" onclick="openModal();currentSlide(3)">
-            <p class="text-center mx-3">Lampryhole</p>
-          </div>      
-    </div>
-      <div class="d-flex align-items-center justify-content-center col m-2 ">
-          <div class="">
-            <img class="img-thumb rounded alt hover-shadow" src="./Artwork/Skærmbillede 2022-08-04 230758.png" alt="H.O.T's Mascot" onclick="openModal();currentSlide(4)">
-            <p class="text-center mx-3 ">H.O.T's Mascot</p>
-          </div>  
-    </div>
-  </div>
-</div>
-  <div class="row d-flex justify-content-center">
-    <a class="" href="../../index.html">Go back? <img src="../../styling/icon/MotherBrainIconCRT.png" alt=""></a>
-  </div>
-  
-  <!-- The Modal/Lightbox -->
-  <div id="ArtworkModels">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <div class="SlideImage">
-        <div class="numbertext">1 / 4</div>
-        <img class="fullimg" src="./Artwork/GratFumo.png">
+
+      <div class="row d-flex justify-content-center">
+        <a class="text-center btn GobackBtn" href="../../index.html"
+          >Go back? <img src="../../styling/icon/MotherBrainIconCRT.png" alt=""
+        /></a>
       </div>
-      <div class="SlideImage">
-        <div class="numbertext">2 / 4</div>
-        <img class="fullimg" src="./Artwork/IlluProfile.png">
+      <div id="ArtworkModels">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <!-- The Modal/Lightbox. Javascript Adds Content Here -->
       </div>
-  
-      <div class="SlideImage">
-        <div class="numbertext">3 / 4</div>
-        <img class="fullimg" src="./Artwork/Lampreyhole.png">
-      </div>
-      <div class="SlideImage">
-        <div class="numbertext">4 / 4</div>
-        <img class="fullimg" src="./Artwork/Skærmbillede 2022-08-04 230758.png">
-      </div>
-      <!-- Next/previous controls -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      <!-- Caption text -->
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-  </div>
-</main>
+    </main>
     <script src="../../scripts/bootstrap.js"></script>
     <script src="../../scripts/script.js"></script>
   </body>

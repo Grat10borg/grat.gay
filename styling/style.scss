@@ -62,29 +62,49 @@ background-color: #c1e3f2;
 
 // Stolen
 
-.CenterH {
-  // stolen
-  position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100%;
-  font-size: 35px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
 
 .imageText {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
+// XS
+@media screen and (max-width:576px) {
+  
+}
+// SM
+@media screen and (min-width: 576px) {
+  
+}
+// MD
+@media screen and (min-width: 768px){
+
+  .CenterH {
+    // stolen
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    font-size: 35px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+  }
+
+  .imageText {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+//LG 992
+//XL 1200
+//XXL 1400 and bigger
 // #region Modal Styling (For Mother1brain/Data/Central/art.html);
 // sets image to full size
 .fullimg {

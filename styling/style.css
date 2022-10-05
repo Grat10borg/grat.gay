@@ -139,10 +139,8 @@ a:hover {
   /* Caption text */
 }
 
-#ArtworkModels .modal-content img {
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+#ArtworkModels .modal-content .fullimg {
+  width: 80%;
 }
 
 #ArtworkModels .modal-content .SlideImage {

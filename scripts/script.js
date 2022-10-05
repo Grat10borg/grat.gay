@@ -64,7 +64,7 @@ function printArtModals(ArtworkSrc, Alt, index) {
     let DivSlideImage = document.createElement("div");
     let DivNumber = document.createElement("div");
     let FullImage = document.createElement("img");
-    DivSlideImage.classList.add("SlideImage");
+    DivSlideImage.classList.add("SlideImage", "justify-content-center");
     DivNumber.classList.add("numbertext");
     DivNumber.innerHTML = `${index + 1} / ${ArtworkSrcs.length}`;
     FullImage.classList.add("fullimg");
@@ -102,7 +102,7 @@ function showSlides(number) {
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "flex";
         captionText.innerHTML = imgs[slideIndex - 1].alt;
     }
 }

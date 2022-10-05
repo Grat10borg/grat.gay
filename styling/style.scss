@@ -131,8 +131,9 @@ background-color: #c1e3f2;
     margin: auto;
     padding: 0;
     width: 80%;
-    img {
-      max-height: fit-content;
+    .fullimg {
+     
+      width: 80%;
     }
 
     /* Hide the slides by default */

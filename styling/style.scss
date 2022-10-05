@@ -54,7 +54,7 @@ a:hover {
 }
 
 .GobackBtn {
-background-color: #c1e3f2;
+  background-color: #c1e3f2;
 }
 .GoToTopBtn {
   background-color: #c1d9f2;
@@ -62,22 +62,29 @@ background-color: #c1e3f2;
 
 // Stolen
 
-
 .imageText {
   display: none;
 }
 
 // XS
-@media screen and (max-width:576px) {
-  
+@media screen and (max-width: 576px) {
+  #Nav_Disapeir {
+    display: none;
+  }
 }
 // SM
 @media screen and (min-width: 576px) {
-  
+  #Nav_Disapeir {
+    display: none;
+  }
 }
 // MD
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
+  #Nav_Disapeir {
+    display: block;
+  }
+  
   .CenterH {
     // stolen
     position: absolute;
@@ -132,7 +139,6 @@ background-color: #c1e3f2;
     padding: 0;
     width: 80%;
     .fullimg {
-     
       width: 80%;
     }
 
@@ -140,7 +146,7 @@ background-color: #c1e3f2;
     .SlideImage {
       display: none;
     }
-    
+
     img.hover-shadow {
       transition: 0.3s;
     }

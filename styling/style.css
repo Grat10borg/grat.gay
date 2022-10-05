@@ -80,7 +80,22 @@ a:hover {
   display: none;
 }
 
+@media screen and (max-width: 576px) {
+  #Nav_Disapeir {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #Nav_Disapeir {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  #Nav_Disapeir {
+    display: block;
+  }
   .CenterH {
     position: absolute;
     top: 200px;

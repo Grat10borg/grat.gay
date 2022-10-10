@@ -197,7 +197,6 @@ function showSlides(number: number) {
       slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "flex";
-    
     captionText.innerHTML = imgs[slideIndex - 1].alt;
   }
   // else you arent on the correct page

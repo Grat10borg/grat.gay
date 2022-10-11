@@ -78,7 +78,6 @@ if (ArtworkModels != null) {
     PrintArtwork(ArtworkSrcs[index], ArtworkAlt[index]);
   }
 }
-// Modal Import.
 
 function PrintArtwork(ArtworkSrc: string, Alt: string) {
   let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
@@ -97,6 +96,7 @@ function PrintArtwork(ArtworkSrc: string, Alt: string) {
     "col",
     "m-2"
   );
+  UnderDiv.classList.add("UnderArtDiv"); // for styling.
   CaptionP.classList.add("text-center", "mx-3");
   CaptionP.innerHTML = Alt;
   imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);

@@ -32,6 +32,7 @@ function PrintArtwork(ArtworkSrc, Alt) {
     let ImgThumbnail = document.createElement("img");
     let CaptionP = document.createElement("p");
     OverDiv.classList.add("d-flex", "align-items-center", "justify-content-center", "col", "m-2");
+    UnderDiv.classList.add("UnderArtDiv");
     CaptionP.classList.add("text-center", "mx-3");
     CaptionP.innerHTML = Alt;
     imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);

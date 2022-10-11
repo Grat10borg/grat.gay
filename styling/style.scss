@@ -5,6 +5,8 @@
 body {
   background-image: url("MotherBrainBG.png");
   color: black;
+}
+.fontCourier {
   font-family: "Courier New", Courier, monospace;
 }
 .background {
@@ -64,6 +66,20 @@ a:hover {
 
 .imageText {
   display: none;
+}
+
+.Transparent {
+  background: transparent;
+}
+
+// Used only on Slideshow.html
+.carouselImg {
+ min-height: 700px;
+ max-height: 800px;
+ margin: auto;
+ margin-bottom: 10%;
+ display: block;
+ font-family: Arial, Helvetica, sans-serif; 
 }
 
 // XS

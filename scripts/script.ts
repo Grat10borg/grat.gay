@@ -59,29 +59,30 @@ let ArtworkInfo = Array(
   "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022"
 ) as Array<string>;
 
-// splits big array into smaller arrays
-let ArtworkSrcs = Array() as Array<string>;
-let ArtworkAlt = Array() as Array<string>;
-let ArtworkDate = Array() as Array<string>;
-for (let index = 0; index < ArtworkInfo.length; index++) {
-  const element = ArtworkInfo[index].split(";");
-  ArtworkSrcs.push(element[0]);
-  ArtworkAlt.push(element[1]);
-  ArtworkDate.push(element[2]);
-}
+let FanartInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022",
+"Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022") as Array<string>;;
 
+// test if its an Art Display
 let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
 if (ArtworkModels != null) {
   // if ArtWork Models is on the page.
-  for (let index = 0; index < ArtworkSrcs.length; index++) {
-    // print all images
-    PrintArtwork(ArtworkSrcs[index], ArtworkAlt[index]);
+  for (let index = 0; index < ArtworkInfo.length; index++) {
+    const element = ArtworkInfo[index].split(";");
+    PrintArtwork(element[0], element[1], element[2]);
   }
 }
 
-function PrintArtwork(ArtworkSrc: string, Alt: string) {
-  let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
+// test if its a Fanart Slideshow
+let FanartArt = document.getElementById("FanartArt") as HTMLElement;
+if(FanartArt != null) {
+  for (let index = 0; index < FanartInfo.length; index++) {
+    const element = FanartInfo[index].split(";");
+    console.log(element[0], element[1], element[2]);
+  }
+}
 
+function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
+  let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
   // Setting up Images on Page
   let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
   let OverDiv = document.createElement("div") as HTMLElement;
@@ -116,5 +117,4 @@ function PrintArtwork(ArtworkSrc: string, Alt: string) {
   OverDiv.append(UnderDiv);
   ArtworkImages.append(OverDiv);
 }
-
 //#endregion

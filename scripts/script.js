@@ -7,22 +7,23 @@ let favicon = document.getElementById("Favicon");
 let P_path = document.getElementById("path");
 favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}?v=${Math.random() * 10}`);
 let ArtworkInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022", "Butt2.gif; Prototype Icon; 27. 9 2022", "IlluProfile.png; Illu Winks!; 27. 9 2022", "Lampreyhole.png; Lampreyhole; 27. 9 2022", "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022", "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022", "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022", "RotatePanties.gif; Rotating underwear; 29. 9 2022", "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022", "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022");
-let ArtworkSrcs = Array();
-let ArtworkAlt = Array();
-let ArtworkDate = Array();
-for (let index = 0; index < ArtworkInfo.length; index++) {
-    const element = ArtworkInfo[index].split(";");
-    ArtworkSrcs.push(element[0]);
-    ArtworkAlt.push(element[1]);
-    ArtworkDate.push(element[2]);
-}
+let FanartInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022");
+;
 let ArtworkModels = document.getElementById("ArtworkModels");
 if (ArtworkModels != null) {
-    for (let index = 0; index < ArtworkSrcs.length; index++) {
-        PrintArtwork(ArtworkSrcs[index], ArtworkAlt[index]);
+    for (let index = 0; index < ArtworkInfo.length; index++) {
+        const element = ArtworkInfo[index].split(";");
+        PrintArtwork(element[0], element[1], element[2]);
     }
 }
-function PrintArtwork(ArtworkSrc, Alt) {
+let FanartArt = document.getElementById("FanartArt");
+if (FanartArt != null) {
+    for (let index = 0; index < FanartInfo.length; index++) {
+        const element = FanartInfo[index].split(";");
+        console.log(element[0], element[1], element[2]);
+    }
+}
+function PrintArtwork(ArtworkSrc, Alt, Date) {
     var _a;
     let ArtPath = (_a = document.getElementById("ArtPath")) === null || _a === void 0 ? void 0 : _a.innerHTML;
     let ArtworkImages = document.getElementById("ArtworkImages");

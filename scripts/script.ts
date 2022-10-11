@@ -1,6 +1,3 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
 //#region Random title selector
 // array for document titles
 let DocTitlenames = Array(
@@ -45,80 +42,52 @@ favicon.setAttribute(
 
 //#region Artwork Page Modal Import & Handling
 
-let ArtworkSrcs = Array(
-  "GratFumo.png",
-  "Butt.gif",
-  "Butt2.gif",
-  "IlluProfile.png",
-  "Lampreyhole.png",
-  "OfflineScreenGratVer1.png",
-  "Sprite-0001.png",
-  "Skærmbillede 2022-08-04 230758.png",
-  "GratMebo.gif",
-  "RotatePanties.gif",
-  "Skærmbillede 2022-09-10 173921.png",
-  "SpinGifHOT.gif"
-);
-let ArtworkAlt = Array(
-  "Fumo Grat",
-  "Icon of the Motherbrain Discord",
-  "Prototype Icon",
-  "Illu Winks!",
-  "Lampreyhole",
-  "OfflineScreen",
-  "Sprite-0001",
-  "H.O.T's Mascot!",
-  "Please Place on a Skylanders™ portal",
-  "Around The World",
-  "A N G E R Y",
-  "H.O.T's Model!"
-);
+// Filename, Description, Date you want displayed
+// USING A ; in the description will break it!
+let ArtworkInfo = Array(
+  "GratFumo.png; Fumo Grat; 27. 9 2022",
+  "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022",
+  "Butt2.gif; Prototype Icon; 27. 9 2022",
+  "IlluProfile.png; Illu Winks!; 27. 9 2022",
+  "Lampreyhole.png; Lampreyhole; 27. 9 2022",
+  "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022",
+  "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022",
+  "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022",
+  "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022",
+  "RotatePanties.gif; Rotating underwear; 29. 9 2022",
+  "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022",
+  "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022"
+) as Array<string>;
 
-let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
-if(ArtworkModels != null) { // if ArtWork Models is on the page.
-
-let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
-let CloseBtn = document.createElement("span") as HTMLElement;
-CloseBtn.classList.add("close", "cursor");
-CloseBtn.setAttribute("onclick", "closeModal()&times;");
-ArtworkModels.append(CloseBtn);
-let ModalContentDiv = document.createElement("div") as HTMLElement;
-ModalContentDiv.classList.add("modal-content");
-ModalContentDiv.setAttribute("id", "modal-content");
-ArtworkModels.append(ModalContentDiv);
-for (let index = 0; index < ArtworkSrcs.length; index++) {
-  // print all images
-  printArtModals(ArtworkSrcs[index], ArtworkAlt[index], index);
+// splits big array into smaller arrays
+let ArtworkSrcs = Array() as Array<string>;
+let ArtworkAlt = Array() as Array<string>;
+let ArtworkDate = Array() as Array<string>;
+for (let index = 0; index < ArtworkInfo.length; index++) {
+  const element = ArtworkInfo[index].split(";");
+  ArtworkSrcs.push(element[0]);
+  ArtworkAlt.push(element[1]);
+  ArtworkDate.push(element[2]);
 }
-let prev = document.createElement("a") as HTMLElement;
-prev.classList.add("prev");
-prev.setAttribute("onclick", "plusSlides(-1)");
-prev.innerHTML = "&#10094;";
 
-let next = document.createElement("a") as HTMLElement;
-next.classList.add("next");
-next.setAttribute("onclick", "plusSlides(1)");
-next.innerHTML = "&#10095;";
-
-let captionContainer = document.createElement("div") as HTMLElement;
-let captionP = document.createElement("p") as HTMLElement;
-captionContainer.classList.add("caption-container");
-captionP.setAttribute("id", "caption");
-
-ModalContentDiv.append(prev);
-ModalContentDiv.append(next);
-captionContainer.append(captionP);
-ModalContentDiv.append(captionContainer);
+let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
+if (ArtworkModels != null) {
+  // if ArtWork Models is on the page.
+  for (let index = 0; index < ArtworkSrcs.length; index++) {
+    // print all images
+    PrintArtwork(ArtworkSrcs[index], ArtworkAlt[index]);
+  }
 }
 // Modal Import.
 
-function printArtModals(ArtworkSrc: string, Alt: string, index: number) {
+function PrintArtwork(ArtworkSrc: string, Alt: string) {
   let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
 
   // Setting up Images on Page
   let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
   let OverDiv = document.createElement("div") as HTMLElement;
   let UnderDiv = document.createElement("div") as HTMLElement;
+  let imgA = document.createElement("a") as HTMLAnchorElement;
   let ImgThumbnail = document.createElement("img") as HTMLElement;
   let CaptionP = document.createElement("p") as HTMLElement;
   OverDiv.classList.add(
@@ -130,76 +99,22 @@ function printArtModals(ArtworkSrc: string, Alt: string, index: number) {
   );
   CaptionP.classList.add("text-center", "mx-3");
   CaptionP.innerHTML = Alt;
-  ImgThumbnail.classList.add("img-thumb", "rounded", "alt", "hover-shadow", "m-auto","d-block");
+  imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);
+  ImgThumbnail.classList.add(
+    "img-thumb",
+    "rounded",
+    "alt",
+    "hover-shadow",
+    "m-auto",
+    "d-block"
+  );
   ImgThumbnail.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
   ImgThumbnail.setAttribute("alt", Alt);
-  ImgThumbnail.setAttribute("onclick", `openModal();currentSlide(${index+1})`);
-
-  UnderDiv.append(ImgThumbnail);
+  imgA.append(ImgThumbnail);
+  UnderDiv.append(imgA);
   UnderDiv.append(CaptionP);
   OverDiv.append(UnderDiv);
   ArtworkImages.append(OverDiv);
-
-  // Setting up Lightboxes
-  let ModalContentDiv = document.getElementById("modal-content") as HTMLElement;
-  let DivSlideImage = document.createElement("div") as HTMLElement;
-  let DivNumber = document.createElement("div") as HTMLElement;
-  let FullImage = document.createElement("img") as HTMLElement;
-  DivSlideImage.classList.add("SlideImage", "justify-content-center");
-  DivNumber.classList.add("numbertext");
-  DivNumber.innerHTML = `${index+1} / ${ArtworkSrcs.length}`;
-  FullImage.classList.add("fullimg");
-  FullImage.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
-
-  DivSlideImage.append(DivNumber);
-  DivSlideImage.append(FullImage);
-  ModalContentDiv.append(DivSlideImage);
-}
-
-// Modal Handling
-
-// Open the Modal
-function openModal() {
-  let ArtModal = document.getElementById("ArtworkModels") as HTMLElement;
-  ArtModal.style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  let ArtModal = document.getElementById("ArtworkModels") as HTMLElement;
-  ArtModal.style.display = "none";
-}
-
-// Next/previous controls
-function plusSlides(number: number) {
-  showSlides((slideIndex += number));
-}
-
-// Thumbnail image controls
-function currentSlide(number: number) {
-  showSlides((slideIndex = number));
-}
-
-function showSlides(number: number) {
-  var i: number;
-  var slides = document.getElementsByClassName("SlideImage") as any;
-  // tests if there even is slides on this page. if not dont do anything
-  if (slides.length != 0) {
-    var imgs = document.getElementsByClassName("alt") as any;
-    var captionText = document.getElementById("caption") as any;
-    if (number > slides.length) {
-      slideIndex = 1;
-    }
-    if (number < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "flex";
-    captionText.innerHTML = imgs[slideIndex - 1].alt;
-  }
-  // else you arent on the correct page
 }
 
 //#endregion

@@ -88,8 +88,7 @@ a:hover {
 }
 
 .carouselImg {
-  min-height: 700px;
-  max-height: 800px;
+  height: 800px;
   margin: auto;
   margin-bottom: 10%;
   display: block;

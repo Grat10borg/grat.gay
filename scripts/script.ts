@@ -59,8 +59,9 @@ let ArtworkInfo = Array(
   "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022"
 ) as Array<string>;
 
-let FanartInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022",
-"Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022") as Array<string>;;
+// filename, Artname, LinkInnerhtml, Link, Description, Writer
+let FanartInfo = Array("GratFumo.png; Fumo Grat; @Grat_Grottenberg on Twitter; Link; Fumo fumo grat cute!; Grat",
+"Sprite-0001.png; Jerma roblox horror stream thumbnail; @Grat_Grottenberg on Twitter; that jerma face is honestly so disturbing; Grat") as Array<string>;;
 
 // test if its an Art Display
 let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
@@ -73,11 +74,50 @@ if (ArtworkModels != null) {
 }
 
 // test if its a Fanart Slideshow
-let FanartArt = document.getElementById("FanartArt") as HTMLElement;
+let FanartArt = document.getElementById("FanartSlide") as HTMLElement;
 if(FanartArt != null) {
+  PrintFanartSlide();
+}
+
+function PrintFanartSlide() {
   for (let index = 0; index < FanartInfo.length; index++) {
     const element = FanartInfo[index].split(";");
-    console.log(element[0], element[1], element[2]);
+
+    let CauselItemDiv = document.createElement("div") as HTMLDivElement;
+    let Slideimg = document.createElement("img") as HTMLImageElement;
+    let captionCauselDiv = document.createElement("div") as HTMLDivElement;
+    let spacingDiv = document.createElement("div") as HTMLDivElement;
+    let SlideshowCaptionDiv = document.createElement("div") as HTMLDivElement;
+    let SlideshowH3 = document.createElement("h3") as HTMLHeadingElement;
+    let SlideshowP = document.createElement("p") as HTMLParagraphElement;
+    if(index == 0) {
+      // first item needs active for it to have a starting image.
+      CauselItemDiv.classList.add("active", "carousel-item");
+    }
+    else {
+      CauselItemDiv.classList.add("carousel-item");
+    }
+    CauselItemDiv.setAttribute("data-bs-interval", "25000");
+    Slideimg.setAttribute("src", `Artwork\\${element[0]}`);
+    Slideimg.classList.add("d-block", "carouselImg");
+    Slideimg.title=`${element[0]} by ${element[2]}`;
+    Slideimg.alt=`${element[0]} by ${element[2]}`;
+    captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");
+    spacingDiv.classList.add("mt-5", "pt-5");
+    SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
+    SlideshowH3.classList.add("mx-5");
+    SlideshowH3.innerHTML=`${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
+    SlideshowP.classList.add("mx-5", "fs-5");
+    SlideshowP.innerHTML=`"" ${element[4]} "" -${element[5]}`;
+    
+    SlideshowCaptionDiv.append(SlideshowH3);
+    SlideshowCaptionDiv.append(SlideshowP);
+    spacingDiv.append(SlideshowCaptionDiv);
+    captionCauselDiv.append(spacingDiv);
+
+    CauselItemDiv.append(Slideimg);
+    CauselItemDiv.append(captionCauselDiv);
+    FanartArt.append(CauselItemDiv);
   }
 }
 

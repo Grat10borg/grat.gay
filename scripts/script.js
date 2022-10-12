@@ -7,7 +7,7 @@ let favicon = document.getElementById("Favicon");
 let P_path = document.getElementById("path");
 favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}?v=${Math.random() * 10}`);
 let ArtworkInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022", "Butt2.gif; Prototype Icon; 27. 9 2022", "IlluProfile.png; Illu Winks!; 27. 9 2022", "Lampreyhole.png; Lampreyhole; 27. 9 2022", "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022", "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022", "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022", "RotatePanties.gif; Rotating underwear; 29. 9 2022", "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022", "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022");
-let FanartInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022");
+let FanartInfo = Array("GratFumo.png; Fumo Grat; @Grat_Grottenberg on Twitter; Link; Fumo fumo grat cute!; Grat", "Sprite-0001.png; Jerma roblox horror stream thumbnail; @Grat_Grottenberg on Twitter; that jerma face is honestly so disturbing; Grat");
 ;
 let ArtworkModels = document.getElementById("ArtworkModels");
 if (ArtworkModels != null) {
@@ -16,11 +16,45 @@ if (ArtworkModels != null) {
         PrintArtwork(element[0], element[1], element[2]);
     }
 }
-let FanartArt = document.getElementById("FanartArt");
+let FanartArt = document.getElementById("FanartSlide");
 if (FanartArt != null) {
+    PrintFanartSlide();
+}
+function PrintFanartSlide() {
     for (let index = 0; index < FanartInfo.length; index++) {
         const element = FanartInfo[index].split(";");
-        console.log(element[0], element[1], element[2]);
+        let CauselItemDiv = document.createElement("div");
+        let Slideimg = document.createElement("img");
+        let captionCauselDiv = document.createElement("div");
+        let spacingDiv = document.createElement("div");
+        let SlideshowCaptionDiv = document.createElement("div");
+        let SlideshowH3 = document.createElement("h3");
+        let SlideshowP = document.createElement("p");
+        if (index == 0) {
+            CauselItemDiv.classList.add("active", "carousel-item");
+        }
+        else {
+            CauselItemDiv.classList.add("carousel-item");
+        }
+        CauselItemDiv.setAttribute("data-bs-interval", "25000");
+        Slideimg.setAttribute("src", `Artwork\\${element[0]}`);
+        Slideimg.classList.add("d-block", "carouselImg");
+        Slideimg.title = `${element[0]} by ${element[2]}`;
+        Slideimg.alt = `${element[0]} by ${element[2]}`;
+        captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");
+        spacingDiv.classList.add("mt-5", "pt-5");
+        SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
+        SlideshowH3.classList.add("mx-5");
+        SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
+        SlideshowP.classList.add("mx-5", "fs-5");
+        SlideshowP.innerHTML = `"" ${element[4]} "" -${element[5]}`;
+        SlideshowCaptionDiv.append(SlideshowH3);
+        SlideshowCaptionDiv.append(SlideshowP);
+        spacingDiv.append(SlideshowCaptionDiv);
+        captionCauselDiv.append(spacingDiv);
+        CauselItemDiv.append(Slideimg);
+        CauselItemDiv.append(captionCauselDiv);
+        FanartArt.append(CauselItemDiv);
     }
 }
 function PrintArtwork(ArtworkSrc, Alt, Date) {

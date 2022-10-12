@@ -60,8 +60,9 @@ let ArtworkInfo = Array(
 ) as Array<string>;
 
 // filename, Artname, LinkInnerhtml, Link, Description, Writer
-let FanartInfo = Array("GratFumo.png; Fumo Grat; @Grat_Grottenberg on Twitter; Link; Fumo fumo grat cute!; Grat",
-"Sprite-0001.png; Jerma roblox horror stream thumbnail; @Grat_Grottenberg on Twitter; that jerma face is honestly so disturbing; Grat") as Array<string>;;
+let FanartInfo = Array(
+"GratFumo.png; Fumo Grat; @Grat_Grottenberg on Twitter; Link; Fumo fumo grat cute!; Grat",
+"Sprite-0001.png; Jerma roblox horror stream thumbnail; @Grat_Grottenberg on Twitter; Link; that jerma face is honestly so disturbing; Grat") as Array<string>;;
 
 // test if its an Art Display
 let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;

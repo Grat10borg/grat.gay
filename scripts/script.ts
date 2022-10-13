@@ -61,8 +61,8 @@ let ArtworkInfo = Array(
 
 // filename, Artname, LinkInnerhtml, Link, Description, Writer
 let FanartInfo = Array(
-"GratFumo.png; Fumo Grat; @Grat_Grottenberg on Twitter; Link; Fumo fumo grat cute!; Grat",
-"Sprite-0001.png; Jerma roblox horror stream thumbnail; @Grat_Grottenberg on Twitter; Link; that jerma face is honestly so disturbing; Grat") as Array<string>;;
+"Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg",
+"GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg") as Array<string>;;
 
 // test if its an Art Display
 let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;

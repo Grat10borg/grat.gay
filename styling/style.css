@@ -1,80 +1,34 @@
-* {
+*, ul {
   padding: 0;
   margin: 0;
 }
 
-body {
-  background-color: #c6ecf8;
-  color: #2B3551;
-}
-
-.fontCourier {
-  font-family: "Courier New", Courier, monospace;
-}
-
-.background {
-  background-color: #f2f2f2;
+main {
+  border: #AD4156;
   border-style: solid;
-  border-color: #2B3551;
-  border: 1,1,1,1;
+  border-radius: 2px;
+  display: block;
+  width: 800px;
+  margin: auto;
+}
+main nav {
+  border: #617581;
+  border-style: solid;
+  border-radius: 2px;
+  position: absolute;
+}
+main article {
+  margin-left: 25%;
+  border: #688e9b;
+  border-style: solid;
+  border-radius: 2px;
 }
 
-h1 {
-  font-size: larger;
-}
-
-h2::first-letter {
-  color: #00828b;
-  font-size: 150%;
-}
-
-img {
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-pixelated;
-      image-rendering: pixelated;
-}
-
-.img-thumb {
-  max-height: 200px;
-  max-width: 300px;
-  min-height: 160px;
-}
-
-h2 {
-  text-transform: capitalize;
-}
-
-nav,
 ul {
-  list-style: none;
+  text-align: center;
 }
-
-li {
-  background-color: #f2f2f2;
-}
-
-li:hover {
-  background-color: #c1d9f2;
-}
-
-a {
+ul a {
   text-decoration: none;
-  color: #854cbf;
-}
-
-a:hover {
-  color: #5d2f8c;
-  background-color: #c1d9f2;
-}
-
-.GobackBtn {
-  background-color: #c1e3f2;
-}
-
-.GoToTopBtn {
-  background-color: #c1d9f2;
 }
 
 .imageText {
@@ -83,6 +37,18 @@ a:hover {
 
 .Transparent {
   background: transparent;
+}
+
+.imgpix {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
+
+.img-thumb {
+  max-height: 200px;
+  max-width: 300px;
+  min-height: 160px;
 }
 
 .carouselImg {
@@ -96,20 +62,16 @@ a:hover {
 .SlideshowCaption {
   background-color: #262a31;
 }
-
 .SlideshowCaption h3 {
   color: #a3b0b8;
 }
-
 .SlideshowCaption p {
   color: #617581;
 }
-
 .SlideshowCaption a,
 .SlideshowCaption a:visited, .SlideshowCaption a:hover {
   color: #688e9b;
 }
-
 .SlideshowCaption a:hover {
   color: #AD4156;
   background-color: transparent;
@@ -120,13 +82,11 @@ a:hover {
     display: none;
   }
 }
-
 @media screen and (min-width: 576px) {
   #Nav_Disapeir {
     display: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   #Nav_Disapeir {
     display: block;
@@ -150,11 +110,9 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-
 .fullimg {
   width: 100%;
 }
@@ -170,5 +128,4 @@ a:hover {
   height: 100%;
   overflow: auto;
   background-color: black;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

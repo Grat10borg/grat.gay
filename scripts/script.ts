@@ -144,6 +144,7 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
   imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);
   ImgThumbnail.classList.add(
     "img-thumb",
+    "imgpix",
     "rounded",
     "alt",
     "hover-shadow",

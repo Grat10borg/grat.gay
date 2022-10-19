@@ -71,7 +71,7 @@ function PrintArtwork(ArtworkSrc, Alt, Date) {
     CaptionP.classList.add("text-center", "mx-3");
     CaptionP.innerHTML = Alt;
     imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);
-    ImgThumbnail.classList.add("img-thumb", "rounded", "alt", "hover-shadow", "m-auto", "d-block");
+    ImgThumbnail.classList.add("img-thumb", "imgpix", "rounded", "alt", "hover-shadow", "m-auto", "d-block");
     ImgThumbnail.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
     ImgThumbnail.setAttribute("alt", Alt);
     imgA.append(ImgThumbnail);

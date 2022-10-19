@@ -1,66 +1,36 @@
-* {
+*, ul {
   padding: 0;
   margin: 0;
 }
-body {
-  // remake this later i guess?
-  // background-image: url("MotherBrainBG.png");
-  background-color: #c6ecf8;
-  color: #2B3551;
-}
-.fontCourier {
-  font-family: "Courier New", Courier, monospace;
-}
-.background {
-  background-color: #f2f2f2;
+
+main {
+  border: #AD4156;
   border-style: solid;
-  border-color: #2B3551;
-  border: 1,1,1,1;
+  border-radius: 2px;
+  display: block;
+  width: 800px;
+  margin: auto;
+  nav {
+    border: #617581;
+  border-style: solid;
+  border-radius: 2px;
+  position: absolute;
+  }
+  article {
+    margin-left: 25%;
+    border: #688e9b;
+  border-style: solid;
+  border-radius: 2px;
+  }
 }
-h1 {
-  font-size: larger;
-}
-h2::first-letter {
-  color: rgb(0, 130, 139);
-  font-size: 150%;
-}
-img {
-  image-rendering: pixelated;
-}
-.img-thumb {
-  max-height: 200px;
-  max-width: 300px;
-  min-height: 160px;
-}
-
-h2 {
-  text-transform: capitalize;
-}
-nav,
 ul {
-  list-style: none;
-}
-li {
-  background-color: #f2f2f2;
-}
-li:hover {
-  background-color: #c1d9f2;
-}
-a {
-  text-decoration: none;
-  color: #854cbf;
-}
-a:hover {
-  color: #5d2f8c;
-  background-color: #c1d9f2;
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
 }
 
-.GobackBtn {
-  background-color: #c1e3f2;
-}
-.GoToTopBtn {
-  background-color: #c1d9f2;
-}
+
 
 // Stolen
 
@@ -71,8 +41,17 @@ a:hover {
 .Transparent {
   background: transparent;
 }
-
+.imgpix {
+  image-rendering: pixelated;
+}
 // Used only on Slideshow.html
+
+.img-thumb {
+  max-height: 200px;
+  max-width: 300px;
+  min-height: 160px;
+}
+
 .carouselImg {
   max-width: 100%;
   height: 800px;

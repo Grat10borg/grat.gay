@@ -1,26 +1,57 @@
-*, ul {
+*,
+ul {
   padding: 0;
   margin: 0;
 }
 
-main {
-  border: #AD4156;
+body {
+  background-color: #F9F3F0;
+}
+
+#contentDiv {
+  border: #85A1BF;
   border-style: solid;
   border-radius: 2px;
+  background-color: #eef6f8;
   display: block;
-  width: 800px;
+  width: 900px;
+  height: 850px;
   margin: auto;
   nav {
-    border: #617581;
-  border-style: solid;
-  border-radius: 2px;
-  position: absolute;
+    overflow-y: scroll;
+    //border: #617581;
+    //border-style: solid;
+    //border-radius: 2px;
+    position: absolute;
+    width: 180px;
+    min-height: 437px;
+  }
+  #bottomSide {
+    margin-top: 434px;
+    overflow-y: scroll;
+    //border-top: #617581;
+    //border-style: solid;
+    //border-radius: 2px;
+    position: absolute;
+    width: 180px;
+    min-height: 411px;
   }
   article {
-    margin-left: 25%;
-    border: #688e9b;
-  border-style: solid;
-  border-radius: 2px;
+    overflow-y: scroll;
+    margin-left: 20%;
+    height: 845px;
+    //border: #688e9b;
+    //border-style: solid;
+    //border-radius: 2px;
+    p,
+    h1,
+    h2,
+    h4,
+    h5,
+    h6, textarea {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
   }
 }
 ul {
@@ -29,8 +60,6 @@ ul {
     text-decoration: none;
   }
 }
-
-
 
 // Stolen
 
@@ -68,12 +97,12 @@ ul {
     color: #617581;
   }
   a,
-  a:visited, a:hover {
+  a:visited,
+  a:hover {
     color: #688e9b;
-    
   }
   a:hover {
-    color: #AD4156;
+    color: #ad4156;
     background-color: transparent;
   }
 }
@@ -140,7 +169,5 @@ ul {
   height: 100%;
   overflow: auto;
   background-color: black;
-
-
 }
 // #endregion

@@ -1,27 +1,49 @@
-*, ul {
+*,
+ul {
   padding: 0;
   margin: 0;
 }
 
-main {
-  border: #AD4156;
+body {
+  background-color: #F9F3F0;
+}
+
+#contentDiv {
+  border: #85A1BF;
   border-style: solid;
   border-radius: 2px;
+  background-color: #eef6f8;
   display: block;
-  width: 800px;
+  width: 900px;
+  height: 850px;
   margin: auto;
 }
-main nav {
-  border: #617581;
-  border-style: solid;
-  border-radius: 2px;
+#contentDiv nav {
+  overflow-y: scroll;
   position: absolute;
+  width: 180px;
+  min-height: 437px;
 }
-main article {
-  margin-left: 25%;
-  border: #688e9b;
-  border-style: solid;
-  border-radius: 2px;
+#contentDiv #bottomSide {
+  margin-top: 434px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 180px;
+  min-height: 411px;
+}
+#contentDiv article {
+  overflow-y: scroll;
+  margin-left: 20%;
+  height: 845px;
+}
+#contentDiv article p,
+#contentDiv article h1,
+#contentDiv article h2,
+#contentDiv article h4,
+#contentDiv article h5,
+#contentDiv article h6, #contentDiv article textarea {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 ul {
@@ -69,11 +91,12 @@ ul a {
   color: #617581;
 }
 .SlideshowCaption a,
-.SlideshowCaption a:visited, .SlideshowCaption a:hover {
+.SlideshowCaption a:visited,
+.SlideshowCaption a:hover {
   color: #688e9b;
 }
 .SlideshowCaption a:hover {
-  color: #AD4156;
+  color: #ad4156;
   background-color: transparent;
 }
 

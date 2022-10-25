@@ -67,9 +67,6 @@ ul {
   display: none;
 }
 
-.Transparent {
-  background: transparent;
-}
 .imgpix {
   image-rendering: pixelated;
 }
@@ -88,8 +85,16 @@ ul {
   margin-bottom: 10%;
   display: block;
 }
+.slideshowBG {
+  background-color: #262a31;
+}
+.SpacingDiv {
+  justify-content: center;
+  display: flex;
+}
 .SlideshowCaption {
   background-color: #262a31;
+  width: max-content;
   h3 {
     color: #a3b0b8;
   }

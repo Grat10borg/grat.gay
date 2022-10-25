@@ -104,7 +104,7 @@ function PrintFanartSlide() {
     Slideimg.title=`${element[0]} by ${element[2]}`;
     Slideimg.alt=`${element[0]} by ${element[2]}`;
     captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");
-    spacingDiv.classList.add("mt-5", "pt-5");
+    spacingDiv.classList.add("mt-5", "pt-5", "SpacingDiv");
     SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
     SlideshowH3.classList.add("mx-5");
     SlideshowH3.innerHTML=`${element[1]} by <a href="${element[3]}">${element[2]}</a>`;

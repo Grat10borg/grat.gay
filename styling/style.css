@@ -8,6 +8,26 @@ body {
   background-color: #F9F3F0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #contentDiv {
   border: #85A1BF;
   border-style: solid;
@@ -18,12 +38,14 @@ body {
   height: 850px;
   margin: auto;
 }
+
 #contentDiv nav {
   overflow-y: scroll;
   position: absolute;
   width: 180px;
   min-height: 437px;
 }
+
 #contentDiv #bottomSide {
   margin-top: 434px;
   overflow-y: scroll;
@@ -31,11 +53,13 @@ body {
   width: 180px;
   min-height: 411px;
 }
+
 #contentDiv article {
   overflow-y: scroll;
   margin-left: 20%;
   height: 845px;
 }
+
 #contentDiv article p,
 #contentDiv article h1,
 #contentDiv article h2,
@@ -49,6 +73,7 @@ body {
 ul {
   text-align: center;
 }
+
 ul a {
   text-decoration: none;
 }
@@ -59,7 +84,9 @@ ul a {
 
 .imgpix {
   -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
       image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
       image-rendering: pixelated;
 }
 
@@ -82,7 +109,11 @@ ul a {
 }
 
 .SpacingDiv {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -92,17 +123,21 @@ ul a {
   width: -moz-max-content;
   width: max-content;
 }
+
 .SlideshowCaption h3 {
   color: #a3b0b8;
 }
+
 .SlideshowCaption p {
   color: #617581;
 }
+
 .SlideshowCaption a,
 .SlideshowCaption a:visited,
 .SlideshowCaption a:hover {
   color: #688e9b;
 }
+
 .SlideshowCaption a:hover {
   color: #ad4156;
   background-color: transparent;
@@ -113,11 +148,13 @@ ul a {
     display: none;
   }
 }
+
 @media screen and (min-width: 576px) {
   #Nav_Disapeir {
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
   #Nav_Disapeir {
     display: block;
@@ -141,9 +178,11 @@ ul a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
+
 .fullimg {
   width: 100%;
 }
@@ -159,4 +198,5 @@ ul a {
   height: 100%;
   overflow: auto;
   background-color: black;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

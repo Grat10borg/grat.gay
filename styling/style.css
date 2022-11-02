@@ -8,14 +8,15 @@ body {
   background-color: #F9F3F0;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
+.HomepageBody {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-image: url(Sprite-0001.png);
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
 /* Handle */
@@ -29,18 +30,18 @@ body {
 }
 
 #contentDiv {
-  border: #85A1BF;
-  border-style: solid;
-  border-radius: 2px;
   background-color: #eef6f8;
   display: block;
   width: 900px;
-  height: 850px;
+  height: 845px;
   margin: auto;
 }
 
 #contentDiv nav {
   overflow-y: scroll;
+  border: #617581;
+  border-style: solid;
+  border-radius: 2px;
   position: absolute;
   width: 180px;
   min-height: 437px;
@@ -49,6 +50,9 @@ body {
 #contentDiv #bottomSide {
   margin-top: 434px;
   overflow-y: scroll;
+  border: #617581;
+  border-style: solid;
+  border-radius: 2px;
   position: absolute;
   width: 180px;
   min-height: 411px;
@@ -58,6 +62,10 @@ body {
   overflow-y: scroll;
   margin-left: 20%;
   height: 845px;
+  border: #688e9b;
+  border-style: solid;
+  border-radius: 2px;
+  border-left: 0px;
 }
 
 #contentDiv article p,

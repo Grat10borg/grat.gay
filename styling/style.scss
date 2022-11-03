@@ -1,152 +1,19 @@
-*,
-ul {
+* {
   padding: 0;
   margin: 0;
 }
 
+// GENERAL DATA
 body {
-  background-color: #F9F3F0;
-}
-.HomepageBody {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  background-image: url(Sprite-0001.png);
-}
-// Scrollbar styling
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
+  background-color: #ddf0ff;
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-#contentDiv {
-  background-color: #eef6f8;
-  display: block;
-  width: 900px;
-  height: 845px;
-  margin: auto;
-  nav {
-    overflow-y: scroll;
-    border: #617581;
-    border-style: solid;
-    border-radius: 2px;
-    position: absolute;
-    width: 180px;
-    min-height: 437px;
-  }
-  #bottomSide {
-    margin-top: 434px;
-    overflow-y: scroll;
-    border: #617581;
-    border-style: solid;
-    border-radius: 2px;
-    position: absolute;
-    width: 180px;
-    min-height: 411px;
-  }
-  article {
-    overflow-y: scroll;
-    margin-left: 20%;
-    height: 845px;
-    border: #688e9b;
-    border-style: solid;
-    border-radius: 2px;
-    border-left: 0px;
-    p,
-    h1,
-    h2,
-    h4,
-    h5,
-    h6, textarea {
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  }
-}
-ul {
-  text-align: center;
-  a {
-    text-decoration: none;
-  }
-}
-
-// Stolen
-
-.imageText {
-  display: none;
-}
-
-.imgpix {
-  image-rendering: pixelated;
-}
-// Used only on Slideshow.html
-
-.img-thumb {
-  max-height: 200px;
-  max-width: 300px;
-  min-height: 160px;
-}
-
-.carouselImg {
-  max-width: 100%;
-  height: 800px;
-  margin: auto;
-  margin-bottom: 10%;
-  display: block;
-}
-.slideshowBG {
-  background-color: #262a31;
-}
-.SpacingDiv {
-  justify-content: center;
-  display: flex;
-}
-.SlideshowCaption {
-  background-color: #262a31;
-  width: max-content;
-  h3 {
-    color: #a3b0b8;
-  }
-  p {
-    color: #617581;
-  }
-  a,
-  a:visited,
-  a:hover {
-    color: #688e9b;
-  }
-  a:hover {
-    color: #ad4156;
-    background-color: transparent;
-  }
-}
-// XS
-@media screen and (max-width: 576px) {
-  #Nav_Disapeir {
-    display: none;
-  }
-}
-// SM
-@media screen and (min-width: 576px) {
-  #Nav_Disapeir {
-    display: none;
-  }
-}
-// MD
-@media screen and (min-width: 768px) {
-  #Nav_Disapeir {
-    display: block;
+  // Class to tell that the image is at Pixelsize making it scale without being blurry.
+  // full list of browser image scaling comparisons look here: https://lospec.com/browser-image-scaling-comparison/
+  .imgpix {
+    image-rendering: pixelated;
   }
 
+  // Styling for making text stand over an image in the center of the image
   .CenterH {
     // stolen
     position: absolute;
@@ -170,27 +37,144 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-//LG 992
-//XL 1200
-//XXL 1400 and bigger
-// #region Modal Styling (For Mother1brain/Data/Central/art.html);
-// sets image to full size
-.fullimg {
-  width: 100%;
+
+  // #region Scrollbar styling
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(78, 129, 225);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(95, 116, 204);
+  }
+  // #endregion
+
+  // #region Slideshow.html Styling
+  // Used only on Slideshow.html
+  .img-thumb {
+    max-height: 200px;
+    max-width: 300px;
+    min-height: 160px;
+  }
+
+  .carouselImg {
+    max-width: 100%;
+    height: 800px;
+    margin: auto;
+    margin-bottom: 10%;
+    display: block;
+  }
+  .slideshowBG {
+    background-color: #262a31;
+  }
+  .SpacingDiv {
+    justify-content: center;
+    display: flex;
+  }
+  .SlideshowCaption {
+    background-color: #262a31;
+    width: max-content;
+    h3 {
+      color: #a3b0b8;
+    }
+    p {
+      color: #617581;
+    }
+    a,
+    a:visited,
+    a:hover {
+      color: #688e9b;
+    }
+    a:hover {
+      color: #ad4156;
+      background-color: transparent;
+    }
+  }
+  // #endregion
 }
 
-// Container of all model related things
-#ArtworkModels {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 1%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
+// Homepage Styling...
+.HomepageBody {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-image: url(Sprite-0001.png);
+
+  #contentDiv {
+    // Colour of Box BG
+    background-color: #e8f4f6;
+    // Centers Box in middle of screen
+    margin: auto;
+    display: block;
+    // Size of Box
+    width: 900px;
+    height: 845px;
+
+    // Centering and styling of SideNav and sidepanel bellow it too
+    ul {
+      padding-left: 30px;
+      a {
+        text-decoration: none;
+      }
+    }
+    nav {
+      overflow-y: scroll;
+      border: #617581;
+      border-style: solid;
+      border-radius: 2px;
+      position: absolute;
+      width: 180px;
+      min-height: 437px;
+    }
+    #bottomSide {
+      margin-top: 434px;
+      overflow-y: scroll;
+      border: #617581;
+      border-style: solid;
+      border-radius: 2px;
+      position: absolute;
+      width: 180px;
+      min-height: 411px;
+    }
+    article {
+      overflow-y: scroll;
+      margin-left: 20%;
+      height: 845px;
+      border: #688e9b;
+      border-style: solid;
+      border-radius: 2px;
+      border-left: 0px;
+      p,
+      h1,
+      h2,
+      h4,
+      h5,
+      h6,
+      textarea {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// #region Media Queries, (Not Done)
+// XS
+@media screen and (max-width: 576px) {
+}
+// SM
+@media screen and (min-width: 576px) {
+}
+// MD
+@media screen and (min-width: 768px) {
 }
 // #endregion

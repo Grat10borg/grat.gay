@@ -5,6 +5,12 @@
 
 .slideshowBG {
   background-color: #262a31 !important;
+  a,p{
+    color: #e8f4f6;
+  }
+  a,p:hover{
+    color: #cae6eb;
+  }
 }
 
 // GENERAL DATA
@@ -15,7 +21,6 @@ body {
   .imgpix {
     image-rendering: pixelated;
   }
-
   // Styling for making text stand over an image in the center of the image
   .CenterH {
     // stolen
@@ -133,7 +138,7 @@ body {
       border-radius: 2px;
       position: absolute;
       width: 180px;
-      min-height: 437px;
+      height: 437px;
     }
     #bottomSide {
       margin-top: 434px;
@@ -143,7 +148,7 @@ body {
       border-radius: 2px;
       position: absolute;
       width: 180px;
-      min-height: 411px;
+      height: 411px;
     }
     article {
       overflow-y: scroll;

@@ -3,10 +3,13 @@
   margin: 0;
 }
 
+.slideshowBG {
+  background-color: #262a31 !important;
+}
+
 // GENERAL DATA
 body {
   background-color: #ddf0ff;
-
   // Class to tell that the image is at Pixelsize making it scale without being blurry.
   // full list of browser image scaling comparisons look here: https://lospec.com/browser-image-scaling-comparison/
   .imgpix {
@@ -73,9 +76,6 @@ body {
     margin: auto;
     margin-bottom: 10%;
     display: block;
-  }
-  .slideshowBG {
-    background-color: #262a31;
   }
   .SpacingDiv {
     justify-content: center;

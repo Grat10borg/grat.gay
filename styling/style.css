@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.slideshowBG {
+  background-color: #262a31 !important;
+}
+
 body {
   background-color: #ddf0ff;
   /* width */
@@ -71,10 +75,6 @@ body .carouselImg {
   margin: auto;
   margin-bottom: 10%;
   display: block;
-}
-
-body .slideshowBG {
-  background-color: #262a31;
 }
 
 body .SpacingDiv {

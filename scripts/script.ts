@@ -65,8 +65,8 @@ let FanartInfo = Array(
 "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg") as Array<string>;;
 
 // test if its an Art Display
-let ArtworkModels = document.getElementById("ArtworkModels") as HTMLElement;
-if (ArtworkModels != null) {
+let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
+if (ArtworkImages != null) {
   // if ArtWork Models is on the page.
   for (let index = 0; index < ArtworkInfo.length; index++) {
     const element = ArtworkInfo[index].split(";");

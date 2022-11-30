@@ -7,11 +7,11 @@
   background-color: #262a31 !important;
 }
 
-.slideshowBG a, .slideshowBG p {
+.slideshowBG a {
   color: #e8f4f6;
 }
 
-.slideshowBG a, .slideshowBG p:hover {
+.slideshowBG a:hover {
   color: #cae6eb;
 }
 

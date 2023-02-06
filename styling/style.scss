@@ -1,57 +1,142 @@
+$LinkColour: #ad4156;
+
 * {
   padding: 0;
   margin: 0;
 }
 
-.slideshowBG {
-  background-color: #262a31 !important;
-  a{
-    color: #e8f4f6;
-  }
-  a:hover{
-    color: #cae6eb;
-  }
-}
-
 // GENERAL DATA
-body {
-  background-color: #ddf0ff;
-  // Class to tell that the image is at Pixelsize making it scale without being blurry.
-  // full list of browser image scaling comparisons look here: https://lospec.com/browser-image-scaling-comparison/
-  .imgpix {
-    image-rendering: pixelated;
-  }
-  // Styling for making text stand over an image in the center of the image
-  .CenterH {
-    // stolen
-    position: absolute;
-    top: 200px;
-    left: 0;
-    width: 100%;
-    font-size: 35px;
-    font-family: monospace;
-    font-weight: bold;
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  a {
+    text-decoration: none;
+    color: $LinkColour;
   }
 
-  .imageText {
-    display: block;
+  // Index page styling
+  .Egress {
+    background-color: #97c2dd;
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 85vh;
+      img {
+        width: 500px;
+        border: #4170ad;
+        border-width: 8px;
+        border-radius: 5px;
+        border-style: solid;
+      }
+      p {
+        margin-top: 10px;
+      }
+      p:last-of-type {
+        margin-top: 40px;
+        color: #688e9b;
+      }
+    }
+  }
+
+  // Homepage
+  .TheSource {
+    background-image: url(Sprite-0001.png);
+    main {
+      margin: auto;
+      display: block;
+      max-width: 1000px;
+
+      .DivimageCenterText {
+        img {
+          max-width: 980px;
+          border-radius: 5px;
+          border-width: 2px;
+          border-style:dashed;
+          border-color: #262a31;
+        }
+        h3 {
+          color: whitesmoke;
+          font-size: 32px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        padding-bottom: 10px; // <- pushes the text down
+      }
+      div {
+        background-color: #e8f4f6;
+        ul {
+          padding-left: 30px;
+          a {
+            text-decoration: none;
+          }
+        }
+        nav {
+          overflow-y: scroll;
+          // border: #617581;
+          // border-style: solid;
+          // border-radius: 2px;
+          position: absolute;
+          width: 180px;
+          height: 437px;
+        }
+        #bottomSide {
+          margin-top: 434px;
+          overflow-y: scroll;
+          // border: #617581;
+          // border-style: solid;
+          // border-radius: 2px;
+          position: absolute;
+          width: 180px;
+          height: 411px;
+        }
+        article {
+          overflow-y: scroll;
+          margin-left: 20%;
+          height: 845px;
+          // border: #688e9b;
+          // border-style: solid;
+          // border-radius: 2px;
+          // border-left: 0px;
+          hr{
+            margin-top: 10px;
+            margin-bottom: 15px;
+          }
+          p,
+          h1,
+          h2,
+          h4,
+          h5,
+          h6,
+          textarea {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // #region Styling for making text stand over an image in the center of the image
+  .DivimageCenterText {
     position: relative;
     text-align: center;
-    color: white;
   }
-  .centered {
+  .centeredText {
+    // stolen
     position: absolute;
+    width: 80%; // how far out to the side the text goes
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  // #endregion
 
   // #region Scrollbar styling
   /* width */
   ::-webkit-scrollbar {
     width: 8px;
   }
-
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(78, 129, 225);
@@ -67,14 +152,24 @@ body {
   }
   // #endregion
 
-  // #region Slideshow.html Styling
+  .img-thumb {
+    max-height: 200px;
+    max-width: 300px;
+    min-height: 160px;
+  }
+}
+
+.slideshowBG {
+  background-color: #262a31 !important;
+  a {
+    color: #e8f4f6;
+  }
   // Used only on Slideshow.html
   .img-thumb {
     max-height: 200px;
     max-width: 300px;
     min-height: 160px;
   }
-
   .carouselImg {
     max-width: 100%;
     height: 800px;
@@ -99,13 +194,18 @@ body {
     a:visited,
     a:hover {
       color: #688e9b;
+      text-decoration: none;
     }
     a:hover {
       color: #ad4156;
       background-color: transparent;
     }
   }
-  // #endregion
+}
+
+// Misc Classes
+.imgpix {
+  image-rendering: pixelated;
 }
 
 // Homepage Styling...
@@ -171,15 +271,3 @@ body {
     }
   }
 }
-
-// #region Media Queries, (Not Done)
-// XS
-@media screen and (max-width: 576px) {
-}
-// SM
-@media screen and (min-width: 576px) {
-}
-// MD
-@media screen and (min-width: 768px) {
-}
-// #endregion

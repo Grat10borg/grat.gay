@@ -1,5 +1,9 @@
 $LinkColour: #ad4156;
 
+
+
+$HomepageBGColour: url(Sprite-0001.png);
+
 * {
   padding: 0;
   margin: 0;
@@ -42,18 +46,17 @@ html {
 
   // Homepage
   .TheSource {
-    background-image: url(Sprite-0001.png);
+    background-image: $HomepageBGColour;
     main {
       margin: auto;
       display: block;
       max-width: 1000px;
-
       .DivimageCenterText {
         img {
-          max-width: 980px;
+          max-width: calc(100% - 6px); // minuses the max width with the border width
           border-radius: 5px;
-          border-width: 2px;
-          border-style:dashed;
+          border-width: 3px;
+          border-style:solid;
           border-color: #262a31;
         }
         h3 {
@@ -76,6 +79,8 @@ html {
           // border: #617581;
           // border-style: solid;
           // border-radius: 2px;
+          display: flex;
+          justify-content: center;
           position: absolute;
           width: 180px;
           height: 437px;

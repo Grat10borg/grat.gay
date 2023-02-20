@@ -68,10 +68,10 @@ html .TheSource main .DivimageCenterText {
 }
 
 html .TheSource main .DivimageCenterText img {
-  max-width: 980px;
+  max-width: calc(100% - 6px);
   border-radius: 5px;
-  border-width: 2px;
-  border-style: dashed;
+  border-width: 3px;
+  border-style: solid;
   border-color: #262a31;
 }
 
@@ -95,6 +95,12 @@ html .TheSource main div ul a {
 
 html .TheSource main div nav {
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   width: 180px;
   height: 437px;

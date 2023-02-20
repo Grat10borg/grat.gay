@@ -61,8 +61,9 @@ let ArtworkInfo = Array(
 
 // filename, Artname, LinkInnerhtml, Link, Description, Writer
 let FanartInfo = Array(
-"Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg",
-"GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg") as Array<string>;;
+  "Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg",
+  "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg"
+) as Array<string>;
 
 // test if its an Art Display
 let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
@@ -76,7 +77,7 @@ if (ArtworkImages != null) {
 
 // test if its a Fanart Slideshow
 let FanartArt = document.getElementById("FanartSlide") as HTMLElement;
-if(FanartArt != null) {
+if (FanartArt != null) {
   PrintFanartSlide();
 }
 
@@ -91,26 +92,30 @@ function PrintFanartSlide() {
     let SlideshowCaptionDiv = document.createElement("div") as HTMLDivElement;
     let SlideshowH3 = document.createElement("h3") as HTMLHeadingElement;
     let SlideshowP = document.createElement("p") as HTMLParagraphElement;
-    if(index == 0) {
+    if (index == 0) {
       // first item needs active for it to have a starting image.
       CauselItemDiv.classList.add("active", "carousel-item");
-    }
-    else {
+    } else {
       CauselItemDiv.classList.add("carousel-item");
     }
     CauselItemDiv.setAttribute("data-bs-interval", "25000");
     Slideimg.setAttribute("src", `Artwork\\${element[0]}`);
     Slideimg.classList.add("d-block", "carouselImg");
-    Slideimg.title=`${element[0]} by ${element[2]}`;
-    Slideimg.alt=`${element[0]} by ${element[2]}`;
-    captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");
+    Slideimg.title = `${element[0]} by ${element[2]}`;
+    Slideimg.alt = `${element[0]} by ${element[2]}`;
+    captionCauselDiv.classList.add(
+      "mx-5",
+      "carousel-caption",
+      "text-start",
+      "d-block"
+    );
     spacingDiv.classList.add("mt-5", "pt-5", "SpacingDiv");
     SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
     SlideshowH3.classList.add("mx-5");
-    SlideshowH3.innerHTML=`${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
+    SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
     SlideshowP.classList.add("mx-5", "fs-5");
-    SlideshowP.innerHTML=`"" ${element[4]} "" -${element[5]}`;
-    
+    SlideshowP.innerHTML = `"" ${element[4]} "" -${element[5]}`;
+
     SlideshowCaptionDiv.append(SlideshowH3);
     SlideshowCaptionDiv.append(SlideshowP);
     spacingDiv.append(SlideshowCaptionDiv);
@@ -160,3 +165,22 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
   ArtworkImages.append(OverDiv);
 }
 //#endregion
+
+function IframeBuilder(IframeId: string) {
+  // if ID is a channel: login_name or a video Id: id
+  var options;
+  // channel: 'marinemammalrescue',
+  let channel = IframeId;
+  options = {
+    height: 420,
+    width: 780,
+    channel,
+    allowfullscreen: true,
+    layout: "video",
+    muted: false,
+    parent: ["mother1brain.neocities.org", "localhost"],
+  };
+  console.log(options);
+  //@ts-ignore
+  var player = new Twitch.Embed("twitch-stream", options);
+}

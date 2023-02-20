@@ -8,7 +8,6 @@ let P_path = document.getElementById("path");
 favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}?v=${Math.random() * 10}`);
 let ArtworkInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022", "Butt2.gif; Prototype Icon; 27. 9 2022", "IlluProfile.png; Illu Winks!; 27. 9 2022", "Lampreyhole.png; Lampreyhole; 27. 9 2022", "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022", "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022", "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022", "RotatePanties.gif; Rotating underwear; 29. 9 2022", "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022", "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022");
 let FanartInfo = Array("Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg", "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg");
-;
 let ArtworkImages = document.getElementById("ArtworkImages");
 if (ArtworkImages != null) {
     for (let index = 0; index < ArtworkInfo.length; index++) {
@@ -79,4 +78,19 @@ function PrintArtwork(ArtworkSrc, Alt, Date) {
     UnderDiv.append(CaptionP);
     OverDiv.append(UnderDiv);
     ArtworkImages.append(OverDiv);
+}
+function IframeBuilder(IframeId) {
+    var options;
+    let channel = IframeId;
+    options = {
+        height: 420,
+        width: 780,
+        channel,
+        allowfullscreen: true,
+        layout: "video",
+        muted: false,
+        parent: ["mother1brain.neocities.org", "localhost"],
+    };
+    console.log(options);
+    var player = new Twitch.Embed("twitch-stream", options);
 }

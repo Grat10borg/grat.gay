@@ -135,6 +135,51 @@ html {
     }
   }
 
+  .TumBlog {
+    background-image: "../styling/Sprite-0001.png";
+    //background-color: #4170ad;
+    //display: flex;
+    //justify-content: center;
+    ol{
+      background-color: #a3b0b8;
+      padding: 0;
+      padding-top: 5%;
+      margin-left: 7%;
+      margin-right: 7%;
+      list-style: none;
+      li {
+        border-radius: 15%;
+        border-color: #ad4156;
+        border-style: solid;
+        border-width: 5px;
+        margin-bottom: 50px;
+        div{
+         
+          //display: flex;
+          //justify-content: center;
+          //flex-direction: column;
+         p:first-child {
+          text-align: center;
+          font-size: 25px;
+         }
+         p{
+          text-align: center;
+         }
+         figure {
+          img{
+            border-radius: 10%;
+            border-color: transparent;
+            border-width: 1px;
+            border-style: none;
+            pointer-events: none;
+          }
+          display: flex;
+          justify-content: center;
+         }
+        }
+      }
+    }
+  }
   // #region Styling for making text stand over an image in the center of the image
   .DivimageCenterText {
     position: relative;
@@ -224,68 +269,4 @@ html {
 // Misc Classes
 .imgpix {
   image-rendering: pixelated;
-}
-
-// Homepage Styling...
-.HomepageBody {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  background-image: url(Sprite-0001.png);
-
-  #contentDiv {
-    // Colour of Box BG
-    background-color: #e8f4f6;
-    // Centers Box in middle of screen
-    margin: auto;
-    display: block;
-    // Size of Box
-    width: 900px;
-    height: 845px;
-
-    // Centering and styling of SideNav and sidepanel bellow it too
-    ul {
-      padding-left: 30px;
-      a {
-        text-decoration: none;
-      }
-    }
-    nav {
-      overflow-y: scroll;
-      border: #617581;
-      border-style: solid;
-      border-radius: 2px;
-      position: absolute;
-      width: 180px;
-      height: 437px;
-    }
-    #bottomSide {
-      margin-top: 434px;
-      overflow-y: scroll;
-      border: #617581;
-      border-style: solid;
-      border-radius: 2px;
-      position: absolute;
-      width: 180px;
-      height: 411px;
-    }
-    article {
-      overflow-y: scroll;
-      margin-left: 20%;
-      height: 845px;
-      border: #688e9b;
-      border-style: solid;
-      border-radius: 2px;
-      border-left: 0px;
-      p,
-      h1,
-      h2,
-      h4,
-      h5,
-      h6,
-      textarea {
-        margin-right: 10px;
-        margin-left: 10px;
-      }
-    }
-  }
 }

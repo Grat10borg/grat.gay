@@ -144,6 +144,53 @@ html .TheSource main div article textarea {
   margin-left: 10px;
 }
 
+html .TumBlog {
+  background-image: "../styling/Sprite-0001.png";
+}
+
+html .TumBlog ol {
+  background-color: #a3b0b8;
+  padding: 0;
+  padding-top: 5%;
+  margin-left: 7%;
+  margin-right: 7%;
+  list-style: none;
+}
+
+html .TumBlog ol li {
+  border-radius: 15%;
+  border-color: #ad4156;
+  border-style: solid;
+  border-width: 5px;
+  margin-bottom: 50px;
+}
+
+html .TumBlog ol li div p:first-child {
+  text-align: center;
+  font-size: 25px;
+}
+
+html .TumBlog ol li div p {
+  text-align: center;
+}
+
+html .TumBlog ol li div figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .TumBlog ol li div figure img {
+  border-radius: 10%;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: none;
+  pointer-events: none;
+}
+
 html .DivimageCenterText {
   position: relative;
   text-align: center;
@@ -244,69 +291,5 @@ html .img-thumb {
       image-rendering: -moz-crisp-edges;
       image-rendering: -o-pixelated;
       image-rendering: pixelated;
-}
-
-.HomepageBody {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  background-image: url(Sprite-0001.png);
-}
-
-.HomepageBody #contentDiv {
-  background-color: #e8f4f6;
-  margin: auto;
-  display: block;
-  width: 900px;
-  height: 845px;
-}
-
-.HomepageBody #contentDiv ul {
-  padding-left: 30px;
-}
-
-.HomepageBody #contentDiv ul a {
-  text-decoration: none;
-}
-
-.HomepageBody #contentDiv nav {
-  overflow-y: scroll;
-  border: #617581;
-  border-style: solid;
-  border-radius: 2px;
-  position: absolute;
-  width: 180px;
-  height: 437px;
-}
-
-.HomepageBody #contentDiv #bottomSide {
-  margin-top: 434px;
-  overflow-y: scroll;
-  border: #617581;
-  border-style: solid;
-  border-radius: 2px;
-  position: absolute;
-  width: 180px;
-  height: 411px;
-}
-
-.HomepageBody #contentDiv article {
-  overflow-y: scroll;
-  margin-left: 20%;
-  height: 845px;
-  border: #688e9b;
-  border-style: solid;
-  border-radius: 2px;
-  border-left: 0px;
-}
-
-.HomepageBody #contentDiv article p,
-.HomepageBody #contentDiv article h1,
-.HomepageBody #contentDiv article h2,
-.HomepageBody #contentDiv article h4,
-.HomepageBody #contentDiv article h5,
-.HomepageBody #contentDiv article h6,
-.HomepageBody #contentDiv article textarea {
-  margin-right: 10px;
-  margin-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */

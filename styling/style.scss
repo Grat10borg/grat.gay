@@ -135,6 +135,7 @@ html {
     }
   }
 
+  // Tumblrblog.html
   .TumBlog {
     background-image: "../styling/Sprite-0001.png";
     //background-color: #4170ad;
@@ -180,6 +181,43 @@ html {
       }
     }
   }
+
+  .WorldTree {
+    background-image: $HomepageBGColour;
+    main {
+      margin: auto;
+      display: block;
+      max-width: 1000px;
+      
+      div{
+        background-color: #e8f4f6;
+        height: 100%;
+        .DivimageCenterText {
+          img {
+            //max-width: calc(100% - 6px); // minuses the max width with the border width
+            max-width: 100%;
+            // border-radius: 5px;
+            // border-width: 3px;
+            // border-style:solid;
+            // border-color: #262a31;
+          }
+          h3 {
+            color: whitesmoke;
+            font-size: 32px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+          }
+          padding-bottom: 10px; // <- pushes the text down
+        }
+        ul {
+          list-style: none;
+          li{
+            margin: 15px;
+          }
+        }
+      }
+    }
+  }
+
   // #region Styling for making text stand over an image in the center of the image
   .DivimageCenterText {
     position: relative;

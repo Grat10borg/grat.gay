@@ -1,33 +1,49 @@
 @font-face {
-  font-family: "Atkinson-Hyperlegible";
-  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot"); /* IE9 Compat Modes */
-  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot?#iefix") format("embedded-opentype"), url("fonts\\Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2"), url("fonts\\Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("fonts\\Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("fonts\\Atkinson-Hyperlegible-Regular-102.svg#svgFontName") format("svg"); /* Legacy iOS */
+  font-family: 'Atkinson-Hyperlegible';
+  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot?#iefix") format("embedded-opentype"), url("fonts\\Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2"), url("fonts\\Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("fonts\\Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("fonts\\Atkinson-Hyperlegible-Regular-102.svg#svgFontName") format("svg");
+  /* Legacy iOS */
 }
+
 * {
   padding: 0;
   margin: 0;
 }
 
 html {
-  font-family: "Atkinson-Hyperlegible", "VT323", Fallback, monospace;
+  font-family: 'Atkinson-Hyperlegible',"VT323", Fallback, monospace;
   /* width */
   /* Handle */
   /* Handle on hover */
 }
+
 html a {
   text-decoration: none;
   color: #ad4156;
 }
+
 html .Egress {
   background-color: #97c2dd;
 }
+
 html .Egress main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 85vh;
 }
+
 html .Egress main img {
   width: 500px;
   border: #4170ad;
@@ -35,24 +51,30 @@ html .Egress main img {
   border-radius: 5px;
   border-style: solid;
 }
+
 html .Egress main p {
   margin-top: 10px;
 }
+
 html .Egress main p:last-of-type {
   margin-top: 40px;
   color: #688e9b;
 }
+
 html .TheSource {
   background-image: url(Sprite-0001.png);
 }
+
 html .TheSource main {
   margin: auto;
   display: block;
   max-width: 1000px;
 }
+
 html .TheSource main .DivimageCenterText {
   padding-bottom: 10px;
 }
+
 html .TheSource main .DivimageCenterText img {
   max-width: calc(100% - 6px);
   border-radius: 5px;
@@ -60,28 +82,38 @@ html .TheSource main .DivimageCenterText img {
   border-style: solid;
   border-color: #262a31;
 }
+
 html .TheSource main .DivimageCenterText h3 {
   color: whitesmoke;
   font-size: 32px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 html .TheSource main div {
   background-color: #e8f4f6;
 }
+
 html .TheSource main div ul {
   padding-left: 30px;
 }
+
 html .TheSource main div ul a {
   text-decoration: none;
 }
+
 html .TheSource main div nav {
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   width: 180px;
   height: 437px;
 }
+
 html .TheSource main div #bottomSide {
   margin-top: 434px;
   overflow-y: scroll;
@@ -89,15 +121,18 @@ html .TheSource main div #bottomSide {
   width: 180px;
   height: 411px;
 }
+
 html .TheSource main div article {
   overflow-y: scroll;
   margin-left: 20%;
   height: 845px;
 }
+
 html .TheSource main div article hr {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+
 html .TheSource main div article p,
 html .TheSource main div article h1,
 html .TheSource main div article h2,
@@ -108,9 +143,11 @@ html .TheSource main div article textarea {
   margin-right: 10px;
   margin-left: 10px;
 }
+
 html .TumBlog {
   background-image: "../styling/Sprite-0001.png";
 }
+
 html .TumBlog ol {
   background-color: #a3b0b8;
   padding: 0;
@@ -119,6 +156,7 @@ html .TumBlog ol {
   margin-right: 7%;
   list-style: none;
 }
+
 html .TumBlog ol li {
   border-radius: 15%;
   border-color: #ad4156;
@@ -126,17 +164,25 @@ html .TumBlog ol li {
   border-width: 5px;
   margin-bottom: 50px;
 }
+
 html .TumBlog ol li div p:first-child {
   text-align: center;
   font-size: 25px;
 }
+
 html .TumBlog ol li div p {
   text-align: center;
 }
+
 html .TumBlog ol li div figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 html .TumBlog ol li div figure img {
   border-radius: 10%;
   border-color: transparent;
@@ -144,58 +190,97 @@ html .TumBlog ol li div figure img {
   border-style: none;
   pointer-events: none;
 }
+
 html .WorldTree {
-  background-image: url(Sprite-0001.png);
+  background-image: url(../images/LinkTreeBG.gif);
 }
+
 html .WorldTree main {
   margin: auto;
   display: block;
+  width: 90%;
   max-width: 1000px;
+  border: #5fcde4;
+  border-width: 10px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-radius: 0;
 }
+
 html .WorldTree main div {
   background-color: #e8f4f6;
-  height: 100%;
+  padding: 10px;
+  padding-top: 5px;
 }
+
 html .WorldTree main div .DivimageCenterText {
   padding-bottom: 10px;
 }
+
 html .WorldTree main div .DivimageCenterText img {
   max-width: 100%;
+  border-radius: 15px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
 }
+
 html .WorldTree main div .DivimageCenterText h3 {
   color: whitesmoke;
   font-size: 32px;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 html .WorldTree main div ul {
   list-style: none;
 }
+
 html .WorldTree main div ul li {
   margin: 15px;
 }
+
+html .WorldTree main div ul li a {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: larger;
+  margin-bottom: 5px;
+}
+
+html .WorldTree main div ul li .Spacer {
+  padding: 15px;
+  font-weight: bolder;
+}
+
 html .DivimageCenterText {
   position: relative;
   text-align: center;
 }
+
 html .centeredText {
   position: absolute;
   width: 80%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 html ::-webkit-scrollbar {
   width: 8px;
 }
+
 html ::-webkit-scrollbar-thumb {
-  background: rgb(78, 129, 225);
+  background: #4e81e1;
 }
+
 html ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 html ::-webkit-scrollbar-thumb:hover {
-  background: rgb(95, 116, 204);
+  background: #5f74cc;
 }
+
 html .img-thumb {
   max-height: 200px;
   max-width: 300px;
@@ -205,14 +290,17 @@ html .img-thumb {
 .slideshowBG {
   background-color: #262a31 !important;
 }
+
 .slideshowBG a {
   color: #e8f4f6;
 }
+
 .slideshowBG .img-thumb {
   max-height: 200px;
   max-width: 300px;
   min-height: 160px;
 }
+
 .slideshowBG .carouselImg {
   max-width: 100%;
   height: 800px;
@@ -220,32 +308,48 @@ html .img-thumb {
   margin-bottom: 10%;
   display: block;
 }
+
 .slideshowBG .SpacingDiv {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .slideshowBG .SlideshowCaption {
   background-color: #262a31;
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
+
 .slideshowBG .SlideshowCaption h3 {
   color: #a3b0b8;
 }
+
 .slideshowBG .SlideshowCaption p {
   color: #617581;
 }
+
 .slideshowBG .SlideshowCaption a,
 .slideshowBG .SlideshowCaption a:visited,
 .slideshowBG .SlideshowCaption a:hover {
   color: #688e9b;
   text-decoration: none;
 }
+
 .slideshowBG .SlideshowCaption a:hover {
   color: #ad4156;
   background-color: transparent;
 }
 
 .imgpix {
-  image-rendering: pixelated;
-}/*# sourceMappingURL=style.css.map */
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+}
+/*# sourceMappingURL=style.css.map */

@@ -79,6 +79,13 @@ function PrintArtwork(ArtworkSrc, Alt, Date) {
     OverDiv.append(UnderDiv);
     ArtworkImages.append(OverDiv);
 }
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+}, false);
+let Html = document.querySelector("html");
+Html.oncontextmenu = function () {
+    alert(":3");
+};
 function IframeBuilder(IframeId) {
     var options;
     let channel = IframeId;

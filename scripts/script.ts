@@ -166,6 +166,21 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
 }
 //#endregion
 
+
+//#region Anti-theft inspect element stopper 
+
+// stops right click inspect element.
+document.addEventListener("contextmenu", function (e){
+  e.preventDefault();
+}, false);
+// Note: Not needed, prints a message when people right click
+let Html = document.querySelector("html") as HTMLElement;
+Html.oncontextmenu = function() {
+  alert("Hui! :3");
+}
+
+//#endregion
+
 function IframeBuilder(IframeId: string) {
   // if ID is a channel: login_name or a video Id: id
   var options;

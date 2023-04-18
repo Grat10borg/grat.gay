@@ -227,6 +227,12 @@ html {
               font-family: monospace;
               font-size: larger;
               margin-bottom: 5px;
+              img {
+                display: inline-block;
+                //width: 100%;
+                width: 16px;
+                height: 16px
+              }
             }
             .Spacer {
               padding: 15px;
@@ -327,4 +333,124 @@ html {
 // Misc Classes
 .imgpix {
   image-rendering: pixelated;
+}
+
+#CDIcon {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -0px -0px;
+}
+
+#Twitch {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -16px -0px;
+}
+
+#Youtube {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -32px -0px;
+}
+
+#Discord {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -0px -16px;
+}
+
+#Itch {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -0px -32px;
+}
+
+#Kofi {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -0px -48px;
+}
+
+#Github {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -16px -16px;
+}
+
+#Newgrounds {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -16px -32px;
+}
+
+#Neocities {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -16px -48px;
+}
+
+#Tumblr {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -32px -16px;
+}
+
+#Steam {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -32px -32px;
+}
+
+#Pixil {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -32px -48px;
+}
+
+#Twitter {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -48px -32px;
+}
+
+#VTSocial {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -48px -48px;
+}
+
+#MissingNo {
+  image-rendering: pixelated;
+  width: 16px;
+  height: 16px;
+  background: url(https://mother1brain.neocities.org/images/PixelIcons128x64@Mother1brain_Neocities.png);
+  background-position: -112px -48px;
 }

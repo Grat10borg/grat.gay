@@ -170,14 +170,14 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
 //#region Anti-theft inspect element stopper 
 
 // stops right click inspect element.
-document.addEventListener("contextmenu", function (e){
-  e.preventDefault();
-}, false);
-// Note: Not needed, prints a message when people right click
-let Html = document.querySelector("html") as HTMLElement;
-Html.oncontextmenu = function() {
-  alert("Hui! :3");
-}
+// document.addEventListener("contextmenu", function (e){
+//   e.preventDefault();
+// }, false);
+// // Note: Not needed, prints a message when people right click
+// let Html = document.querySelector("html") as HTMLElement;
+// Html.oncontextmenu = function() {
+//   alert("Hui! :3");
+// }
 
 //#endregion
 

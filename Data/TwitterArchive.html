@@ -4,12 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      id="Favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="../images/TWQuickIcon16x16@Mother1brain_Neocities.png"
+    />
     <title>Grat's Twitter Archive</title>
+    <style>
+      img {
+        width: 900px;
+        border: 5px solid #2355df;
+        border-top: 0px;
+        border-bottom: 0px;
+      }
+      img:last-of-type {
+        border-bottom: 5px solid #2355df;
+      }
+
+      #TWA_OverDiv {
+        /* background-color: antiquewhite; */
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      #TWA_paragraphdiv {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        text-align: left;
+        background: #2355df;
+        color: aliceblue;
+        width: 900px;
+
+        /* border */
+        border: 5px solid #2355df;
+        border-bottom: 0px;
+        border-top: 0px;
+      }
+
+      #TWA_paragraphdiv p {
+        margin-left: 10px;
+      }
+
+      #TWA_paragraphdiv svg {
+        width: 32px;
+        fill: aliceblue;
+        margin-right: 10px;
+      }
+
+      #TWA_img {
+        justify-content: center;
+        display: flex;
+        margin: auto;
+      }
+    </style>
   </head>
   <body>
-    <div id="TWA_img"></div>
-    <div id="TWA_paragraphdiv">
-      <p>@BoJustBo1</p>
+    <div id="TWA_OverDiv">
+      <div id="TWA_paragraphdiv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/><title>Due to Twitter's current status tweets deemed important for Grat's tutorials have been backed up here..</title></svg>
+      </div>
+      <div id="TWA_img"></div>
     </div>
 
     <script>
@@ -91,10 +150,13 @@
         let res = string.split("^");
         let img = document.createElement("img");
         img.src = res[1];
+        let p = document.createElement("p");
+        p.innerHTML = "@" + res[0];
         //"https://twitter.com/"+res[0];
         console.log(img);
         console.log(document.getElementById("TWA_img"));
         document.getElementById("TWA_img")?.append(img);
+        document.getElementById("TWA_paragraphdiv")?.prepend(p);
       }
     </script>
   </body>

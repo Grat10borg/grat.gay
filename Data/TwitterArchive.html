@@ -61,23 +61,42 @@
         display: flex;
         margin: auto;
       }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #2355df;
+        font-weight: bold
+      }
+      .info svg {
+        width: 16px;
+        fill: #2355df;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="TWA_OverDiv">
       <div id="TWA_paragraphdiv">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/><title>Due to Twitter's current status tweets deemed important for Grat's tutorials have been backed up here..</title></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/><title>Due to Twitter's current status, tweets deemed important for Grat's tutorials have been backed up here..</title></svg>
       </div>
       <div id="TWA_img"></div>
     </div>
-
+    <p class="info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/><title>below are other links to the artists SoMe</title></svg>
+      you can click on the photo to go to their Twitter profile! (if its still there)</p>
+    <p class="info">▼</p>
+    <p> otherwise check out their other social medias!</p>
+    <ul>
+      <li><a href="blep"> blep</a></li>
+    </ul>
     <script>
       console.log(document.location.hash);
 
       let TWAArray = new Array(
-        "16pxl / 8pxl^TwitterBackup/8pxl_TwitterAccount_PixelartRealLifeMediums.png",
-        "16pxl / 8pxl^TwitterBackup/16pxl_CloudTutorial_BookmarkDump.png",
-        "AngrSnail^TwitterBackup/AngrySnail_TreeTutorial_bookmarkDump.png",
+        "16pxl^TwitterBackup/8pxl_TwitterAccount_PixelartRealLifeMediums.png",
+        "16pxl^TwitterBackup/16pxl_CloudTutorial_BookmarkDump.png",
+        "angry__snail^TwitterBackup/AngrySnail_TreeTutorial_bookmarkDump.png",
         "BoJustBo1^TwitterBackup/BoJustBo1_AA_BookmarkDump.png",
         "BokiPixelart^TwitterBackup/BOKiBOKI_TwitterAccount_OBSPixelart.png",
         "curemoto_dot^TwitterBackup/Curemoto_dot_AnimeEyes_BookmarkDump.png",
@@ -137,10 +156,10 @@
           placeBackup(TWAArray[13]);
           break;
         case document.location.hash == "#RhlPixels/palettes":
-          placeBackup(TWAArray[13]);
+          placeBackup(TWAArray[14]);
           break;
         case document.location.hash == "#_IAmSaKo_/RGBTrick":
-          placeBackup(TWAArray[13]); //  added way to also make it do the second image..
+          placeBackup(TWAArray[15]); //  added way to also make it do the second image..
           break;
         default:
           break;
@@ -152,10 +171,12 @@
         img.src = res[1];
         let p = document.createElement("p");
         p.innerHTML = "@" + res[0];
-        //"https://twitter.com/"+res[0];
+        let a = document.createElement("a");
+        a.href="https://twitter.com/"+res[0];
         console.log(img);
         console.log(document.getElementById("TWA_img"));
-        document.getElementById("TWA_img")?.append(img);
+        a.append(img)
+        document.getElementById("TWA_img")?.append(a);
         document.getElementById("TWA_paragraphdiv")?.prepend(p);
       }
     </script>

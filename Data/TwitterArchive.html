@@ -160,6 +160,9 @@
         // BoJustBo
         Array("resite (link collection),https://resite.link/BoJustBo", "Instagram,https://www.instagram.com/bosdoodles/", "Newgrounds,https://bojustbo.newgrounds.com/","Kofi,https://ko-fi.com/bojustbo"),
         
+        //BOKI
+        Array("Twitter,https://twitter.com/BokiPixelart"),
+
         // Curemotodot
         Array("Twitter,https://twitter.com/curemoto_dot"),
         
@@ -251,8 +254,6 @@
       }
 
       function placeBackup(arrayTWA, arrayIndex) {
-        // console.log(TWAArrayLinks[arrayIndex]);
-        // console.log(arrayTWA);
         let res = arrayTWA[0].split("^");
         let p = document.createElement("p");
         p.innerHTML = "@" + res[0];
@@ -264,8 +265,6 @@
           img.src = res[1];
           let a = document.createElement("a");
           a.href="https://twitter.com/"+res[0];
-          console.log(img);
-          console.log(document.getElementById("TWA_img"));
           a.append(img)
           document.getElementById("TWA_img")?.append(a);
         }  

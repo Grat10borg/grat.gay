@@ -1,0 +1,19 @@
+// Shorthand Dom versions
+const $ = document;
+const $$ = {
+dom: document,
+
+// document methods
+id: $.getElementById.bind($),
+class: $.getElementsByClassName.bind($),
+make: $.createElement.bind($),
+query: $.querySelector.bind($),
+query_all: $.querySelectorAll.bind($),
+
+// custome methods bellow this
+// none yet!
+
+// just here to help me out when working.
+log: console.log,
+}
+

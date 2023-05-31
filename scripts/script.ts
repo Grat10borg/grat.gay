@@ -29,9 +29,9 @@ let faviconSrcs = Array(
   "MotherBrainIconTessa.png"
 );
 
-let favicon = document.getElementById("Favicon") as HTMLElement;
+let favicon = $$.id("Favicon") as HTMLElement;
 // lets us select where the start of the filepath should be inside the HTML files
-let P_path = document.getElementById("path") as HTMLElement;
+let P_path = $$.id("path") as HTMLElement;
 favicon.setAttribute(
   "href",
   `${P_path.textContent}${
@@ -66,7 +66,7 @@ let FanartInfo = Array(
 ) as Array<string>;
 
 // test if its an Art Display
-let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
+let ArtworkImages = $$.id("ArtworkImages") as HTMLElement;
 if (ArtworkImages != null) {
   // if ArtWork Models is on the page.
   for (let index = 0; index < ArtworkInfo.length; index++) {
@@ -76,7 +76,7 @@ if (ArtworkImages != null) {
 }
 
 // test if its a Fanart Slideshow
-let FanartArt = document.getElementById("FanartSlide") as HTMLElement;
+let FanartArt = $$.id("FanartSlide") as HTMLElement;
 if (FanartArt != null) {
   PrintFanartSlide();
 }
@@ -85,13 +85,13 @@ function PrintFanartSlide() {
   for (let index = 0; index < FanartInfo.length; index++) {
     const element = FanartInfo[index].split(";");
 
-    let CauselItemDiv = document.createElement("div") as HTMLDivElement;
-    let Slideimg = document.createElement("img") as HTMLImageElement;
-    let captionCauselDiv = document.createElement("div") as HTMLDivElement;
-    let spacingDiv = document.createElement("div") as HTMLDivElement;
-    let SlideshowCaptionDiv = document.createElement("div") as HTMLDivElement;
-    let SlideshowH3 = document.createElement("h3") as HTMLHeadingElement;
-    let SlideshowP = document.createElement("p") as HTMLParagraphElement;
+    let CauselItemDiv = $$.make("div") as HTMLDivElement;
+    let Slideimg = $$.make("img") as HTMLImageElement;
+    let captionCauselDiv = $$.make("div") as HTMLDivElement;
+    let spacingDiv = $$.make("div") as HTMLDivElement;
+    let SlideshowCaptionDiv = $$.make("div") as HTMLDivElement;
+    let SlideshowH3 = $$.make("h3") as HTMLHeadingElement;
+    let SlideshowP = $$.make("p") as HTMLParagraphElement;
     if (index == 0) {
       // first item needs active for it to have a starting image.
       CauselItemDiv.classList.add("active", "carousel-item");
@@ -128,14 +128,14 @@ function PrintFanartSlide() {
 }
 
 function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
-  let ArtPath = document.getElementById("ArtPath")?.innerHTML as string;
+  let ArtPath = $$.id("ArtPath")?.innerHTML as string;
   // Setting up Images on Page
-  let ArtworkImages = document.getElementById("ArtworkImages") as HTMLElement;
-  let OverDiv = document.createElement("div") as HTMLElement;
-  let UnderDiv = document.createElement("div") as HTMLElement;
-  let imgA = document.createElement("a") as HTMLAnchorElement;
-  let ImgThumbnail = document.createElement("img") as HTMLElement;
-  let CaptionP = document.createElement("p") as HTMLElement;
+  let ArtworkImages = $$.id("ArtworkImages") as HTMLElement;
+  let OverDiv = $$.make("div") as HTMLElement;
+  let UnderDiv = $$.make("div") as HTMLElement;
+  let imgA = $$.make("a") as HTMLAnchorElement;
+  let ImgThumbnail = $$.make("img") as HTMLElement;
+  let CaptionP = $$.make("p") as HTMLElement;
   OverDiv.classList.add(
     "d-flex",
     "align-items-center",

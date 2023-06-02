@@ -195,7 +195,11 @@ function IframeBuilder(IframeId: string) {
     muted: false,
     parent: ["mother1brain.neocities.org", "localhost"],
   };
-  console.log(options);
+  $$.log(options);
   //@ts-ignore
   var player = new Twitch.Embed("twitch-stream", options);
+}
+
+async function RSSBlogBuilder(Url: string) {
+  $$.log(await $$.api(Url));
 }

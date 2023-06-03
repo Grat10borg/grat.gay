@@ -29,7 +29,6 @@ function ApiCall(HttpCall) {
             .then((respon) => respon.text())
             .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
             .then((data) => {
-            $$.log(data);
             return data;
         })
             .catch((err) => {

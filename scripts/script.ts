@@ -201,5 +201,26 @@ function IframeBuilder(IframeId: string) {
 }
 
 async function RSSBlogBuilder(Url: string) {
-  $$.log(await $$.api(Url));
+  let VTSocialRss = await $$.api(Url) as HTMLHtmlElement;
+  $$.log(VTSocialRss);
+  //$$.log(VTSocialRss.getElementsByTagName("channel")[0].innerHTML);
+  $$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
+  let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
+  
+  for (let index = 0; index < Toots.length; index++) {
+    const element = Toots[index];
+    let ContentDiv = $$.make("div") as HTMLDivElement;
+    ContentDiv.classList.add("VTToot");
+    ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent as any);
+    let link = $$.make("a");
+    link.href =  element.getElementsByTagName("link")[0].innerHTML as string
+    link.innerHTML = "Orginal post -> "+ element.getElementsByTagName("link")[0].innerHTML as string
+    link.classList.add("rssLink");
+    ContentDiv.append(link);
+    $$.id("RssBlog_Import")?.append(ContentDiv);
+
+    if (index == 9) {
+      return;
+    }
+  }
 }

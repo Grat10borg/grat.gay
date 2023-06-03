@@ -104,7 +104,26 @@ function IframeBuilder(IframeId) {
     var player = new Twitch.Embed("twitch-stream", options);
 }
 function RSSBlogBuilder(Url) {
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
-        $$.log(yield $$.api(Url));
+        let VTSocialRss = yield $$.api(Url);
+        $$.log(VTSocialRss);
+        $$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
+        let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
+        for (let index = 0; index < Toots.length; index++) {
+            const element = Toots[index];
+            let ContentDiv = $$.make("div");
+            ContentDiv.classList.add("VTToot");
+            ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent);
+            let link = $$.make("a");
+            link.href = element.getElementsByTagName("link")[0].innerHTML;
+            link.innerHTML = "Orginal post -> " + element.getElementsByTagName("link")[0].innerHTML;
+            link.classList.add("rssLink");
+            ContentDiv.append(link);
+            (_a = $$.id("RssBlog_Import")) === null || _a === void 0 ? void 0 : _a.append(ContentDiv);
+            if (index == 9) {
+                return;
+            }
+        }
     });
 }

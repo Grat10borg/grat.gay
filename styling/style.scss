@@ -130,6 +130,25 @@ html {
             margin-right: 10px;
             margin-left: 10px;
           }
+          .blogTitleBG {
+            padding: 15px;
+            background: #6c9bd8;
+            margin-bottom: 10px;
+            .blogTitle {
+              font-size: larger;
+              font-weight: bold;
+            }
+          }
+          #RssBlog_Import {
+
+            .VTToot {
+              margin-top: 5px;
+              margin-bottom: 25px;
+              .rssLink {
+                margin-left: 30px
+              }
+            }
+          }
         }
       }
     }

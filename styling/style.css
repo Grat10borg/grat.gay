@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "Atkinson-Hyperlegible";
-  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot"); /* IE9 Compat Modes */
-  src: url("fonts\\Atkinson-Hyperlegible-Regular-102.eot?#iefix") format("embedded-opentype"), url("fonts\\Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2"), url("fonts\\Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("fonts\\Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("fonts\\Atkinson-Hyperlegible-Regular-102.svg#svgFontName") format("svg"); /* Legacy iOS */
-}
+@import 'fonts.css';
 * {
   padding: 0;
   margin: 0;
@@ -50,10 +46,6 @@ html .thesource main {
   display: block;
   max-width: 1000px;
 }
-html .thesource main .sidenavbar li {
-  display: block;
-  padding-bottom: 10px;
-}
 html .thesource main .divimagecentertext {
   padding-bottom: 10px;
 }
@@ -74,6 +66,10 @@ html .thesource main div {
 }
 html .thesource main div ul {
   padding-left: 30px;
+}
+html .thesource main div ul li {
+  padding-bottom: 10px;
+  display: block;
 }
 html .thesource main div ul a {
   text-decoration: none;

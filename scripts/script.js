@@ -9,12 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 let DocTitlenames = Array("Website of Mother1Brain", "Data Central: Brain Mother", "Mother-Data: Brain Central", "Brain Central: Data Mother", "undefined-Brain: undefined Data", "Mom-brain: Integer Control", "Mother-brain: Data Central", "Are you reloading the page?", "Data Mother: Central Brain", "Central: Data Brain Mother", "Brain Data: Mother Central", "YT: 'watch?v=DLzxn1SgKds' Watch..");
-document.title =
-    DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
-let faviconSrcs = Array("MotherBrainIconGrat.png", "MotherBrainIconChar.png", "MotherBrainIconCRT.png", "MotherBrainIconIllu.png", "MotherBrainIconTessa.png");
-let favicon = $$.id("Favicon");
-let P_path = $$.id("path");
-favicon.setAttribute("href", `${P_path.textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]}?v=${Math.random() * 10}`);
+document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
+let faviconSrcs = Array("MotherBrainIconGrat", "MotherBrainIconChar", "MotherBrainIconCRT", "MotherBrainIconIllu", "MotherBrainIconTessa");
+$$.id("Favicon").setAttribute("href", `${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)] + ".png"}?v=${Math.random() * 10}`);
 let ArtworkInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022", "Butt2.gif; Prototype Icon; 27. 9 2022", "IlluProfile.png; Illu Winks!; 27. 9 2022", "Lampreyhole.png; Lampreyhole; 27. 9 2022", "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022", "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022", "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022", "RotatePanties.gif; Rotating underwear; 29. 9 2022", "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022", "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022");
 let FanartInfo = Array("Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg", "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg");
 let ArtworkImages = $$.id("ArtworkImages");
@@ -24,10 +21,9 @@ if (ArtworkImages != null) {
         PrintArtwork(element[0], element[1], element[2]);
     }
 }
-let FanartArt = $$.id("FanartSlide");
-if (FanartArt != null) {
+let FanartArt = $$.id("fanartslide");
+if (FanartArt != null)
     PrintFanartSlide();
-}
 function PrintFanartSlide() {
     for (let index = 0; index < FanartInfo.length; index++) {
         const element = FanartInfo[index].split(";");
@@ -50,8 +46,8 @@ function PrintFanartSlide() {
         Slideimg.title = `${element[0]} by ${element[2]}`;
         Slideimg.alt = `${element[0]} by ${element[2]}`;
         captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");
-        spacingDiv.classList.add("mt-5", "pt-5", "SpacingDiv");
-        SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
+        spacingDiv.classList.add("mt-5", "pt-5", "spacingdiv");
+        SlideshowCaptionDiv.classList.add("py-3", "my-3", "slideshowcaption");
         SlideshowH3.classList.add("mx-5");
         SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
         SlideshowP.classList.add("mx-5", "fs-5");
@@ -107,23 +103,20 @@ function RSSBlogBuilder(Url) {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
         let VTSocialRss = yield $$.api(Url);
-        $$.log(VTSocialRss);
-        $$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
         let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
         for (let index = 0; index < Toots.length; index++) {
             const element = Toots[index];
             let ContentDiv = $$.make("div");
-            ContentDiv.classList.add("VTToot");
+            ContentDiv.classList.add("vttoot");
             ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent);
             let link = $$.make("a");
             link.href = element.getElementsByTagName("link")[0].innerHTML;
             link.innerHTML = "Orginal post -> " + element.getElementsByTagName("link")[0].innerHTML;
-            link.classList.add("rssLink");
+            link.classList.add("rsslink");
             ContentDiv.append(link);
-            (_a = $$.id("RssBlog_Import")) === null || _a === void 0 ? void 0 : _a.append(ContentDiv);
-            if (index == 9) {
+            (_a = $$.id("rssblog_import")) === null || _a === void 0 ? void 0 : _a.append(ContentDiv);
+            if (index == 9)
                 return;
-            }
         }
     });
 }

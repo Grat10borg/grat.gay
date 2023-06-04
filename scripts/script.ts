@@ -16,28 +16,12 @@ let DocTitlenames = Array(
 );
 
 // picks a random title from DocTitlenames and sets it as the Title of the document
-document.title =
-  DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
+document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
 //#endregion
 
 //#region Random Favicon Selector
-let faviconSrcs = Array(
-  "MotherBrainIconGrat.png",
-  "MotherBrainIconChar.png",
-  "MotherBrainIconCRT.png",
-  "MotherBrainIconIllu.png",
-  "MotherBrainIconTessa.png"
-);
-
-let favicon = $$.id("Favicon") as HTMLElement;
-// lets us select where the start of the filepath should be inside the HTML files
-let P_path = $$.id("path") as HTMLElement;
-favicon.setAttribute(
-  "href",
-  `${P_path.textContent}${
-    faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]
-  }?v=${Math.random() * 10}`
-);
+let faviconSrcs = Array("MotherBrainIconGrat","MotherBrainIconChar","MotherBrainIconCRT","MotherBrainIconIllu","MotherBrainIconTessa"); //@ts-ignore
+$$.id("Favicon").setAttribute("href",`${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]+".png"}?v=${Math.random() * 10}`);
 //#endregion
 
 //#region Artwork Page Modal Import & Handling
@@ -76,10 +60,8 @@ if (ArtworkImages != null) {
 }
 
 // test if its a Fanart Slideshow
-let FanartArt = $$.id("FanartSlide") as HTMLElement;
-if (FanartArt != null) {
-  PrintFanartSlide();
-}
+let FanartArt = $$.id("fanartslide") as HTMLElement;
+if (FanartArt != null) PrintFanartSlide();
 
 function PrintFanartSlide() {
   for (let index = 0; index < FanartInfo.length; index++) {
@@ -103,14 +85,9 @@ function PrintFanartSlide() {
     Slideimg.classList.add("d-block", "carouselImg");
     Slideimg.title = `${element[0]} by ${element[2]}`;
     Slideimg.alt = `${element[0]} by ${element[2]}`;
-    captionCauselDiv.classList.add(
-      "mx-5",
-      "carousel-caption",
-      "text-start",
-      "d-block"
-    );
-    spacingDiv.classList.add("mt-5", "pt-5", "SpacingDiv");
-    SlideshowCaptionDiv.classList.add("py-3", "my-3", "SlideshowCaption");
+    captionCauselDiv.classList.add("mx-5","carousel-caption","text-start","d-block");
+    spacingDiv.classList.add("mt-5", "pt-5", "spacingdiv");
+    SlideshowCaptionDiv.classList.add("py-3", "my-3", "slideshowcaption");
     SlideshowH3.classList.add("mx-5");
     SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
     SlideshowP.classList.add("mx-5", "fs-5");
@@ -136,26 +113,12 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
   let imgA = $$.make("a") as HTMLAnchorElement;
   let ImgThumbnail = $$.make("img") as HTMLElement;
   let CaptionP = $$.make("p") as HTMLElement;
-  OverDiv.classList.add(
-    "d-flex",
-    "align-items-center",
-    "justify-content-center",
-    "col",
-    "m-2"
-  );
+  OverDiv.classList.add("d-flex","align-items-center","justify-content-center","col","m-2");
   UnderDiv.classList.add("UnderArtDiv"); // for styling.
   CaptionP.classList.add("text-center", "mx-3");
   CaptionP.innerHTML = Alt;
   imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);
-  ImgThumbnail.classList.add(
-    "img-thumb",
-    "imgpix",
-    "rounded",
-    "alt",
-    "hover-shadow",
-    "m-auto",
-    "d-block"
-  );
+  ImgThumbnail.classList.add("img-thumb","imgpix","rounded","alt","hover-shadow","m-auto","d-block");
   ImgThumbnail.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
   ImgThumbnail.setAttribute("alt", Alt);
   imgA.append(ImgThumbnail);
@@ -182,9 +145,7 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
 //#endregion
 
 function IframeBuilder(IframeId: string) {
-  // if ID is a channel: login_name or a video Id: id
   var options;
-  // channel: 'marinemammalrescue',
   let channel = IframeId;
   options = {
     height: 420,
@@ -202,25 +163,22 @@ function IframeBuilder(IframeId: string) {
 
 async function RSSBlogBuilder(Url: string) {
   let VTSocialRss = await $$.api(Url) as HTMLHtmlElement;
-  $$.log(VTSocialRss);
-  //$$.log(VTSocialRss.getElementsByTagName("channel")[0].innerHTML);
-  $$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
+  //$$.log(VTSocialRss);
+  //$$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
   let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
   
   for (let index = 0; index < Toots.length; index++) {
     const element = Toots[index];
     let ContentDiv = $$.make("div") as HTMLDivElement;
-    ContentDiv.classList.add("VTToot");
+    ContentDiv.classList.add("vttoot");
     ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent as any);
     let link = $$.make("a");
     link.href =  element.getElementsByTagName("link")[0].innerHTML as string
     link.innerHTML = "Orginal post -> "+ element.getElementsByTagName("link")[0].innerHTML as string
-    link.classList.add("rssLink");
+    link.classList.add("rsslink");
     ContentDiv.append(link);
-    $$.id("RssBlog_Import")?.append(ContentDiv);
+    $$.id("rssblog_import")?.append(ContentDiv);
 
-    if (index == 9) {
-      return;
-    }
+    if (index == 9) return;   
   }
 }

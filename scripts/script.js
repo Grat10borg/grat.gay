@@ -42,7 +42,7 @@ function PrintFanartSlide() {
         }
         CauselItemDiv.setAttribute("data-bs-interval", "25000");
         Slideimg.setAttribute("src", `Artwork\\${element[0]}`);
-        Slideimg.classList.add("d-block", "carouselImg");
+        Slideimg.classList.add("d-block", "carouselimg");
         Slideimg.title = `${element[0]} by ${element[2]}`;
         Slideimg.alt = `${element[0]} by ${element[2]}`;
         captionCauselDiv.classList.add("mx-5", "carousel-caption", "text-start", "d-block");

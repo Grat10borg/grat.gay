@@ -17,8 +17,12 @@ const $$ = {
     query: $.querySelector.bind($),
     query_all: $.querySelectorAll.bind($),
     api: ApiCall.bind($),
+    tag: tag.bind($),
     log: console.log,
 };
+function tag(element, find) {
+    return element.getElementsByTagName(find);
+}
 function ApiCall(HttpCall) {
     return __awaiter(this, void 0, void 0, function* () {
         const respon = yield fetch(`${HttpCall}`, {

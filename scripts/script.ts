@@ -15,13 +15,24 @@ let DocTitlenames = Array(
   "YT: 'watch?v=DLzxn1SgKds' Watch.."
 );
 
-// picks a random title from DocTitlenames and sets it as the Title of the document
-document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
+// picks a random title from DocTitlenames and sets it as the Title of
+// the document
+document.title = DocTitlenames[Math.floor(Math.random()
+* DocTitlenames.length)];
 //#endregion
 
 //#region Random Favicon Selector
-let faviconSrcs = Array("MotherBrainIconGrat","MotherBrainIconChar","MotherBrainIconCRT","MotherBrainIconIllu","MotherBrainIconTessa"); //@ts-ignore
-$$.id("Favicon").setAttribute("href",`${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)]+".png"}?v=${Math.random() * 10}`);
+let faviconSrcs = Array(
+	"MotherBrainIconGrat",
+	"MotherBrainIconChar",
+	"MotherBrainIconCRT",
+	"MotherBrainIconIllu",
+	"MotherBrainIconTessa"); 
+//@ts-ignore
+$$.id("Favicon").setAttribute("href",
+//@ts-ignore
+`${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random() 
+* faviconSrcs.length)]+".png"}?v=${Math.random() * 10}`);
 //#endregion
 
 //#region Artwork Page Modal Import & Handling
@@ -34,7 +45,7 @@ let ArtworkInfo = Array(
   "Butt2.gif; Prototype Icon; 27. 9 2022",
   "IlluProfile.png; Illu Winks!; 27. 9 2022",
   "Lampreyhole.png; Lampreyhole; 27. 9 2022",
-  "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022",
+"OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022",
   "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022",
   "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022",
   "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022",
@@ -45,8 +56,13 @@ let ArtworkInfo = Array(
 
 // filename, Artname, LinkInnerhtml, Link, Description, Writer
 let FanartInfo = Array(
-  "Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg",
-  "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg"
+"Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!;"+ 
+"@HaybleneVT on Twitter; https://twitter.com/HaybleneVT;"+ 
+"Hayblene bestie drew this Grat awhile back! its actually my first"+ 
+"fanart ever!!;Grat_Grottenberg",
+"GratMebo.gif; Grat Amibo i made in Crocotile3D;" +
+"@Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg;" 
++"Please place on a skylanders portal to continue; Grat_Grottenberg"
 ) as Array<string>;
 
 // test if its an Art Display
@@ -85,11 +101,15 @@ function PrintFanartSlide() {
     Slideimg.classList.add("d-block", "carouselimg");
     Slideimg.title = `${element[0]} by ${element[2]}`;
     Slideimg.alt = `${element[0]} by ${element[2]}`;
-    captionCauselDiv.classList.add("mx-5","carousel-caption","text-start","d-block");
+    captionCauselDiv.classList.add("mx-5",
+				   "carousel-caption",
+				   "text-start","d-block");
     spacingDiv.classList.add("mt-5", "pt-5", "spacingdiv");
-    SlideshowCaptionDiv.classList.add("py-3", "my-3", "slideshowcaption");
+    SlideshowCaptionDiv.classList.add("py-3", "my-3", 
+				      "slideshowcaption");
     SlideshowH3.classList.add("mx-5");
-    SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
+    SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">
+    ${element[2]}</a>`;
     SlideshowP.classList.add("mx-5", "fs-5");
     SlideshowP.innerHTML = `"" ${element[4]} "" -${element[5]}`;
 
@@ -113,12 +133,16 @@ function PrintArtwork(ArtworkSrc: string, Alt: string, Date: string) {
   let imgA = $$.make("a") as HTMLAnchorElement;
   let ImgThumbnail = $$.make("img") as HTMLElement;
   let CaptionP = $$.make("p") as HTMLElement;
-  OverDiv.classList.add("d-flex","align-items-center","justify-content-center","col","m-2");
+  OverDiv.classList.add("d-flex",
+			"align-items-center",
+			"justify-content-center",
+			"col","m-2");
   UnderDiv.classList.add("UnderArtDiv"); // for styling.
   CaptionP.classList.add("text-center", "mx-3");
   CaptionP.innerHTML = Alt;
   imgA.setAttribute("href", `${ArtPath}${ArtworkSrc}`);
-  ImgThumbnail.classList.add("img-thumb","imgpix","rounded","alt","hover-shadow","m-auto","d-block");
+  ImgThumbnail.classList.add("img-thumb","imgpix","rounded","alt",
+			     "hover-shadow","m-auto","d-block");
   ImgThumbnail.setAttribute("src", `${ArtPath}${ArtworkSrc}`);
   ImgThumbnail.setAttribute("alt", Alt);
   imgA.append(ImgThumbnail);
@@ -163,22 +187,47 @@ function IframeBuilder(IframeId: string) {
 
 async function RSSBlogBuilder(Url: string) {
   let VTSocialRss = await $$.api(Url) as HTMLHtmlElement;
-  //$$.log(VTSocialRss);
-  //$$.log(VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item"));
-  let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
-  
+  $$.log(VTSocialRss);
+  let Toots = $$.tag($$.tag(VTSocialRss,"channel")[0], "item");
+  $$.log(Toots);
+  // Running through each toot
   for (let index = 0; index < Toots.length; index++) {
-    const element = Toots[index];
-    let ContentDiv = $$.make("div") as HTMLDivElement;
+  
+
+let ContentDiv = $$.make("div") as HTMLDivElement;
     ContentDiv.classList.add("vttoot");
-    ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent as any);
+    ContentDiv.insertAdjacentHTML("beforeend", 
+    $$.tag(Toots[index],"description")[0].textContent as any);
+    
     let link = $$.make("a");
-    link.href =  element.getElementsByTagName("link")[0].innerHTML as string
-    link.innerHTML = "Orginal post -> "+ element.getElementsByTagName("link")[0].innerHTML as string
+    link.href = $$.tag(Toots[index], "link")[0].innerHTML as string
+    link.innerHTML = "Orginal post -> "+ 
+    $$.tag(Toots[index], "link")[0].innerHTML as string
     link.classList.add("rsslink");
+    if($$.tag(Toots[index], "media:content").length > 0){
+    let imgdata = $$.tag(Toots[index], "media:content");
+    
+    if(imgdata[0]["attributes"][1].textContent == "video/mp4") {
+	let vid = $$.make("video");
+	vid.controls=true;
+	vid.autoplay=true;
+	vid.loop=true; // !! should be checked if its a Gif or Video!!
+	let source = $$.make("source");
+    	source.src = imgdata[0]["attributes"][0].textContent;
+    	source.type = imgdata[0]["attributes"][1].textContent;
+    	vid.append(source);
+	ContentDiv.append(vid);
+    }
+    else{
+    	let img = $$.make("img");
+    	img.src = imgdata[0]["attributes"][0].textContent;
+    	img.alt = imgdata[0].children[1].textContent;
+    	ContentDiv.append(img);
+    }
+    }
+    
     ContentDiv.append(link);
     $$.id("rssblog_import")?.append(ContentDiv);
-
     if (index == 9) return;   
   }
 }

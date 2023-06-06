@@ -13,7 +13,7 @@ $HomepageBGColour: url(Sprite-0001.png);
 
 // GENERAL DATA
 html {
-  font-family:  'Atkinson-Hyperlegible',"VT323", Fallback, monospace;
+  font-family:   'Atkinson-Hyperlegible', "VT323", Fallback, monospace;
   a {
     text-decoration: none;
     color: $LinkColour;
@@ -140,6 +140,10 @@ html {
               .rsslink {
                 margin-left: 30px
               }
+	      video,img {
+	        display:block;
+      	      }
+
             }
           }
         }

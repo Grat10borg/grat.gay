@@ -12,9 +12,14 @@ query_all: $.querySelectorAll.bind($),
 
 // custome methods bellow this
 api: ApiCall.bind($),
+tag: tag.bind($),
 
 // just here to help me out when working.
 log: console.log,
+}
+
+function tag(element: any, find:string) {
+return element.getElementsByTagName(find);
 }
 
 // Calls Twitch API or another API if turned on

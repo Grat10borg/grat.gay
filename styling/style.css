@@ -124,6 +124,9 @@ html .thesource main div article #rssblog_import .vttoot {
 html .thesource main div article #rssblog_import .vttoot .rsslink {
   margin-left: 30px;
 }
+html .thesource main div article #rssblog_import .vttoot video, html .thesource main div article #rssblog_import .vttoot img {
+  display: block;
+}
 html .tumblog {
   background-image: "../styling/Sprite-0001.png";
 }

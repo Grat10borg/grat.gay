@@ -9,11 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 let DocTitlenames = Array("Website of Mother1Brain", "Data Central: Brain Mother", "Mother-Data: Brain Central", "Brain Central: Data Mother", "undefined-Brain: undefined Data", "Mom-brain: Integer Control", "Mother-brain: Data Central", "Are you reloading the page?", "Data Mother: Central Brain", "Central: Data Brain Mother", "Brain Data: Mother Central", "YT: 'watch?v=DLzxn1SgKds' Watch..");
-document.title = DocTitlenames[Math.floor(Math.random() * DocTitlenames.length)];
+document.title = DocTitlenames[Math.floor(Math.random()
+    * DocTitlenames.length)];
 let faviconSrcs = Array("MotherBrainIconGrat", "MotherBrainIconChar", "MotherBrainIconCRT", "MotherBrainIconIllu", "MotherBrainIconTessa");
-$$.id("Favicon").setAttribute("href", `${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random() * faviconSrcs.length)] + ".png"}?v=${Math.random() * 10}`);
+$$.id("Favicon").setAttribute("href", `${$$.id("path").textContent}${faviconSrcs[Math.floor(Math.random()
+    * faviconSrcs.length)] + ".png"}?v=${Math.random() * 10}`);
 let ArtworkInfo = Array("GratFumo.png; Fumo Grat; 27. 9 2022", "Butt.gif; Icon of the Motherbrain Discord; 27. 9 2022", "Butt2.gif; Prototype Icon; 27. 9 2022", "IlluProfile.png; Illu Winks!; 27. 9 2022", "Lampreyhole.png; Lampreyhole; 27. 9 2022", "OfflineScreenGratVer1.png; OfflineScreen i use for Twitch!; 27. 9 2022", "Sprite-0001.png; Jerma roblox horror stream thumbnail; 27. 9 2022", "Skærmbillede 2022-08-04 230758.png; Mascot for H.O.T!; 27. 9 2022", "GratMebo.gif; Please place on a Skylanders™ portal; 29. 9 2022", "RotatePanties.gif; Rotating underwear; 29. 9 2022", "Skærmbillede 2022-09-10 173921.png; A N G E R Y; 29. 9 2022", "SpinGifHOT.gif; Full view of H.O.T's Mascot!; 29. 9 2022");
-let FanartInfo = Array("Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!; @HaybleneVT on Twitter; https://twitter.com/HaybleneVT; Hayblene bestie drew this Grat awhile back! its actually my first fanart ever!!; Grat_Grottenberg", "GratMebo.gif; Grat Amibo i made in Crocotile3D; @Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg; Please place on a skylanders portal to continue; Grat_Grottenberg");
+let FanartInfo = Array("Fanart\\GratAndPudding_@HaybleneVT.png; Grat And Some Pudding!;" +
+    "@HaybleneVT on Twitter; https://twitter.com/HaybleneVT;" +
+    "Hayblene bestie drew this Grat awhile back! its actually my first" +
+    "fanart ever!!;Grat_Grottenberg", "GratMebo.gif; Grat Amibo i made in Crocotile3D;" +
+    "@Grat_Grottenberg on Twitter; https://twitter.com/GratGrottenberg;"
+    + "Please place on a skylanders portal to continue; Grat_Grottenberg");
 let ArtworkImages = $$.id("ArtworkImages");
 if (ArtworkImages != null) {
     for (let index = 0; index < ArtworkInfo.length; index++) {
@@ -49,7 +56,8 @@ function PrintFanartSlide() {
         spacingDiv.classList.add("mt-5", "pt-5", "spacingdiv");
         SlideshowCaptionDiv.classList.add("py-3", "my-3", "slideshowcaption");
         SlideshowH3.classList.add("mx-5");
-        SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">${element[2]}</a>`;
+        SlideshowH3.innerHTML = `${element[1]} by <a href="${element[3]}">
+    ${element[2]}</a>`;
         SlideshowP.classList.add("mx-5", "fs-5");
         SlideshowP.innerHTML = `"" ${element[4]} "" -${element[5]}`;
         SlideshowCaptionDiv.append(SlideshowH3);
@@ -103,16 +111,38 @@ function RSSBlogBuilder(Url) {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
         let VTSocialRss = yield $$.api(Url);
-        let Toots = VTSocialRss.getElementsByTagName("channel")[0].getElementsByTagName("item");
+        $$.log(VTSocialRss);
+        let Toots = $$.tag($$.tag(VTSocialRss, "channel")[0], "item");
+        $$.log(Toots);
         for (let index = 0; index < Toots.length; index++) {
-            const element = Toots[index];
             let ContentDiv = $$.make("div");
             ContentDiv.classList.add("vttoot");
-            ContentDiv.insertAdjacentHTML("beforeend", element.getElementsByTagName("description")[0].textContent);
+            ContentDiv.insertAdjacentHTML("beforeend", $$.tag(Toots[index], "description")[0].textContent);
             let link = $$.make("a");
-            link.href = element.getElementsByTagName("link")[0].innerHTML;
-            link.innerHTML = "Orginal post -> " + element.getElementsByTagName("link")[0].innerHTML;
+            link.href = $$.tag(Toots[index], "link")[0].innerHTML;
+            link.innerHTML = "Orginal post -> " +
+                $$.tag(Toots[index], "link")[0].innerHTML;
             link.classList.add("rsslink");
+            if ($$.tag(Toots[index], "media:content").length > 0) {
+                let imgdata = $$.tag(Toots[index], "media:content");
+                if (imgdata[0]["attributes"][1].textContent == "video/mp4") {
+                    let vid = $$.make("video");
+                    vid.controls = true;
+                    vid.autoplay = true;
+                    vid.loop = true;
+                    let source = $$.make("source");
+                    source.src = imgdata[0]["attributes"][0].textContent;
+                    source.type = imgdata[0]["attributes"][1].textContent;
+                    vid.append(source);
+                    ContentDiv.append(vid);
+                }
+                else {
+                    let img = $$.make("img");
+                    img.src = imgdata[0]["attributes"][0].textContent;
+                    img.alt = imgdata[0].children[1].textContent;
+                    ContentDiv.append(img);
+                }
+            }
             ContentDiv.append(link);
             (_a = $$.id("rssblog_import")) === null || _a === void 0 ? void 0 : _a.append(ContentDiv);
             if (index == 9)

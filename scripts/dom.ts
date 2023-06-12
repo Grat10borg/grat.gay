@@ -16,4 +16,3 @@ query_all: $.querySelectorAll.bind($),
 // just here to help me out when working.
 log: console.log,
 }
-

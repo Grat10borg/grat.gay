@@ -9,8 +9,6 @@
        url('fonts\\Atkinson-Hyperlegible-Regular-102.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-
-
 // General
 $LinkColour: #ad4156;
 
@@ -24,6 +22,10 @@ $HomepageBGColour: url(Sprite-0001.png);
 
 // GENERAL DATA
 html {
+   /* For Firefox */
+  overflow-y: scroll;
+  scrollbar-color: #008de4 #0d3b97;
+  scrollbar-width: thin;
   font-family:  'Atkinson-Hyperlegible',"VT323", Fallback, monospace;
   a {
     text-decoration: none;

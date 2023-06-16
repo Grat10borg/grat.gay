@@ -29,9 +29,9 @@ async function ApiCall(HttpCall: string) {
         "Content-Type": "application/rss+xml; charset=utf-8",
       },
     })
-    .then((respon) => respon.text())
-    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-    .then((data) => {
+  .then((respon) => respon.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then((data) => {
       // Return Response on Success
       return data;
     })

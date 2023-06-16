@@ -126,6 +126,7 @@ html .thesource main div article #rssblog_import .vttoot .rsslink {
 }
 html .thesource main div article #rssblog_import .vttoot video, html .thesource main div article #rssblog_import .vttoot img {
   display: block;
+  max-width: 350px;
 }
 html .tumblog {
   background-image: "../styling/Sprite-0001.png";

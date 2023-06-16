@@ -5,6 +5,10 @@
 }
 
 html {
+  /* For Firefox */
+  overflow-y: scroll;
+  scrollbar-color: #008de4 #0d3b97;
+  scrollbar-width: thin;
   font-family: "Atkinson-Hyperlegible", "VT323", Fallback, monospace;
   /* width */
   /* Handle */

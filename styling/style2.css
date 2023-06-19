@@ -1,7 +1,16 @@
 :root{
+
+/* page fonts.*/
+
+/* page colors. */
 --background: #ffff;
 --fontcolorGen: #ffff;
 --fontHighlight: #3333;
+
+--contentpagebg: #aaaaaa;
+--navsidebg: #888888; 
+--vttooteven: #777777;
+--vttootodd: #999999;
 }
 
 *{
@@ -68,15 +77,58 @@ article {
 	width: 140vh;
 	margin:auto;
 	padding: 10px;
-	display:block;
+	display:flex;
+}
 
+.navside {
+	width: calc(140vh - 110vh);
+	background: var(--navsidebg);
 }
-article div:first-of-type {
+.navside img {
+	margin:auto;
+	margin-top:10px;
+	display:block;
+}
+.contentpage {
 	width: calc(140vh - 30vh);
-	
+	background: var(--contentpagebg);
+	margin-right: 10px
 }
-article div h2 {
+.contentpage h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
 	text-align:center;
 }
+.contentpage #twitch-stream {
+	display:flex;
+	justify-content:center;
+}
 
+/*rssblog styling*/
 
+#rssblog{
+	margin: 25px; 10px; 0px;
+	
+}
+
+#rssblog .blogtitlebg {
+
+}
+#rssblog .blogtitle {
+	font-size:22px;
+	font-weight: bold;
+}
+
+#rssblog #rssblog_import .vttoot {
+	background: var(--vttooteven);
+	margin-top:5px;
+	margin-bottom:15px;
+}
+#rssblog #rssblog_import .vttoot:nth-child(odd) {
+	background: var(--vttootodd);
+}
+#rssblog #rssblog_import .vttoot img {
+	margin:auto;
+	display:block;
+	max-width: calc(140vh - 40vh);
+}

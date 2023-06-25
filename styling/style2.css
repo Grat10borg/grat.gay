@@ -11,6 +11,7 @@
 --contentpagebg: #e8f4f6;
 --navsidebg: #888888; 
 --blogtitlebg: #6c9bd8;
+
 --vttooteven: #777777;
 --vttootodd: #999999;
 }
@@ -109,14 +110,16 @@ article {
 /*rssblog styling*/
 
 #rssblog{
-	margin: 25px 10px 0px;
 }
 
 #rssblog .blogtitlebg {
 	background: var(--blogtitlebg);
 	padding: 10px;
 	
+	margin: 25px; 10px; 0px;
+	
 }
+
 #rssblog .blogtitle {
 	font-size:22px;
 	font-weight: bold;
@@ -124,12 +127,11 @@ article {
 
 #rssblog #rssblog_import .vttoot {
 	background: var(--vttooteven);
-		
+
 	padding: 15px 5px;
 	margin-top:5px;
 	margin-bottom:15px;
 	margin-left: 40px;
-		
 }
 #rssblog #rssblog_import .vttoot:nth-child(odd) {
 	background: var(--vttootodd);
@@ -138,10 +140,12 @@ article {
 #rssblog #rssblog_import .vttoot p {
 	margin-bottom:20px;
 }
+
 #rssblog #rssblog_import .vttoot .rsslink {
 	color: var(--linkcolorgen);
 	text-decoration:none;
 }
+
 #rssblog #rssblog_import .vttoot img {
 	margin:auto;
 	display:block;

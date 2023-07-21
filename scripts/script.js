@@ -120,8 +120,7 @@ function RSSBlogBuilder(Url) {
             ContentDiv.insertAdjacentHTML("beforeend", $$.tag(Toots[index], "description")[0].textContent);
             let link = $$.make("a");
             link.href = $$.tag(Toots[index], "link")[0].innerHTML;
-            link.innerHTML = "Orginal post -> " +
-                $$.tag(Toots[index], "link")[0].innerHTML;
+            link.innerHTML = "post from VT.Social (Mastodon)";
             link.classList.add("rsslink");
             if ($$.tag(Toots[index], "media:content").length > 0) {
                 let imgdata = $$.tag(Toots[index], "media:content");
@@ -140,6 +139,7 @@ function RSSBlogBuilder(Url) {
                     let img = $$.make("img");
                     img.src = imgdata[0]["attributes"][0].textContent;
                     img.alt = imgdata[0].children[1].textContent;
+                    img.title = imgdata[0].children[1].textContent;
                     ContentDiv.append(img);
                 }
             }

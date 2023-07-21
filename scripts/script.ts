@@ -201,8 +201,9 @@ let ContentDiv = $$.make("div") as HTMLDivElement;
     
     let link = $$.make("a");
     link.href = $$.tag(Toots[index], "link")[0].innerHTML as string
-    link.innerHTML = "Orginal post -> "+ 
-    $$.tag(Toots[index], "link")[0].innerHTML as string
+    link.innerHTML = "post from VT.Social (Mastodon)";
+    //link.innerHTML = "Orginal post -> "+ 
+    //$$.tag(Toots[index], "link")[0].innerHTML as string
     link.classList.add("rsslink");
     if($$.tag(Toots[index], "media:content").length > 0){
     let imgdata = $$.tag(Toots[index], "media:content");
@@ -221,7 +222,8 @@ let ContentDiv = $$.make("div") as HTMLDivElement;
     else{
     	let img = $$.make("img");
     	img.src = imgdata[0]["attributes"][0].textContent;
-    	img.alt = imgdata[0].children[1].textContent;
+    	img.alt = imgdata[0].children[1].textContent;	
+	img.title = imgdata[0].children[1].textContent;
     	ContentDiv.append(img);
     }
     }

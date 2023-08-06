@@ -1,0 +1,248 @@
+@import 'fonts.css';
+
+/*
+ #rejoice! for the robot dance is: ON 
+
+ └[∵┌]└[ ∵ ]┘[┐∵]┘ 
+*/
+
+/* also hiii Grat here thanks for checking out my site!! */
+
+:root {
+/* fontface vars */
+	/*atkinson is a good general font, very readable*/
+--atkinson: 'Atkinson-Hyperlegible', monospace;
+--helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
+--tinyuni: 'TinyUnicode', monospace; /* small pixels */
+--minimal: 'Minimal4', monospace; /*smallest pixels*/
+ /*incase i add more flags, make it its own file...*/
+--transflag-bg: linear-gradient(to right, 
+	lightblue 0%,
+	lightblue 20%,
+	pink 20%,
+	pink 40%,
+	white 40%,
+	white 60%,
+	pink 60%,
+	pink 80%,
+	lightblue 80%, 
+	lightblue 100%);
+
+--text-select: #12173d;
+--text-select-bg: #b7fff4;
+
+
+--hp-bg-color: #e1e6fe;
+--hp-main-bg-color: #ffff;
+
+ /*nav colors*/
+--nav-bg: #293268;
+--nav-bg-hover: #464b8c;
+--nav-text: #78fae6;
+--nav-text-hover: #b1fff3;
+--nav-current-text: #ffe091;
+--nav-current-text-hover: #ffefc5;
+
+ /*main/content colors*/
+--content-border: #c1d9f2;
+--content-sidenav: #293268;
+--content-sidenav-clockbg: #c1d9f2;
+--content-sidenav-textareabg: #c1d9f2;
+--content-sidenav-split: #ffaa6e;
+
+ /*footer colors*/
+--footer-bg: #293268;
+
+
+--page-width: 60vw;
+--content-page-width: calc(var(--page-width)- 10px);
+
+--page-nav-width: var(--page-width);
+--page-nav-bar-width: calc(var(--page-nav-width) - 48vw);
+}
+
+::-moz-selection {
+	color: var(--text-select);
+	background: var(--text-select-bg);
+}
+::selection{
+	color: var(--text-select);
+	background: var(--text-select-bg);
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+a{
+ text-decoration: none;
+}
+
+.pixelart { /*make that pixelart look chrisp!*/
+	image-rendering: pixelated;
+}
+
+.homepage { /*body*/
+	margin: auto;
+	display: block;
+
+	background-color: var(--hp-bg-color);
+}
+
+	/* contains everything centered into one thing*/
+.page_center{
+	width: var(--page-width);
+	margin: auto;
+	display: block;
+
+	background: var(--hp-main-bg-color);
+}
+
+.header_image{
+	height: 10rem;
+	width: var(--page-width);
+	background-color: #909edd;
+}
+ /*make this better,,, somehow!*/
+.header_image img{
+	display: block;
+	margin: auto;
+	max-height: 10rem;
+	max-width: var(--page-width);
+}
+
+/* navigation */
+.homepage_nav{
+	height: 2.5rem;
+	width: var(--page-width);
+	
+	font-size: 18px;
+	font-weight: bold;
+	font-family: var(--atkinson);
+	background: var(--nav-bg);
+}
+
+.homepage_nav ul {
+	display: flex;
+	list-style: none;
+
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.homepage_nav ul li {
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+	height: 2.5rem;
+	width: var(--page-nav-bar-width);
+
+}
+
+.homepage_nav ul li:hover {
+	background: var(--nav-bg-hover);
+}
+
+.homepage_nav ul li p {
+	color: var(--nav-text);
+	text-transform: capitalize;
+}
+
+.homepage_nav ul li:hover p {
+	color: var(--nav-text-hover);
+}
+
+.homepage_nav ul li p.current {
+	color: var(--nav-current-text);
+}
+
+.homepage_nav ul li:hover p.current {
+        color: var(--nav-current-text-hover);
+}
+
+/* main page content */
+.content{
+	display: block;
+	width: var(--content-page-width); 
+	border-left: 10px solid var(--content-border);
+	border-right: 10px solid var(--content-border);
+	
+
+	/*remove later*/
+	height: 60rem;
+}
+
+	/* used when displaying both a main and a side nav */
+.content .center {
+	padding-top: 50px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+	/*sidebar*/
+.content .center .side {
+	width: 24%;
+	height: 10rem;
+	background: var(--content-sidenav);
+	margin: 0 5px 0 5px;
+}
+	/*clock styling*/
+.content .center .side #clock {
+	width: 90%;
+	margin: auto;
+	margin-top: 10px;
+	display: block;
+	padding: 10px 0 10px 0;
+	border-radius: 30px;
+	background: var(--content-sidenav-clockbg);
+}
+.content .center .side #clock p {
+	text-align: center;
+}
+
+	/*breaker*/
+.content .center .side .break {
+	width: 80%;
+	height: 1rem;
+	margin: auto;
+	display: block;
+	background: var(--content-sidenav-split);
+}
+
+.content .center .main {
+	width: 75%;
+	display: flex;
+	background-color: azure;
+}
+
+	/*footer styling*/
+.homepage_footer{
+	width: var(--page-width);
+	background: var(--footer-bg);
+	border-radius: 0 0 10px 10px;
+}
+.homepage_footer .upper_foot {
+	display: flex;
+	justify-content: space-between;
+
+}
+ /*badges*/
+.homepage_footer .upper_foot div:first-child {
+	margin: 10px;
+	padding-bottom: 4rem;	
+}
+
+.homepage_footer .upper_foot .transfl {
+	display: block;
+	width: 8rem;
+	height: 4rem;
+	background: var(--transflag-bg);
+	border-radius: 0 0 0px 15px;
+}
+
+
+
+

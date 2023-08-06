@@ -9,19 +9,21 @@
 --minimal: 'Minimal4', monospace; /*smallest pixels*/
 
 /* page colors. */
---background: url(triangle_bg.png);
---background-general-color: #dfe0e8; 
+--background: #e1e6fe;
+--background-general-color: #e1e6fe; 
+
 
 /* general color of background img*/
 --font-color-gen: #ffff;
 --font-highlight: #3333;
 --link-color-gen: #e54286;
 
---content-page-bg: #cfd1f6;
---first-content-bg: #cfd1f6;
+--content-page-bg: #ffff;
+--first-content-bg: #ffff;
+--second-content-bg: #ffff;
 
 --nav-top-bg: #3b768f;
---nav-side-bg: #909edd; 
+--nav-side-bg: #293268; 
 --blog-bg: #cfd1f6;
 --blog-title-bg: #6c9bd8;
 
@@ -29,7 +31,7 @@
 --vt-toot-odd: #8cafff;	 
 
 /*page sizing*/ 
---general-width: 70vw;
+--general-width: 60vw;
 --spacing-between-panels: 10px;
 
 	/*Calc'd vars*/
@@ -44,7 +46,6 @@
 
 
 /* Index */
-
 
 /* Homepage */
 .homepage { /* background for the homepage */
@@ -121,6 +122,7 @@
 .homepage article {
 	width: var(--general-width);
 	margin:auto;
+	background-color: #ffff;
 	/*padding: 10px;*/
 	margin-top: var(--spacing-between-panels);
 	display:flex;
@@ -158,7 +160,7 @@
 
 #rssblog{
 	padding-top:8px;
-	background: var(--blog-bg);
+	background: var(--second-content-bg);
 }
 
 #rssblog .blogtitlebg {

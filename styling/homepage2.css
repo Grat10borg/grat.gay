@@ -32,7 +32,8 @@
 --text-select-bg: #b7fff4;
 
 
---hp-bg-color: #e1e6fe;
+/*--hp-bg-color: #e1e6fe;*/
+--hp-bg-color: url(./homepagebg.png);
 --hp-main-bg-color: #ffff;
 
  /*nav colors*/
@@ -55,6 +56,7 @@
 --content-main-tabblue2-hover: #3e83d1;
 --content-main-fontcolor: #464b8c;
 --content-main-fontcolor-alt: #909edd;
+--content-main-tab-bg: white;
 
  /*footer colors*/
 --footer-bg: #293268;
@@ -93,16 +95,17 @@ a{
 	margin: auto;
 	display: block;
 
-	background-color: var(--hp-bg-color);
+	background: var(--hp-bg-color);
 }
 
 	/* contains everything centered into one thing*/
 .page_center{
-	width: var(--page-width);
 	margin: auto;
 	display: block;
-
+	width: var(--page-width);
 	background: var(--hp-main-bg-color);
+	border-left: 10px solid var(--content-border);
+	border-right: 10px solid var(--content-border);
 }
 
 .header_image{
@@ -173,8 +176,8 @@ a{
 .content{
 	display: block;
 	width: var(--content-page-width); 
-	border-left: 10px solid var(--content-border);
-	border-right: 10px solid var(--content-border);
+	/*border-left: 10px solid var(--content-border);
+	border-right: 10px solid var(--content-border);*/
 	
 
 	/*remove later*/
@@ -260,6 +263,7 @@ a{
 
 	/*main, with info page and tabs*/
 .content .center .main {
+	margin: 0 1.5rem 0rem 0rem;
 	width: 75%;
 	display: block;
 }
@@ -268,7 +272,7 @@ a{
 	width: 100%;
 	height: 5rem;
 	display: flex;
-	background: gray;
+	/*background: gray;*/
 }
 
 .content .center .main .tabs div:first-of-type {
@@ -276,7 +280,7 @@ a{
 	height: 5rem;
 	display: flex;
 	align-items: center;
-	border-radius: 25px 10px 0px 25px;
+	border-radius: 25px 10px 0px 0px;
 	background: var(--content-main-tabblue1);		
 }
 .content .center .main .tabs div:last-of-type {
@@ -284,7 +288,7 @@ a{
 	height: 5rem;
 	display: flex;
 	align-items: center;
-	border-radius: 10px 25px 25px 0;
+	border-radius: 10px 25px 0px 0;
 	background: var(--content-main-tabblue2);
 }
 
@@ -305,17 +309,49 @@ a{
 .content .center .main .panels {
 	display: block;
 	width: 100%;
-	height: 100px;
-	background: gold;
+	position: relative;
 }
 
 .content .center .main .panels .page {
-	
+	width: 100%;
+
+	/*replace with something better!*/
+	height: 30rem;
+	position: absolute;	
 }
-	
+	/* homepage specific ids*/
+#panel1 {
+	border-width: 0px 10px 10px 10px;
+	border-style: solid;
+	border-color: var(--content-main-tabblue1);
+	border-radius: 0px 10px 0px 15px;
+	background: var(--content-main-tab-bg);
+}
+
+#panel1 .bar {
+	width: 100%;
+	height: 2rem;
+	background: var(--content-main-tabblue1);
+}
+
+#panel1 p, h5 {
+
+}
+
+#panel2 {
+	background: blueviolet ;
+}
+#panel3 {
+
+}
+#panel4 {
+
+}
 	/*footer styling*/
 .homepage_footer{
-	width: var(--page-width);
+	margin: auto;
+	display: block;
+	width: calc(var(--page-width) + 20px);
 	background: var(--footer-bg);
 	border-radius: 0 0 10px 10px;
 }

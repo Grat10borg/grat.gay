@@ -17,16 +17,16 @@
 --minimal: 'Minimal4', monospace; /*smallest pixels*/
  /*incase i add more flags, make it its own file...*/
 --transflag-bg: linear-gradient(to right, 
-	lightblue 0%,
-	lightblue 20%,
-	pink 20%,
-	pink 40%,
-	white 40%,
-	white 60%,
-	pink 60%,
-	pink 80%,
-	lightblue 80%, 
-	lightblue 100%);
+	#8cdaff 0%,
+	#8cdaff 20%,
+	#ffa5d5 20%,
+	#ffa5d5 40%,
+	#fff 40%,
+	#fff 60%,
+	#ffa5d5 60%,
+	#ffa5d5 80%,
+	#8cdaff 80%, 
+	#8cdaff 100%);
 
 --text-select: #12173d;
 --text-select-bg: #b7fff4;
@@ -47,16 +47,24 @@
  /*main/content colors*/
 --content-border: #c1d9f2;
 --content-sidenav: #293268;
+--content-sidenav-2: #909edd;
 --content-sidenav-clockbg: #c1d9f2;
 --content-sidenav-textareabg: #c1d9f2;
 --content-sidenav-split: #ffaa6e;
 --content-main-tabblue1: #50b9eb;
 --content-main-tabblue2: #3e83d1;
---content-main-tabblue1-hover: #50b9eb;
---content-main-tabblue2-hover: #3e83d1;
+--content-main-tabblue1-hover: #27d3cb;
+--content-main-tabblue2-hover: #00aaa5;
+--content-main-tabteal1: #78fae6;
+--content-main-tabteal2: #00aaa5;
+--content-main-tabteal1-hover: #a6fff1;
+--content-main-tabteal2-hover: #3ea09d;
 --content-main-fontcolor: #464b8c;
 --content-main-fontcolor-alt: #909edd;
 --content-main-tab-bg: white;
+--content-main-panel-titlecolor: #464b8c;
+--content-main-panel-fontcolor: #464b8c;
+
 
  /*footer colors*/
 --footer-bg: #293268;
@@ -67,13 +75,16 @@
 
 --page-nav-width: var(--page-width);
 --page-nav-bar-width: calc(var(--page-nav-width) - 48vw);
+	/*this code is stupid, Too bad!*/
+--page-height: 80rem;
+--tab-spacing: 5rem; /*spacing for the second tab*/
 }
 
 ::-moz-selection {
 	color: var(--text-select);
 	background: var(--text-select-bg);
 }
-::selection{
+::selection, mark{
 	color: var(--text-select);
 	background: var(--text-select-bg);
 }
@@ -86,6 +97,7 @@ padding: 0;
 a{
  text-decoration: none;
 }
+
 
 .pixelart { /*make that pixelart look chrisp!*/
 	image-rendering: pixelated;
@@ -176,12 +188,9 @@ a{
 .content{
 	display: block;
 	width: var(--content-page-width); 
-	/*border-left: 10px solid var(--content-border);
-	border-right: 10px solid var(--content-border);*/
-	
 
 	/*remove later*/
-	height: 60rem;
+	height: var(--page-height);
 }
 
 	/* used when displaying both a main and a side nav */
@@ -190,15 +199,24 @@ a{
 	display: flex;
 	justify-content: space-evenly;
 }
-
 	/*sidebar*/
 .content .center .side {
 	width: 24%;
 	margin: 0 1rem 0 1.5rem;
 	border-radius: 15px;
-	background: var(--content-sidenav);
 	padding-bottom: 15px;
 }
+
+	/*this isn't prettyy... i wanted to use 
+	* last/first of type but it won't workkk*/
+#sidebg1{
+	background: var(--content-sidenav);
+}
+#sidebg2 {
+	background: var(--content-sidenav-2);
+	min-height: 25rem;
+}
+
 	/*clock styling*/
 .content .center .side #clock {
 	width: 90%;
@@ -211,6 +229,8 @@ a{
 }
 .content .center .side #clock p {
 	text-align: center;
+	font-family: var(--helveti);
+	font-size: 1.8rem;
 }
 
 	/*breaker*/
@@ -228,8 +248,10 @@ a{
 	/*text in sidebar*/
 .content .center .side .text p {
 	text-align: left;
+	font-size: 1.1rem;
 	margin-left: 2rem;
 	margin-bottom: 1rem;
+	font-family: var(--atkinson);
 	color: var(--content-sidenav-textareabg);
 }
 .content .center .side .text p::before{
@@ -258,6 +280,7 @@ a{
 	height: 10rem;
 	margin: auto;
 	display: block;
+	font-family: var(--atkinson);
 	background: var(--content-sidenav-textareabg);
 } 
 
@@ -266,6 +289,7 @@ a{
 	margin: 0 1.5rem 0rem 0rem;
 	width: 75%;
 	display: block;
+	margin-bottom: 4rem;	
 }
 
 .content .center .main .tabs {
@@ -275,30 +299,62 @@ a{
 	/*background: gray;*/
 }
 
-.content .center .main .tabs div:first-of-type {
+.content .center .main .tabs .tab1, 
+.content .center .main .tabs .tab3 {
 	width: 20%;
 	height: 5rem;
 	display: flex;
 	align-items: center;
 	border-radius: 25px 10px 0px 0px;
-	background: var(--content-main-tabblue1);		
 }
-.content .center .main .tabs div:last-of-type {
+.content .center .main .tabs .tab2, 
+.content .center .main .tabs .tab4 {
 	width: 20%;
 	height: 5rem;
 	display: flex;
 	align-items: center;
 	border-radius: 10px 25px 0px 0;
-	background: var(--content-main-tabblue2);
 }
+.content .center .main .tabs .tab1 p, 
+.content .center .main .tabs .tab2 p, 
+.content .center .main .tabs .tab3 p, 
+.content .center .main .tabs .tab4 p {
+	font-family: var(--atkinson);
+	font-size: 1.2rem;
+} 
 
-.content .center .main .tabs div:first-of-type {
+	/*tab colors*/
+.tab1 {
+	background: var(--content-main-tabblue1);		
+	color: #fff;
+}
+.tab1:hover {
 	background: var(--content-main-tabblue1-hover);
 }
-
-.content .center .main .tabs div:last-of-type:hover {
+.tab2 {
+	background: var(--content-main-tabblue2);
+	color: #fff;
+}
+.tab2:hover {
 	background: var(--content-main-tabblue2-hover);
-} 
+}
+.tab3 {
+	background: var(--content-main-tabteal1);	
+	color: #fff;
+}
+.tab3:hover {
+	background: var(--content-main-tabteal1-hover);
+}
+.tab4 {
+	background: var(--content-main-tabteal2);
+	color: #fff;
+}
+.tab4:hover {
+	background: var(--content-main-tabteal2-hover);
+}
+.tabspacing {
+	margin-top: var(--tab-spacing);
+}
 
 .content .center .main .tabs div:last-of-type p, 
 .content .center .main .tabs div:first-of-type p {
@@ -333,19 +389,59 @@ a{
 	height: 2rem;
 	background: var(--content-main-tabblue1);
 }
+#panel2 .bar {
+	width: 100%;
+	height: 2rem;
+	background: var(--content-main-tabteal1);
+}
 
-#panel1 p, h5 {
+#panel1 .panel-in {
+	display: flex;
+	height: calc(100% - 2rem);	
+}
+
+#panel1 .panel-in .text {
+	display: block;
+	width: 50%;
+}
+
+#panel1 .panel-in .text h1 {
+	font-size: 34px;	
+	font-family: var(--atkinson);
+	margin: 15px 0 15px 15px;
+	color: var(--content-main-panel-titlecolor);
+}
+
+#panel1 .panel-in .text p {
+	font-size: 22px;
+	font-family: var(--atkinson);
+	margin: 15px 0 15px 15px;
+	color: var(--content-main-panel-fontcolor);
+}
+
+#panel1 .panel-in .image {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+#panel1 .panel-in .image img {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 45%;
+	min-width: 35%;
+	image-rendering: pixelated;
+	pointer-events: none;
 
 }
 
 #panel2 {
-	background: blueviolet ;
-}
-#panel3 {
-
-}
-#panel4 {
-
+	border-width: 0px 10px 10px 10px;
+	border-style: solid;
+	border-color: var(--content-main-tabteal1);
+	border-radius: 0px 10px 0px 15px;
+	background: var(--content-main-tab-bg);
 }
 	/*footer styling*/
 .homepage_footer{

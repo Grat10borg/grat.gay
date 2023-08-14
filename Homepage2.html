@@ -69,7 +69,7 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 			<div id="sidebg1" class="side">
                           <!-- clock set in by Javascript -->             
                           <div id="clock">                                
-                                  <p>12:00 am</p>                         
+                                  <p id="clocktext">12:00 am</p>                         
                           </div>                                          
                           <div class="break"></div>                       
                           <div class="text">                              
@@ -98,10 +98,10 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 			</div>	
 			<div class="main">
 				<div class="tabs">
-					<div class="tab1">
+					<div id="tabs1" class="tab1">
 						<p>Intro.txt</p>
 					</div>
-					<div class="tab2">
+					<div id="tabs2" class="tab2">
 						<p>extras(1).txt</p>
 					</div>
 				</div>
@@ -132,7 +132,39 @@ this website is very much <br> a <mark>work-in-progress</mark>
 					</div>
 					<div hidden
 					class="page" id="panel2">
-
+					<div class="bar"></div>
+					<div class="panel-in">
+					<div class="text">
+						<h2>Extra info!</h2>
+						<ul>
+							<li>Age: 20</li>
+							<li>Gender: Female</li>
+							<li>
+							<details>
+							<summary>Fav: Games</summary>
+							<ul>
+								<li>The ER: Patient Typhon</li>
+								<li>Amnesia: The Dark Descent</li>
+								<li>Damn Daniel: White Vans Adventure</li>
+							</ul>
+							
+							</details>
+							</li>
+							<li>
+							<details>
+							<summary>Fav: Foods</summary>
+							<ul>
+								<li>Wii fit board</li>
+								<li>Rhubarb pie</li>
+								<li>Hyben Marmelade</li>
+							</ul>
+							
+							</details>
+							</li>
+							<li>Orbital Space Array or something heree</li>
+						</ul>
+					</div>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -144,19 +176,36 @@ this website is very much <br> a <mark>work-in-progress</mark>
 			</div>
 			<div class="main">
 				<div class="tabs tabspacing">
-					<div class="tab3">
-						<p>VT.Social</p>
+					<div id="tabs3" class="tab3">
+						<p>VT.Social.com</p>
 					</div>
-					<div class="tab4">
-						<p>something!</p>
+					<div id="tabs4" class="tab4">
+						<p>artwork.png</p>
 					</div>
 				</div>
 				<div class="panels">
-					<div id="panel2" class="page">
+					<div hidden
+					id="panel3" class="page">
 					<div class="bar"></div>
 					<div class="panel-in">
 					<div class="text">
+				       	 <p>VT social blog here</p>
+					 <div class="vt-social">
+						
+								
 
+					</div>
+					</div>
+					</div>
+					</div>
+					<div id="panel4" class="page">
+					<div class="bar"></div>
+					<div class="panel-in">
+					<div class="gallery">
+					<!-- not fully implimented!-->
+						<h3>Newest artwork</h3>
+						<img src="images/desert_rain_frog.png"> 
+					</div>
 					</div>
 					</div>
 					</div>
@@ -177,6 +226,8 @@ this website is very much <br> a <mark>work-in-progress</mark>
 	   </footer>
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src=".\scripts\dom.js"></script>
+    
+    <script src=".\scripts\homepage.js"></script>
     <script src=".\scripts\script.js"></script>
     <script>IframeBuilder("grat_grot10_berg");</script>
     <script>RSSBlogBuilder("https://vt.social/@Grat10berg.rss");</script>

@@ -36,10 +36,32 @@ tab4.addEventListener("click", function(){
 	}	
 })
 
-/* clock for homepage */
 let clock = $$.id("clocktext");
-clockRefresh();
+refreshing();
+	/*very refreshing, also refreshes anything and stops if not shown*/
+function refreshing() {
 
+	clockRefresh(); // update clock	
+	
+	if(document.hidden == false) {
+		// restart the animated favicon
+	$$.id("favicon").setAttribute("href",
+		"./images/webicon.gif");
+
+	setTimeout("refreshing()", 100);
+	}
+	else {
+		// stop animated favicon and replace with inactive ver
+	$$.id("favicon").setAttribute("href",
+		"./images/webicon_inactive.png");
+		
+	setTimeout("refreshing()", 300);	
+	}
+	
+}
+
+
+/* clock for homepage */
 function clockRefresh(){
 
 const date = new Date();
@@ -54,29 +76,5 @@ const date = new Date();
 	 * i'm just testing
 	**/ 
 	let ampm = (hours >= 12) ? "PM" : "AM";
-
 	clock.innerHTML = hours +":"+minutes+" "+ampm;	
-	setTimeout("clockRefresh()", 100);
 }
-
-
-/* web worker, work in progress
-if (typeof(Worker) !== "undefined") {
-	if(typeof(w) == "undefined") {
-		w = new Worker("webworker.js");
-
-		w.onmessage = function(event) {
-			console.log(event.data);
-			clock.innerHTML = event.data;	
-		}
-
-		w.onerror = function(event) {
-			console.log(event.message);	
-		}
-	}
-}
-else {
-	$$.log("your browser does not support Web Workers"+
-		", the clock on this page won't work");
-}
-*/

@@ -48,14 +48,14 @@ function refreshing() {
 	$$.id("favicon").setAttribute("href",
 		"./images/webicon.gif");
 
-	setTimeout("refreshing()", 100);
+	setTimeout("refreshing()", 500);
 	}
 	else {
 		// stop animated favicon and replace with inactive ver
 	$$.id("favicon").setAttribute("href",
 		"./images/webicon_inactive.png");
 		
-	setTimeout("refreshing()", 300);	
+	setTimeout("refreshing()", 900);	
 	}
 	
 }
@@ -63,18 +63,13 @@ function refreshing() {
 
 /* clock for homepage */
 function clockRefresh(){
-
-const date = new Date();
-	let hours = date.getHours();
-	let minutes = date.getMinutes();
-
-	if(date.getMinutes.length == 1) {
-		// makes 3 into 03
-		minutes = "0" + minutes;
-	}
-	/*Tetenary Operator, Don't use these
-	 * i'm just testing
-	**/ 
-	let ampm = (hours >= 12) ? "PM" : "AM";
-	clock.innerHTML = hours +":"+minutes+" "+ampm;	
+		/*seems largely ineffective..*/
+	const dateNow = new Date().toLocaleString();
+		// 6:14:46 PM
+	let timeres = dateNow.split(",")[1];
+		// 6:16 PM
+	let time = timeres.split(":")[0]+":"+timeres.split(":")[1]+
+		" "+timeres.split(":")[2].split(" ")[1];
+	
+	clock.innerHTML = time;	
 }

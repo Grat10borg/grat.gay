@@ -288,8 +288,9 @@ a{
 .content .center .main {
 	margin: 0 1.5rem 0rem 0rem;
 	width: 75%;
+	height: 34rem;	
 	display: block;
-	margin-bottom: 4rem;	
+	margin-bottom: 2rem;	
 }
 
 .content .center .main .tabs {
@@ -356,9 +357,6 @@ a{
 .tab4:hover {
 	background: var(--content-main-tabteal2-hover);
 }
-.tabspacing {
-	margin-top: var(--tab-spacing);
-}
 
 .content .center .main .tabs div:last-of-type p, 
 .content .center .main .tabs div:first-of-type p {
@@ -368,7 +366,8 @@ a{
 
 .content .center .main .panels {
 	display: block;
-	width: 100%;
+		/*max minus the margin sidebar has*/
+	width: calc(100% - 1.5rem); 
 	position: relative;
 }
 

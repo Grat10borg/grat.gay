@@ -432,9 +432,13 @@ a{
 .panel-in .text {
 	display: block;
 	width: 50%;
+	overflow-y: scroll; /*incase user expands all details*/
 }
 
-.panel-in .text h1, .panel-in .text h2, .panel-in .gallery h3 {
+.panel-in .text h1, 
+.panel-in .text h2,
+.panel-in .text h3,
+.panel-in .gallery h4 {
 	font-size: 34px;	
 	font-family: var(--atkinson);
 	margin: 15px 0 15px 15px;
@@ -446,6 +450,37 @@ a{
 	font-family: var(--atkinson);
 	margin: 15px 0 15px 15px;
 	color: var(--content-main-panel-fontcolor);
+}
+
+ /*for the extra.txt tab*/
+.panel-in .text ul {
+	list-style: none;
+	margin-left: 15px;
+	font-family: var(--atkinson);
+	color: var(--content-main-panel-fontcolor);
+}
+
+.panel-in .text ul li {
+	font-size: 20px;
+}
+.panel-in .text ul li a {
+	color: #b23c40;
+}
+
+.panel-in .text ul li details {
+	cursor: grab; 
+	font-weight: 600;
+}
+
+.panel-in .text ul li details ul {
+	cursor: initial; /*makes cursor act normally*/
+	list-style: square;
+	margin-left: 30px;
+
+}
+
+.panel-in .text ul li details ul li {
+	font-weight: 400;
 }
 
 .panel-in .image {

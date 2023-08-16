@@ -1,5 +1,7 @@
 /*this is only used on the Homepage*/
 
+mastofeed("https://vt.social/@Grat10berg.rss");	
+
 let tab1 = $$.id("tabs1");
 let tab2 = $$.id("tabs2");
 let tab3 = $$.id("tabs3");
@@ -65,6 +67,7 @@ function refreshing() {
 function clockRefresh(){
 		/*seems largely ineffective..*/
 	const dateNow = new Date().toLocaleString();
+	/*$$.log(dateNow);*/
 		// 6:14:46 PM
 	let timeres = dateNow.split(",")[1];
 		// 6:16 PM
@@ -72,4 +75,14 @@ function clockRefresh(){
 		" "+timeres.split(":")[2].split(" ")[1];
 	
 	clock.innerHTML = time;	
+}
+
+	// gets a Mastodon feed
+async function mastofeed(url) {
+  let vtfeedDiv = $$.id("VTfeed");
+  let vtSocialRss = await $$.api(url);
+  $$.log(vtSocialRss);
+  let Toots = $$.tag($$.tag(vtSocialRss,"channel")[0], "item");
+  $$.log(Toots);
+
 }

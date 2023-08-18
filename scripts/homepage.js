@@ -83,6 +83,50 @@ async function mastofeed(url) {
   let vtSocialRss = await $$.api(url);
   $$.log(vtSocialRss);
   let Toots = $$.tag($$.tag(vtSocialRss,"channel")[0], "item");
-  $$.log(Toots);
+ 	
+  for (let index = 0; index < Toots.length; index++) {
+ 	$$.log(Toots[index]);	
+	  
+    let ContentDiv = $$.make("div");
+    ContentDiv.classList.add("vttoot");
+    ContentDiv.insertAdjacentHTML("beforeend", 
+    $$.tag(Toots[index],"description")[0].textContent);
+    $$.log(ContentDiv);
+
+
+    let link = $$.make("a");
+    link.href = $$.tag(Toots[index], "link")[0].innerHTML
+    link.innerHTML = "post from VT.Social (Mastodon)";
+    //link.innerHTML = "Orginal post -> "+ 
+    //$$.tag(Toots[index], "link")[0].innerHTML as string
+    link.classList.add("rsslink");
+    if($$.tag(Toots[index], "media:content").length > 0){
+    let imgdata = $$.tag(Toots[index], "media:content");
+    
+    if(imgdata[0]["attributes"][1].textContent == "video/mp4") {
+	let vid = $$.make("video");
+	vid.controls=true;
+	vid.autoplay=true;
+	vid.loop=true; // !! should be checked if its a Gif or Video!!
+	let source = $$.make("source");
+    	source.src = imgdata[0]["attributes"][0].textContent;
+    	source.type = imgdata[0]["attributes"][1].textContent;
+    	vid.append(source);
+	ContentDiv.append(vid);
+    }
+    else{
+    	let img = $$.make("img");
+    	img.src = imgdata[0]["attributes"][0].textContent;
+    	img.alt = imgdata[0].children[1].textContent;	
+	img.title = imgdata[0].children[1].textContent;
+    	ContentDiv.append(img);
+    }
+    }
+    
+    ContentDiv.append(link);
+    $$.id("rssblog_import")?.append(ContentDiv);
+    if (index == 9) return;   
+  }
+
 
 }

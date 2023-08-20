@@ -435,6 +435,35 @@ a{
 	overflow-y: scroll; /*incase user expands all details*/
 }
 
+	/*VT social feed (in panel-in)*/
+.panel-in .vt-social {
+	display: block;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.panel-in .vt-social .vttoot {
+	padding: 10px 0 10px 0;
+}
+
+.vttoot {
+	background-color: aliceblue;
+}
+.vttoot:nth-child(odd) {
+	background-color: blueviolet;
+}
+
+.panel-in .vt-social .vttoot p {
+	margin: 0 0 10px 10px;
+	font-size: 18px;
+}
+
+.panel-in .vt-social .vttoot img {	
+	width: 80%;
+	margin: auto;
+	display: block;
+}
+
 .panel-in .text h1, 
 .panel-in .text h2,
 .panel-in .text h3,

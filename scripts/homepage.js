@@ -96,7 +96,7 @@ async function mastofeed(url) {
 
     let link = $$.make("a");
     link.href = $$.tag(Toots[index], "link")[0].innerHTML
-    link.innerHTML = "post from VT.Social (Mastodon)";
+    link.innerHTML = "Origin";
     //link.innerHTML = "Orginal post -> "+ 
     //$$.tag(Toots[index], "link")[0].innerHTML as string
     link.classList.add("rsslink");
@@ -124,7 +124,7 @@ async function mastofeed(url) {
     }
     
     ContentDiv.append(link);
-    $$.id("rssblog_import")?.append(ContentDiv);
+    $$.id("VTfeed")?.append(ContentDiv);
     if (index == 9) return;   
   }
 

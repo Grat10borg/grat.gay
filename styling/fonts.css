@@ -21,3 +21,11 @@
   src: url('TinyUnicode.ttf');
 }
 
+/* fontface vars */
+:root {
+	/*atkinson is a good general font, very readable*/
+--atkinson: 'Atkinson-Hyperlegible', monospace;
+--helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
+--tinyuni: 'TinyUnicode', monospace; /* small pixels */
+--minimal: 'Minimal4', monospace; /*smallest pixels*/
+}

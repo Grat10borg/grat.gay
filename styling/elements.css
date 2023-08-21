@@ -1,0 +1,87 @@
+/*This file is for containing all basic element styling*/
+@import 'palette.css';
+
+/*inbuilt browser styling, and mark*/
+::selection, ::-moz-selection, mark {
+	background: var(--text-select-bg);
+	color: var(--text-select);
+}
+
+
+/*basic elements*/
+
+a {
+	text-decoration: none;
+	font-family: var(--atkinson);
+}
+	/*for custom style on an audio player
+	 * you'll need to make your own*/
+aside, audio {
+	display: block;
+}
+	
+button { /*unsure what to add here yet*/
+	display: block;
+}
+
+
+
+/*rarer tags */
+
+address {
+	color: var(--font-color);
+	display: block;
+	font-style: italic;
+}
+	/*used inside the <map> tag*/
+area {
+	display: none;
+}
+	/*used when citing sources*/
+blockquote {
+	margin: 0;
+	display: block;
+	color: var(--font-color);
+}
+
+/*elements in <p> tags*/
+
+p {
+	font-family: var(--atkinson);
+}
+
+mark, abbr, b, bdi, strong, em, q, i, small, sub, sup, samp {
+	background-color: none;
+	font-style: normal;
+	text-decoration: none;
+	display: inline;		
+}
+	/*abbriviation & definition*/
+abbr, dfn {
+	text-decoration: underline dotted;
+	color: var(--content-main-fontcolor);
+}
+
+b, strong {
+	font-weight: 700;
+	color: var(--font-color);
+}
+
+bdi, bdo { 
+	/*bdi is good for isolating weird fonts, 
+	bdo can control reading direction*/
+	unicode-bidi: bidi-override;
+}
+
+q, em, i {
+	font-style: italic;
+	color: var(--font-color);
+}
+
+
+/*<form> elements*/
+
+/*elements which do nothing or are SEO*/
+article {
+
+}

@@ -1,4 +1,6 @@
+@import 'palette.css';
 @import 'fonts.css';
+@import 'elements.css'; /*basic element styling*/
 
 /*
  #rejoice! for the robot dance is: ON 
@@ -9,71 +11,6 @@
 /* also hiii Grat here thanks for checking out my site!! */
 
 :root {
-/* fontface vars */
-	/*atkinson is a good general font, very readable*/
---atkinson: 'Atkinson-Hyperlegible', monospace;
---helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
---tinyuni: 'TinyUnicode', monospace; /* small pixels */
---minimal: 'Minimal4', monospace; /*smallest pixels*/
- /*incase i add more flags, make it its own file...*/
---transflag-bg: linear-gradient(to right, 
-	#8cdaff 0%,
-	#8cdaff 20%,
-	#ffa5d5 20%,
-	#ffa5d5 40%,
-	#fff 40%,
-	#fff 60%,
-	#ffa5d5 60%,
-	#ffa5d5 80%,
-	#8cdaff 80%, 
-	#8cdaff 100%);
-
---text-select: #12173d;
---text-select-bg: #b7fff4;
-
-
-/*--hp-bg-color: #e1e6fe;*/
---hp-bg-color: url(./homepagebg.png);
---hp-main-bg-color: #ffff;
-
- /*nav colors*/
---nav-bg: #293268;
---nav-bg-hover: #464b8c;
---nav-text: #78fae6;
---nav-text-hover: #b1fff3;
---nav-current-text: #ffe091;
---nav-current-text-hover: #ffefc5;
-
- /*main/content colors*/
---content-border: #c1d9f2;
---content-sidenav: #293268;
---content-sidenav-2: #909edd;
---content-sidenav-clockbg: #c1d9f2;
---content-sidenav-textareabg: #c1d9f2;
---content-sidenav-split: #ffaa6e;
---content-main-tabblue1: #50b9eb;
---content-main-tabblue2: #3e83d1;
---content-main-tabblue1-hover: #27d3cb;
---content-main-tabblue2-hover: #00aaa5;
---content-main-tabteal1: #27d3cb;
---content-main-tabteal2: #00aaa5;
---content-main-tabteal1-hover: #50b9eb;
---content-main-tabteal2-hover: #3e83d1;
---content-main-fontcolor: #464b8c;
---content-main-fontcolor-alt: #909edd;
---content-main-tab-bg: white;
---content-main-panel-titlecolor: #464b8c;
---content-main-panel-fontcolor: #464b8c;
-
- /*VTsocial blog*/
---main-toot-color: #fff;
---secondary-toot-color: #c1d9f2;
---blog-bg: #909edd;
---origin-link-color: #ff6fbc; 
-
- /*footer colors*/
---footer-bg: #293268;
-
 
 --page-width: 60vw;
 --content-page-width: calc(var(--page-width)- 10px);
@@ -85,24 +22,10 @@
 --tab-spacing: 5rem; /*spacing for the second tab*/
 }
 
-::-moz-selection {
-	color: var(--text-select);
-	background: var(--text-select-bg);
-}
-::selection, mark{
-	color: var(--text-select);
-	background: var(--text-select-bg);
-}
-
 * {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
-a{
- text-decoration: none;
-}
-
 
 .pixelart { /*make that pixelart look chrisp!*/
 	image-rendering: pixelated;
@@ -256,7 +179,6 @@ a{
 	font-size: 1.1rem;
 	margin-left: 2rem;
 	margin-bottom: 1rem;
-	font-family: var(--atkinson);
 	color: var(--content-sidenav-textareabg);
 }
 .content .center .side .text p::before{
@@ -328,7 +250,6 @@ a{
 .content .center .main .tabs .tab2 p, 
 .content .center .main .tabs .tab3 p, 
 .content .center .main .tabs .tab4 p {
-	font-family: var(--atkinson);
 	font-size: 1.2rem;
 	pointer-events: none;
 } 

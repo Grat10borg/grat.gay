@@ -1,6 +1,6 @@
-/*this is only used on the Homepage*/
 
-mastofeed("https://vt.social/@Grat10berg.rss");	
+
+refreshing();
 
 let tab1 = $$.id("tabs1");
 let tab2 = $$.id("tabs2");
@@ -12,6 +12,7 @@ let panel2 = $$.id("panel2");
 let panel3 = $$.id("panel3");
 let panel4 = $$.id("panel4");
 
+if(tab1 != null && tab1 != undefined) {
 tab1.addEventListener("click", function(){
 	if(panel1.hidden == true){
 		panel1.hidden=false;
@@ -38,12 +39,15 @@ tab4.addEventListener("click", function(){
 	}	
 })
 
-let clock = $$.id("clocktext");
-refreshing();
+// only run on homepage
+mastofeed("https://vt.social/@Grat10berg.rss");	
+}
+
 	/*very refreshing, also refreshes anything and stops if not shown*/
 function refreshing() {
 
 	clockRefresh(); // update clock	
+	 
 	
 	if(document.hidden == false) {
 		// restart the animated favicon
@@ -65,9 +69,10 @@ function refreshing() {
 
 /* clock for homepage */
 function clockRefresh(){
-		/*seems largely ineffective..*/
+	let clock = $$.id("clocktext");
+	/*seems largely ineffective..*/
+	if(clock != null && clock != undefined) {
 	const dateNow = new Date().toLocaleString();
-	/*$$.log(dateNow);*/
 		// 6:14:46 PM
 	let timeres = dateNow.split(",")[1];
 		// 6:16 PM
@@ -75,6 +80,7 @@ function clockRefresh(){
 		" "+timeres.split(":")[2].split(" ")[1];
 	
 	clock.innerHTML = time;	
+	}
 }
 
 	// gets a Mastodon feed
@@ -127,6 +133,4 @@ async function mastofeed(url) {
     $$.id("VTfeed")?.append(ContentDiv);
     if (index == 9) return;   
   }
-
-
 }

@@ -65,6 +65,11 @@
 --content-main-panel-titlecolor: #464b8c;
 --content-main-panel-fontcolor: #464b8c;
 
+ /*VTsocial blog*/
+--main-toot-color: #fff;
+--secondary-toot-color: #c1d9f2;
+--blog-bg: #909edd;
+--origin-link-color: #ff6fbc; 
 
  /*footer colors*/
 --footer-bg: #293268;
@@ -440,28 +445,43 @@ a{
 	display: block;
 	width: 100%;
 	overflow-y: scroll;
+	background-color: var(--blog-bg);
 }
 
 .panel-in .vt-social .vttoot {
 	padding: 10px 0 10px 0;
+	margin: 10px 0 10px 0;
+}
+
+.vt-social .vttoot:first-child, .vt-social .vttoot:last-child {
+	margin: 0;
 }
 
 .vttoot {
-	background-color: aliceblue;
+	background-color: var(--main-toot-color);
 }
-.vttoot:nth-child(odd) {
-	background-color: blueviolet;
+.vttoot:nth-child(even) {
+	background-color: var(--secondary-toot-color);
 }
 
 .panel-in .vt-social .vttoot p {
 	margin: 0 0 10px 10px;
 	font-size: 18px;
+	color: var(--content-main-fontcolor);
 }
 
 .panel-in .vt-social .vttoot img {	
-	width: 80%;
+	max-width: 80%;
+	max-height: 600px;
 	margin: auto;
 	display: block;
+}
+
+.panel-in .vt-social .vttoot a {
+	text-align: right;
+	display: block;
+	margin-right: 10px;
+	color: var(--origin-link-color);
 }
 
 .panel-in .text h1, 

@@ -423,7 +423,7 @@
 }
 
  /*for the extra.txt tab*/
-.panel-in .text ul {
+.panel-in .text > ul {
 	list-style: none;
 	margin-left: 15px;
 	font-family: var(--atkinson);
@@ -435,22 +435,6 @@
 }
 .panel-in .text ul li a {
 	color: #b23c40;
-}
-
-.panel-in .text ul li details {
-	cursor: grab; 
-	font-weight: 600;
-}
-
-.panel-in .text ul li details ul {
-	cursor: initial; /*makes cursor act normally*/
-	list-style: square;
-	margin-left: 30px;
-
-}
-
-.panel-in .text ul li details ul li {
-	font-weight: 400;
 }
 
 .panel-in .image {

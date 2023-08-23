@@ -10,53 +10,37 @@
 
 /*basic elements*/
 
+p,a,ul,ol,details {
+	font-family: var(--atkinson);
+}
+
 a {
 	text-decoration: none;
-	font-family: var(--atkinson);
-}
-	/*for custom style on an audio player
-	 * you'll need to make your own*/
-aside, audio {
-	display: block;
-}
-	
-button { /*unsure what to add here yet*/
-	display: block;
 }
 
-
-
-/*rarer tags */
-
-address {
-	color: var(--font-color);
-	display: block;
-	font-style: italic;
-}
-	/*used inside the <map> tag*/
-area {
-	display: none;
-}
-	/*used when citing sources*/
-blockquote {
-	margin: 0;
-	display: block;
-	color: var(--font-color);
+a:hover{
+	text-decoration: dashed underline;
 }
 
+ul {
+	list-style: square;
+}
+
+details * {
+	cursor: initial;
+	font-weight: 400; /*normal weight*/
+}
+details summary {
+	cursor: grab; 
+	font-weight: 600; /*semi bold*/
+}
+details ul {
+	list-style: square;
+	margin-left: 30px;
+}
+
+/*abbriviation & definition*/
 /*elements in <p> tags*/
-
-p {
-	font-family: var(--atkinson);
-}
-
-mark, abbr, b, bdi, strong, em, q, i, small, sub, sup, samp {
-	background-color: none;
-	font-style: normal;
-	text-decoration: none;
-	display: inline;		
-}
-	/*abbriviation & definition*/
 abbr, dfn {
 	text-decoration: underline dotted;
 	color: var(--content-main-fontcolor);

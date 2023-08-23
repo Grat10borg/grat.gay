@@ -43,6 +43,7 @@ details ul {
 /*elements in <p> tags*/
 abbr, dfn {
 	text-decoration: underline dotted;
+	cursor:help;
 	color: var(--content-main-fontcolor);
 }
 

@@ -17,7 +17,6 @@
 
 --page-nav-width: var(--page-width);
 --page-nav-bar-width: calc(var(--page-nav-width) - 48vw);
-	/*this code is stupid, Too bad!*/
 --page-height: 80rem;
 --tab-spacing: 5rem; /*spacing for the second tab*/
 }

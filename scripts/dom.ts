@@ -13,6 +13,7 @@ query_all: $.querySelectorAll.bind($),
 // custome methods bellow this
 api: ApiCall.bind($),
 tag: tag.bind($),
+txt: fetchTXT.bind($), //async
 
 // just here to help me out when working.
 log: console.log,
@@ -20,6 +21,23 @@ log: console.log,
 
 function tag(element: any, find:string) {
 return element.getElementsByTagName(find);
+}
+
+// a little wonky but the response promise did not want to play along..
+async function fetchTXT(Url:string) {
+  await fetch(Url)
+  .then(response => response.text())
+  .then((txt) => {    
+    //return txt;
+    let textarea = $$.make("textarea");
+    textarea.textContent = txt;
+    textarea.id = Url;
+    textarea.hidden = true;
+    $.body.append(textarea);
+  })
+  let text = $$.id(Url).innerHTML;
+  $$.id(Url).outerHTML = ""; // remove textarea again
+  return text;
 }
 
 // Calls Twitch API or another API if turned on

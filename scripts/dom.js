@@ -1,44 +1,62 @@
-"use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
+// Shorthand Dom versions
 const $ = document;
 const $$ = {
-    dom: document,
-    id: $.getElementById.bind($),
-    class: $.getElementsByClassName.bind($),
-    make: $.createElement.bind($),
-    query: $.querySelector.bind($),
-    query_all: $.querySelectorAll.bind($),
-    api: ApiCall.bind($),
-    tag: tag.bind($),
-    log: console.log,
-};
+dom: document,
+
+// document methods
+id: $.getElementById.bind($),
+class: $.getElementsByClassName.bind($),
+make: $.createElement.bind($),
+query: $.querySelector.bind($),
+query_all: $.querySelectorAll.bind($),
+
+// custome methods bellow this
+api: ApiCall.bind($),
+tag: tag.bind($),
+txt: fetchTXT.bind($), //async
+
+// just here to help me out when working.
+log: console.log,
+}
+
 function tag(element, find) {
-    return element.getElementsByTagName(find);
+return element.getElementsByTagName(find);
 }
-function ApiCall(HttpCall) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const respon = yield fetch(`${HttpCall}`, {
-            headers: {
-                "Content-Type": "application/rss+xml; charset=utf-8",
-            },
-        })
-            .then((respon) => respon.text())
-            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-            .then((data) => {
-            return data;
-        })
-            .catch((err) => {
-            $$.log(err);
-            return err;
-        });
-        return respon;
+
+// a little wonky but the response promise did not want to play along..
+async function fetchTXT(Url) {
+  await fetch(Url)
+  .then(response => response.text())
+  .then((txt) => {    
+    //return txt;
+    let textarea = $$.make("textarea");
+    textarea.textContent = txt;
+    textarea.id = Url;
+    textarea.hidden = true;
+    $.body.append(textarea);
+  })
+  let text = $$.id(Url).innerHTML;
+  $$.id(Url).outerHTML = ""; // remove textarea again
+  return text;
+}
+
+// Calls Twitch API or another API if turned on
+async function ApiCall(HttpCall) {
+    const respon = await fetch(`${HttpCall}`, {
+      headers: {
+        "Content-Type": "application/rss+xml; charset=utf-8",
+      },
+    })
+  .then((respon) => respon.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then((data) => {
+      // Return Response on Success
+      return data;
+    })
+    .catch((err) => {
+      // Print Error if any. And return 0
+      $$.log(err);
+      return err;
     });
-}
+  return respon;
+  }

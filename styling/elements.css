@@ -38,7 +38,9 @@ details ul {
 	list-style: square;
 	margin-left: 30px;
 }
-
+details ul li:last-child {
+	margin-bottom: 0.7rem;
+}
 /*abbriviation & definition*/
 /*elements in <p> tags*/
 abbr, dfn {

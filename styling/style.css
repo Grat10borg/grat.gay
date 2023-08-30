@@ -154,12 +154,52 @@
 }
 
 .content .center .commisions .reveal {
-	animation: comm_reveal 5s linear 2s infinite alternate;	
+	
+	/*animation: comm_reveal 5s linear 2s infinite alternate;*/	
 	margin-top: 1.5rem;
 	border-top: dashed var(--content-comm-borderhide-color);
 	width: 100%;
-	min-height: 5px;
 }
+.slidemove {
+	animation-name: comm_reveal;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+}
+
+.slide {
+	position: absolute;
+	width: var(--page-width);
+	height: 100px;	
+}
+/*not due to the way html is read the latest one is on top*/
+.slide:nth-child(6) {
+	/*this is whats shown by default.*/
+	animation-delay: 2s;
+	background: white;
+}
+.slide:nth-child(5), .slide:nth-child(1) {
+ 	background: var(--transflag-blue);	
+}
+.slide:nth-child(4), .slide:nth-child(2) {
+	background: var(--transflag-pink);
+}
+.slide:nth-child(5) {
+	animation-delay: 4s;
+}
+.slide:nth-child(4) {
+	animation-delay: 6s;
+}
+.slide:nth-child(3) {
+	animation-delay: 8s;
+	background: gray;
+}
+.slide:nth-child(2) {
+	animation-delay: 10s;
+}
+.slide:nth-child(1) {
+	animation-delay: 12s;
+}
+
 	/*this isn't prettyy... i wanted to use 
 	* last/first of type but it won't workkk*/
 #sidebg1{
@@ -523,9 +563,9 @@
 /*Keyframe animations*/
 @keyframes comm_reveal  {
 	from {
-	background-color: aliceblue;
-	height: 100%;}
-	to {
-	background-color: aqua;
-	height: 0;}
+		transform:translateY(0);
+	}
+	to { 
+		transform: translateY(100px);
+	}
 }

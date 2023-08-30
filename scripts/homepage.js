@@ -134,3 +134,23 @@ async function mastofeed(url) {
     if (index == 9) return;   
   }
 }
+	/*if a siteUpdates textarea is on this page*/
+if($$.id("siteUpdate") != undefined) {
+	async function siteUpdate() {
+		let textarea = $$.id("siteUpdate");
+		textarea.innerHTML = await $$.txt
+		("../txt/siteUpdates.txt");		
+	}
+	siteUpdate();
+}
+
+	/*this is used on commisions.html*/
+if($$.id("agrred") != undefined) {
+	$.addEventListener("click", function(e){
+		let slideAnimation = $$.query_all(".slide");
+		console.log(slideAnimation);
+		slideAnimation.forEach((slide) => 
+		slide.classList.add("slidemove"));
+
+	});
+}

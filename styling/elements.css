@@ -10,7 +10,7 @@
 
 /*basic elements*/
 
-p,a,ul,ol,details {
+p,a,ul,ol,details,label {
 	font-family: var(--atkinson);
 }
 

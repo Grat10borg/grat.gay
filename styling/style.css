@@ -137,6 +137,66 @@
 	width: 100%;
 }
 
+.content .center .commisions .pretext {
+	font-size: 18px;	
+	color: var(--content-main-fontcolor);
+}
+
+
+.content .center .commisions .pretext .textImg {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.content .center .commisions .pretext .textImg div:first-child, 
+.content .center .commisions .pretext .textImg div:last-child {
+	width: 50%;
+}
+
+.content .center .commisions .pretext .textImg div:first-child {
+	margin: 0 0 0 2rem;
+}
+
+/*figure out a better way to put images on the side*/
+.content .center .commisions .pretext .textImg div:last-child {
+	margin-left: 10%;
+	display: block;
+
+}
+.content .center .commisions .pretext .textImg div:last-child img {
+	max-width: 20rem;
+	border-radius: 15px;
+	border: 10px solid var(--content-comm-borderhide-color);
+	margin: 1rem 0 1rem 0;
+}
+.content .center .commisions .pretext .textImg 
+div:last-child img:first-of-type {
+	margin-right: 2rem;
+}
+
+.content .center .commisions .pretext .textImg 
+div:last-child img:last-of-type {
+	margin-left: 2rem;
+}
+
+.content .center .commisions .pretext .detailDiv {
+	margin: 0 3rem 0 3rem; /*add margin to the sides*/
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 3rem;
+}
+
+.content .center .commisions .pretext .detailDiv details {
+	width: 30%;
+}
+.content .center .commisions .pretext .detailDiv details summary {
+	text-align: center;
+}
+.content .center .commisions .pretext .detailDiv details p:first-of-type {
+	margin: 1rem 0 0 0;
+	font-weight: bold;
+}
+
 .content .center .commisions .terms {
 	/*fill whole block*/
 	margin: auto; 

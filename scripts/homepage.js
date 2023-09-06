@@ -52,14 +52,14 @@ function refreshing() {
 	if(document.hidden == false) {
 		// restart the animated favicon
 	$$.id("favicon").setAttribute("href",
-		"./images/webicon.gif");
+		"/images/webicon.gif");
 
 	setTimeout("refreshing()", 500);
 	}
 	else {
 		// stop animated favicon and replace with inactive ver
 	$$.id("favicon").setAttribute("href",
-		"./images/webicon_inactive.png");
+		"/images/webicon_inactive.png");
 		
 	setTimeout("refreshing()", 900);	
 	}

@@ -117,12 +117,12 @@
 	width: var(--content-page-width); 
 
 	/*remove later*/
-	height: var(--page-height);
+	/*height: var(--page-height);*/
 }
 
 	/* used when displaying both a main and a side nav */
 .content .center {
-	padding-top: 50px;
+	padding: 40px 0 40px 0;
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -133,7 +133,7 @@
 	border-radius: 15px;
 	padding-bottom: 15px;
 }
-.content .center .commisions {
+.content .center .commisions, .content .center .socials {
 	width: 100%;
 }
 
@@ -231,6 +231,57 @@ div:last-child img:last-of-type {
 	width: var(--page-width);
 	height: 100px;	
 }
+
+.content .center .socials {
+	color: var(--content-main-fontcolor);
+	margin: 0 0 0 2rem;
+	/*to stop details from pushing scroll bar away*/
+	min-height: 80vh;
+	display: block;
+}
+
+.content .center .socials .sideBySide {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.content .center .socials .details h1 {
+	margin: 0 0 1rem 2rem;
+	display: block;
+}
+
+.content .center .socials .details details {
+	background-color: azure;
+	border-radius: 10px 10px 0 0;
+	margin: 1rem 0 0 0;
+	font-size: 18px;
+	min-width: 20rem;
+	max-width: 25rem;
+}
+
+.content .center .socials .details details summary {
+	padding: 5px 0 0 0;
+	margin: 0 0 0 10px;
+}
+
+.content .center .socials .details details p {
+	margin: 10px 0 10px 10px;
+}
+
+.content .center .socials .details details a {
+	cursor: grab;
+	padding: 1rem;
+	background-color: whitesmoke;
+	border-radius: 0 0 15px 15px;
+	display: block;
+	text-align: center;
+	color: var(--origin-link-color);
+}
+.content .center .socials .sideImg img{
+	width: 100%;
+}
+
 /*not due to the way html is read the latest one is on top*/
 .slide:nth-child(6) {
 	/*this is whats shown by default.*/
@@ -317,12 +368,25 @@ div:last-child img:last-of-type {
 	margin: auto;
 	display: block;
 }
+
+/*css code that makes hovered over images blue*/
+.content .center .side .banners .bannerhov:hover {
+	margin: 0;
+	padding: 0;
+	background: cornflowerblue;
+	opacity: 25%;
+}
+
+.content .center .side .banners a, .content .center .side .banners img {
+	margin: auto;
+	display: block;
+}
+
 .content .center .side .banners img {
 	width: 100%;
 }
 .content .center .side .banners img:hover {
-	filter: brightness(80%);
-
+	filter: grayscale(100%) brightness(110%); 
 	/* i wanted the images to turn grayscale blue*/	
 	/*filter: hue-rotate(180deg) grayscale(40%);*/
 }

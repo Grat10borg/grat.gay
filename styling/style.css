@@ -272,12 +272,103 @@ div:last-child img:last-of-type {
 .content .center .socials .details details a {
 	cursor: grab;
 	padding: 1rem;
-	background-color: whitesmoke;
+	/*background-color: whitesmoke;*/
 	border-radius: 0 0 15px 15px;
 	display: block;
 	text-align: center;
-	color: var(--origin-link-color);
+	color: white;
+	transition: ease-in-out;
+	text-transform:capitalize;
 }
+.details details a:hover {
+	text-decoration: none;
+}
+	
+	/*detail buttons*/
+.details .yt a {
+	background: var(--link-yt-color);	
+}
+.details .yt a:hover {
+	background: var(--link-yt-color);
+}
+
+.details .tw a {
+	background: var(--link-tw-color);
+}
+.details .tw a:hover {
+	background: var(--link-tw-color);
+}
+
+.details .vt a {
+	background: var(--link-vt-color);
+}
+.details .vt a:hover {
+	background: var(--link-vt-color);
+}
+
+.details .yp a {
+	background: var(--link-yp-color);
+}
+.details .yp a:hover {
+	background: var(--link-yp-color);
+}
+
+.details .tu a {
+	background: var(--link-tu-color);
+}
+.details .tu a:hover {
+	background: var(--link-tu-color);
+}
+
+.details .ng a {
+	background: var(--link-ng-color);
+}
+.details .ng a:hover {
+	background: var(--link-ng-color);
+}
+
+.details .sg a {
+	background: var(--link-sg-color);
+}
+.details .sg a:hover {
+	background: var(--link-sg-color);
+}
+
+.details .pi a {
+	background: var(--link-pi-color);
+}
+.details .pi a:hover {
+	background: var(--link-pi-color);
+}
+
+.details .di a {
+	background: var(--link-di-color);
+}
+.details .di a:hover {
+	background: var(--link-di-color);
+}
+
+.details .it a {
+	background: var(--link-it-color);
+}
+.details .it a:hover {
+	background: var(--link-it-color);
+}
+
+.details .gi a {
+	background: var(--link-gi-color);
+}
+.details .gi a:hover {
+	background: var(--link-gi-color);
+}
+
+.details .ko a {
+	background: var(--link-ko-color);
+}
+.details .ko a:hover {
+	background: var(--link-ko-color);
+}
+
 .content .center .socials .sideImg img{
 	width: 100%;
 }

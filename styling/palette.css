@@ -1,5 +1,6 @@
 :root {
 
+
 /*incase i add more flags, make it its own file...*/
 --transflag-bg: linear-gradient(to right, 
 	#8cdaff 0%,
@@ -20,7 +21,7 @@
 
 
 /*--hp-bg-color: #e1e6fe;*/
---hp-bg-color: url(./homepagebg.png);
+--hp-bg-color: url(./gears_bg.png);
 --hp-main-bg-color: #ffff;
 
  /*nav colors*/
@@ -58,6 +59,20 @@
 --secondary-toot-color: #c1d9f2;
 --blog-bg: #909edd;
 --origin-link-color: #ff6fbc; 
+
+ /*link page palette*/
+--link-yt-color: #dd3745;
+--link-tw-color: #b483ef;
+--link-vt-color: #ffa5d5;
+--link-yp-color: #a52639;
+--link-tu-color: #3e83d1;
+--link-ng-color: #ffaa6e;
+--link-sg-color: #322d89;
+--link-pi-color: #ff6eaf;
+--link-di-color: #354ab2;
+--link-it-color: #e54286;
+--link-gi-color: #12173d;
+--link-ko-color: #50b9eb;
 
  /*footer colors*/
 --footer-bg: #293268;

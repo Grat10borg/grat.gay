@@ -232,6 +232,17 @@ div:last-child img:last-of-type {
 	height: 100px;	
 }
 
+.content .center .commisions div .commitem {
+	margin-top: 2rem;
+	display: flex;
+}
+.content .center .commisions div .commitem .text {
+	width: 70%;
+}
+.content .center .commisions div .commitem .images {
+	width: 30%;
+}
+
 .content .center .socials {
 	color: var(--content-main-fontcolor);
 	margin: 0 0 0 2rem;
@@ -261,8 +272,7 @@ div:last-child img:last-of-type {
 }
 
 .content .center .socials .details details summary {
-	padding: 5px 0 0 0;
-	margin: 0 0 0 10px;
+	padding: 5px 0 0 10px;
 }
 
 .content .center .socials .details details p {
@@ -283,7 +293,16 @@ div:last-child img:last-of-type {
 .details details a:hover {
 	text-decoration: none;
 }
-	
+
+.details summary:hover {
+	border-radius: 10px 10px 0 0;
+	background: var(--content-border);
+}
+	/*custome hover colors*/
+.details .yt summary:hover {
+		
+}
+
 	/*detail buttons*/
 .details .yt a {
 	background: var(--link-yt-color);	
@@ -734,16 +753,9 @@ div:last-child img:last-of-type {
 
 }
 
-.panel-in .gallery {
-	display: block;
+.panel-in #twitch-embed {
 	width: 100%;
-}
-
-.panel-in .gallery img {
-	margin: auto;
-	display: block;
-	width: auto;	
-	max-height: 80%;
+	height: 100%;
 }
 
 	/*footer styling*/

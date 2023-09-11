@@ -41,6 +41,16 @@ tab4.addEventListener("click", function(){
 
 // only run on homepage
 mastofeed("https://vt.social/@Grat10berg.rss");	
+
+  var options = {
+    width: "100%",
+    height: "100%",
+    channel: "grat_grot10_berg",
+    muted: true,
+    // Only needed if this page is going to be embedded on other websites
+    parent: ["localhost", "neocities.org"]
+  };
+  var player = new Twitch.Player("twitch-embed", options);
 }
 
 	/*very refreshing, also refreshes anything and stops if not shown*/

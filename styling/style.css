@@ -157,6 +157,32 @@
 	margin: 0 0 0 2rem;
 }
 
+.content .center .commisions .pretext .textImg div:first-child p {
+	margin: 1rem 0 0 0;
+	font-size: 20px;
+}
+.content .center .commisions .pretext
+.textImg div:first-child p:last-child {
+	margin: 1rem 0 1rem 0;
+}
+
+.content .center .commisions .pretext
+.textImg div:first-child p a {
+	color: var(--orange-link-color);
+}
+.content .center .commisions .pretext
+.textImg div:first-child p a:hover {
+	color: var(--orange-link-color-hover);
+}
+.content .center .commisions .pretext
+.textImg div:first-child p a:active {
+	color: var(--orange-link-color-active);
+}
+.content .center .commisions .pretext
+.textImg div:first-child p a:visited {
+	color: var(--orange-link-color-visited);
+}
+
 /*figure out a better way to put images on the side*/
 .content .center .commisions .pretext .textImg div:last-child {
 	margin-left: 10%;
@@ -236,8 +262,19 @@ div:last-child img:last-of-type {
 	margin-top: 2rem;
 	display: flex;
 }
+
+/*needs to be done a bit clearner*/
 .content .center .commisions div .commitem .text {
 	width: 70%;
+	margin: 0 0 0 1rem;
+	color: var(--content-main-fontcolor);
+}
+.commitem .text p {
+	font-size: 20px;
+}
+.commitem .text .title {
+	font-weight: bold;
+	font-size: 32px;
 }
 .content .center .commisions div .commitem .images {
 	width: 30%;

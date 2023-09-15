@@ -74,6 +74,12 @@
 --link-gi-color: #12173d;
 --link-ko-color: #50b9eb;
 
+ /*misc link colors*/
+--orange-link-color: #ffaa6e;
+--orange-link-color-hover: #ffe091;
+--orange-link-color-active:#ff695a;
+--orange-link-color-visited: #854cbf;
+
  /*footer colors*/
 --footer-bg: #293268;
 

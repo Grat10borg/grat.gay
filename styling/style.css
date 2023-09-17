@@ -258,9 +258,18 @@ div:last-child img:last-of-type {
 	height: 100px;	
 }
 
+
 .content .center .commisions div .commitem {
-	margin-top: 2rem;
+	margin: 1rem 0 1rem 0;
+	padding-top: 1rem;
+
+	border-top: dotted var(--content-main-tabteal1) 5px;
 	display: flex;
+
+	
+}
+.content .center .commisions div .commitem:first-of-type {
+	border: none;
 }
 
 /*needs to be done a bit clearner*/

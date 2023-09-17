@@ -5,6 +5,7 @@
 ::selection, ::-moz-selection, mark {
 	background: var(--text-select-bg);
 	color: var(--text-select);
+	border-radius: 5px;
 }
 
 

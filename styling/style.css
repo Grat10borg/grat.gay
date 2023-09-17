@@ -276,8 +276,22 @@ div:last-child img:last-of-type {
 	font-weight: bold;
 	font-size: 32px;
 }
+
+.commitem .text section {
+	margin: 0.5rem 0 0 1rem;	
+}
+.commitem .text section p {
+	margin: 1rem 0.5rem 0 0;
+}
+
+
 .content .center .commisions div .commitem .images {
 	width: 30%;
+
+	/*makes the image smaller and more 
+	* than one image flex into a column*/
+	display: flex;
+	flex-direction: column;
 }
 
 .content .center .socials {

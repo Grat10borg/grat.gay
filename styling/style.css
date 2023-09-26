@@ -90,6 +90,10 @@
 
 }
 
+.genpage_nav ul a:active {
+	text-decoration: none;
+}
+
 .genpage_nav ul li:hover {
 	background: var(--nav-bg-hover);
 }
@@ -110,6 +114,8 @@
 .genpage_nav ul li:hover p.current {
         color: var(--nav-current-text-hover);
 }
+
+
 
 /* main page content */
 .content{

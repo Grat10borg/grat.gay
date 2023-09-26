@@ -834,6 +834,7 @@ div:last-child img:last-of-type {
 	width: calc(var(--page-width) + 20px);
 	background: var(--footer-bg);
 	border-radius: 0 0 10px 10px;
+	margin-bottom: 6rem;
 }
 .homepage_footer .upper_foot {
 	display: flex;

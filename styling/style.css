@@ -115,8 +115,6 @@
         color: var(--nav-current-text-hover);
 }
 
-
-
 /* main page content */
 .content{
 	display: block;
@@ -798,6 +796,11 @@ div:last-child img:last-of-type {
 .panel-in .text ul li {
 	font-size: 20px;
 }
+.panel-in .text ul li strong {
+	font-size: 22px;
+	font-weight: bold;
+}
+
 .panel-in .text ul li a {
 	color: #b23c40;
 }

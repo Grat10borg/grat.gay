@@ -66,6 +66,13 @@ q, em, i {
 	color: var(--font-color);
 }
 
+textarea {
+	font-family: monospace;
+	border: none;
+	resize: none;
+	outline: none;
+	overflow-y: auto;
+}
 
 /*<form> elements*/
 

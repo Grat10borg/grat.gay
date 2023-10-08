@@ -700,6 +700,13 @@ div:last-child img:last-of-type {
 	width: 100%;
 	height: 2rem;
 }
+#panel1 .bar img, #panel2 .bar img, #panel3 .bar img, #panel4 .bar img {
+	/* float close open minimize buttons to right and center*/
+	float: right;
+	margin: 5px;
+	margin-top: 8px;
+}
+	
 #panel1 .bar {
 	background: var(--content-main-tabblue1);
 }

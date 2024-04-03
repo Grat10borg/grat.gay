@@ -12,6 +12,77 @@
 
 :root {
 
+--text-select: #12173d;
+--text-select-bg: #b7fff4;
+
+/*--hp-bg-color: #e1e6fe;*/
+--hp-bg-color: url('./gears_bg.png'),
+linear-gradient(to bottom, 
+#e1e6fe 0%,
+#909edd 40%,
+#293268 70%,
+#000000);
+--hp-main-bg-color: #ffff;
+
+ /*nav colors*/
+--nav-bg: #293268;
+--nav-bg-hover: #464b8c;
+--nav-text: #78fae6;
+--nav-text-hover: #b1fff3;
+--nav-current-text: #ffe091;
+--nav-current-text-hover: #ffefc5;
+
+ /*main/content colors*/
+--content-border: #c1d9f2;
+--content-sidenav: #293268;
+--content-sidenav-2: #909edd;
+--content-sidenav-clockbg: #c1d9f2;
+--content-sidenav-textareabg: #c1d9f2;
+--content-sidenav-split: #ffaa6e;
+--content-main-tabblue1: #50b9eb;
+--content-main-tabblue2: #3e83d1;
+--content-main-tabblue1-hover: #27d3cb;
+--content-main-tabblue2-hover: #00aaa5;
+--content-main-tabteal1: #27d3cb;
+--content-main-tabteal2: #00aaa5;
+--content-main-tabteal1-hover: #50b9eb;
+--content-main-tabteal2-hover: #3e83d1;
+--content-main-fontcolor: #464b8c;
+--content-main-fontcolor-alt: #909edd;
+--content-main-tab-bg: white;
+--content-main-panel-titlecolor: #464b8c;
+--content-main-panel-fontcolor: #464b8c;
+--content-comm-borderhide-color: #464b8c;
+--content-comm-imageborder-color: #464b8c;
+ /*VTsocial blog*/
+--main-toot-color: #fff;
+--secondary-toot-color: #c1d9f2;
+--blog-bg: #909edd;
+--origin-link-color: #ff6fbc; 
+
+ /*link page palette*/
+--link-yt-color: #dd3745;
+--link-tw-color: #b483ef;
+--link-vt-color: #ffa5d5;
+--link-yp-color: #a52639;
+--link-tu-color: #3e83d1;
+--link-ng-color: #ffaa6e;
+--link-sg-color: #322d89;
+--link-pi-color: #ff6eaf;
+--link-di-color: #354ab2;
+--link-it-color: #e54286;
+--link-gi-color: #12173d;
+--link-ko-color: #50b9eb;
+
+ /*misc link colors*/
+--orange-link-color: #ffaa6e;
+--orange-link-color-hover: #ffe091;
+--orange-link-color-active:#ff695a;
+--orange-link-color-visited: #854cbf;
+
+ /*footer colors*/
+--footer-bg: #293268;
+
 --page-width: 60vw;
 --content-page-width: calc(var(--page-width)- 10px);
 

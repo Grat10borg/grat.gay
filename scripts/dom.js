@@ -23,6 +23,14 @@ function tag(element, find) {
 return element.getElementsByTagName(find);
 }
 
+let enable_twitch = false;
+
+if(enable_twitch) {
+	let script = $$.make("script");
+	script.src = "https://player.twitch.tv/js/embed/v1.js">
+	document.body.append(script);
+}
+
 // a little wonky but the response promise did not want to play along..
 async function fetchTXT(Url) {
   await fetch(Url)

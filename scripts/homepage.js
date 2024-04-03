@@ -1,5 +1,4 @@
 
-
 refreshing();
 
 let tab1 = $$.id("tabs1");
@@ -41,16 +40,19 @@ tab4.addEventListener("click", function(){
 
 // only run on homepage
 mastofeed("https://vt.social/@Grat10berg.rss");	
+}
 
-var options = {
-  width: "100%",
-  height: "100%",
-  channel: "grat_grot10_berg",
-  muted: true,
-  // Only needed if this page is going to be embedded on other websites
-  parent: ["localhost", "neocities.org"]
-};
-var player = new Twitch.Player("twitch-embed", options);
+	/* if a twitch-embed div is found, fill it with a twitch embed	*/
+if($$.query("#twitch-embed") != null && enable_twitch) {
+	var options = {
+	  width: "100%",
+	  height: "100%",
+	  channel: "grat_grot10_berg",
+	  muted: true,
+	  // Only needed if this page is going to be embedded on other websites
+	  parent: ["localhost", "neocities.org"]
+	};
+	var player = new Twitch.Player("twitch-embed", options);
 }
 
 	/*very refreshing, also refreshes anything and stops if not shown*/
@@ -93,7 +95,65 @@ function clockRefresh(){
 	}
 }
 
+	/* function for adding art srcs to art divs*/
+let artDivs = Array.from($$.query_all(".img"));
+if(artDivs.length > 0) {
+		/* embeded function because async can't run outside of it */
+	async function fetchJSON(filename) {
+
+			/* find JSON file after passed filename var */
+		let response = $$.txt("../images/art/"+filename+".json");
+		let json = JSON.parse(await response);
+		
+			/* look for all art divs of /this/ type */
+		let art = $$.query_all("."+filename+"-img");
+	
+			/* run through each art display found */
+		for(let i = 0; i < art.length; i++) {
+				/* get title & author from filename	*/
+			let imageText = json["sources"][i].split("_");
+
+				/* set hover text	*/
+			art[i].querySelector(".author").innerHTML=imageText[0];
+			art[i].querySelector(".title").innerHTML=imageText[1];
+
+				/* set src for shown image	*/
+			art[i].style.backgroundImage=
+			"url('../images/art/"+filename+"/"+json["sources"][i]+"')";
+		}
+	}
+
+	/* run code if image divs of specific types are found. */
+	if($$.query(".fanart-img") != undefined) 
+		fetchJSON("fanart");
+	if($$.query(".hamabead-img") != undefined)
+		fetchJSON("hamabead");
+	if($$.query(".pixelart-img") != undefined)
+		fetchJSON("pixelart");
+	if($$.query(".art3d-img") != undefined)
+		fetchJSON("art3d");
+}
+	
+
+
+
+	/* function for parsing md files via element ids */
+				/* convert nodelist to array */
+let pageBoxes = Array.from($$.query_all(".box"));
+if(pageBoxes.length > 0) {
+	async function fetchFile(box) {
+			/* id box id blacklist */
+		if(box.id != "chatbox"){
+				/* getting md files and parsing with marked */
+			let md = $$.txt("../txt/"+box.id+".md");
+			document.getElementById(box.id).innerHTML =
+			marked.parse(await md);
+		}
+	}
+	pageBoxes.map(fetchFile);
+}
 	// gets a Mastodon feed
+//
 async function mastofeed(url) {
   let vtfeedDiv = $$.id("VTfeed");
   let vtSocialRss = await $$.api(url);
@@ -143,24 +203,4 @@ async function mastofeed(url) {
     $$.id("VTfeed")?.append(ContentDiv);
     if (index == 9) return;   
   }
-}
-	/*if a siteUpdates textarea is on this page*/
-if($$.id("siteUpdate") != undefined) {
-	async function siteUpdate() {
-		let textarea = $$.id("siteUpdate");
-		textarea.innerHTML = await $$.txt
-		("../txt/siteUpdates.txt");		
-	}
-	siteUpdate();
-}
-
-	/*this is used on commisions.html*/
-if($$.id("agrred") != undefined) {
-	$.addEventListener("click", function(e){
-		let slideAnimation = $$.query_all(".slide");
-		console.log(slideAnimation);
-		slideAnimation.forEach((slide) => 
-		slide.classList.add("slidemove"));
-
-	});
 }

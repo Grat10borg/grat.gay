@@ -1,5 +1,97 @@
 :root {
 
+/* palette used is called blk-nx64*/
+
+	/*	grayscale colors */
+
+--black: #000000;
+--gray1: #12173D;
+--grat2: #293268;
+--gray3: #464B8C;
+--gray4: #6B74B2;
+--gray5: #909EDD;
+--gray6: #C1D9F2;
+--white: #FFFFFF;
+	
+	/* purples */
+
+--dark-purple1: #A293C4;
+--dark-purple2: #7B6AA5;
+--dark-purple3: #53427F;
+--dark-purple4: #3C2C68;
+--purple1: #431E66;
+--purple2: #5D2F8C;
+--purple3: #854CBF;
+--purple4: #B483EF;
+
+	/* greens */
+
+--green1: #8CFF9B;
+--green2: #42BC7F;
+--green3: #22896E;
+--green4: #14665B;
+--green5: #0F4A4C;
+--green6: #0A2A33;
+
+	/* blues hues */
+
+--blue1: #1D1A59;
+--blue2: #322D89;
+--blue3: #354AB2;
+--blue4: #3E83D1;
+--blue5: #50B9EB;
+--blue6: #8CDAFF;
+
+	/* cyans hues */
+
+--cyan1: #53A1AD;
+--cyan2: #3B768F;
+--cyan3: #21526B;
+--cyan4: #163755;
+--cyan5: #008782;
+--cyan6: #00AAA5;
+--cyan7: #27D3CB;
+--cyan8: #78FAE6;
+
+	/* beige/brown hues */
+
+--beige1: #CDC599;
+--beige2: #988F64;
+--beige3: #5C5D41;
+--beige4: #353F23;
+--beige5: #919B45;
+--beige6: #AFD370;
+
+	/* yellow/red hues */
+
+--yellow1: #FFE091;
+--yellow2: #FFAA6E;
+--orange1: #FF695A;
+--orange2: #B23C40;
+--orange3: #FF6675;
+--red1: #DD3745;
+--red2: #A52639;
+--red3: #721C2F;
+
+	/* pinks hues */
+
+--pink1: #B22E69;
+--pink2: #E54286;
+--pink3: #FF6EAF;
+--pink4: #FFA5D5;
+
+	/* browns */
+
+--brown1: #FFD3AD;
+--brown2: #CC817A;
+--brown3: #895654;
+--brown4: #61393B;
+--brown5: #3F1F3C;
+--brown6: #723352;
+--brown7: #994C69;
+--brown8: #C37289;
+--brown9: #F29FAA;
+--brown10: #FFCCD0;
 
 /*incase i add more flags, make it its own file...*/
 --transflag-bg: linear-gradient(to right, 
@@ -13,74 +105,5 @@
 	#ffa5d5 80%,
 	#8cdaff 80%, 
 	#8cdaff 100%);
---transflag-blue: #Bcdaff;
---transflag-pink: #ffa5d5;
-
---text-select: #12173d;
---text-select-bg: #b7fff4;
-
-
-/*--hp-bg-color: #e1e6fe;*/
---hp-bg-color: url(./gears_bg.png);
---hp-main-bg-color: #ffff;
-
- /*nav colors*/
---nav-bg: #293268;
---nav-bg-hover: #464b8c;
---nav-text: #78fae6;
---nav-text-hover: #b1fff3;
---nav-current-text: #ffe091;
---nav-current-text-hover: #ffefc5;
-
- /*main/content colors*/
---content-border: #c1d9f2;
---content-sidenav: #293268;
---content-sidenav-2: #909edd;
---content-sidenav-clockbg: #c1d9f2;
---content-sidenav-textareabg: #c1d9f2;
---content-sidenav-split: #ffaa6e;
---content-main-tabblue1: #50b9eb;
---content-main-tabblue2: #3e83d1;
---content-main-tabblue1-hover: #27d3cb;
---content-main-tabblue2-hover: #00aaa5;
---content-main-tabteal1: #27d3cb;
---content-main-tabteal2: #00aaa5;
---content-main-tabteal1-hover: #50b9eb;
---content-main-tabteal2-hover: #3e83d1;
---content-main-fontcolor: #464b8c;
---content-main-fontcolor-alt: #909edd;
---content-main-tab-bg: white;
---content-main-panel-titlecolor: #464b8c;
---content-main-panel-fontcolor: #464b8c;
---content-comm-borderhide-color: #464b8c;
---content-comm-imageborder-color: #464b8c;
- /*VTsocial blog*/
---main-toot-color: #fff;
---secondary-toot-color: #c1d9f2;
---blog-bg: #909edd;
---origin-link-color: #ff6fbc; 
-
- /*link page palette*/
---link-yt-color: #dd3745;
---link-tw-color: #b483ef;
---link-vt-color: #ffa5d5;
---link-yp-color: #a52639;
---link-tu-color: #3e83d1;
---link-ng-color: #ffaa6e;
---link-sg-color: #322d89;
---link-pi-color: #ff6eaf;
---link-di-color: #354ab2;
---link-it-color: #e54286;
---link-gi-color: #12173d;
---link-ko-color: #50b9eb;
-
- /*misc link colors*/
---orange-link-color: #ffaa6e;
---orange-link-color-hover: #ffe091;
---orange-link-color-active:#ff695a;
---orange-link-color-visited: #854cbf;
-
- /*footer colors*/
---footer-bg: #293268;
 
 }

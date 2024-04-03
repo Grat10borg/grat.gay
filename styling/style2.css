@@ -1,0 +1,541 @@
+@import 'palette.css'; 
+@import 'fonts.css';
+
+
+:root {
+	/* page sizing*/
+--page-nav-width: 60vw;
+--page-nav-bar-width: calc(var(--page-nav-width) - 48vw);
+
+	/* images */
+--header-image: 
+url('../images/banner_forNow.png');
+--body-bg-image: url('./gears_bg.png');
+
+	/* colors */
+--darkbg: var(--gray1);
+/*nav colors*/
+--nav-bg: #293268;
+--nav-bg-hover: #464b8c;
+--nav-text: #78fae6;
+--nav-text-hover: var(--white);
+--nav-current-text: var(--yellow1);
+--nav-current-text-hover: #ffefc5;
+
+--content: #43256E;
+--body-text: var(--gray1);
+--body-text-em: var(--gray3);
+--body-link: var(--orange1);
+--body-link-hover: var(--yellow2);
+--body-text-highlight: var(--cyan1);
+--main-bg: var(--white);
+--sidepanel-bg: var(--white);
+--content-border: #c1d9f2;
+--page-border-width: 1px;
+
+}
+
+/* general classes */
+.hide { display: none; }
+.show { display: block; }
+.flex { display: flex; }
+.center {
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+/* bootstrap like margin spacing */
+.mt{ margin-top: 15px;}
+
+
+/* default font familes */
+
+textarea {
+	font-family: monospace;
+	resize: none;
+	outline: none;
+}
+
+strong, details summary  {
+	font-weight: bold;
+}
+
+ul {
+	/* fallback */
+	list-style: square;
+	list-style: "◆  ";
+}
+
+body {
+	margin: 0;
+	background: var(--body-bg-image);
+	font-family: var(--atkinson);
+	color: var(--body-text);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#flex { 
+	display: flex; 
+	border: var(--page-border-width) solid var(--darkbg);
+	border-top: none;
+}
+
+#container {
+	max-width: 1000px;
+	margin: 0 auto;
+	border-left: 10px solid var(--content-border);
+	border-right: 10px solid var(--content-border);
+}
+
+#container a {
+	color: var(--body-link);
+	font-weight: bold;
+}
+#container a:hover { color: var(--body-link-hover); }
+#container .twitch-player summary {
+	background-color: var(--orange1);
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: larger;
+	padding: 15px;
+}
+
+/* extra margin for first element */
+#container .twitch-player {	margin-top: 10px; }
+	/* stops twitch-embed from being to squished */
+#container .twitch-player #twitch-embed iframe {
+	height: 400px;
+}
+#container .twitch-player summary p {
+	margin: 0;
+}
+#container .twitch-player {
+	border: 2px solid var(--orange2);
+}
+#container .twitch-player[open] summary {
+	border-bottom: 2px solid var(--orange2);
+}
+
+#container details img {
+	max-width: 100%;
+}
+
+	/* styling for detail tags flexed inside a div  */
+#container .details-div {
+	font-size: 18px;
+	color: var(--blue2);
+
+}
+
+#container .details-div div {
+	width: 50%;
+}
+
+#container .details-div div p,
+#container .details-div div p abbr {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#container .details-div div > ul {
+	padding-left: 10px;
+	list-style: none;
+}
+
+	/* styling for selecting, and marked text */
+#container mark, ::selection {
+	color: var(--body-text);
+	background: #b7fff4;
+
+	/* does nothing to selection, but does to <mark>*/
+	border-radius: 5px;
+	padding: 0 2px 0 2px;
+}
+
+	/* pretty spacing horizontal rule*/
+#container hr {
+	border: 2px dashed var(--blue4);
+}
+
+#container .artwork {
+	width: 100%;
+	position: relative;
+	margin-bottom: 15px;
+
+	border: 1px solid var(--darkbg);
+}
+
+#container .artwork a {
+	background-color: var(--darkbg);
+	width: 100%;
+	height: 100%;	
+}
+
+#container .artwork a .overlay {
+	/* copy pasted text*/
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+}
+
+#container .artwork:hover .overlay {
+	background-color: rgba(0,0,0,0.5);	
+	backdrop-filter: blur(2px);
+}
+
+#container .artwork .title, #container .artwork .author {
+	opacity: 0;
+	margin: 0;
+} 
+	
+#container .artwork:hover .title, #container .artwork:hover .author {
+	opacity: 1;
+} 
+
+#container .artwork .overlay .title {
+	font-size: 24px;
+}
+
+#container .artwork .overlay .author {
+	font-size: 19px;
+}
+
+
+	/* size background image and */
+#container .artwork .img {
+	width: 100%;
+	height: 250px;
+
+	background-image: url("../images/artwork_placeholder.png");
+	background-position: 0 20%;
+	background-size: cover;
+}
+
+#header {
+	width: 100%;
+	height: 350px;
+	background-color: var(--cyan1); /* fallback */
+	background-image: var(--header-image);
+	background-size: 100%;
+
+	border: var(--page-border-width) solid var(--darkbg);
+	border-top: none;
+}
+			
+/*	...hello navi */
+#navbar {
+	height: 40px;
+	background-color: var(--nav-bg);
+	width: 100%;
+	height: 2.5rem;
+
+	font-weight: bold;
+	font-family: var(--atkinson);
+}
+
+#navbar ul, .dropbtn {
+	display: flex;
+	list-style: none;
+
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+}
+
+#navbar a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#navbar .logos {
+	display: flex;
+	width: 100%;
+	justify-content: end;
+}
+
+#navbar a svg {
+	width: 20px;
+	height: 20px;
+	color: var(--nav-text);
+}
+.dropdown .dropbtn {
+  background: var(--nav-bg);
+  border: none;
+  outline: none;
+  margin: 0;
+}
+	/* hover effects */
+#navbar a:hover, .dropdown:hover .dropbtn { background: var(--nav-bg-hover); }
+#navbar a:hover, .dropdown:hover .dropbtn, #navbar a:hover svg, 
+#navbar .dropdown-content a:hover {
+color: var(--nav-text-hover); }
+#navbar li:hover { color: var(--nav-text-hover); }
+
+#navbar ul li, #navbar .dropbtn {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	display: flex;
+
+	padding: 0 15px 0 15px;
+	font-weight: bold;
+	color: var(--nav-text);
+}
+
+.dropbtn i {
+	margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--nav-bg);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#navbar .dropdown-content a {
+  float: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  color: var(--nav-text);
+}
+	/* dropdown logos, used in projects dropdown */
+.dropdown-content a img {
+	image-rendering: pixelated;
+	margin-right: 10px;
+}
+	/* show dropdown */
+.dropdown:hover .dropdown-content { display: block; }
+
+	/* different colors for currently present page */
+#navbar .current { color: var(--nav-current-text); }
+#navbar .current:hover { color: var(--nav-current-text-hover); }
+
+
+	/* Content */
+
+main {
+	background-color: var(--main-bg);
+	flex: 1;
+	padding: 20px;
+	order: 2;
+}
+	/* Side panel */
+aside {
+	background: var(--sidepanel-bg);
+	width: 250px;
+	padding: 20px;
+	font-size: smaller;
+}
+
+aside > ul {
+	margin-top: 5px;
+	padding-left: 45px;
+	font-size: 15px;
+	color: var(--body-link);
+}
+
+aside > h3, aside .banners h3 {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+aside .banners {
+	margin: auto;
+	display: block;
+	width: 75%;
+}
+aside .banners img { width: 100%; }
+
+aside .spacer {
+	height: 1px;
+	width: 80%;
+	margin: auto;
+	display: block;
+
+	border-top: 3px dashed var(--gray3);
+
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+aside .file {
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	margin: 10px 0 0px 0;
+	border: 2px solid var(--darkbg);
+	border-radius: 15px 15px 0px 0px;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--cyan1);
+}
+.file h2 {
+	font-size: 18px;
+	color: var(--white);
+	margin: 0;
+}
+.file img {
+	justify-self: end;
+}
+
+/* this is just a cool box, it's the darker colored one */
+aside .box {
+	background: var(--gray5);
+	border: 2px solid var(--darkbg);
+	border-radius: 0px 0px 15px 15px; 
+	border-top: none;
+	color: var(--blue1);
+	padding: 10px;
+}
+aside .box img { max-width: 100%; }
+
+#site-updates {
+	height: 300px;
+	overflow-y: scroll;
+}
+#site-updates ul {
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+#site-updates p {
+	font-size: 15px;
+	padding-bottom: 20px;
+	border-bottom: 2px dotted var(--gray3);
+}
+
+#site-updates p:first-of-type {
+	margin-top: 0px;
+}
+#site-updates li:last-child p {
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+
+#homepage-info p {
+	font-size: 15px;
+}
+
+#chatbox {
+	padding: 0px;
+	border-radius: 0;
+}
+
+    /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+*/ #leftSidebar {
+	order: 1;
+}
+
+#rightSidebar {
+	order: 3;
+}
+
+footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	background: var(--darkbg);
+	color: var(--nav-text);
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+}
+
+footer #trans {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: var(--transflag-bg);
+}
+
+h1, h2, h3 {
+	color: var(--body-text-em);
+}
+
+h1 {
+	font-size: 34px;
+}
+
+strong {
+/* this styles bold text */
+	color: var(--body-text-em);
+}
+
+
+/* CSS for extras */
+
+#topBar {
+	width: 100%;
+	height: 30px;
+	padding: 10px;
+	font-size: smaller;
+	background: var(--darkbg);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+	#flex {
+		flex-wrap: wrap;
+	}	
+
+	aside {
+		width: 100%;
+	}
+
+	aside .box {
+		display: flex;
+		justify-content: center;
+	}
+
+	aside > ul {
+		padding-left: 40%;	
+	}
+
+	main {
+		order: 1;
+	}
+
+	#container {
+		border: none;
+	}
+
+	#leftSidebar {
+		order: 2;
+	}
+
+	#rightSidebar {
+		order: 3;
+	}		
+
+	#navbar ul {
+		display: none;
+		flex-wrap: wrap;
+	}
+}

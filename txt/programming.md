@@ -1,0 +1,13 @@
+- **Markup / Styling**
+- HTML
+- Markdown
+- CSS
+- SASS
+- **Programming**
+- Javascript
+- Typescript
+- PHP
+- C#
+- Dlang (learning)
+- **Interpreters**
+- Node.js (learning)

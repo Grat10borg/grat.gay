@@ -28,8 +28,8 @@ url('../images/banner_forNow.png');
 --body-link: var(--orange1);
 --body-link-hover: var(--yellow2);
 --body-text-highlight: var(--cyan1);
---main-bg: var(--white);
---sidepanel-bg: var(--white);
+--main-bg: #FFFFFF;
+--sidepanel-bg: #FFFFFF;
 --content-border: #c1d9f2;
 --page-border-width: 1px;
 
@@ -84,6 +84,29 @@ body {
 	border-top: none;
 }
 
+/* lightbox styling*/
+#lightbox {
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#lightbox div {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+#lightbox div img {
+	max-width: 60%;
+	max-height: 80%;
+}
+
+/* general container for all page content */
 #container {
 	max-width: 1000px;
 	margin: 0 auto;

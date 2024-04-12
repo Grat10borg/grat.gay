@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="en-DK">
   <head>
     <meta charset="UTF-8"/>
@@ -21,12 +20,22 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 
     <link id="favicon" rel="icon" type="image/x-icon"
     href="./images/webicon.gif"/>
-    <link href="styling/style2.css" rel="stylesheet", 
-     type="text/css", media="all">
+    <link href="styling/style2.css" rel="stylesheet" 
+     type="text/css" media="all">
 	<link rel="stylesheet" 
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+	  	<!-- displays clicked on artwork -->
+	  	<div id="lightbox" class="hide">
+			<div>
+				<!-- background image placed via Javascript -->
+				<img id="lightbox-img">
+				<div>
+				<p>Test</p>
+				</div>
+			</div>
+		</div>
         <div id="container">
 			<div class="hide" id="topBar">You can put some text or images 
 			(or even a good old-fashioned marquee) up here!</div>
@@ -44,7 +53,7 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 					</a>			
 				<div class="dropdown-content">
       			 <a href="gallery.html#fanart">Fanart</a>
-	   		   	 <a href="gallery.html#3d">3D art</a>
+	   		   	 <a href="gallery.html#art3d">3D art</a>
      			 <a href="gallery.html#pixelart">Pixelart</a>
      			 <a href="gallery.html#ocs">OCs</a>
 	   			 </div>
@@ -122,6 +131,7 @@ d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5
 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/></svg>
 
 					</li>
+				</a>
 				<a href="https://www.twitch.tv/grat_grot10_berg">
 					<li>
 	<!-- Twitch logo -->
@@ -310,7 +320,7 @@ title="note: Aseprite isn't a game, but says 'playing Aseprite' on Discord"
 					title="Personal Home Page / PHP: Hypertext Preprocessor"
 									>PHP</abbr></li>
 									<li>C#</li>
-									<li><strong>Interpreters</strong></li>
+									<li><strong>Runtimes</strong></li>
 									<li>Node.js (learning)</li>
 								</ul>
 							</details>
@@ -470,11 +480,13 @@ href="https://steamcommunity.com/sharedfiles/filedetails/?id=3028740531"
 				<div id="trans"> </div>
 			</footer>
         </div>
-		<!-- import of JS libraries --!>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-	<!-- <script src="twitch iframe api or whatever" ></script> --!>
+		<!-- import of JS libraries -->
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<!-- <script src="twitch iframe api or whatever" ></script> -->
 
-		<!-- import of shorthand code, and general page scripts --!>
+		<!-- import nodeJS generated js art folder varible -->
+	<script src=".\images\art\images.js"></script>
+		<!-- import of shorthand code, and general page scripts -->
 	<script src=".\scripts\dom.js"></script>
 	<script src=".\scripts\homepage.js"></script>
   </body>

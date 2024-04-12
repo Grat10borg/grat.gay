@@ -99,19 +99,18 @@ function clockRefresh(){
 let artDivs = Array.from($$.query_all(".img"));
 if(artDivs.length > 0) {
 		/* embeded function because async can't run outside of it */
-	async function fetchJSON(filename) {
-
-			/* find JSON file after passed filename var */
-		let response = $$.txt("../images/art/"+filename+".json");
-		let json = JSON.parse(await response);
-		
+	async function fetchJSON(images, artType) {
 			/* look for all art divs of /this/ type */
-		let art = $$.query_all("."+filename+"-img");
-	
+		let art = $$.query_all("."+artType+"-img");
+			/* find all clickable images for lightbox */
+		let overlays = $$.query_all(".overlay");
+
 			/* run through each art display found */
 		for(let i = 0; i < art.length; i++) {
+
+
 				/* get title & author from filename	*/
-			let imageText = json["sources"][i].split("_");
+			let imageText = images[i].split("_");
 
 				/* set hover text	*/
 			art[i].querySelector(".author").innerHTML=imageText[0];
@@ -119,22 +118,38 @@ if(artDivs.length > 0) {
 
 				/* set src for shown image	*/
 			art[i].style.backgroundImage=
-			"url('../images/art/"+filename+"/"+json["sources"][i]+"')";
+			"url('../images/art/"+artType+"/"+images[i]+"')";
+
+			art[i].addEventListener("click", (e) => {
+				e.preventDefault();
+				$$.log(e.currentTarget.style.backgroundImage);
+				let filepath = e.currentTarget.style.backgroundImage.split('"');
+				$$.id("lightbox-img").src = filepath[1];
+				$$.id("lightbox").classList.remove("hide");
+				$$.id("lightbox").classList.add("show");
+			});
 		}
 	}
 
 	/* run code if image divs of specific types are found. */
 	if($$.query(".fanart-img") != undefined) 
-		fetchJSON("fanart");
+		fetchJSON(fanart, "fanart");
 	if($$.query(".hamabead-img") != undefined)
-		fetchJSON("hamabead");
+		fetchJSON(hamabead, "hamabead");
 	if($$.query(".pixelart-img") != undefined)
-		fetchJSON("pixelart");
+		fetchJSON(pixelart, "pixelart");
 	if($$.query(".art3d-img") != undefined)
-		fetchJSON("art3d");
+		fetchJSON(art3d, "art3d");
+	if($$.query(".sketches-img") != undefined)
+		fetchJSON(sketches, "sketches");
 }
 	
-
+/* close lightbox eventhandler */
+if($$.id("lightbox") != undefined)
+	$$.id("lightbox").addEventListener("click", (e) => {
+		$$.id("lightbox").classList.remove("show");
+		$$.id("lightbox").classList.add("hide");
+	});
 
 
 	/* function for parsing md files via element ids */

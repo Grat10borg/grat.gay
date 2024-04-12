@@ -1,1 +1,1 @@
-Motherbrain Delta..
+thanks for stopping by my site! :3

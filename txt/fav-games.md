@@ -1,5 +1,0 @@
-- Aseprite
-- Wobbledogs
-- The ER: Patient Typhon
-- Amnesia: The Dark Descent
-- Damn Daniel: White Vans Adventure

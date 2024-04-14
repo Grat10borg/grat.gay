@@ -1,0 +1,53 @@
+	/* Main font */
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+	/* Misc fonts */
+@font-face {
+  font-family: 'HelvetiPixel';	
+  src: url('fonts/HelvetiPixel.ttf'); 
+}
+
+@font-face {
+  font-family: 'Vhsper';	
+  src: url('fonts/VHSperV2.ttf'); 
+}
+
+@font-face {
+  font-family: 'Minimal4';
+  src: url('font/Minimal4.ttf');
+}
+@font-face {
+  font-family: 'TinyUnicode';
+  src: url('TinyUnicode.ttf');
+}
+
+/* fontface vars */
+:root {
+	/*atkinson is a good general font, very readable*/
+--atkinson: 'Atkinson-Hyperlegible', monospace;
+--helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
+--tinyuni: 'TinyUnicode', monospace; /* small pixels */
+--minimal: 'Minimal4', monospace; /*smallest pixels*/
+}

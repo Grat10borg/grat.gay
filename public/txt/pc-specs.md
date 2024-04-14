@@ -1,0 +1,10 @@
+- **CPU:** Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz
+- **GPU:** AMD ATI Radeon RX 7600
+- **RAM:** 16GB total
+- **MIC:** Røde NT-USB
+- **CAM:** Streaming Webcam Gear 4U
+- **CAM2:** LifeCam HD-3000
+- **MOUSE:** DeathAdder V2 Mini
+- **KEYBOARD:** SteelSeries Apex 150
+- **DRAWING-TABLET:** Intuos BT
+- **WII-CAPTURE:** WII2HDMI + HDMI Grabber

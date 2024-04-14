@@ -1,0 +1,109 @@
+:root {
+
+/* palette used is called blk-nx64*/
+
+	/*	grayscale colors */
+
+--black: #000000;
+--gray1: #12173D;
+--grat2: #293268;
+--gray3: #464B8C;
+--gray4: #6B74B2;
+--gray5: #909EDD;
+--gray6: #C1D9F2;
+--white: #FFFFFF;
+	
+	/* purples */
+
+--dark-purple1: #A293C4;
+--dark-purple2: #7B6AA5;
+--dark-purple3: #53427F;
+--dark-purple4: #3C2C68;
+--purple1: #431E66;
+--purple2: #5D2F8C;
+--purple3: #854CBF;
+--purple4: #B483EF;
+
+	/* greens */
+
+--green1: #8CFF9B;
+--green2: #42BC7F;
+--green3: #22896E;
+--green4: #14665B;
+--green5: #0F4A4C;
+--green6: #0A2A33;
+
+	/* blues hues */
+
+--blue1: #1D1A59;
+--blue2: #322D89;
+--blue3: #354AB2;
+--blue4: #3E83D1;
+--blue5: #50B9EB;
+--blue6: #8CDAFF;
+
+	/* cyans hues */
+
+--cyan1: #53A1AD;
+--cyan2: #3B768F;
+--cyan3: #21526B;
+--cyan4: #163755;
+--cyan5: #008782;
+--cyan6: #00AAA5;
+--cyan7: #27D3CB;
+--cyan8: #78FAE6;
+
+	/* beige/brown hues */
+
+--beige1: #CDC599;
+--beige2: #988F64;
+--beige3: #5C5D41;
+--beige4: #353F23;
+--beige5: #919B45;
+--beige6: #AFD370;
+
+	/* yellow/red hues */
+
+--yellow1: #FFE091;
+--yellow2: #FFAA6E;
+--orange1: #FF695A;
+--orange2: #B23C40;
+--orange3: #FF6675;
+--red1: #DD3745;
+--red2: #A52639;
+--red3: #721C2F;
+
+	/* pinks hues */
+
+--pink1: #B22E69;
+--pink2: #E54286;
+--pink3: #FF6EAF;
+--pink4: #FFA5D5;
+
+	/* browns */
+
+--brown1: #FFD3AD;
+--brown2: #CC817A;
+--brown3: #895654;
+--brown4: #61393B;
+--brown5: #3F1F3C;
+--brown6: #723352;
+--brown7: #994C69;
+--brown8: #C37289;
+--brown9: #F29FAA;
+--brown10: #FFCCD0;
+
+/*incase i add more flags, make it its own file...*/
+--transflag-bg: linear-gradient(to right, 
+	#8cdaff 0%,
+	#8cdaff 20%,
+	#ffa5d5 20%,
+	#ffa5d5 40%,
+	#fff 40%,
+	#fff 60%,
+	#ffa5d5 60%,
+	#ffa5d5 80%,
+	#8cdaff 80%, 
+	#8cdaff 100%);
+
+}

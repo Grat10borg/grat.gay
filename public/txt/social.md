@@ -4,7 +4,6 @@ i'm still brainstorming how i want this to look, but for now heres my links to p
 
 - [Twitch](https://www.twitch.tv/grat_grot10_berg)
 - [VT.Social](https://vt.social/@Grat10berg)
-- [Pixilart (Old)](https://www.pixilart.com/grat10)
 - [Itch.io](https://gratgrot10berg.itch.io/)
 - [Youtube posts](https://www.youtube.com/@gratgrot-10-berg/community)
 - [Youtube](https://www.youtube.com/channel/UC7egH-Znbn7z_KStKdMR3pQ)
@@ -14,3 +13,6 @@ i'm still brainstorming how i want this to look, but for now heres my links to p
 - [Discord](https://discord.com/invite/x8jsdDswsC)
 - [Steam Guides](https://steamcommunity.com/id/Grat10_Mother1brain/myworkshopfiles/?section=guides)
 - [Github](https://github.com/Grat10borg)
+
+- **Abandoned.**
+- [Pixilart (Old)](https://www.pixilart.com/grat10)

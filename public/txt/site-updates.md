@@ -1,3 +1,5 @@
+- 2024-04-22 added alt-text adder, and work on better artist crediting
+
 - 2024-04-14 Mother1brain is now using Deploy-To-Neocities!.. hopefully this upload to neociti-
 
 - 2024-04-13 images are now sorted newest to oldest.

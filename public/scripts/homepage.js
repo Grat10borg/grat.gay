@@ -1,4 +1,12 @@
 
+	/* contains saved values */
+let cache = {
+	
+}
+
+
+
+
 refreshing();
 
 let tab1 = $$.id("tabs1");
@@ -64,14 +72,14 @@ function refreshing() {
 	if(document.hidden == false) {
 		// restart the animated favicon
 	$$.id("favicon").setAttribute("href",
-		"/images/webicon.gif");
+		"/images/sprites/favicons/webicon.gif");
 
 	setTimeout("refreshing()", 500);
 	}
 	else {
 		// stop animated favicon and replace with inactive ver
 	$$.id("favicon").setAttribute("href",
-		"/images/webicon_inactive.png");
+		"/images/sprites/favicons/webicon_inactive.png");
 		
 	setTimeout("refreshing()", 900);	
 	}
@@ -111,6 +119,7 @@ if(artDivs.length > 0) {
 
 				/* get title & author from filename	*/
 			let imageText = images["files"][i].split("_");
+			
 
 				/* set hover text	*/
 			art[i].querySelector(".author").innerHTML=imageText[0];
@@ -120,11 +129,27 @@ if(artDivs.length > 0) {
 			art[i].style.backgroundImage=
 			"url('../images/art/"+artType+"/"+images["files"][i]+"')";
 
+			console.log(alt);
+				/* add alt text */
+			art[i].alt = alt.text[alt.img.indexOf(images["files"][i])];
+			art[i].title = alt.text[alt.img.indexOf(images["files"][i])];
+
+				/* code ran when clicked, / lightbox code */
 			art[i].addEventListener("click", (e) => {
 				e.preventDefault();
 				$$.log(e.currentTarget.style.backgroundImage);
 				let filepath = e.currentTarget.style.backgroundImage.split('"');
+				
+					/* update filepath to the clicked on image*/
 				$$.id("lightbox-img").src = filepath[1];
+
+					/* add alt text and title */
+				let filename = filepath[1].split("/");
+				$$.id("lightbox-img").alt = alt.text[
+				alt.img.indexOf(filename[filename.length - 1])];
+				$$.id("lightbox-img").title = alt.text[
+				alt.img.indexOf(filename[filename.length - 1])];
+
 				$$.id("lightbox").classList.remove("hide");
 				$$.id("lightbox").classList.add("show");
 			});

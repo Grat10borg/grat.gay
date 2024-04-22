@@ -69,11 +69,27 @@ ul {
 }
 
 body {
+
 	margin: 0;
 	background: var(--body-bg-image);
 	font-family: var(--atkinson);
 	color: var(--body-text);
+
+	/* default cursor */
+	/*cursor: url('../images/sprites/cursors/cursor.png') 4 4, default;*/
 }
+
+/*
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover,
+p:hover,textarea:hover,summary:hover,span:hover,
+li:hover,abbr:hover,mark:hover  {
+	cursor: url('../images/sprites/cursors/cursor_text2.png') 9 11, text;
+}
+
+a:hover, #navbar li:hover {
+	cursor: url('../images/sprites/cursors/cursor_point.png') 6 3, pointer;
+}
+*/
 
 * {
 	box-sizing: border-box;
@@ -83,6 +99,7 @@ body {
 	display: flex; 
 	border: var(--page-border-width) solid var(--darkbg);
 	border-top: none;
+
 }
 
 /* lightbox styling*/

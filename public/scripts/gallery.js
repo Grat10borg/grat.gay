@@ -22,6 +22,12 @@ function makeImgdivs(paths, hash) {
 		imgDiv.style.backgroundImage=
 		"url('../images/art/"+hash+"/"+paths["files"][i]+"')";
 
+		/* add title and alt */
+		imgDiv.alt = alt.text[
+		alt.img.indexOf(paths["files"][i])];
+		imgDiv.title = alt.text[
+		alt.img.indexOf(paths["files"][i])];
+
 		let overlay = $$.make("div");
 		overlay.classList.add("overlay");
 
@@ -45,7 +51,16 @@ function makeImgdivs(paths, hash) {
 		imgDiv.addEventListener("click", (e) => {
 			e.preventDefault();
 			let filepath = e.currentTarget.style.backgroundImage.split('"');
+				/* update lightbox image source */	
 			$$.id("lightbox-img").src = filepath[1];
+
+					/* add alt text and title */
+			let filename = filepath[1].split("/");
+			$$.id("lightbox-img").alt = alt.text[
+			alt.img.indexOf(filename[filename.length - 1])];
+			$$.id("lightbox-img").title = alt.text[
+			alt.img.indexOf(filename[filename.length - 1])];
+
 			$$.id("lightbox").classList.remove("hide");
 			$$.id("lightbox").classList.add("show");
 		});

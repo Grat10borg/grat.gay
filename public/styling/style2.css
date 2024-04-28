@@ -48,7 +48,9 @@ url('../images/banner_forNow.png');
 
 /* bootstrap like margin spacing */
 .mt{ margin-top: 15px;}
-
+/* no margin*/
+.nom { margin: 0; }
+.nop { padding: 0; }
 
 /* default font familes */
 
@@ -113,21 +115,109 @@ a:hover, #navbar li:hover {
 	height: 100%;
 }
 
-#lightbox div {
-	display: flex;
+#lightbox #lightbox-center {
 	height: 100%;
+	width: 100%;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-#lightbox div img {
+
+#lightbox #lightbox-container {
+	display: flex;
+	justify-content: center;
+}
+
+#lightbox #lightbox-img {
 	/* background and styling */
 	background: var(--white);
 	padding: 10px;
 	border-radius: 15px;
 
-	/* image size */
-	max-width: 60%;
+	/* max image size */
+	max-height: 80vh;
+	max-width: 65%;
+}
+
+#lightbox-credit {
+	background-color: white;
+	display: block;
+
 	max-height: 80%;
+	width: 25%;
+
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+#lightbox-credit #profile {
+	margin: auto;
+	margin-top: 15px;
+	display: block;
+
+	width: 50%;
+
+	border-radius: 50%;
+	border: 4px solid var(--blue6);
+
+	overflow-y: scroll;
+}
+
+#lightbox-credit .text {
+	text-align: center;
+	color: var(--gray3);
+}
+
+.text:first-of-type {
+	margin-bottom: 2px;
+}
+
+.text #name {
+	font-size: 20px;
+	color: var(--gray3);
+}
+.text #pronouns{
+	font-size: 15px;
+	color: var(--gray4);
+}
+
+.text #pfp-artist {
+	color: var(--gray5);
+	font-size: 13px;
+}
+
+#lightbox-credit #socials {
+	display: flex;
+	justify-content: center;
+	margin: 0 10% 0 10%;
+
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	max-height: 110px;
+}
+#socials a {
+	padding: 12px;
+	margin: 5px 10px 5px 10px;
+	background: var(--blue2);
+	border-radius: 10px;
+	color: white;
+
+	display: flex;
+	width: 100%;
+}
+#socials a:first-of-type {margin-top: 0px;}
+
+#lightbox-credit #desc {
+	color: var(--gray3);
+
+	margin: 15px 10% 0 10%;
+	font-size: 18px;
+	overflow-y: scroll;
+}
+
+#lightbox-credit hr {
+	border: 1px solid var(--gray5);
+	margin: 35px 10% 20px 10%;
 }
 
 /* general container for all page content */

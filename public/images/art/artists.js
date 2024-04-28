@@ -5,6 +5,7 @@ let artists = {
 		pfp_alt: "a blue haired robot with two big antenna, big robot ears and a hook in the middle, orange eyes, orange hairbands and a gray suit",
 		pfp_artist: "grat10",
 		pfp_artist_link: "https://vt.social/@Grat10berg",
+		name: "Grat10",
 		desc: ":3",
 		pronouns: "she/it",
 
@@ -18,6 +19,7 @@ let artists = {
 		pfp_alt: "an anthro with purple fur, ear rings and a blue nose, with hair that falls over the left eye with an happy expression  ",
 		pfp_artist: "smoki-dhampir",
 		pfp_artist_link: "https://www.twitch.tv/smokingdhampir04",
+		name: "Smoki Dhampir",
 		desc: "description tba",
 		pronouns: "he/him",
 
@@ -32,7 +34,8 @@ let artists = {
 		pfp_alt: "a zombie and internet themed vtuber against a lavender background, they have an red hair strand in their otherwise darkblue hair, one red eye and one orange eye",
 		pfp_artist: "MimzyyMay",
 		pfp_artist_link: "https://linktr.ee/mimzyyMay",
-		desc: "description tba",
+		name: "MimzyyMay",
+		desc: "YUH SLAY YUH SLAY YUH SLAY YUH SLAY ",
 		pronouns: "any",
 
 		/* link text then url */
@@ -48,6 +51,7 @@ let artists = {
 		pfp_alt: "a human with pink eyes and brown hair with a red bow in their hair lightly blushing and a redshirt with blue overalls and an orange tie on",
 		pfp_artist: "のには (@1229Noniha4)",
 		pfp_artist_link: "https://twitter.com/1229Noniha4",
+		name: "LilRedRonin",
 		desc: "description tba",
 		pronouns: "he/him",
 
@@ -63,6 +67,7 @@ let artists = {
 		pfp_alt: "a robot vtuber with green hair and limegreen eyes she has two large antenna with aviator like goggles on, and a spiky jacket on, against a gray background",
 		pfp_artist: "Xenovia Noether",
 		pfp_artist_link: "https://xenovianoether.carrd.co/",
+		name: "RetraceYourSteps",
 		desc: "'it's so yoHOver :(' it's retrace.",
 		pronouns: "she/her",
 
@@ -77,6 +82,7 @@ let artists = {
 		pfp_alt: "a chicken themed vtuber with pinkhair she has a chicken pin in her hair with a pink dress with white puffs and an orange ribon",
 		pfp_artist: "HaybeeVT (?)",
 		pfp_artist_link: "https://www.twitch.tv/haybeevt",
+		name: "HaybeeVT",
 		desc: "description tba",
 		pronouns: "she/her",
 

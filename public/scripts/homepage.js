@@ -143,12 +143,51 @@ if(artDivs.length > 0) {
 					/* update filepath to the clicked on image*/
 				$$.id("lightbox-img").src = filepath[1];
 
+				let filesplit = filepath[1].split("/");
+				let filename = filesplit[filesplit.length - 1];
+
 					/* add alt text and title */
-				let filename = filepath[1].split("/");
 				$$.id("lightbox-img").alt = alt.text[
-				alt.img.indexOf(filename[filename.length - 1])];
+				alt.img.indexOf(filename)];
 				$$.id("lightbox-img").title = alt.text[
-				alt.img.indexOf(filename[filename.length - 1])];
+				alt.img.indexOf(filename)];
+
+					/* fill credits panel with credits */
+				let sourcesplit = filename.replace("@", ""
+								).replace("-", "").split("_")
+				let author = sourcesplit[0]; 
+				$$.log(
+				artists[author.toLowerCase()]);
+
+				let artist = artists[author.toLowerCase()];
+
+				$$.id("profile").src =
+				"images/art/artists/"+ artist["pfp"];
+				$$.id("profile").alt = artist["pfp_alt"];
+				$$.id("profile").title = artist["pfp_alt"];
+
+					/* profile text */
+				$$.id("name").innerHTML = artist["name"];
+				$$.id("pronouns").innerHTML = artist["pronouns"];
+				$$.id("desc").innerHTML = artist["desc"];
+
+				$$.id("pfp-artist").innerHTML = "pfp by: @"+artist["pfp_artist"];
+				$$.id("pfp-artist").href = artist["pfp_artist_link"];
+
+				/* empty socials with previous SoME links */
+				$$.id("socials").innerHTML = "";
+					
+				$$.log(artist.links);
+				artist.links.map((link) => {
+					let split = link.split("_");
+
+					let anchor = $$.make("a");
+					anchor.href = split[1];
+					anchor.innerHTML = split[0];
+
+					$$.id("socials").append(anchor);
+				});
+
 
 				$$.id("lightbox").classList.remove("hide");
 				$$.id("lightbox").classList.add("show");

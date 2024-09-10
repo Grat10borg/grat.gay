@@ -6,6 +6,14 @@ let cache = {
 
 
 
+let enable_twitch = false;
+
+if(enable_twitch) {
+	let script = $$.make("script");
+	script.src = "https://player.twitch.tv/js/embed/v1.js">
+	document.body.append(script);
+}
+
 
 refreshing();
 

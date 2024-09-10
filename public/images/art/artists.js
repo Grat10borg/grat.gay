@@ -92,4 +92,19 @@ let artists = {
 		"twitch_https://www.twitch.tv/haybeevt",
 		]
 	},
+	kobeepb: {
+		pfp: "kobe.jpg",
+		pfp_alt: "a red demon with a happy expression, green hair and cheerleader puffs in their hands",
+		pfp_artist: "Kobeepb",
+		pfp_artist_link: "https://x.com/Kobeepb",
+		name: "Kobeepb",
+		desc: "description tba",
+		pronouns: "she/her",
+
+		/* link text then url */
+		links: [
+		"twitter_https://x.com/Kobeepb",
+		"carrd_https://kobeepb.carrd.co/",
+		]		
+	},
 };

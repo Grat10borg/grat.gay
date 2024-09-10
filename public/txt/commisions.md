@@ -14,7 +14,7 @@ i take a pretty laid back look at commisions, so i try to be upfront about if an
 
 # Vtuber models
 
-price: 100$ - 300$
+price: 
 
 I'll make you a custom model for use on your streams or videos!
 
@@ -30,7 +30,7 @@ extra things like toggles, outfits and such will cost extra
 **Beware:** you should probably be fine with me stopping by your streams to lurk aswell :3
 
 # Minecraft skins
-price: 15$
+price: 
 
 i make a Minecraft skin for you!
 
@@ -39,14 +39,14 @@ minecraft skins take very little time for me to make and is super fun hence the 
 I make all my minecraft skins from the bottom up
 
 #Small pixelart
-price: 10$ - 35$
+price:
 
 I make a small pixelart piece for you!
 
 this can be simple spirte animations or small icons for your website
 
 # Custom profile picture
-price: 25$
+price: 
 
 this is for profile pictures meant for SoME
 
@@ -55,7 +55,7 @@ it comes in a static and if requested an animated version
 i try to keep the pixelart very clear so it will be easy to see at smaller sizes
 
 #Some bigger artwork
-price: 50$ - 150$
+price: 
 
 this if for bigger pixelart that doesn't fit neatly into other catagories
 
@@ -64,7 +64,7 @@ use this for Offline screens, bigger artwork or exprimental things i'm working, 
 Might take awhile, depending on complixity!
 
 # Hama-Letters (Denmark ONLY)
-price: 45$
+price: 
 
 a **Highly** exprimental commission
 

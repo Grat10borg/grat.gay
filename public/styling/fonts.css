@@ -23,6 +23,19 @@
   font-style: italic;
 }
 
+	/* main condensed font */
+
+@font-face {
+	font-family: 'Saira-Condensed';
+	src: url(fonts/SairaCondensed-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Saira-Condensed';
+	src: url(fonts/SairaCondensed-Bold.ttf);
+	font-weight: bold;
+}
+
 	/* Misc fonts */
 @font-face {
   font-family: 'HelvetiPixel';	
@@ -43,11 +56,59 @@
   src: url('TinyUnicode.ttf');
 }
 
+@font-face {
+  font-family: 'BadComa';
+  src: url('BadComa.ttf');
+}
+
+@font-face {
+  font-family: 'Panic';
+  src: url('Panic.ttf');
+}
+
+@font-face {
+  font-family: 'DotImpact';
+  src: url('DotImpact.ttf');
+}
+
+@font-face {
+  font-family: 'Static';
+  src: url('Static.ttf');
+}
+
+@font-face {
+  font-family: 'Astigma';
+  src: url('Astigma.ttf');
+}
+
+@font-face {
+  font-family: 'Barcode';
+  src: url('BarcodeFont.ttf');
+}
+
+@font-face {
+  font-family: 'Ovnis';
+  src: url('Ovnis.ttf');
+}
+
 /* fontface vars */
 :root {
 	/*atkinson is a good general font, very readable*/
---atkinson: 'Atkinson-Hyperlegible', monospace;
---helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
---tinyuni: 'TinyUnicode', monospace; /* small pixels */
---minimal: 'Minimal4', monospace; /*smallest pixels*/
+	--atkinson: 'Atkinson-Hyperlegible', monospace;
+	--saira: 'Saira-Condensed', monospace;
+
+	/* pixelfonts */
+	--vhsper: 'Vhsper', monospace; /* custom font */
+	--helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
+	--tinyuni: 'TinyUnicode', monospace; /* small pixels */
+	--minimal: 'Minimal4', monospace; /*smallest pixels*/
+	--barcode: 'Barcode', monospace;  /*pixel font with barcode above it */
+	
+	/* glitchy, dotfonts etc */
+	--coma:  'BadComa', monospace; /* SOMA like font */
+	--panic:  'Panic', monospace;  /*  */
+	--dotpact:  'DotImpact', monospace;  /* very dot heavy font */
+	--static:  'Static', monospace;  /* glitchy looking font */
+	--astigma:  'Astigma', monospace;  /* glitchy looking font */
+	--ovnis:  'Ovnis', monospace;  /*  */
 }

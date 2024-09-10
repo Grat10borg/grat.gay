@@ -1,0 +1,527 @@
+/* code by Grat10berg!! code available on the github.
+ *
+ * website stucture somewhat inspired by 
+ * the Dominos x Hatsune Miku collab site
+ *
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* site settings. palette should be in palette file */
+:root {
+	/* sawteeth at the topnav/footer */
+	--sawtooth-size: 77px;
+
+	/* used for buttons, links, or decorations */
+	--cta-orange: #F7976C;
+	--cta-orange-hover: #F7576C;
+
+	--cta-cyan: #3DCACD;
+	--cta-cyan-hover: #52f7d9;
+}
+
+body {
+	overflow: hidden;
+}
+
+nav {
+	display: block;
+	width: 100vw;
+	height: 8.5vh;
+
+}
+
+/* navigation */
+
+#navbar, #navbar-deco {
+	width: 100%;
+}
+
+#navbar {
+	background-color: #16283C;
+	height: 85%;
+
+	position: relative;
+	z-index: 4;
+}
+
+/* saturn icon */
+#navbar a {text-decoration: none;}
+#navbar img:first-of-type {
+	width: 66px;
+	display: inline;
+	position: relative;
+	left: 18%;
+	top: 5px;
+}
+
+#navbar div {
+	display: inline;
+	position: inherit;
+	bottom: 15%;
+
+	position: relative;
+	left: 22%;
+}
+
+#navbar p {
+	display: inline;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+#navbar p a {
+	font-family: var(--saira);	
+	font-size: 38px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #D5E1EA;
+}
+
+#navbar p:nth-child(even) a {
+	color: #90CBC4;
+
+}
+
+#navbar p a:hover {color: #FFFFFF;}
+#navbar p:nth-child(even) a:hover {color: #90FBC4;}
+
+/* stream ad on top navbar */
+
+#stream-ad {
+	background-color: var(--cta-orange);
+	width: 285px;
+	height: 10%;
+	position: absolute;
+	z-index: 5;
+	display: block;
+	right: 20%;
+	top: 1%;
+
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#stream-ad:hover {
+	background-color: var(--cta-orange-hover);
+}
+
+#stream-ad #live-text {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	color: white;
+	margin-left: 10px;
+	overflow-x: hidden;
+}
+#live-text p:first-of-type {
+	margin-top: 10px;
+	font-size: 15px;
+}
+#live-text p:last-child {
+	font-size: 38px;
+}
+
+/* navigation footer*/
+footer {
+	display: block;
+	width: 100vw;
+	height: 8.5vh;
+
+	position: absolute;
+	bottom: 0%;
+}
+
+#footer, #footer-deco {
+	width: 100%;
+}
+
+#footer {
+	height: 85%;
+	background-color: #F0F4F5;
+	position: relative;
+	z-index: 4;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#footer p {
+	font-family: var(--atkinson);
+	color: #646464;
+}
+
+#footer a {
+	color: var(--cta-orange);
+	font-weight: bold;
+	text-decoration: none;
+}
+#footer a:hover {color: var(--cta-orange-hover);}
+
+#footer p:first-of-type { margin-top: 10px; }
+
+#socials svg-img svg, #guestbook-btn svg-img svg {
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#socials .icon, #guestbook-btn .icon {
+	 position: absolute;
+	 z-index: 3;
+	 margin-left: 10px;
+	 margin-top: 15px;
+}
+#socials .icon svg, #guestbook-btn .icon svg {
+	width: 25px;
+	fill: white;
+}
+
+/* Twitch icon is not a square (why.) */
+#twitch svg {
+	margin-top: 3px;
+}
+
+/* color of gears in footer */
+#footer #socials svg-img svg * *, #guestbook-btn svg-img svg * * {
+	fill: var(--cta-cyan);
+} 
+
+#footer #socials .foot-gear:hover svg-img svg * *,
+#guestbook-btn:hover svg-img svg * * {
+	fill: var(--cta-cyan-hover);
+} 
+#footer #socials .foot-gear .gear svg,
+#guestbook-btn .gear svg {
+	animation-name: rotate;
+	animation-duration: 3s; 
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}	
+#footer #socials .foot-gear:hover .gear svg,
+#guestbook-btn:hover .gear svg {
+
+	animation-play-state: running;
+}
+
+/* sawtooth repeating code */
+/*  */
+
+.sawtooth {
+	width: 100%;
+	height: calc(var(--sawtooth-size) / 5.5);
+    background-size: var(--sawtooth-size) 
+	calc(var(--sawtooth-size) / 5.5);
+	position: relative; /* used to place sawtooth above other elements*/ 
+}
+
+.sawtooth::after {
+	width: 100%;
+	content: " ";
+	display: block;
+	height: calc(var(--sawtooth-size) / 5.5);
+    background-size: var(--sawtooth-size)
+   	calc(var(--sawtooth-size) / 5.5);
+	position: relative; /* used to place sawtooth above other elements*/ 
+}
+
+.sawtooth-top  {
+	background-image: url(images/assets/topbanner_inner.svg);	
+	/* change color of top nav*/
+	/* filter: hue-rotate(30deg); */
+}
+
+.sawtooth-top::after  {
+	background-image: url(images/assets/topbanner_outer.svg);	
+	z-index: 4;
+}
+
+.sawtooth-bot {
+	background-image: url(images/assets/botbanner_inner.svg);	
+}
+
+.sawtooth-bot::after {
+	background-image: url(images/assets/botbanner_outer.svg);	
+	z-index: 4;
+}
+
+
+/* main content on load look */
+
+main {
+	overflow: hidden;
+}
+
+#background {
+	position: absolute;
+	z-index: -1;
+	background: black;
+	left: 0%;
+	right: 0%;
+	bottom: 1%;
+	top: 1%;
+}
+
+#credits, #site-by {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	z-index: 3;
+
+	color: #175872;
+  	text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+       1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+#credits {
+	bottom: 9%;
+	right: 5%;
+}
+#site-by {
+	right: 5%;
+	top: 10%;
+}
+
+#site-by a, #credits a {
+	text-decoration: none;
+}
+
+#site-by a {
+	color: #5D7A89;
+}
+#site-by a:hover {
+	color: #2E4B5A;
+}
+
+#credits a {
+	color: #175872;
+}
+#credits a:hover {
+	color: #2992BC;
+}
+
+#guestbook-btn {
+	position: absolute;
+	left: 1%;
+	bottom: 8%;
+		
+}
+
+/* part of the code is in footer as it reuses the footer gear styling*/
+
+#guestbook-btn .icon svg * *, #guestbook-btn:hover .icon svg * * {
+	fill: white;
+}
+#guestbook-btn .icon {
+	margin-right: 10px;
+	margin-top: -8px;
+}
+
+#grat {
+	max-width: 100vw;
+	pointer-events: none;
+}
+	/* the image of grat10 posing, without a plug*/
+	/* artwork by @MimzyyMay */
+
+#grat #pose, #grat #knee, #grat #arm {
+	display: block;	
+	max-width: 	85vw;
+	max-height: 80vh;
+	position: absolute;
+	right: 5%;
+	top: 15%;
+
+}
+
+#grat #pose { z-index: 1;}
+#grat #arm { z-index: 2;}
+#grat #knee { z-index: 3;}
+
+#grat #pose, #grat #knee {
+	animation: float 2s ease-in-out 1s infinite alternate-reverse;
+}
+
+	/* grat's arm */
+#grat #arm {
+
+	animation: arm 2s ease-in-out 1s infinite alternate-reverse;
+	transform-origin: 55.9% 73.7%;
+}
+
+	/* grat's knee to cover the arm */
+
+	/* grat's plug tail */
+#grat #plug {
+	display: block;
+	width: 11vw;	
+
+	position: absolute;
+	z-index: 3;	
+	left: 15%;
+	top: 65%;
+
+	animation: plug 2s ease-in-out 1s infinite alternate-reverse;
+	transform-origin: bottom;
+}
+
+	/* fake program window */
+.program {
+	background-color: white;
+	border-radius: 0px 0px 17px 17px;
+	border: 2px solid #4178B7;
+
+	position: absolute;
+	z-index: 5;
+}
+
+#gratchat  {
+	width: 33vw;
+	height: 29vh;	
+
+	left: 12%;
+	top: 25%;
+}
+
+#gratchat .content {
+	height: 45%;
+}
+
+#comments {
+	/* hidden till triggered */
+	display: none;
+	width: 33vw;
+	height: 59vh;	
+
+	left: 17%;
+	top: 27%;
+}
+
+#comments .content {
+	height: 73%;
+}
+
+.program .line {
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #4178B7;
+	background-color: var(--cta-cyan);
+
+	display: flex;
+	justify-content: space-between;
+}
+.program .line p {
+	color: #ECFBFF;
+	font-family: var(--helveti);
+	font-size: 38px;
+
+	margin-left: 15px;
+}
+.program .line div {
+	background-color: var(--cta-orange);
+	border-left:  2px solid #4178B7;
+	width: 13%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.program .line div:hover {
+	background-color: var(--cta-orange-hover);
+	cursor: pointer;
+}
+.program .line div img {
+	margin: auto;
+	display: block;
+	width: 45%;
+	image-rendering: pixelated;
+}
+
+.program .content {
+	font-family: var(--helveti);
+	color: #6285A0;
+	font-size: 24px;
+	margin: 15px 15px 15px 15px;
+	overflow-y: scroll;
+
+	border-bottom: 3px solid var(--cta-cyan);
+
+}
+
+.program .buttons {
+	display: flex;
+	justify-content: end;	
+	align-items: center;
+}
+
+.program .buttons div {
+	background-color: #C2E0EE;
+	border: 2px solid #265F9F;
+
+	padding: 1.5% 10% 1.5% 10%;	
+	margin-right: 5%;
+} 
+.program .buttons div:hover {
+	background-color: #89C5E0;
+	cursor: pointer;
+}
+.program .buttons div p {
+	font-family: var(--helveti);
+	color: #16283C;
+	font-size: 24px;
+	margin: auto;
+	display: block;
+}
+
+	/* float element up and down */
+@keyframes float {
+	0% {
+		top: 16%;
+	}
+	100% {
+		top: 15%;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+	/* float plug up and down and rotate to create a sway */
+@keyframes plug {
+	0% {
+		top: 66%;
+		transform: rotate(30deg);
+	}
+	100% {
+		top: 66.6%;
+	}
+}
+
+	/* float element up and down */
+@keyframes arm {
+	0% {
+		top: 16%;
+		transform: rotate(-10deg);
+	}
+	100% {
+		top: 15%;
+		transform: rotate(5deg);
+	}
+}

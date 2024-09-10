@@ -10,10 +10,12 @@ make: $.createElement.bind($),
 query: $.querySelector.bind($),
 query_all: $.querySelectorAll.bind($),
 
-// custome methods bellow this
+// custom methods below this
 api: ApiCall.bind($),
 tag: tag.bind($),
 txt: fetchTXT.bind($), //async
+drag: makeDraggable.bind($),
+display: display.bind($),
 
 // just here to help me out when working.
 log: console.log,
@@ -21,14 +23,6 @@ log: console.log,
 
 function tag(element, find) {
 return element.getElementsByTagName(find);
-}
-
-let enable_twitch = false;
-
-if(enable_twitch) {
-	let script = $$.make("script");
-	script.src = "https://player.twitch.tv/js/embed/v1.js">
-	document.body.append(script);
 }
 
 // a little wonky but the response promise did not want to play along..
@@ -68,3 +62,60 @@ async function ApiCall(HttpCall) {
     });
   return respon;
   }
+
+/* when element1 is clicked display option element 2*/
+function display(element, display, element2) {
+	let eventelem = $$.id(element); 
+	eventelem.addEventListener("click", function() {
+		let changelem = $$.id(element2);
+		changelem.style.display = display;
+	});
+}
+
+// make element with position: absolute draggable
+function makeDraggable(id) {
+// W3Schools Draggable element code but edited 
+// Make the DIV element draggable:
+  dragElement(document.getElementById(id));
+
+  function dragElement(elmnt) {
+  	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  	if (document.getElementById(elmnt.id + "header")) {
+   		// if present, the header is where you move the DIV from:
+   		document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  	} else {
+   		// otherwise, move the DIV from anywhere inside the DIV:
+   		elmnt.onmousedown = dragMouseDown;
+  	}
+
+  function dragMouseDown(e) {
+   	e = e || window.event;
+   	e.preventDefault();
+   	// get the mouse cursor position at startup:
+   	pos3 = e.clientX;
+   	pos4 = e.clientY;
+   	document.onmouseup = closeDragElement;
+   	// call a function whenever the cursor moves:
+   	document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+   	e = e || window.event;
+   	e.preventDefault();
+   	// calculate the new cursor position:
+   	pos1 = pos3 - e.clientX;
+   	pos2 = pos4 - e.clientY;
+   	pos3 = e.clientX;
+   	pos4 = e.clientY;
+   	// set the element's new position:
+   	elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+   	elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  	}
+  }
+}

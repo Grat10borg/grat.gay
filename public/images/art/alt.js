@@ -17,8 +17,10 @@ let alt = {
 	"@HaybleneVT_grat-and-pudding.png",
 	"@LilRedRonin_grat-birthday-gift-2023.png",
 	"@MimzyyMay_grat-bust .png",
+	"@MimzyyMay_Grat-introscreen.png",
 	"@MimzyyMay_yes.png",
 	"@Smoki-Dhampir_grat.png",
+	"@Kobeepb_Grat-chibi.png",
 	
 		/* hamabead*/
 	"@Grat10_grat-hama.jpg",
@@ -58,9 +60,11 @@ let alt = {
 	"grat standing infront of a large pudding wearing a grey sweater and green boots",
 	"grat drawn in pixelart smiling with grats 'plug tail' sparking out energy",
 	"grat drawn in mimzyys style with square pupils and a heart shaped hook",
+	"grat in mimzyys style against grats introscreen leaning back and doing a pose",
 	"a swiftly drawn grat wearing a big scarf with the text 'Yes.' above her",
 	"a full body grat drawing against an orange bubble background reaching out her hand",
-	
+	"a cartoonishly drawn grat hugging a scared ghost from Pacman",
+
 		/* hamabead */
 	"a hamabeaded grat against a cardboard display in a lightbox with a custom made receipt",
 	"a hamabeaded grat and illu on cardboard displays illu has a puffy cheek",

@@ -35,13 +35,44 @@ function refresh() {
 	}
 }
 
+/* get image sizes, useful for pixelart handling*/
+function get_image_size(url) {
+    let img = document.createElement("img");
+
+    img.style.opacity = "0.0";
+    img.style.display = "none";
+    img.style.pointerEvents = "none";
+
+    document.body.append(img);
+
+    return new Promise((resolve, reject) => {
+        img.onload = () => {
+            img.remove();
+
+            resolve({
+                width: img.clientWidth,
+                height: img.clientHeight
+            })
+        }
+
+        img.onerror = () => {
+            img.remove();
+            reject();
+        }
+
+        img.src = url;
+    })
+}
+
 /*
  *		Custom element code
  * */
 
-// searches for `<svg-img>` and uses `src=""` to fetch and fill it with
-// the requested img (hopefully an actual SVG file)
+/* check for special elements */
 (async () => {
+
+	// searches for `<svg-img>` and uses `src=""` to fetch and fill it with
+	// the requested img (hopefully an actual SVG file)
     let svgs = $$.query_all("svg-img");
     for (let i = 0; i < svgs.length; i++) {
         // nobody specified a `src=""` attribute :c
@@ -54,6 +85,20 @@ function refresh() {
 
         svgs[i].innerHTML = res;
     }
+
+	let txtpres = $$.query_all("txt-pre");
+    for (let i = 0; i < txtpres.length; i++) {
+        // nobody specified a `src=""` attribute :c
+        if (! txtpres[i].getAttribute("src")) {
+            continue;
+        }
+
+        // get the text data
+        let res = await (await fetch(txtpres[i].getAttribute("src"))).text();
+
+        txtpres[i].innerHTML = res;
+    }
+	
 })()
 
 

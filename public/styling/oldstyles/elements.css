@@ -1,0 +1,82 @@
+/*This file is for containing all basic element styling*/
+@import 'palette.css';
+
+/*inbuilt browser styling, and mark*/
+::selection, ::-moz-selection, mark {
+	background: var(--text-select-bg);
+	color: var(--text-select);
+	border-radius: 5px;
+}
+
+
+/*basic elements*/
+
+p,a,ul,ol,details,label {
+	font-family: var(--atkinson);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: dashed underline;
+}
+
+ul {
+	list-style: square;
+}
+
+details * {
+	cursor: initial;
+	font-weight: 400; /*normal weight*/
+}
+details summary {
+	cursor: grab; 
+	font-weight: 600; /*semi bold*/
+}
+details ul {
+	list-style: square;
+	margin-left: 30px;
+}
+details ul li:last-child {
+	margin-bottom: 0.7rem;
+}
+/*abbriviation & definition*/
+/*elements in <p> tags*/
+abbr, dfn {
+	text-decoration: underline dotted;
+	cursor:help;
+	color: var(--content-main-fontcolor);
+}
+
+b, strong {
+	font-weight: 700;
+	color: var(--font-color);
+}
+
+bdi, bdo { 
+	/*bdi is good for isolating weird fonts, 
+	bdo can control reading direction*/
+	unicode-bidi: bidi-override;
+}
+
+q, em, i {
+	font-style: italic;
+	color: var(--font-color);
+}
+
+textarea {
+	font-family: monospace;
+	border: none;
+	resize: none;
+	outline: none;
+	overflow-y: auto;
+}
+
+/*<form> elements*/
+
+/*elements which do nothing or are SEO*/
+article {
+
+}

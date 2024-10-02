@@ -5,27 +5,38 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0"/>
-		<!-- SEO meta tags-->
+
+	<!-- SEO meta tags-->
     <meta name="keywords" content="Vtuber, Robot, Grat10"/>
     <meta name="description" content="Grat's Vtuber Website"/>
     <meta name="author" content="Grat Grot10berg"/>
-    	<!-- Open Graph protocol metatags  -->
+
+    <!-- Open Graph protocol metatags  -->
     <meta property="og:title" content="Mother-brain: Data Central" />
     <meta property="og:type" content="image" />
-    <meta property="og:url" 
-    content="https://mother1brain.neocities.org"/> 
+    <meta property="og:url" content="https://mother1brain.neocities.org"/> 
     <meta property="og:image" 
-content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
+	content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 
     <title>[Hub] - Mother-Brain-Delta</title>
-
+	
+	<!-- favicon -->
     <link id="favicon" rel="icon" type="image/x-icon"
     href="./images/sprites/favicons/webicon.gif"/>
-    <link href="indexstyle.css" rel="stylesheet", 
+
+	<!-- common styling -->
+    <link href="styling/palette.css" rel="stylesheet", 
      type="text/css", media="all">
     <link href="styling/fonts.css" rel="stylesheet", 
      type="text/css", media="all">
+    <link href="styling/common.css" rel="stylesheet", 
+     type="text/css", media="all">
+
+	<!-- page specific styling -->
+    <link href="styling/index.css" rel="stylesheet", 
+     type="text/css", media="all">
   </head>
+
   <body>
   <!-- 
 		Scrapper no scrapping, scrapper no scraping
@@ -37,7 +48,7 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 			</a>
 			<div>
 				<p> 
-					<a href="">OCS</a>
+					<a href="characters.html">OCS</a>
 				</p>
 				<p>
 					<a href="gallery.html">Gallery</a>
@@ -180,14 +191,14 @@ content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
 		$$.drag("comments");
 
 		/* make close & ok button set gratchat to display none */
-		$$.display("gratchat_close", "none", "gratchat");
-		$$.display("gratchat_ok", "none", "gratchat");
+		$$.click("gratchat_close", "display: none;", "gratchat");
+		$$.click("gratchat_ok", "display: none;", "gratchat");
 
-		$$.display("comments_close", "none", "comments");
-		$$.display("comments_close2", "none", "comments");
+		$$.click("comments_close", "display: none;", "comments");
+		$$.click("comments_close2", "display: none;", "comments");
 
 		/* display guest book button */
-		$$.display("guestbook-btn", "block", "comments");
+		$$.click("guestbook-btn", "display: block;", "comments");
 
 		/* redirect to about page when about button is clicked. */
 		let aboutBtn = $$.id("gratchat_about");

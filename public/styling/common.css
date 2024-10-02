@@ -1,0 +1,302 @@
+
+/* set margin & padding on all elements to nothing */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* hide away everything outside of the normal sized window, no scroll */
+body {
+	overflow: hidden;
+}
+
+
+/* navigation */
+
+nav {
+	display: block;
+	width: 100vw;
+	height: 8.5vh;
+}
+
+#navbar, #navbar-deco {
+	width: 100%;
+}
+
+#navbar {
+	background-color: #16283C;
+	height: 85%;
+
+	position: relative;
+	z-index: 4;
+}
+
+/* saturn icon */
+#navbar a {text-decoration: none;}
+#navbar img:first-of-type {
+	width: 66px;
+	display: inline;
+	position: relative;
+	left: 18%;
+	top: 5px;
+}
+
+#navbar div {
+	display: inline;
+	position: inherit;
+	bottom: 15%;
+
+	position: relative;
+	left: 22%;
+}
+
+#navbar p {
+	display: inline;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+#navbar p a {
+	font-family: var(--saira);	
+	font-size: 38px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #D5E1EA;
+}
+
+#navbar p:nth-child(even) a {
+	color: #90CBC4;
+
+}
+
+#navbar p a:hover {color: #FFFFFF;}
+#navbar p:nth-child(even) a:hover {color: #90FBC4;}
+
+
+/* navigation footer*/
+
+
+footer {
+	display: block;
+	width: 100vw;
+	height: 8.5vh;
+
+	position: absolute;
+	bottom: 0%;
+}
+
+#footer, #footer-deco {
+	width: 100%;
+}
+
+#footer {
+	height: 85%;
+	background-color: #F0F4F5;
+	position: relative;
+	z-index: 4;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#footer p {
+	font-family: var(--atkinson);
+	color: #646464;
+}
+
+#footer a {
+	color: var(--cta-orange);
+	font-weight: bold;
+	text-decoration: none;
+}
+#footer a:hover {color: var(--cta-orange-hover);}
+
+#footer p:first-of-type { margin-top: 10px; }
+
+#socials svg-img svg, #guestbook-btn svg-img svg {
+	width: 45px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#socials .icon, #guestbook-btn .icon {
+	 position: absolute;
+	 z-index: 3;
+	 margin-left: 10px;
+	 margin-top: 15px;
+}
+#socials .icon svg, #guestbook-btn .icon svg {
+	width: 25px;
+	fill: white;
+}
+
+/* Twitch icon is not a square (why.) */
+#twitch svg {
+	margin-top: 3px;
+}
+
+/* color of gears in footer */
+#footer #socials svg-img svg * *, #guestbook-btn svg-img svg * * {
+	fill: var(--cta-cyan);
+} 
+
+#footer #socials .foot-gear:hover svg-img svg * *,
+#guestbook-btn:hover svg-img svg * * {
+	fill: var(--cta-cyan-hover);
+} 
+#footer #socials .foot-gear .gear svg,
+#guestbook-btn .gear svg {
+	animation-name: rotate;
+	animation-duration: 3s; 
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}	
+#footer #socials .foot-gear:hover .gear svg,
+#guestbook-btn:hover .gear svg {
+
+	animation-play-state: running;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* sawtooth repeating code */
+/*  */
+
+.sawtooth {
+	width: 100%;
+	height: calc(var(--sawtooth-size) / 5.5);
+    background-size: var(--sawtooth-size) 
+	calc(var(--sawtooth-size) / 5.5);
+	position: relative; /* used to place sawtooth above other elements*/ 
+}
+
+.sawtooth::after {
+	width: 100%;
+	content: " ";
+	display: block;
+	height: calc(var(--sawtooth-size) / 5.5);
+    background-size: var(--sawtooth-size)
+   	calc(var(--sawtooth-size) / 5.5);
+	position: relative; /* used to place sawtooth above other elements*/ 
+}
+
+.sawtooth-top  {
+	background-image: url(../images/assets/topbanner_inner.svg);	
+	/* change color of top nav*/
+	/* filter: hue-rotate(30deg); */
+}
+
+.sawtooth-top::after  {
+	background-image: url(../images/assets/topbanner_outer.svg);	
+	z-index: 4;
+}
+
+.sawtooth-bot {
+	background-image: url(../images/assets/botbanner_inner.svg);	
+}
+
+.sawtooth-bot::after {
+	background-image: url(../images/assets/botbanner_outer.svg);	
+	z-index: 4;
+}
+
+
+
+
+/* "program" styling */
+
+	/* fake program window */
+.program {
+	background-color: white;
+	border-radius: 0px 0px 17px 17px;
+	border: 2px solid #4178B7;
+
+	position: absolute;
+	z-index: 5;
+}
+
+.program .line {
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #4178B7;
+	background-color: var(--cta-cyan);
+
+	display: flex;
+	justify-content: space-between;
+}
+.program .line p {
+	color: #ECFBFF;
+	font-family: var(--helveti);
+	font-size: 38px;
+
+	margin-left: 15px;
+}
+.program .line div {
+	background-color: var(--cta-orange);
+	border-left:  2px solid #4178B7;
+	width: 13%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.program .line div:hover {
+	background-color: var(--cta-orange-hover);
+	cursor: pointer;
+}
+.program .line div img {
+	margin: auto;
+	display: block;
+	width: 45%;
+	image-rendering: pixelated;
+}
+
+.program .content {
+	font-family: var(--helveti);
+	color: #6285A0;
+	font-size: 24px;
+	margin: 15px 15px 15px 15px;
+	overflow-y: scroll;
+
+	border-bottom: 3px solid var(--cta-cyan);
+
+}
+
+.program .buttons {
+	display: flex;
+	justify-content: end;	
+	align-items: center;
+}
+
+.program .buttons div {
+	background-color: #C2E0EE;
+	border: 2px solid #265F9F;
+
+	padding: 1.5% 10% 1.5% 10%;	
+	margin-right: 5%;
+} 
+.program .buttons div:hover {
+	background-color: #89C5E0;
+	cursor: pointer;
+}
+.program .buttons div p {
+	font-family: var(--helveti);
+	color: #16283C;
+	font-size: 24px;
+	margin: auto;
+	display: block;
+}

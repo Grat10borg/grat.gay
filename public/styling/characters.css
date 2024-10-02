@@ -1,0 +1,283 @@
+
+#background {
+	position: absolute;
+	z-index: -1;
+	background: black;
+	left: 0%;
+	right: 0%;
+	bottom: 1%;
+	top: 1%;
+}
+
+#container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+
+	height: 83vh;
+	margin-left: 2%;
+}
+
+#selector {
+	background-color: #0E3B6D;
+	width: 7vw;
+	min-width: 120px;
+	height: 77vh;
+	border-radius: 15px;
+}
+
+
+#selector img {
+	width: 70%;
+	border: var(--cta-cyan) 3px solid;
+	border-radius: 25px;
+	margin: auto;
+	display: block;
+}
+#selector img:first-of-type { margin-top: 15%;}
+
+#selector p {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;	
+
+	color: #90cbc4;
+}
+
+#selector .border {
+	height: 5px;
+	width: 80%;
+	border-radius: 15px;
+
+	background-color: #507094;
+	display: block;
+	margin: auto;
+}
+
+#selector p, #selector img, #selector .border {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#selector .buttons {
+	margin-top: 25%;
+	margin-bottom: 25%;
+	
+	display: flex;
+	justify-content: space-evenly;
+}
+#selector .buttons svg-img svg * {
+	fill: var(--cta-cyan);
+}
+
+#selector .buttons svg-img:last-of-type svg {
+	rotate: 180deg;	
+}
+
+/**/
+
+
+#displayer {
+	width: 58vw;
+	min-width: 120px;
+	height: 77vh;
+	border-radius: 15px;
+    border: #15273F solid 3px;
+	margin-left: 4%;
+
+	overflow-y: scroll;
+}
+
+#displayer .bar {
+	width: calc(100% - 20px);
+	height: 10%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-left: 20px;
+
+	background-color: #0E5f6D;
+}
+
+#displayer #char-select,#displayer #loading, #displayer #shower {
+	position: absolute;
+
+	width: 58%;
+	height: 69.3%;
+	border-radius: 0 0 10px 10px;
+
+	background-color: #0E3B6D;
+}
+
+#char-select {
+	z-index: 3;
+}
+
+#loading {
+	z-index: 2;
+}
+
+#shower {
+	z-index: 1;
+}
+
+	/* char-select */
+	
+#char-select div {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+
+#char-select div img {
+	width: 12%;
+	border-radius: 18px;
+	border: var(--cta-cyan) solid 2px;
+	cursor: pointer;
+}
+
+#char-select h3, #char-select h4, #char-select p {
+	color: #90CBC4;
+	font-family: var(--atkinson);
+	margin-bottom: 10px;
+
+}
+#char-select hr {
+	color: #507094;
+	margin-bottom: 20px;
+}
+#char-select p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#char-select p:first-of-type, #char-select h3:first-of-type {
+	margin-top: 40px;
+}
+
+
+#char-select div, #char-select h3, #char-select h4,
+#char-select hr, #char-select p, #char-select div {
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+#displayer .bar svg-img svg {
+	fill: var(--cta-cyan);
+}
+
+
+/* background */
+#background txt-pre {
+	position: absolute;
+	width: 100%;
+	color: var(--cta-cyan);
+	font-size: 11px;
+	right: 0;
+	left: 10%;
+	z-index: 3;
+	rotate: 180deg;
+}
+
+#background div {
+	background-color: #16283C;
+	opacity: 80%;
+	position: absolute;	
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+#background img {
+	position: relative;
+	z-index: 1;
+}
+
+	/* loading screen */
+#displayer #loading::after {
+	opacity: 1.0;
+ 	transition: opacity 1.3s ease-in-out;
+}	
+
+#displayer:not(#loading):after {
+	opacity: 0;
+}
+
+	/* shower */
+#shower {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+
+#shower img {
+
+	/* hide small version before js does rounding */
+	opacity: 0;
+	/*the image needs to be 2x 4x 6x original sizes only.*/
+	/* add this through JS, get original image size,
+	 * then add this styling. round(to-zero, 90%, <imagesize>)
+	 * then it'll only snap to doublings of its size, no jaggies */
+	/*width: round(to-zero, 90%, 183px);*/ 
+	
+	max-width: 800px;
+	image-rendering: crisp-edges;
+
+	/* image styling */
+	border-radius: 5px;
+	border: medium solid var(--cta-cyan);
+
+}
+
+#shower p:first-of-type img {
+	margin: auto;
+	display: block;
+
+	/* spacing */
+	margin-bottom: 25px;
+}
+
+#shower h1,h2,h3,h4,h5,h6,hr,p,ul,ol {
+	color: var(--cta-cyan);
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#shower a {
+	color: var(--cta-orange);
+	text-decoration: none;
+}
+
+#shower a:hover {
+	color: var(--cta-orange-hover);
+}
+
+#shower hr {
+	margin-bottom: 25px;
+}
+
+#shower h1 {
+	font-size: 80px;
+	font-family: var(--barcode);
+	margin-top: 2px;
+	margin-left: 0;
+	position: fixed;
+	background-color: #0E3B6D;
+}
+#shower h2,h3,h4 {
+	margin-top: 10px;
+	font-size: 25px;	
+}
+
+#shower h5,h6 {
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+#shower p,ul,ol {
+	font-family: var(--atkinson);
+	font-size: 1.2rem;
+	padding: revert;
+	margin-top: revert;
+}

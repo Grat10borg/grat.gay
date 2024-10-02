@@ -1,0 +1,227 @@
+/* code by Grat10berg!! code available on the github.
+ *
+ * website stucture somewhat inspired by 
+ * the Dominos x Hatsune Miku collab site
+ *
+*/
+
+
+
+/* stream ad on top navbar */
+
+#stream-ad {
+	background-color: var(--cta-orange);
+	width: 285px;
+	height: 10%;
+	position: absolute;
+	z-index: 5;
+	display: block;
+	right: 20%;
+	top: 1%;
+
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#stream-ad:hover {
+	background-color: var(--cta-orange-hover);
+}
+
+#stream-ad #live-text {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	color: white;
+	margin-left: 10px;
+	overflow-x: hidden;
+}
+#live-text p:first-of-type {
+	margin-top: 10px;
+	font-size: 15px;
+}
+#live-text p:last-child {
+	font-size: 38px;
+}
+
+
+/* main content on load look */
+
+main {
+	overflow: hidden;
+}
+
+#background {
+	position: absolute;
+	z-index: -1;
+	background: black;
+	left: 0%;
+	right: 0%;
+	bottom: 1%;
+	top: 1%;
+}
+
+#credits, #site-by {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	z-index: 3;
+
+	color: #175872;
+  	text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+       1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+#credits {
+	bottom: 9%;
+	right: 5%;
+}
+#site-by {
+	right: 5%;
+	top: 10%;
+}
+
+#site-by a, #credits a {
+	text-decoration: none;
+}
+
+#site-by a {
+	color: #5D7A89;
+}
+#site-by a:hover {
+	color: #2E4B5A;
+}
+
+#credits a {
+	color: #175872;
+}
+#credits a:hover {
+	color: #2992BC;
+}
+
+#guestbook-btn {
+	position: absolute;
+	left: 1%;
+	bottom: 8%;
+		
+}
+
+/* part of the code is in footer as it reuses the footer gear styling*/
+
+#guestbook-btn .icon svg * *, #guestbook-btn:hover .icon svg * * {
+	fill: white;
+}
+#guestbook-btn .icon {
+	margin-right: 10px;
+	margin-top: -8px;
+}
+
+#grat {
+	max-width: 100vw;
+	pointer-events: none;
+}
+	/* the image of grat10 posing, without a plug*/
+	/* artwork by @MimzyyMay */
+
+#grat #pose, #grat #knee, #grat #arm {
+	display: block;	
+	max-width: 	85vw;
+	max-height: 80vh;
+	position: absolute;
+	right: 5%;
+	top: 15%;
+
+}
+
+#grat #pose { z-index: 1;}
+#grat #arm { z-index: 2;}
+#grat #knee { z-index: 3;}
+
+#grat #pose, #grat #knee {
+	animation: float 2s ease-in-out 1s infinite alternate-reverse;
+}
+
+	/* grat's arm */
+#grat #arm {
+
+	animation: arm 2s ease-in-out 1s infinite alternate-reverse;
+	transform-origin: 55.9% 73.7%;
+}
+
+	/* grat's knee to cover the arm */
+
+	/* grat's plug tail */
+#grat #plug {
+	display: block;
+	width: 11vw;	
+
+	position: absolute;
+	z-index: 3;	
+	left: 15%;
+	top: 65%;
+
+	animation: plug 2s ease-in-out 1s infinite alternate-reverse;
+	transform-origin: bottom;
+}
+
+	/* fake program styling, rest can be found in common.css. */
+
+#gratchat  {
+	width: 33vw;
+	height: 29vh;	
+
+	left: 12%;
+	top: 25%;
+}
+
+#gratchat .content {
+	height: 45%;
+}
+
+#comments {
+	/* hidden till triggered */
+	display: none;
+	width: 33vw;
+	height: 59vh;	
+
+	left: 17%;
+	top: 27%;
+}
+
+#comments .content {
+	height: 73%;
+}
+
+	/* float element up and down */
+@keyframes float {
+	0% {
+		top: 16%;
+	}
+	100% {
+		top: 15%;
+	}
+}
+
+
+	/* float plug up and down and rotate to create a sway */
+@keyframes plug {
+	0% {
+		top: 66%;
+		transform: rotate(30deg);
+	}
+	100% {
+		top: 66.6%;
+	}
+}
+
+	/* float element up and down */
+@keyframes arm {
+	0% {
+		top: 16%;
+		transform: rotate(-10deg);
+	}
+	100% {
+		top: 15%;
+		transform: rotate(5deg);
+	}
+}

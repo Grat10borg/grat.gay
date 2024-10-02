@@ -49,46 +49,46 @@
 
 @font-face {
   font-family: 'Minimal4';
-  src: url('font/Minimal4.ttf');
+  src: url('fonts/Minimal4.ttf');
 }
 @font-face {
   font-family: 'TinyUnicode';
-  src: url('TinyUnicode.ttf');
+  src: url('fonts/TinyUnicode.ttf');
 }
 
 @font-face {
   font-family: 'BadComa';
-  src: url('BadComa.ttf');
+  src: url('fonts/BadComa.ttf');
 }
 
 @font-face {
   font-family: 'Panic';
-  src: url('Panic.ttf');
+  src: url('fonts/Panic.ttf');
 }
 
 @font-face {
   font-family: 'DotImpact';
-  src: url('DotImpact.ttf');
+  src: url('fonts/DotImpact.ttf');
 }
 
 @font-face {
   font-family: 'Static';
-  src: url('Static.ttf');
+  src: url('fonts/Static.ttf');
 }
 
 @font-face {
   font-family: 'Astigma';
-  src: url('Astigma.ttf');
+  src: url('fonts/Astigma.TTF');
 }
 
 @font-face {
   font-family: 'Barcode';
-  src: url('BarcodeFont.ttf');
+  src: url('fonts/BarcodeFont.ttf');
 }
 
 @font-face {
   font-family: 'Ovnis';
-  src: url('Ovnis.ttf');
+  src: url('fonts/Ovnis.ttf');
 }
 
 /* fontface vars */

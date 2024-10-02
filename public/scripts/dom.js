@@ -11,11 +11,13 @@ query: $.querySelector.bind($),
 query_all: $.querySelectorAll.bind($),
 
 // custom methods below this
+	// unused
 api: ApiCall.bind($),
 tag: tag.bind($),
+	// shorthand code
 txt: fetchTXT.bind($), //async
 drag: makeDraggable.bind($),
-display: display.bind($),
+click: click.bind($),
 
 // just here to help me out when working.
 log: console.log,
@@ -42,6 +44,8 @@ async function fetchTXT(Url) {
   return text;
 }
 
+
+
 // Calls Twitch API or another API if turned on
 async function ApiCall(HttpCall) {
     const respon = await fetch(`${HttpCall}`, {
@@ -64,11 +68,11 @@ async function ApiCall(HttpCall) {
   }
 
 /* when element1 is clicked display option element 2*/
-function display(element, display, element2) {
+function click(element, style, element2) {
 	let eventelem = $$.id(element); 
 	eventelem.addEventListener("click", function() {
 		let changelem = $$.id(element2);
-		changelem.style.display = display;
+		changelem.style = style;
 	});
 }
 

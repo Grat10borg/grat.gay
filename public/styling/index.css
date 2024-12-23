@@ -47,18 +47,35 @@
 /* main content on load look */
 
 main {
-	overflow: hidden;
+	/*overflow: hidden;*/
+	height: 2000px;
 }
 
+
+/* blue image background*/
 #background {
 	position: absolute;
 	z-index: -1;
 	background: black;
 	left: 0%;
 	right: 0%;
-	bottom: 1%;
 	top: 1%;
 }
+
+/* triangular orange background*/
+#background2 {
+	position: absolute;
+	z-index: 4;
+	top: 90%;
+	left: -2%;
+	width: 105%;
+	height: 15%;
+	background: orange;
+
+	transform: rotate(-4deg)
+}
+
+/* floating text, eg credit text "art by @MimzyyMay"*/
 
 #credits, #site-by {
 	font-family: var(--atkinson);
@@ -99,14 +116,15 @@ main {
 	color: #2992BC;
 }
 
+/* guestbook button gear. */
+/* part of the code is in footer as it reuses the footer gear styling*/
+
 #guestbook-btn {
 	position: absolute;
 	left: 1%;
 	bottom: 8%;
 		
 }
-
-/* part of the code is in footer as it reuses the footer gear styling*/
 
 #guestbook-btn .icon svg * *, #guestbook-btn:hover .icon svg * * {
 	fill: white;
@@ -115,6 +133,8 @@ main {
 	margin-right: 10px;
 	margin-top: -8px;
 }
+
+/* the floating grat on the top of the page*/
 
 #grat {
 	max-width: 100vw;

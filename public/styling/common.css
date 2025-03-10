@@ -26,12 +26,23 @@ nav {
 
 /* saturn icon */
 #navbar a {text-decoration: none;}
-#navbar img:first-of-type {
-	width: 66px;
+#navbar a img {
+	width: 60px;
 	display: inline;
 	position: relative;
 	left: 18%;
 	top: 5px;
+}
+/* for hover gif animation */
+#navbar img:nth-child(2) {
+	opacity: 0;	/*hide animated ver by default*/
+	position: absolute; /* put gif ontop of icon*/
+}
+#navbar a:first-of-type:hover img:first-of-type { 
+	opacity: 0; /*hide static icon*/
+}
+#navbar a:first-of-type:hover img:nth-child(2) {
+	opacity: 100%; /*show animated icon*/
 }
 
 #navbar div {
@@ -55,6 +66,7 @@ nav {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #D5E1EA;
+	transition: all 1s;
 }
 
 #navbar p:nth-child(even) a {
@@ -64,6 +76,44 @@ nav {
 
 #navbar p a:hover {color: #FFFFFF;}
 #navbar p:nth-child(even) a:hover {color: #90FBC4;}
+
+/* stream ad on top navbar */
+
+#stream-ad {
+	background-color: var(--cta-orange);
+	width: 285px;
+	height: 10%;
+	position: absolute;
+	z-index: 5;
+	display: block;
+	right: 20%;
+	top: 1%;
+
+	transition: all 1s;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#stream-ad:hover {
+	background-color: var(--cta-orange-hover);
+}
+
+#stream-ad #live-text {
+	font-family: var(--atkinson);
+	font-weight: bold;
+	color: white;
+	margin-left: 10px;
+	overflow-x: hidden;
+}
+#live-text p:first-of-type {
+	margin-top: 10px;
+	font-size: 15px;
+}
+#live-text p:last-child {
+	font-size: 38px;
+}
+
 
 
 /* navigation footer*/
@@ -102,6 +152,7 @@ footer {
 	color: var(--cta-orange);
 	font-weight: bold;
 	text-decoration: none;
+	transition: all 1s;
 }
 #footer a:hover {color: var(--cta-orange-hover);}
 
@@ -295,3 +346,15 @@ footer {
 	margin: auto;
 	display: block;
 }
+
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
+@media screen and (min-width: 600px) {
+}
+
+/* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1500px) {
+	#stream-ad {
+		display: none;
+	}
+}
+

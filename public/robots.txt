@@ -16,4 +16,4 @@ Disallow: /
 User-Agent: FacebookBot
 Disallow: /
 
-note: hey, isn't mayyyybe just Maaaaayybe not legal to steal images from sites? just a thought.
+note: hey, isn't it mayyyybe just Maaaaayybe not legal to steal images from sites? just a thought.

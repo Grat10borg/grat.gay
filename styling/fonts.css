@@ -1,0 +1,114 @@
+	/* Main font */
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible';
+  src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+	/* main condensed font */
+
+@font-face {
+	font-family: 'Saira-Condensed';
+	src: url(fonts/SairaCondensed-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Saira-Condensed';
+	src: url(fonts/SairaCondensed-Bold.ttf);
+	font-weight: bold;
+}
+
+	/* Misc fonts */
+@font-face {
+  font-family: 'HelvetiPixel';	
+  src: url('fonts/HelvetiPixel.ttf'); 
+}
+
+@font-face {
+  font-family: 'Vhsper';	
+  src: url('fonts/VHSperV2.ttf'); 
+}
+
+@font-face {
+  font-family: 'Minimal4';
+  src: url('fonts/Minimal4.ttf');
+}
+@font-face {
+  font-family: 'TinyUnicode';
+  src: url('fonts/TinyUnicode.ttf');
+}
+
+@font-face {
+  font-family: 'BadComa';
+  src: url('fonts/BadComa.ttf');
+}
+
+@font-face {
+  font-family: 'Panic';
+  src: url('fonts/Panic.ttf');
+}
+
+@font-face {
+  font-family: 'DotImpact';
+  src: url('fonts/DotImpact.ttf');
+}
+
+@font-face {
+  font-family: 'Static';
+  src: url('fonts/Static.ttf');
+}
+
+@font-face {
+  font-family: 'Astigma';
+  src: url('fonts/Astigma.TTF');
+}
+
+@font-face {
+  font-family: 'Barcode';
+  src: url('fonts/BarcodeFont.ttf');
+}
+
+@font-face {
+  font-family: 'Ovnis';
+  src: url('fonts/Ovnis.ttf');
+}
+
+/* fontface vars */
+:root {
+	/*atkinson is a good general font, very readable*/
+	--atkinson: 'Atkinson-Hyperlegible', monospace;
+	--saira: 'Saira-Condensed', monospace;
+
+	/* pixelfonts */
+	--vhsper: 'Vhsper', monospace; /* custom font */
+	--helveti: 'HelvetiPixel', monospace; /*big sized pixel*/
+	--tinyuni: 'TinyUnicode', monospace; /* small pixels */
+	--minimal: 'Minimal4', monospace; /*smallest pixels*/
+	--barcode: 'Barcode', monospace;  /*pixel font with barcode above it */
+	
+	/* glitchy, dotfonts etc */
+	--coma:  'BadComa', monospace; /* SOMA like font */
+	--panic:  'Panic', monospace;  /*  */
+	--dotpact:  'DotImpact', monospace;  /* very dot heavy font */
+	--static:  'Static', monospace;  /* glitchy looking font */
+	--astigma:  'Astigma', monospace;  /* glitchy looking font */
+	--ovnis:  'Ovnis', monospace;  /*  */
+}

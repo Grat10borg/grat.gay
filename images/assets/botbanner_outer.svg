@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="43.9989px" height="8px" viewBox="0 0 43.9989 8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group">
+    <path d="M0 8L0 0.346436L11.002 8L0 8L0 8Z" id="Triangle" fill="#F0F4F5" fill-rule="evenodd" stroke="none" />
+    <path d="M43.9989 0.345703L43.502 0L32.002 8L43.9989 8L43.9989 0.345703L43.9989 0.345703Z" id="Triangle" fill="#F0F4F5" fill-rule="evenodd" stroke="none" />
+    <path d="M21.502 0L33.002 8L10.002 8L21.502 0Z" id="Triangle" fill="#F0F4F5" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

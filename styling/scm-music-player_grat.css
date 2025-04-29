@@ -1,0 +1,30 @@
+#player,#player a{ color:#fff; font-size: 11px; font-family: verdana; text-transform:normal; } 
+#player{ background:url(http://static.tumblr.com/su8juwr/3HUmkhox7/preto.png); background-position:bottom; background-color: #000;}
+#player .mainImage{ background:url(http://static.tumblr.com/su8juwr/BPLn36qrk/minipreta.png); }
+
+#player #baseLeft{ width:93px; } 
+#player #baseRight{ width:145px;}  
+#player .button{  width:26px; }
+#player #play{ background:url(http://static.tumblr.com/su8juwr/4j9n36qj8/minipretopausar.png); }
+#player #play,#player #pause{ left:0px; }
+#player #previous{ left:26px; } 
+#player #next{ left:42px; }
+#player #title{ left:80px;  font-size: 9px; }
+#player #tooltip{ right:565555px; }    
+#player #timer{ right:5555555px;  } 
+#player #list{ right:5555551270px; }    
+ 
+#player #seeker{ right:8888888888888888888888px; }  
+#player #seekerBase{ border-color:#000;  } 
+#player #seekerBuffered{ background-color:#000 ; }  
+#player #seekerSliderBase{ background-color:#000; } 
+
+#player #volume{ width:8888888px; right:8888888px; } 
+#player #volumeSlider{ width:777777px; background:url(); }
+
+#playlist,#playlist .module,#playlist h3{ border-color:#000;}
+#playlist .module{  color:#000 background-color:#000; }
+#playlist h3{ background:url(http://static.tumblr.com/su8juwr/PJnn0r57o/ski.png); color:#000; background-color:#000;  }
+#playlist .even{background-color:#000;}
+#playlist .odd{ background-color:#000;} 
+#playlist .focus{ background-color:#aaa; color:#000;}   

@@ -212,9 +212,37 @@
 
 		/* redirect to about page when about button is clicked. */
 		let aboutBtn = $$.id("gratchat_about");
-		aboutBtn.addEventListener("click", function() {
+		aboutBtn.addEventListener("click", () => {
 			window.location.href = "about.html"
 		});
 	</script>
+	<!-- SCM Music Player https://www.scmplayer.net -->
+	<script type="text/javascript"
+		src="https://www.scmplayer.net/script.js" 
+		data-config="{'skin':'https://grat.gay/styling/scm/scm-music-player_grat.css',
+		'volume':25,'autoplay':false,
+		'shuffle':true,
+		'repeat':1,'placement':'top',
+		'showplaylist':false,
+
+		'playlist':[{'title':'Black Medi - The Defense',
+		'url':'https://grat.gay/styling/scm/Black_Midi_The_Defence.mp3'},
+		{'title':'Dapper Dog - Nocturnal',
+		'url':'https://grat.gay/styling/scm/Dapper%20Dog%20-Nocturnal.mp3'},
+		{'title':'Gorillaz - Doncamatic',
+		'url':'https://grat.gay/styling/scm/Gorillaz_Doncamatic.mp3'},
+		{'title':'Momma - Biohazard',
+		'url':'https://grat.gay/styling/scm/Momma_Biohazard.mp3'},
+		{'title':'Slow Pulp - Falling Apart',
+		'url':'https://grat.gay/styling/scm/SlowPulp_FallingApart_.mp3'},
+		{'title':'Vansire - Love You All The Same',
+		'url':'https://grat.gay/styling/scm/Vansire_Love_You_All_the_Same.mp3'},
+		{'title':'Vansire - Metamodernity',
+		'url':'https://grat.gay/styling/scm/Vansire_Metamodernity.mp3'},
+		{'title':'Vansire - Statelines',
+		'url':'https://grat.gay/styling/scm/Vansire_Statelines.mp3'}]}">
+	</script>
+	<!-- SCM Music Player script end -->
+
   </body>
 </html>

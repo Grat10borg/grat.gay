@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    height: 2400px;
+    height: 458px;
 }
 
 /* blue image background*/
@@ -26,44 +26,6 @@ main {
     top: 1%;
 }
 
-/* triangular orange background*/
-#triangles{
-    width: 100%;
-    overflow: hidden;
-}
-.triangle_bg {
-    z-index: 4;
-    height: 95%;
-    position: absolute;
-}
-
-#background2 {
-    top: 100%;
-    left: -2%;
-    width: 110%;
-
-    transform: rotate(-4deg);
-    background-color: var(--cta-orange);
-}
-#background3 {
-    top: 170%;
-    left: -5%;
-    width: 110%;
-    
-    transform: rotate(5deg);
-    background-color: var(--cta-cyan);
-}
-
-#background3:after {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: " ";
-    height: 150px;
-    display: block;
-    position: absolute;
-    background-color: var(--cta-cyan);
-}
 
 /* blue image background*/
 #background {
@@ -83,7 +45,6 @@ main {
 	display: block;
 	font-size: 20px;
 	position: absolute;
-	z-index: 3;
 
 	color: #175872;
   	text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
@@ -92,10 +53,12 @@ main {
 #credits {
 	bottom: 9%;
 	right: 5%;
+	z-index: 5;
 }
 #site-by {
 	right: 5%;
 	top: 10%;
+	z-index: 3;
 }
 
 #site-by a, #credits a {
@@ -249,3 +212,55 @@ main {
 	height: 73%;
 }
 
+.segment img {
+	width: 100%;
+}
+
+.segment {
+	margin-top: -15%;
+}
+
+.segment:first-of-type { margin-top: 0;}
+.segment:first-of-type img {
+	position: relative;
+	z-index: 4;
+}
+
+.segment:nth-child(4) img {	position: relative; z-index: 6;}
+.segment:nth-child(5) img {	position: relative; z-index: 7;}
+.segment:nth-child(6) img {	position: relative; z-index: 8;}
+.segment:nth-child(7) img {	position: relative; z-index: 9;}
+
+.segment:last-of-type {
+	margin-bottom: -15px;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+	main {
+		height: 450px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	main {
+		height: 550px;
+	}
+} 

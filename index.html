@@ -31,6 +31,7 @@
      type="text/css", media="all">
     <link href="styling/common.css" rel="stylesheet", 
      type="text/css", media="all">
+     <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
 
 	<!-- page specific styling -->
     <link href="styling/index.css" rel="stylesheet", 
@@ -41,6 +42,7 @@
   <!-- 
 		Scrapper no scrapping, scrapper no scraping
   --!>
+	<radio></radio>
 	<nav>
 		<div id="navbar">
 			<a href="index.html">
@@ -55,10 +57,10 @@
 					<a href="gallery.html">Gallery</a>
 				</p>
 				<p>
-					<a href="Data/links.html">Socials</a>
+					<a href="blog.html">Blog</a>
 				</p>
 				<p>
-					<a href="commisions.html">Comms</a>
+					<a href="links.html">Links</a>
 				</p>
 			</div>
 		</div>	
@@ -169,7 +171,7 @@
 				<p>copyleft CC, original maker Grat10berg,
 				Mother1brain.neocities.org. 
 				the website code is available
-				<a href="https://github.com/Grat10borg/Mother1brain">here</a></p>
+				<a href="https://github.com/Grat10borg/Mother1brain" target="_blank">here</a></p>
 			</div>
 			<div id="socials">
 			  <!-- svg but with swag -->
@@ -197,6 +199,36 @@
 		</div>	
 	</footer>
 	<script src="scripts/dom.js"></script>
+	<script src="./styling/scm/nyaaradio.js"></script>
+	<script>
+		radio.init({ // songs
+			"Black Medi - The Defence": "./styling/scm/Black_Midi_The_Defence.mp3",
+			"Dapper Dog - Nocturnal": "./styling/scm/Dapper_Dog-Nocturnal.mp3",
+			"Gorillaz - Doncamatic": "./styling/scm/Gorillaz_Doncamatic.mp3",
+			"Momma - Biohazard": "./styling/scm/Momma_Biohazard.mp3",
+			"Slow Pulp - Falling Apart": "./styling/scm/SlowPulp_FallingApart_.mp3",
+			"Vansire - Love You All The Same": "./styling/scm/Vansire_Love_You_All_the_Same.mp3",
+			"Vansire - Metamodernity": "./styling/scm/Vansire_Metamodernity.mp3",
+			"Vansire - Statelines": "./styling/scm/Vansire_Statelines.mp3",
+		},
+		// settings
+		{
+			// randomizes playlist track order
+			shuffle: true,
+
+			// whether to play track after initializing
+			autoplay: false,
+
+			// volume to use when none has been set by the user
+			default_volume: 0.1,
+
+			// separator between the timestamps
+			time_separator: " | ",
+
+			// a header placed above the tracks in the `<playlist>` element
+			playlist_header: "Playlist",
+		});
+	</script>
 	<script src="scripts/common.js"></script>
 	<!-- 
 		page unique code 
@@ -223,7 +255,7 @@
 		});
 	</script>
 	<!-- SCM Music Player https://www.scmplayer.net -->
-	<script type="text/javascript"
+	<!-- 	<script type="text/javascript"
 		src="https://www.scmplayer.net/script.js" 
 		data-config="{'skin':'https://grat.gay/styling/scm/scm-music-player_grat.css',
 		'volume':25,'autoplay':false,
@@ -247,8 +279,9 @@
 		'url':'https://grat.gay/styling/scm/Vansire_Metamodernity.mp3'},
 		{'title':'Vansire - Statelines',
 		'url':'https://grat.gay/styling/scm/Vansire_Statelines.mp3'}]}">
-	</script>
+	</script>  -->
 	<!-- SCM Music Player script end -->
+
 
   </body>
 </html>

@@ -12,27 +12,26 @@
 
 refresh();
 function refresh() {
-	let res = $$.id("favicon").getAttribute("href").split("/");
-	let icon = res[4].split(".");
 
-	if(document.hidden == false) {
-		// restart the animated favicon
-		icon[0] = icon[0].replace("_inactive", "");
-		$$.id("favicon").setAttribute("href",
-		"/images/sprites/favicons/"+icon[0]+".gif");
-
-	setTimeout("refresh()", 500);
+	if(radio.audio.paused != true) {
+		// change favicon to a dancing version if nyaaradio is playing
+		$$.id("favicon").setAttribute("href",	
+		"/images/sprites/favicons/webicon_dance.gif");
 	}
-	else {
+	else if(document.hidden == true) {
 		// stop animated favicon and replace with inactive ver
 		if($$.id("favicon").getAttribute("href")
 		.includes("_inactive") == false) {
-			$$.id("favicon").setAttribute("href",
-			"/images/sprites/favicons/"+icon[0]+"_inactive.png");
+			$$.id("favicon").setAttribute("href",	
+			"/images/sprites/favicons/webicon_inactive.png");
 		}
-
-	setTimeout("refresh()", 1000);	
+	}	
+	else {
+		// restart the animated favicon
+		$$.id("favicon").setAttribute("href",	
+		"/images/sprites/favicons/webicon.gif");
 	}
+	setTimeout("refresh()", 800);	
 }
 
 /* get image sizes, useful for pixelart handling*/

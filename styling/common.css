@@ -22,6 +22,7 @@ nav {
 	height: 85%;
 
 	position: relative;
+	z-index: 11;
 }
 
 /* saturn icon */
@@ -66,7 +67,7 @@ nav {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #D5E1EA;
-	transition: all 1s;
+	transition: all 0.3s;
 }
 
 #navbar p:nth-child(even) a {
@@ -84,12 +85,12 @@ nav {
 	width: 285px;
 	height: 10%;
 	position: absolute;
-	z-index: 5;
+	z-index: 12;
 	display: block;
 	right: 20%;
-	top: 1%;
+	top: 4%;
 
-	transition: all 1s;
+	transition: all 0.3s;
 	border-radius: 25px;
 	display: flex;
 	justify-content: center;
@@ -124,7 +125,7 @@ footer {
 	width: 100vw;
 	height: 8.5vh;
 
-	z-index: 9;
+	z-index: 11;
 	position: sticky;
 	bottom: 0%;
 }
@@ -137,7 +138,7 @@ footer {
 	height: 85%;
 	background-color: #F0F4F5;
 	position: relative;
-	z-index: 4;
+	z-index: 11;
 
 	display: flex;
 	justify-content: space-evenly;
@@ -166,7 +167,7 @@ footer {
 
 #socials .icon, #guestbook-btn .icon {
 	 position: absolute;
-	 z-index: 3;
+	 z-index: 11;
 	 margin-left: 10px;
 	 margin-top: 15px;
 }
@@ -271,7 +272,7 @@ footer {
 
 	min-width: 450px;
 	position: absolute;
-	z-index: 5;
+	z-index: 10;
 }
 
 .program .line {

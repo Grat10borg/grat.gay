@@ -1,0 +1,182 @@
+body {margin: 0}
+
+radio {
+	--radio-radius: 5px;
+	--radio-padding: 5px;
+
+	--radio-bg: #15273c;
+	--radio-fg: #ffffff;
+	--radio-height: 1.5em;
+	--radio-slider: #3ccacc;
+	--radio-button: #15273c;
+	--radio-real-height: calc(var(--radio-height) + calc(var(--radio-padding) * 2));
+
+	--playlist-fg: #555555;
+	--playlist-sel: #397bc3;
+	--playlist-sel-fg: #eeeeee;
+	--playlist-bg: #eeeeee;
+	--playlist-hover-fg: var(--playlist-sel-fg);
+	--playlist-hover: color-mix(in hsl, var(--playlist-sel), transparent);
+	--header-bg: url("bar.png");
+
+	display: flex;
+	color: var(--radio-fg);
+	padding: var(--radio-padding);
+	background: var(--radio-bg);
+	height: var(--radio-height);
+	width: calc(100% - calc(var(--radio-padding) * 2));
+}
+
+radio button {
+	border: none;
+	outline: none;
+	color: var(--radio-fg);
+	background: var(--radio-button);
+	border-radius: var(--radio-radius);
+
+	width: 26px;
+	height: 25px;
+
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+radio .play {
+	background: url(play_btn.png);
+	background-position: center;
+}
+
+radio .play:hover {
+	background: url(play_btn_active.png);
+	background-position: center;
+}
+
+/* when not playing, change class */
+radio .pause {
+	background: url(pause_btn.png);
+	background-position: center;
+}
+
+radio .pause:hover {
+	background: url(pause_btn_active.png);
+	background-position: center;
+}
+
+radio .skip {
+	background: url(skip_btn.png);
+	background-position: center;
+}
+
+radio .skip:hover {
+	background: url(skip_btn_active.png);
+	background-position: center;
+}
+
+radio .previous {
+	background: url(previous_btn.png);
+	background-position: center;
+}
+
+radio .previous:hover {
+	background: url(previous_btn_active.png);
+	background-position: center;
+}
+
+radio .list {
+	background: url(list_btn.png);
+	background-position: center;
+}
+
+radio .list:hover {
+	background: url(list_btn_active.png);
+	background-position: center;
+}
+radio .title {
+	white-space: pre;
+	margin: 0px 15px;
+	font-family: var(--atkinson);
+	line-height: var(--radio-height);
+
+}
+
+radio .time {
+	display: flex;
+	font-family: var(--atkinson);
+	margin: 0px 15px;
+	line-height: var(--radio-height);
+
+}
+
+radio .time .separator {
+	white-space: pre;
+}
+
+radio button {margin: 0px var(--radio-padding)}
+radio :first-child {margin-left: 0px}
+radio :not(playlist):last-child {margin-right: 0px}
+
+radio .duration {width: 100%}
+
+radio [type="range"] {
+	accent-color: var(--radio-slider);
+}
+
+playlist {
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.0;
+	display: block;
+	position: fixed;
+	z-index: 13;
+	max-width: 100vw;
+	pointer-events: none;
+	width: max(260px, 25vw);
+	max-width:	260px;
+	color: var(--playlist-fg);
+	transform: translateX(5vw);
+	transition: 0.3s ease-in-out;
+	background: var(--playlist-bg);
+	top: var(--radio-real-height);
+	transition-property: opacity, transform;
+
+	border-left: 2px solid var(--radio-bg);
+}
+
+playlist:not(.hidden) {
+	opacity: 1.0;
+	pointer-events: all;
+	transform: translateX(0px);	
+
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
+}
+
+playlist track, playlist header {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	padding: var(--radio-padding);
+}
+
+playlist track::before {
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: counter(section) ". "; /* Display counter value in default style (decimal) */
+}
+
+playlist header {
+	cursor: inherit;
+	color: var(--radio-fg);
+	height: 14px;
+	background: var(--header-bg);
+	font-size: 12px;
+
+}
+
+playlist track:hover {
+	color: var(--playlist-hover-fg);
+	background: var(--playlist-hover);
+}
+
+playlist track.playing {
+	color: var(--playlist-sel-fg);
+	background: var(--playlist-sel);
+}

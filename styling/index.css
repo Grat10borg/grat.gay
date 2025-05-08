@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    height: 458px;
+    height: 950px;
 }
 
 /* blue image background*/
@@ -51,13 +51,14 @@ main {
        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 #credits {
-	bottom: 9%;
-	right: 5%;
-	z-index: 5;
+	bottom: 10%;
+	right: 4%;
+	z-index: 7;
+	transform: rotate(-7deg);
 }
 #site-by {
-	right: 5%;
-	top: 10%;
+	right: 4%;
+	top: 14%;
 	z-index: 3;
 }
 
@@ -84,8 +85,9 @@ main {
 
 #guestbook-btn {
 	position: absolute;
+	z-index: 7;
 	left: 1%;
-	bottom: -4%;
+	bottom: -12%;
 		
 }
 
@@ -212,10 +214,6 @@ main {
 	height: 73%;
 }
 
-.segment img {
-	width: 100%;
-}
-
 .segment {
 	margin-top: -15%;
 }
@@ -226,13 +224,38 @@ main {
 	z-index: 4;
 }
 
-.segment:nth-child(4) img {	position: relative; z-index: 6;}
-.segment:nth-child(5) img {	position: relative; z-index: 7;}
-.segment:nth-child(6) img {	position: relative; z-index: 8;}
-.segment:nth-child(7) img {	position: relative; z-index: 9;}
+.segment:nth-child(4) img {
+	position: relative; 
+	z-index: 6;
+	height: 1282px;
+	margin-top: -578px;
+}
+
+.segment:nth-child(5) img {
+	position: relative;
+	z-index: 7;
+}
+
+.segment:nth-child(6) img {
+	position: relative; 
+	height: 1282px;
+	margin-top: -260px;
+	z-index: 8;	
+}
+
+.segment:nth-child(7) img {
+	position: relative;
+	height: 1282px;
+	margin-top: -10px;
+	z-index: 9;
+}
 
 .segment:last-of-type {
+	position: relative;
 	margin-bottom: -15px;
+	height: 720px;
+	margin-top: -480px;
+	z-index: 10;
 }
 
  /* Extra small devices (phones, 600px and down) */
@@ -253,14 +276,9 @@ main {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-	main {
-		height: 450px;
-	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	main {
-		height: 550px;
-	}
+	
 } 

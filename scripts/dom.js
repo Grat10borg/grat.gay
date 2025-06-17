@@ -78,9 +78,10 @@ function click(element, style, element2) {
 
 // make element with position: absolute draggable
 function makeDraggable(id) {
-// W3Schools Draggable element code but edited 
 // Make the DIV element draggable:
-  dragElement(document.getElementById(id));
+
+	// test if screen size is big enough for dragging
+    dragElement(document.getElementById(id));
 
   function dragElement(elmnt) {
   	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -104,6 +105,9 @@ function makeDraggable(id) {
   }
 
   function elementDrag(e) {
+	if (innerWidth <= 500) {
+		return;
+	}
    	e = e || window.event;
    	e.preventDefault();
    	// calculate the new cursor position:

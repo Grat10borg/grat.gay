@@ -1,0 +1,176 @@
+:root {
+  
+  --btn-main-color: #E1F6FF;
+  --btn-main-text: #2961A5;
+  --btn-main-hover: #A8FFFC;
+  --btn-main-text-hover: #2977A7;
+
+  --btn-sec-color: #5FC2E7;
+  --btn-sec-text: #FFFFFF;
+  --btn-sec-hover: #3A97D5;
+  --btn-sec-text-hover: #FFFFFF;
+  
+  --btn-shadow-color: #000;
+  --btn-shadow-amount: 5px;
+
+  --btn-height: 2.5em;
+
+  --text-color: #81FBFF;
+  --text-hover: #FFFFFF;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.btn-main svg-img svg {
+	margin-top: 5px;
+	height: 24px;
+	width: 24px; /* cuz svgs don't wanna act */
+	fill: var(--btn-main-text);
+}
+
+.btn-main svg-img svg path {
+	fill: var(--btn-main-text);
+}
+
+.row #pfp {
+	width: 25%;
+	max-width: 250px;
+	margin-top: 5%;
+  	filter: drop-shadow(0px 4px 20px rgba(0,0,0, 0.25));
+}
+
+.row .text {
+	color: var(--text-color);
+	text-align: center;
+	cursor: default;
+}
+
+.row .text h1 {
+	margin: 0.5em 0 0.3em 0;
+	font-size: 32px;
+	font-weight: bolder;	
+	font-family: var(--atkinson); /*change out with monospace ver*/
+}
+
+.row .text p {
+	font-family: Inter;
+	font-size: 22px;
+	font-weight: 600;	
+	margin: 0 0 1.5em 0;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-main {
+	font-size: 1.2em;
+	font-family: Inter;
+	border-radius: 59px;
+	width: 30%;
+	max-width: 350px;
+	height: var(--btn-height);
+	margin-bottom: 0.9em;
+
+	/* align text in the middle of the button */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-weight: 600;
+	text-decoration: none;
+	transition: 0.1s linear;
+	padding: 0px 1em;
+
+	color: var(--btn-main-text);
+	background: var(--btn-main-color);
+  	filter: drop-shadow(0px 4px 20px rgba(0,0,0, 0.25));
+}
+
+.btn-main:not(:has(svg-img)) {
+	justify-content: center;
+}
+
+.btn-main:hover {
+	cursor: pointer;
+	background: var(--btn-main-hover);
+	color: var(--btn-main-text);
+}
+
+.row .btn-main:first-child:not(:last-child) {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	width: 35%;
+}
+
+.row .btn-main:last-child:not(:first-child) {
+	background-color: var(--btn-sec-color);
+	color: var(--btn-sec-text);
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	width: 35%;
+}
+
+.row .btn-main:last-child:not(:first-child) svg-img svg { 
+	fill: var(--btn-sec-text);
+}
+
+.row .btn-main:last-child:not(:first-child) svg-img svg path { 
+	fill: var(--btn-sec-text);
+}
+
+.row .btn-main:last-child:not(:first-child):hover {
+	background-color: var(--btn-sec-hover);
+	color: var(--btn-sec-text-hover);
+}
+
+
+
+#background {
+  --size: 250px;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: fixed;
+  background-position: 0px 0px;
+  background-size: calc(var(--size));
+  background-image: url("../images/assets/links_bg.png");
+  animation: 20s linear infinite background-scroll;
+}
+
+ @keyframes background-scroll {
+    0% {
+      background-position: calc(var(--size) * -1) calc(var(--size) * -1);
+    }
+    100% {
+      background-position: var(--size) var(--size);
+    }
+ }
+
+@media (max-width: 600px) {
+	.btn-main svg-img {
+		display: none;
+	}
+
+	.btn-main {
+		justify-content: center;
+	}
+}
+
+/* reduced motion version */
+@media (prefers-reduced-motion: reduce) {
+	#background { animation-play-state: paused; }
+} 

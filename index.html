@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html>
-<html lang="en-DK">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+    <title></title>
+	<link href="style.css" rel="stylesheet">
+	<link href="styling/fonts.css" rel="stylesheet">
 
-	<!-- SEO meta tags-->
-    <meta name="keywords" content="Vtuber, Robot, Grat10"/>
-    <meta name="description" content="Grat's Vtuber Website"/>
-    <meta name="author" content="Grat Grot10berg"/>
-
-    <!-- Open Graph protocol metatags  -->
-    <meta property="og:title" content="Mother-brain: Data Central" />
-    <meta property="og:type" content="image" />
-    <meta property="og:url" content="https://mother1brain.neocities.org"/> 
-    <meta property="og:image" 
-	content="https://mother1brain.neocities.org/images/desert_rain_frog.png"/>
-
-    <title>[Hub] - Mother-Brain-Delta</title>
-	
 	<!-- favicon -->
     <link id="favicon" rel="icon" type="image/x-icon"
     href="./images/sprites/favicons/webicon.gif"/>
@@ -32,80 +18,15 @@
     <link href="styling/common.css" rel="stylesheet", 
      type="text/css", media="all">
      <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
-
-	<!-- page specific styling -->
-    <link href="styling/index.css" rel="stylesheet", 
-     type="text/css", media="all">
   </head>
-
   <body>
-  <!-- 
-		Scrapper no scrapping, scrapper no scraping
-  --!>
 	<radio></radio>
-	<nav>
-		<div id="navbar">
-			<a href="index.html">
-				<img src="images/icons/saturn.png"> 
-				<img src="images/icons/saturn.gif"> 
-			</a>
-			<div>
-				<p> 
-					<a href="characters.html">OCS</a>
-				</p>
-				<p>
-					<a href="gallery.html">Gallery</a>
-				</p>
-				<p>
-					<a href="blog.html">Blog</a>
-				</p>
-				<p>
-					<a href="links.html">Links</a>
-				</p>
-			</div>
-		</div>	
-		<a href="https://www.twitch.tv/grat_grot10_berg">
-			<div id="stream-ad">
-				<div id="live-icon"><svg-img src="images/icons/live.svg"></div>
-				<div id="live-text">
-					<p>Streaming live on Twitch.tv</p>
-					<p>Livestream</p>
-				</div>
-			</div>
-		</a>
-		<!-- the looping navbar decoration -->
-		<div id="navbar-deco">
-			<div class="sawtooth sawtooth-top"></div>
-		</div>
-	</nav>		
-	<!--
-    <img style="z-index: 6; opacity: 30%; left: 1%; top: 0;
-	position: fixed; width: 95%;" src="website.png"> 
-	-->
+	<div id="navbar-deco">
+		<div class="sawtooth sawtooth-top"></div>
+	</div>
 	<main>
-		<p id="credits"><a target="_blank" 
-		href="https://linktr.ee/mimzyyMay">art by @MimzyyMay</a></p>
-		<p id="site-by"><a target="_blank"
-		href="https://neocities.org/site/mother1brain">website by @Grat10</a></p>
-		<div id="guestbook-btn">
-			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>
-		 	<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
-		</div>
-		<div id="grat">
-			<div id="float">
-				<img id="knee" src="images/assets/grat_knee.png"> 
-				<img id="arm"  src="images/assets/grat_arm.png"> 
-				<img id="pose" src="images/assets/grat.png"> 
-			</div>
-			<img id="plug" src="images/assets/grat_tail.png"> 
-		</div>
-		<div class="program" id="comments">
-			<div class="line">
-				<p>guestbook-libre2.1.exe</p>	
-				<div id="comments_close" class="close">
-					<img src="images/sprites/x.png"> 
-				</div>
-			</div>		
+		<!-- elements / programs sitting above everything -->
+		<div class="program" id="chatbox">
 			<div class="content">
 				<iframe 
 		 			src="https://www5.cbox.ws/box/?boxid=949923&boxtag=etItIN"
@@ -119,85 +40,247 @@
 		 			scrolling="none">
 				</iframe>
 			</div>
-			<div class="buttons">
-				<div id="comments_close2"><p>close</p></div>	
-			</div>
-			
 		</div>
-		<div class="program" id="gratchat">
-			<div class="line">
-				<p>gratchat.exe</p>	
-				<div id="gratchat_close" class="close">
-					<img src="images/sprites/x.png"> 
-				</div>
-			</div>		
+
+		<div class="program" id="badges">
 			<div class="content">
-				<p>[Error]: the website code seems to be unfinished.</p>
-			</div>
-			<div class="buttons">
-				<div id="gratchat_ok"><p>Ok</p></div>	
-				<div id="gratchat_about"><p>About</p></div>
+				<p>If you have your own site feel free to download my website badge!</p>
+				<p>extended badges is on <a href="links">my links page!</a></p>
+
+				<img src="styling/grat.gay_badge.gif">
+				<img src="styling/grat_gay_badge.png">
+				<img src="styling/grat10_gay_badge_smol.png">
 			</div>
 		</div>
-		<div id="background">
-			<!-- canvas/shader code not written by Grat10. -->
-			<img src="images/assets/background1.jpg"
-			style="width: 100%; pointer-events: none;">
+
+		<!-- start of webpage panel content -->
+		<div class="panel">
+			<div class="flex">
+				<aside>
+					<img src="images/assets/grat_pfp2.png"/>
+					<center>
+						<p>pronouns: <strong>she/it</strong></p>
+						<p>serial number: [GRAAF:15602]</p>
+						<p>botsday: 2003-05-17</p>
+					</center>
+				</aside>
+				<article>
+					<hr>
+					<h1 id="about">~/about-me.md</h1>
+					<p>Heyy i'm Grat10 I am a web-designer, graphics designer,
+					programmer, pixelarmstest, seamstrest. i do most of these
+					for the love of the craft!</p>
+					<p>I'm also a streamer even if i'm quite infrequent at it,
+					I'm also a robot girl that posts funny things to my
+					fediverse account.</p>
+					<p>if you catch me feel free to ask about Ark 
+					Survival Evolved tips cuz apparently i can yapp about that :3</p>
+					<P>I also help out at EN-V Arcade semi often,
+					as i help with building and media there! </p>
+				</article>
+			</div>
+			<hr>
+			<div class="buttons">
+				 <a href="gallery.html#graphics">Gallery</a>
+				 <a href="gallery.html#projects">Projects</a>
+				 <a href="links.html">Links</a>
+				 <a href="socials.html">Socials</a>
+				 <a href="blog.html">Blog</a>
+			</div>
+		</div>
+		<div class="panel">
+			<div class="flex">
+				<aside>
+					<img class="rounded" src="images/assets/cholesterol_pfp.png"/>
+					<center>
+						<p>pronouns: <strong>she/it</strong></p>
+						<p>serial number: [CHLEO:12235]</p>
+						<p>botsday 2023-11-08</p>
+					</center>
+				</aside>
+				<article>
+					<hr>
+					<h1 id="pets">~/about-pets.md</h1>
+					<p>This is Cholesterol my friendly little cleaning
+					robot that i adopted from the thrift-store, 
+					she's a little old but does good work.</p>
+					<p>she often helps me clean my room on cleaning days.
+					it is equiped with a cute sound chip that 
+					chirps when its done a good job.</p>
+					<p>she has trouble with door sills and i'm planning
+					on adding ramps to them so she
+					can explore more of the house...</p>
+					<p>otherwise a perfect pet and i love her dearly.</p>
+				</article>
+			</div>
+			<hr>
+		</div>
+		<div class="panel">
+			<div class="flex">
+				<aside>
+					<img class="rounded" src="images/assets/grat_draw_pfp.png"/>
+					<center>
+				 		<a href="mailto:mail@grat.gay">Email your fanart</a>
+					</center>
+					<center>
+				 		<a href="gallery.html">View gallery</a>
+					</center>
+				</aside>
+				<article>
+					<hr>
+					<h2 id="art">~/art.md</h2>
+					<p>here is some of my art! if you want to 
+					see more navigate yourself to the gallery!</p>
+					<p>the artforms i typically use are Pixelart, Hamabeading,
+					3D modeling, as well as Live2D!</p>
+					<p>these images change each day so check back tomorrow for 
+					a new artwork! and ofc thanks so much to Today's fanartist <strong
+					id="artist-name">artist</strong></p>
+				</article>
+			</div>
+			<hr>
+			<div class="flex">
+				<div class="artwork">
+					<h3>## Today's artwork</h3>
+					<a>
+						<div class="img"
+						src="/images/art/pixelart/@Grat10_lampreyhole.png">
+							<div class="bg"></div>
+							<div>
+								<p id="art-title">Lamprey</p>
+								<div>
+									<p id="art-date">2004-04-07</p>
+									<p id="art-form">pixelart</p>	
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="artwork">
+					<h4>## Today's fanart</h4>
+					<a>
+						<div class="img"
+						src="/images/art/pixelart/@Grat10_lampreyhole.png">
+							<div class="bg"></div>
+							<div>
+								<p id="art-title">Lamprey</p>
+								<div>
+									<p id="art-date">2004-04-07</p>
+									<p id="art-form">pixelart</p>	
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="panel">
+			<div class="flex">
+				<aside>
+					<img src="images/assets/placeholder_pfp.png"/>
+					<center>
+				 		<a href="blog.html">View blog</a>
+					</center>
+				</aside>
+				<article>
+					<hr>
+					<h1 id="texts">~/texts.md</h1>
+					<p>here is some of my art! if you want to 
+					see more navigate yourself to the gallery!</p>
+					<p>the artforms i typically use are Pixelart, Hamabeading,
+					3D modeling, as well as Live2D!</p>
+					<p>these images change each day so check back tomorrow for 
+					a new artwork! and ofc thanks so much to Today's fanartist <strong
+					id="artist-name">artist</strong></p>
+				</article>
+			</div>
+			<hr>
+			<div class="flex">
+				<div class="fedi">
+					<h3>## Live robot updates</h3>
+
+					<iframe 
+src="https://social.grat.gay/embed/user-timeline/a0j8x157xxo30008?maxHeight=450"
+data-misskey-embed-id="v1_075394d3-daa0-42d7-aa39-a3fd4f697320"
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin"
+style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+				</div>
+				<div class="updates">
+					<h3>## Site updates</h3>
+					<div>
+						<p>here is some of my art! if you want to 
+						see more navigate yourself to the gallery!</p>
+						<p>the artforms i typically use are Pixelart, Hamabeading,
+						3D modeling, as well as Live2D!</p>
+						<p>here is some of my art! if you want to 
+						see more navigate yourself to the gallery!</p>
+						<p>the artforms i typically use are Pixelart, Hamabeading,
+						3D modeling, as well as Live2D!</p>
+						<p>here is some of my art! if you want to 
+						see more navigate yourself to the gallery!</p>
+						<p>the artforms i typically use are Pixelart, Hamabeading,
+						3D modeling, as well as Live2D!</p>
+						<p>here is some of my art! if you want to 
+						see more navigate yourself to the gallery!</p>
+						<p>the artforms i typically use are Pixelart, Hamabeading,
+						3D modeling, as well as Live2D!</p>
+						<p>here is some of my art! if you want to 
+						see more navigate yourself to the gallery!</p>
+						<p>the artforms i typically use are Pixelart, Hamabeading,
+						3D modeling, as well as Live2D!</p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<a id="blog-post-1" href="blog.html" class="blog-post">
+				<div></div>
+				<div>
+					<h2>Blog Title</h2>
+					<p>qwlædknq æwldm qæwl dmæqw ldnæ qlwm dæqlwm dæqlw mdd
+					wæq ld mqæw lmd qælw dmæ qlw mdæ qwældnmqæwldnmæqlwmdlqw.dqnw .dnmqwldk.n.kmq</p>
+				</div>
+			</a>
+			<a id="blog-post-2" href="blog.html" class="blog-post">
+				<div></div>
+				<div>
+					<h2>Blog Title</h2>
+					<p>qwlædknq æwldm qæwl dmæqw ldnæ qlwm dæqlwm dæqlw mdd
+					wæq ld mqæw lmd qælw dmæ qlw mdæ lqmq</p>
+				</div>
+			</a>
+			<a id="blog-post-3" href="blog.html" class="blog-post">
+				<div></div>
+				<div>
+					<h2>Blog Title</h2>
+					<p>qwlædknq æwldm qæwl dmæqw ldnæ qlwm dæqlwm dæqlw mdd
+					wæq ld mqæw lmd qælw dmæ qlw mdæ lqmq</p>
+				</div>
+			</a>
+			<a id="blog-post-3" href="blog.html" class="blog-post">
+				<div></div>
+				<div>
+					<h2>Blog Title</h2>
+					<p>qwlædknq æwldm qæwl dmæqw ldnæ qlwm dæqlwm dæqlw mdd
+					wæq ld mqæw lmd qælw dmæ qlw mdæ lqmq</p>
+				</div>
+			</a>
+			<hr>
 		</div>
 	</main>
-	<div class="segment">
-		<img src="images/assets/bar_1.png">
-	</div>
-	<div class="segment">
-		<img src="images/assets/bar_2.png">
-	</div>
-	<div class="segment">
-		<img src="images/assets/bar_3.png">
-	</div>
-	<div class="segment">
-		<img src="images/assets/bar_4.png">
-	</div>
-	<div class="segment">
-		<img src="images/assets/bar_5.png">
-	</div>
-	<footer>
-		<div id="footer-deco">
-			<div class="sawtooth sawtooth-bot"></div>
+	<div>
+		<div id="comments" class="side-gear">
+			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
+			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
-		<div id="footer">
-			<div id="notice">
-				<p>this website is work in progress (W.I.P) | denne 
-				hjemmeside er under opbyggelse.</p>
-				<p>copyleft CC, original maker Grat10berg,
-				Mother1brain.neocities.org. 
-				the website code is available
-				<a href="https://github.com/Grat10borg/Mother1brain" target="_blank">here</a></p>
-			</div>
-			<div id="socials">
-			  <!-- svg but with swag -->
-			  <a class="foot-gear" target="_blank"
-				 href="https://social.grat.gay/@Grat10">
-				<svg-img class="icon" src="images/icons/sharkey.svg"></svg-img>
-		 	  	<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
-			  </a>
-			  <a class="foot-gear" target="_blank"
-				 href="https://www.twitch.tv/grat_grot10_berg">
-				<svg-img id="twitch" class="icon" src="images/icons/twitch.svg"></svg-img>
-		 	  	<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
-			  </a>
-			  <a class="foot-gear" target="_blank"
-				 href="https://github.com/Grat10borg">
-				<svg-img class="icon" src="images/icons/github.svg"></svg-img>
-		 	  	<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
-			  </a>
-			  <a class="foot-gear" target="_blank"
-				 href="https://social.grat.gay/@Grat10.rss">
-				<svg-img class="icon" src="images/icons/square-rss-solid.svg"></svg-img>
-		 	  	<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
-			  </a>
-			</div>
-		</div>	
-	</footer>
+		<div id="share" class="side-gear">
+			<svg-img class="icon" src="images/icons/heart.svg"></svg-img>
+			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
+		</div>
+	</div>
+	</div>
+	<div class="diamond" id="background"></div>
 	<script src="scripts/dom.js"></script>
 	<script src="./styling/scm/nyaaradio.js"></script>
 	<script>
@@ -227,61 +310,29 @@
 
 			// a header placed above the tracks in the `<playlist>` element
 			playlist_header: "Playlist",
+
 		});
 	</script>
-	<script src="scripts/common.js"></script>
+	<script defer src="https://social.grat.gay/embed.js"></script>	
+	<script src="/scripts/common.js"></script>
 	<!-- 
 		page unique code 
 	-->
 	<script>
 		/* make gratchat draggable */
-		$$.drag("gratchat");
-		$$.drag("comments");
+		 $$.drag("chatbox"); 
+		 $$.drag("badges"); 
 
 		/* make close & ok button set gratchat to display none */
-		$$.click("gratchat_close", "display: none;", "gratchat");
-		$$.click("gratchat_ok", "display: none;", "gratchat");
-
-		$$.click("comments_close", "display: none;", "comments");
-		$$.click("comments_close2", "display: none;", "comments");
-
-		/* display guest book button */
-		$$.click("guestbook-btn", "display: block;", "comments");
-
-		/* redirect to about page when about button is clicked. */
-		let aboutBtn = $$.id("gratchat_about");
-		aboutBtn.addEventListener("click", () => {
-			window.location.href = "about.html"
+		$$.id("comments").addEventListener("click", () =>  {
+			$$.id("chatbox").classList.toggle("visible");
 		});
+
+		/* make close & ok button set gratchat to display none */
+		$$.id("share").addEventListener("click", () =>  {
+			$$.id("badges").classList.toggle("visible");
+		});
+
 	</script>
-	<!-- SCM Music Player https://www.scmplayer.net -->
-	<!-- 	<script type="text/javascript"
-		src="https://www.scmplayer.net/script.js" 
-		data-config="{'skin':'https://grat.gay/styling/scm/scm-music-player_grat.css',
-		'volume':25,'autoplay':false,
-		'shuffle':true,
-		'repeat':1,'placement':'top',
-		'showplaylist':false,
-
-		'playlist':[{'title':'Black Medi - The Defense',
-		'url':'https://grat.gay/styling/scm/Black_Midi_The_Defence.mp3'},
-		{'title':'Dapper Dog - Nocturnal',
-		'url':'https://grat.gay/styling/scm/Dapper%20Dog%20-Nocturnal.mp3'},
-		{'title':'Gorillaz - Doncamatic',
-		'url':'https://grat.gay/styling/scm/Gorillaz_Doncamatic.mp3'},
-		{'title':'Momma - Biohazard',
-		'url':'https://grat.gay/styling/scm/Momma_Biohazard.mp3'},
-		{'title':'Slow Pulp - Falling Apart',
-		'url':'https://grat.gay/styling/scm/SlowPulp_FallingApart_.mp3'},
-		{'title':'Vansire - Love You All The Same',
-		'url':'https://grat.gay/styling/scm/Vansire_Love_You_All_the_Same.mp3'},
-		{'title':'Vansire - Metamodernity',
-		'url':'https://grat.gay/styling/scm/Vansire_Metamodernity.mp3'},
-		{'title':'Vansire - Statelines',
-		'url':'https://grat.gay/styling/scm/Vansire_Statelines.mp3'}]}">
-	</script>  -->
-	<!-- SCM Music Player script end -->
-
-
   </body>
 </html>

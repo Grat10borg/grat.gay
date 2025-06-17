@@ -1,4 +1,6 @@
-	/* Main font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Main font */
 @font-face {
   font-family: 'Atkinson-Hyperlegible';
   src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
@@ -23,7 +25,9 @@
   font-style: italic;
 }
 
-	/* main condensed font */
+/* Inter */
+
+/* main condensed font */
 
 @font-face {
 	font-family: 'Saira-Condensed';

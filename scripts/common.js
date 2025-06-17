@@ -69,37 +69,38 @@ function get_image_size(url) {
 
 /* check for special elements */
 (async () => {
-
-	// searches for `<svg-img>` and uses `src=""` to fetch and fill it with
-	// the requested img (hopefully an actual SVG file)
+    // searches for <svg-img> and uses src="" to fetch and fill it with
+    // the requested img (hopefully an actual SVG file)
     let svgs = $$.query_all("svg-img");
     for (let i = 0; i < svgs.length; i++) {
-        // nobody specified a `src=""` attribute :c
+        // nobody specified a src="" attribute :c
         if (! svgs[i].getAttribute("src")) {
             continue;
         }
 
-        // get the svg data
-        let res = await (await fetch(svgs[i].getAttribute("src"))).text();
-
-        svgs[i].innerHTML = res;
+        // get and set the svg data in the background
+        (async () => {
+            let res = await (await fetch(svgs[i].getAttribute("src"))).text();
+            svgs[i].innerHTML = res;
+        })()
     }
 
-	let txtpres = $$.query_all("txt-pre");
+    let txtpres = $$.query_all("txt-pre");
     for (let i = 0; i < txtpres.length; i++) {
-        // nobody specified a `src=""` attribute :c
+        // nobody specified a src="" attribute :c
         if (! txtpres[i].getAttribute("src")) {
             continue;
         }
 
         // get the text data
-        let res = await (await fetch(txtpres[i].getAttribute("src"))).text();
-
-        txtpres[i].innerHTML = res;
+        // get and set the text data in the background
+        (async () => {
+            let res = await (await fetch(txtpres[i].getAttribute("src"))).text();
+            txtpres[i].innerHTML = res;
+        })()
     }
-	
-})()
 
+})()
 
 /* old code used for twitch player
 let enable_twitch = false;

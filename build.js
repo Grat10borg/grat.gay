@@ -1,57 +1,82 @@
-"use strict";
+const fs = require("fs");
 
-const fs = require('fs');
-
-	/* which folders are affected */
-let artFolders = 
-[ "./images/art/art3d",
-"./images/art/fanart",
-"./images/art/pixelart",
-"./images/art/hamabead",
-"./images/art/sketches"];
-
-	/* Generate JSON files from files inside art folders	*/
-function GenerateJSFile(artFolders) {
-
+// Generate JSON files from files inside art folders
+async function build() {
 	let file = "";
+    // get all directories within ./art and loops it with current directory
+	fs.readdirSync("images/media").map((folder) => {
+        folder = "images/media/" + folder;
 
-	artFolders.map((folder) => {
+        if (! fs.statSync(folder).isDirectory()) {
+            return;
+        }
 
-		// get folder name from filepath
-		let foldername = folder.split("/");
 		let obj = {
-			files: [],
-			dates: [],
-		};
-		var files = fs.readdirSync(folder);
-	    var dates = [];	
+            files: fs.readdirSync(folder),
+            dates: []
+        };
 
-			/* sorts files by oldest to newest*/
-		files.sort((a, b) => {
-			return fs.statSync(folder +"/"+ a).mtime.getTime() -
-				fs.statSync(folder +"/"+ b).mtime.getTime();
-		});
-			/* reverse sorting, newest to oldest. */
-		files = files.reverse();
-
-		files.map((file) => {
-			dates.push(fs.statSync(folder+"/"+file).birthtime)
-		})
-			
-		obj.files = files;
-		obj.dates = dates;
-
-		console.info("exported new image.js+("+foldername[3]+") file");
+        // get the folder name
+        let dirName = require("path").basename(folder);
 
 		// create JS arrays with folders images
-		file += "let "+foldername[3]+" = "
+		file += "let "+dirName+" = "
 		+JSON.stringify(obj)+"; \n";
 	});
-	
+
+    // twitch api key
+    // qg6jglxietj80siyhlxqjz6ihjo9ii
+    //
+    // twitch client id
+    // gp762nuuoqcoxypju8c569th9wz7q5
+    //
+    // seal place id
+    // 538506717
+    //
+    // grat10 id
+    // 485848067
+    //
+    //TWITCH_TOKEN=qg6jglxietj80siyhlxqjz6ihjo9ii TWITCH_CLIENT_ID=gp762nuuoqcoxypju8c569th9wz7q5 node build.js
+
+
+    let user_id = "538506717"
+
+    let res_streams = await (await fetch("https://api.twitch.tv/helix/streams?user_id="+user_id+"&type=live",
+        {
+            headers: {
+                authorization: `Bearer ${process.env["TWITCH_TOKEN"]}`,
+                "client-id": process.env["TWITCH_CLIENT_ID"]
+            }
+        }
+    )).json()
+    
+    let res_schdule = await (await fetch("https://api.twitch.tv/helix/schedule?broadcast_id="+user_id,
+        {
+            headers: {
+                authorization: `Bearer ${process.env["TWITCH_TOKEN"]}`,
+                "client-id": process.env["TWITCH_CLIENT_ID"]
+            }
+        }
+    )).json()
+    
+    // unneeded for simple live checker
+    delete res_streams.pagination;
+
+    // save to file string
+    file += "let twitch_streams = "
+    +JSON.stringify(res_streams)+"; \n";
+
+    file += "let twitch_schdule = "
+    +JSON.stringify(res_schdule)+"; \n";
+
+    console.log(process.env["TWITCH_TOKEN"]);
+    console.log(res_streams);
+
 	// export art JS file to the art folder
-	fs.writeFile("images/art/images.js", file,
+	fs.writeFile("info.js", file,
 		function(err){if(err){console.error(err)}});
 
+	console.info("file written");
 }
 
-GenerateJSFile(artFolders);
+build();

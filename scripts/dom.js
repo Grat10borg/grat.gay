@@ -28,20 +28,19 @@ return element.getElementsByTagName(find);
 }
 
 // a little wonky but the response promise did not want to play along..
-async function fetchTXT(Url) {
-  await fetch(Url)
-  .then(response => response.text())
-  .then((txt) => {    
-    //return txt;
-    let textarea = $$.make("textarea");
-    textarea.textContent = txt;
-    textarea.id = Url;
-    textarea.hidden = true;
-    $.body.append(textarea);
-  })
-  let text = $$.id(Url).innerHTML;
-  $$.id(Url).outerHTML = ""; // remove textarea again
-  return text;
+async function fetchTXT(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const text = await response.text();
+    console.log(text); 
+    return text;
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
 

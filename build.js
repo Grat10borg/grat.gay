@@ -3,6 +3,8 @@ const fs = require("fs");
 // Generate JSON files from files inside art folders
 async function build() {
 	let file = "";
+
+    image_list = {};
     // get all directories within ./art and loops it with current directory
 	fs.readdirSync("images/media").map((folder) => {
         folder = "images/media/" + folder;
@@ -11,18 +13,30 @@ async function build() {
             return;
         }
 
-		let obj = {
-            files: fs.readdirSync(folder),
-            dates: []
-        };
+        let metadata = require("./images/metadata.json");
+
+        let images = {}; 
+        let files = fs.readdirSync(folder);
+        for (file of files) {
+            
+            images[file] = {
+                source: file,
+                alt: "",
+                link: "",
+                credit: "",
+                date: "",
+                ...(metadata[file] || {}),
+            }
+        } 
 
         // get the folder name
         let dirName = require("path").basename(folder);
 
-		// create JS arrays with folders images
-		file += "let "+dirName+" = "
-		+JSON.stringify(obj)+"; \n";
+        image_list[dirName] = images;
+
 	});
+
+    file += `\nlet images = ${JSON.stringify(image_list, null, "\t")}\n`;
 
     // twitch api key
     // qg6jglxietj80siyhlxqjz6ihjo9ii

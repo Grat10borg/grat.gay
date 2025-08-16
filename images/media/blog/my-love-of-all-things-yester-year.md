@@ -1,5 +1,5 @@
 ---
-title: "Blog post!"
+title: "my love!"
 date: "2025-06-20"
 ---
 

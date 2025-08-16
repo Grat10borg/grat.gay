@@ -28,10 +28,10 @@
 		<!-- elements / programs sitting above everything -->
 		<div class="program" id="chatbox">
 			<div class="content">
-				<iframe 
+				<iframe id="cbox" 
                     src="https://www5.cbox.ws/box/?boxid=949923&boxtag=etItIN"
                     width="100%"
-                    height="550"
+                    height="800"
                     allowtransparency="yes"
                     allow="autoplay"
                     frameborder="0"
@@ -102,7 +102,7 @@
 			<hr>
 			<div class="buttons">
 				 <a href="index.html">index</a>
-				 <a href="gallery.html#projects">Projects</a>
+				 <a href="#projects">Projects</a>
 				 <a href="links.html">Links</a>
 				 <a href="socials.html">Socials</a>
 				 <a href="blog.html">Blog</a>
@@ -132,15 +132,25 @@
                 <p>booting up creative drives!</p>
             </div>
             <div class="art-grid">
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
-                <div></div> 
+                <div>
+                    <div></div> 
+                    <div></div> 
+                    <div></div> 
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div> 
+                    <div></div> 
+                </div>
+                <div>
+                    <div></div> 
+                    <div></div> 
+                    <div></div> 
+                </div>
+            </div>
+            <div class="moar">
+                <hr>
+                <a href="">MOAR</a>
             </div>
             <div class="seperator">
                 <h3 id="projects">~/projects...</h3>
@@ -148,7 +158,7 @@
                 <p>what i keep myself busy with</p>
             </div>
             <div class="projects">
-                <div id="blog-post-1" href="blog.html" class="blog-post">
+                <div href="blog.html" class="blog-post">
                     <div></div>
                     <div>
                         <h2>Wobble-Wall</h2>
@@ -158,7 +168,7 @@
                     </div>
                 </div>
                 <hr>
-                <div id="blog-post-2" href="blog.html" class="blog-post">
+                <div href="blog.html" class="blog-post">
                     <div></div>
                     <div>
                         <h2>H.O.T Node.js</h2>
@@ -168,7 +178,7 @@
                     </div>
                 </div>
                 <hr>
-                <div id="blog-post-3" href="blog.html" class="blog-post">
+                <div href="blog.html" class="blog-post">
                     <div></div>
                     <div>
                         <h2>EN-V Teaches</h2>
@@ -177,7 +187,7 @@
                     </div>
                 </div>
                 <hr>
-                <div id="blog-post-3" href="blog.html" class="blog-post">
+                <div href="blog.html" class="blog-post">
                     <div></div>
                     <div>
                         <h2>H.O.T</h2>
@@ -187,7 +197,7 @@
                 </div>
             </div>
 		</div>
-	<div>
+	<div class="gears">
 		<div id="comments" class="side-gear">
 			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
@@ -231,15 +241,12 @@
 		});
 	</script>
 	<script defer src="https://social.grat.gay/embed.js"></script>	
+	<script src="info.js"></script>
 	<script src="/scripts/common.js"></script>
 	<!-- 
 		page unique code 
 	-->
 	<script>
-		/* make gratchat draggable */
-		 $$.drag("chatbox"); 
-		 $$.drag("badges"); 
-
 		/* make close & ok button set gratchat to display none */
 		$$.id("comments").addEventListener("click", () =>  {
 			$$.id("chatbox").classList.toggle("visible");

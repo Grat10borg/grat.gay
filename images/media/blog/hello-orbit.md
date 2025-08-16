@@ -1,11 +1,10 @@
 ---
 title: "Blog post!"
 date: "2025-06-20"
+image: "hotnode.png"
 ---
 
 # Hello Orbit.
-
-(header image here)
 
 I'm Grat10 and i'd like to welcome you to my personal website on the internet super highway!
 here i plan to post a bunch of my old tutorials & ofc some new blog posts in between them :3

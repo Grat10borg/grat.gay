@@ -28,7 +28,8 @@
   --border-color: #96AAE2;
   --border-color-dark: #84A0D5;
   --hr-panel-color: #96BAE6;
-  --updates-bg: #153C80;
+  --updates-bg: #e5f3ff;
+  --updates-thumb: #8bd9fe;
 }
 
 html, body { margin: 0; padding: 0; }
@@ -42,7 +43,7 @@ html, body { margin: 0; padding: 0; }
 	padding: 0px 1em;
 	margin-top: 100px;
 	font-family: Inter;
-	margin-bottom: 12em;
+	margin-bottom: 18em;
 	border-radius: 25px;
 	color: var(--btn-main-text);
 	background: var(--btn-main-color);
@@ -106,7 +107,7 @@ html, body { margin: 0; padding: 0; }
     margin-bottom: 5px;
 	justify-content: space-evenly;	
 }
-.buttons a, .panel aside center a, .projects .blog-post a {
+.buttons a, .panel aside center a, .projects .blog-post a, .moar a {
 	width: 100%;
 	font-weight: 600;
 	font-size: 1.1em;
@@ -134,7 +135,7 @@ html, body { margin: 0; padding: 0; }
 .buttons a:nth-child(3) { background-color: var(--gradient-3); }
 .buttons a:nth-child(4) { background-color: var(--gradient-4); }
 .buttons a:nth-child(5) { background-color: var(--gradient-5); }
-.buttons a:hover, .panel aside center a:hover, .projects .blog-post a:hover 
+.buttons a:hover, .panel aside center a:hover, .projects .blog-post a:hover, .moar a:hover 
 { filter: brightness(1.3); }
 .panel aside center a { background-color: var(--gradient-2); }
 
@@ -157,6 +158,7 @@ html, body { margin: 0; padding: 0; }
 .artwork a {
 	display: flex;
 	justify-content: space-evenly;
+    text-decoration: none;
 }
 
 
@@ -171,6 +173,7 @@ html, body { margin: 0; padding: 0; }
 	border: 1px solid #000000;
 	grid-template-columns: 1fr;
 	background-position: left;
+    background-color: #fff;
 	background-image: var(--background);
 }
 
@@ -197,6 +200,7 @@ html, body { margin: 0; padding: 0; }
 	transition-duration: 0.8s;
 	background-position: left;
 	filter: blur(2px) brightness(50%);
+    background-color: #fff;
 	background-image: var(--background);
 }
 
@@ -233,12 +237,12 @@ html, body { margin: 0; padding: 0; }
 
 .updates div {
 	max-height: 450px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	border-radius: 15px;
-	color: var(--btn-sec-text);
 	font-family: var(--atkinson);
 	background-color: var(--updates-bg);
 	border: solid var(--border-color) 2px;
+    scrollbar-color: var(--updates-thumb) var(--updates-bg);
 }
 
 .updates div p {
@@ -498,17 +502,25 @@ html, body { margin: 0; padding: 0; }
 
 /* artwork grid */
 .art-grid {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    align-items: space-evenly;
+    flex-direction: column;
+    margin:  auto;
     width: 100%;
-    height: 500px;
 }
 
-.art-grid div {
-    width: 100px;
-    height: 100px;
+.art-grid > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+.art-grid > div div {
+    width: 190px;
+    height: 140px;
+    margin: 0px 8px;
     display: block;
+    border: 2px solid var(--border-color);
     background-image: url("images/assets/background3.jpg");
     
 }
@@ -548,7 +560,64 @@ html, body { margin: 0; padding: 0; }
 
 .projects .blog-post:hover { background-color: transparent; }
 
+.moar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.moar a {
+    background-color: var(--gradient-4);
+    margin: auto;
+    width: 25%;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+.moar hr {
+    width: 50%;
+}
+
 	/* stop gallery */
+    /* start links */
+.links div:first-of-type {
+    width: 85%;
+    margin: auto;
+}
+.links div:last-of-type {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+a:focus:has(:is(.badge-img, .stamp-img)) {outline: none}
+a:focus :is(img.badge-img, img.stamp-img) {
+    transition-property: scale;
+    outline: 3px solid highlight;
+    box-shadow: inset 0px 5px black;
+}
+
+.badge-img {
+    width: 88px;
+    height: 31px;
+    margin: 2px;
+    image-rendering: crisp-edges;
+}
+
+.stamp-img {
+    margin: 5px;
+    width: 95px;
+    height: 56px;
+}
+
+.stamp-img, .badge-img {
+
+    transition: all 0.5s;
+}
+
+.stamp-img:hover, .badge-img:hover {
+    transform: scale(2);
+}
 
 /* background scroll styling*/
 #background {
@@ -617,6 +686,12 @@ html, body { margin: 0; padding: 0; }
         flex-direction: column;
     }
 
+    .art-grid > div {
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .art-grid > div div { width: 80%; height: 250px; margin-bottom: 20px; }
 }
 
 /* reduced motion version */
@@ -639,6 +714,7 @@ html, body { margin: 0; padding: 0; }
 		--border-color: #5382D8;
 		--hr-panel-color: #96BAE6;
 		--updates-bg: #153C80;
+        --updates-thumb: #005986;
 	}
 
     .diamond { background-image: url("images/assets/diamond_bg_dark.png"); }
@@ -648,5 +724,6 @@ html, body { margin: 0; padding: 0; }
     /* socials page colors */
     .btn-main { background: #1F5AC1; }
     .row .btn-main:last-child:not(:first-child):hover { background-color: #2473A8; }
+
 
 }

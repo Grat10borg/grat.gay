@@ -15,6 +15,7 @@ radio {
 	--playlist-sel: #397bc3;
 	--playlist-sel-fg: #eeeeee;
 	--playlist-bg: #eeeeee;
+    --playlist-bor: #15273c;
 	--playlist-hover-fg: var(--playlist-sel-fg);
 	--playlist-hover: color-mix(in hsl, var(--playlist-sel), transparent);
 	--header-bg: url("bar.png");
@@ -135,11 +136,11 @@ playlist {
 	color: var(--playlist-fg);
 	transform: translateX(5vw);
 	transition: 0.3s ease-in-out;
-	background: var(--playlist-bg);
 	top: var(--radio-real-height);
+	background: var(--playlist-bg);
 	transition-property: opacity, transform;
 
-	border-left: 2px solid var(--radio-bg);
+	border-left: 2px solid var(--playlist-bor);
 }
 
 playlist:not(.hidden) {
@@ -179,4 +180,26 @@ playlist track:hover {
 playlist track.playing {
 	color: var(--playlist-sel-fg);
 	background: var(--playlist-sel);
+}
+
+
+/* darkmode version*/
+@media (prefers-color-scheme: dark){
+    radio {
+        --radio-bg: #15273c;
+        --radio-fg: #ffffff;
+        --radio-height: 1.5em;
+        --radio-slider: #3ccacc;
+        --radio-button: #15273c;
+        --radio-real-height: calc(var(--radio-height) + calc(var(--radio-padding) * 2));
+
+        --playlist-fg: #d3d9fa;
+        --playlist-sel: #397bc3;
+        --playlist-sel-fg: #eeeeee;
+        --playlist-bg: #001549;
+        --playlist-bor: #1d82a6;
+        --playlist-hover-fg: var(--playlist-sel-fg);
+        --playlist-hover: color-mix(in hsl, var(--playlist-sel), transparent);
+        --header-bg: url("bar.png");
+    }
 }

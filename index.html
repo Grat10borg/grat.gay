@@ -28,25 +28,24 @@
 		<!-- elements / programs sitting above everything -->
 		<div class="program" id="chatbox">
 			<div class="content">
-				<iframe 
-		 			src="https://www5.cbox.ws/box/?boxid=949923&boxtag=etItIN"
-		 			width="100%"
-		 			height="550"
-		 			allowtransparency="yes"
-		 			allow="autoplay"
-		 			frameborder="0"
-		 			marginheight="0"
-		 			marginwidth="0"
-		 			scrolling="none">
+				<iframe id="cbox" 
+                    src="https://www5.cbox.ws/box/?boxid=949923&boxtag=etItIN"
+                    width="100%"
+                    height="800"
+                    allowtransparency="yes"
+                    allow="autoplay"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    scrolling="none">
 				</iframe>
 			</div>
 		</div>
 
-		<div class="program" id="badges">
+		<div class="program" id="sites">
 			<div class="content">
 				<p>If you have your own site feel free to download my website badge!</p>
 				<p>extended badges is on <a href="links">my links page!</a></p>
-
 				<img src="styling/grat.gay_badge.gif">
 				<img src="styling/grat_gay_badge.png">
 				<img src="styling/grat10_gay_badge_smol.png">
@@ -142,7 +141,7 @@
 			<div class="flex">
 				<div class="artwork">
 					<h3>## Today's artwork</h3>
-					<a>
+					<a href="go to nya-gallery">
                         <div id="t-artwork" class="img">
 							<div class="bg"></div>
 							<div>
@@ -156,7 +155,7 @@
 				</div>
 				<div class="artwork">
 					<h4>## Today's fanart</h4>
-					<a>
+					<a id="fart-link" href="..." target="_blank">
                         <div id="t-fanart" class="img">
 							<div class="bg"></div>
 							<div>
@@ -182,13 +181,9 @@
 				<article>
 					<hr>
 					<h1 id="texts">~/texts.md</h1>
-					<p>here is some of my art! if you want to 
-					see more navigate yourself to the gallery!</p>
-					<p>the artforms i typically use are Pixelart, Hamabeading,
-					3D modeling, as well as Live2D!</p>
-					<p>these images change each day so check back tomorrow for 
-					a new artwork! and ofc thanks so much to Today's fanartist <strong
-					id="artist-name">artist</strong></p>
+					<p>I yap & post a lot! if thats of any interest heres a few forms my writing takes. microblogging & blog posts :3</p>
+					<p>my posts are legit just about whatever i can think of at the time of writing, typically it's robot yuri tho lol</p>
+					<p>so if that's of interest check out my blog on here, or maybe follow me on fedi!</p>
 				</article>
 			</div>
 			<hr>
@@ -206,26 +201,11 @@ style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme:
 				<div class="updates">
 					<h3>## Site updates</h3>
 					<div>
-						<p>here is some of my art! if you want to 
-						see more navigate yourself to the gallery!</p>
-						<p>the artforms i typically use are Pixelart, Hamabeading,
-						3D modeling, as well as Live2D!</p>
-						<p>here is some of my art! if you want to 
-						see more navigate yourself to the gallery!</p>
-						<p>the artforms i typically use are Pixelart, Hamabeading,
-						3D modeling, as well as Live2D!</p>
-						<p>here is some of my art! if you want to 
-						see more navigate yourself to the gallery!</p>
-						<p>the artforms i typically use are Pixelart, Hamabeading,
-						3D modeling, as well as Live2D!</p>
-						<p>here is some of my art! if you want to 
-						see more navigate yourself to the gallery!</p>
-						<p>the artforms i typically use are Pixelart, Hamabeading,
-						3D modeling, as well as Live2D!</p>
-						<p>here is some of my art! if you want to 
-						see more navigate yourself to the gallery!</p>
-						<p>the artforms i typically use are Pixelart, Hamabeading,
-						3D modeling, as well as Live2D!</p>
+                     	<p>04/08/2025 - nearly completed Links page & Metadata for images, for alt text and links. aswell as OGP Images.</p>
+                        <p>06/07/2025 - made popup windows work better, 
+                        and added custom selection colors.</p>
+				        <p>06/07/2025 - redesigning grat.gay, have been working on it
+                        pretty often for 2ish months</p>	
 					</div>
 				</div>
 			</div>
@@ -265,7 +245,7 @@ style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme:
 			<hr>
 		</div>
 	</main>
-	<div>
+	<div class="gears">
 		<div id="comments" class="side-gear">
 			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
@@ -316,10 +296,6 @@ style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme:
 		page unique code 
 	-->
 	<script>
-		/* make gratchat draggable */
-		 $$.drag("chatbox"); 
-		 $$.drag("badges"); 
-
 		/* make close & ok button set gratchat to display none */
 		$$.id("comments").addEventListener("click", () =>  {
 			$$.id("chatbox").classList.toggle("visible");

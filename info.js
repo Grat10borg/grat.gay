@@ -1,13 +1,1246 @@
-let artists = {"files":["grat.png","hayb.png","kobe.jpg","mimz.png","placeholder.png","retr.png","roni.jpg","smok.jpg"],"dates":[]}; 
-let badges = {"files":[" and_inside_cat_is_a_safe_cat.jpg","88x31_autism_acceptance_now.png","88x31_trans_rights_now.png","EpicBlazedButton.png","antiNFT.gif","antinazi.gif","badge_keep_living.png","blink-0.gif","e-browser_now.gif","ebrowser.gif","eyes.gif","hello-kitty-city.gif","ika-musume_banner.gif","kiru_button.png","lain.gif","neocities.png","netscapenow30.gif","ns-best.gif","pokemon.gif","powered-by-estrogen.png","ppc.gif","slimesnow.png","vocaloid.png"],"dates":[]}; 
-let blinkers = {"files":["badge_autistic.png","badge_lesbian.png","dominoCrew_banner.jpg","kitty.gif","nonhuman.gif","rss-feed_banner.png"],"dates":[]}; 
-let blog = {"files":["hello-orbit.md","infowriters-otter-extravaganza.md","my-love-of-all-things-yester-year.md","web-growing-pains.md"],"dates":[]}; 
-let fanart = {"files":["@HaybeeVT_grat-and-pudding.png","@Kobeepb_Grat-chibi.png","@LilRedRonin_grat-birthday-gift-2023.png","@MimzyyMay_Grat-introscreen.png","@MimzyyMay_grat-bust .png","@MimzyyMay_yes.png","@Smoki-Dhampir_grat.png","@SwagpunchLilith_gratsketch.jpg"],"dates":[]}; 
-let hamabead = {"files":["grat-hama.jpg","grat-illu-hama.jpg","illu-hama.jpg"],"dates":[]}; 
-let logos = {"files":["admin_pfp.png","git_grat_gay.png","live_grat_gay_x2.png"],"dates":[]}; 
-let lowpoly = {"files":["desert-rain-frog.png","goblin-shark.gif","grat-mebo.gif","pixel-bolts.gif","strawberry-bot.gif","turto-spinn.gif","wiitri-spin.gif"],"dates":[]}; 
-let pixelart = {"files":["grat-fumo.png","grat-mc-skin.png","lampreyhole.png","offline-screen.png","penumbra.png","sati-waitscreen.gif","shimeji-chan.png","ufo-idle.gif"],"dates":[]}; 
-let sketches = {"files":["glorpi_grat.png","grats.png","grot.png","vocaloids.png"],"dates":[]}; 
-let stamps = {"files":["3DS.webp","Wii.webp","aether_fuck_up.gif","alloy_pressed.gif","amyrose.webp","anime_howl.png","aquarium.png","bandages.png","big_cable.gif","blushyy.webp","bridget.webp","bridget2.webp","cat_angler.webp","cat_binky.webp","cat_jump.webp","cat_slap.webp","cat_smile.webp","cat_tv.png","cat_yell.gif","colors.jpg","damn_daniel.gif","doom.webp","en-v_logo_spin_black.gif","en-v_logo_spin_magenta.gif","error.webp","fnaf.gif","game-over.gif","game_cryoffear.png","imac.gif","isopod.png","jellyfish.webp","jerma.webp","jerma2.webp","jerma985.png","keyboard.png","kittythink.png","lobstor_stamp.gif","luckystar.gif","luckystar.webp","luckystar2.webp","me_going_online.png","miku1.webp","miku2.webp","miku3.png","miku4.png","miku5.png","miku6.webp","miku7.png","miku_guitar.webp","over-the-garden-wall.webp","overthegardenwall2.webp","portal_GLADOS.png","portal_GLADOS2.gif","portal_defec.png","portal_logo.webp","robot.png","sonic_bisexual.png","spiritphone.png","static.webp","tf2_intuder.webp","tf2_logo.webp","tf2_mother.webp","tf2_scout.gif","you_died.png","yuri.gif"],"dates":[]}; 
-let twitch_streams = {"data":[{"id":"322997063036","user_id":"538506717","user_login":"marinemammalrescue","user_name":"MarineMammalRescue","game_id":"272263131","game_name":"Animals, Aquariums, and Zoos","type":"live","title":"🌊 🌈 Otter Highlights-athon ─ Otters. All of them. Everywhere. And an ocean ASMR soundtrack to relax with. 🌊 🏳️‍🌈 🍁","viewer_count":199,"started_at":"2025-06-20T12:58:50Z","language":"en","thumbnail_url":"https://static-cdn.jtvnw.net/previews-ttv/live_user_marinemammalrescue-{width}x{height}.jpg","tag_ids":[],"tags":["Educational","FamilyFriendly","Animals","ASMRvisual","Rerun","24HourStream","Animals","Wildlife","English"],"is_mature":false}]}; 
-let twitch_schdule = {"error":"Bad Request","status":400,"message":"Missing required parameter \"broadcaster_id\""}; 
+let images = {
+	"artists_pfp": {
+		"grat.png": {
+			"source": "grat.png",
+			"alt": "unused. pass",
+			"link": "",
+			"credit": "@Mimzyy May",
+			"date": "2024-04-20T07:28:36.434Z"
+		},
+		"hayb.png": {
+			"source": "hayb.png",
+			"alt": "a chicken themed nurse Vtuber with pink hair and dark skin, she has pink eyes and have pink ribbons and yellow highlights on their outfit and hair boubles. she is sitting against a white background",
+			"link": "",
+			"credit": "@HaybeeVT",
+			"date": "2024-04-20T07:35:27.999Z"
+		},
+		"kobe.jpg": {
+			"source": "kobe.jpg",
+			"alt": "an oni with red skin doing a happy expression, the oni has red horns and green hair, it's doing a cheerleader pose with pom poms against a salmon colored background",
+			"link": "",
+			"credit": "@Kobepb",
+			"date": "2024-06-07T12:56:22.757Z"
+		},
+		"mimz.png": {
+			"source": "mimz.png",
+			"alt": "a zombie with messy dark blue hair with red and blue highlights, the face is split with one part being dark green and the other a sorta pastel light green, she's wearing a dark purple crop top hoodie with orange highlights and strings, the lower body after the crop top is white bandages",
+			"link": "",
+			"credit": "@Mimzyy May",
+			"date": "2024-04-20T07:31:55.541Z"
+		},
+		"placeholder.png": {
+			"source": "placeholder.png",
+			"alt": "a light cyan star against a blue gradient background going from light blue to dark blue from the top to the bottom",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-25T18:49:59.353Z"
+		},
+		"roni.jpg": {
+			"source": "roni.jpg",
+			"alt": "a human with pink eyes and beige skin, brown hair and a red clothing, with dark blue overalls, their also wearing a red ribbon hair band",
+			"link": "",
+			"credit": "@Lil red ronin",
+			"date": "2024-04-20T08:31:48.446Z"
+		},
+		"smok.jpg": {
+			"source": "smok.jpg",
+			"alt": "a furry with purple and light grey colors, and a boopable blue snout with a gold snout ring. they have dark purple hair and a dark purple sweater, they're doing a happy expression with their eyes closed",
+			"link": "",
+			"credit": "@Smokii Dhampir",
+			"date": "2024-04-20T08:28:07.804Z"
+		}
+	},
+	"badges": {
+		" and_inside_cat_is_a_safe_cat.jpg": {
+			"source": " and_inside_cat_is_a_safe_cat.jpg",
+			"alt": "an inside cat is a safe cat with a tabby cat laying beside the pink text",
+			"link": "https://epicblazed.com/",
+			"credit": "",
+			"date": "2025-04-03T06:12:36.855Z"
+		},
+		"88x31_autism_acceptance_now.png": {
+			"source": "88x31_autism_acceptance_now.png",
+			"alt": "a purple badge with the autism loop in a window on the left with pink text saying autism acceptance now the now! is in red text and is extra bold",
+			"link": "",
+			"credit": "",
+			"date": "2024-05-24T09:40:38.267Z"
+		},
+		"88x31_trans_rights_now.png": {
+			"source": "88x31_trans_rights_now.png",
+			"alt": "a grey badge with the transflag in a window on the left, with black  text saying trans rights now! the trans rights is in black text and the now! is in red text and is bigger",
+			"link": "",
+			"credit": "",
+			"date": "2024-05-24T09:40:33.567Z"
+		},
+		"EpicBlazedButton.png": {
+			"source": "EpicBlazedButton.png",
+			"alt": "Epic blazed with an image edit of Tim Sweeny with a blunt in his mouth smiling directly at the camera. the Epic is super big and bold and the blazed is a small pixel text",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-29T17:52:47.302Z"
+		},
+		"antiNFT.gif": {
+			"source": "antiNFT.gif",
+			"alt": "This is an Anti - NFT site there's an icon of a server with a document burning cross over with a red circle with a slash through it",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T12:29:21.946Z"
+		},
+		"antinazi.gif": {
+			"source": "antinazi.gif",
+			"alt": "exlimation mark, No Nazi, No Fascism, No Racism. and on the right the nazi symbol crossed out with a red circle with a slash through it",
+			"link": "",
+			"credit": "",
+			"date": "2025-01-23T12:31:56.041Z"
+		},
+		"badge_keep_living.png": {
+			"source": "badge_keep_living.png",
+			"alt": "keep living, keep going, with a red symbol for transgender in the middle, the badge is light blue with hearts all around",
+			"link": "",
+			"credit": "",
+			"date": "2024-06-18T17:00:39.450Z"
+		},
+		"blink-0.gif": {
+			"source": "blink-0.gif",
+			"alt": "a close up of an anime girl blinking she has brown eyes, and emerald cyan like hair",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T13:10:43.280Z"
+		},
+		"catawump.gif": {
+			"source": "catawump.gif",
+			"alt": "a yellow and black badge with blue text saying Catawump and a pixelart drawing of a dark blue haired character with big round glasses and a yellow hoodie",
+			"link": "https://catawump.com",
+			"credit": "catawump",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"e-browser_now.gif": {
+			"source": "e-browser_now.gif",
+			"alt": "this page is best viewd with: Ebrowser now, on there's a lesbian flag in the top left corner, and a trans flag in the bottom right corner, and in the window there's a purple estrogen pill",
+			"link": "",
+			"credit": "",
+			"date": "2025-03-29T09:21:16.604Z"
+		},
+		"elysia.png": {
+			"source": "elysia.png",
+			"alt": "a pink pastel badge with ribbons and a infinity simbol above some text saying elysia",
+			"link": "https://le.alphamethyl.barr0w.net/~elysia/",
+			"credit": "elysia",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"eyes.gif": {
+			"source": "eyes.gif",
+			"alt": "best viewed with open eyes, and a little yellow ball smiling with open eyes looking to the right. open is red the rest of the text is black",
+			"link": "",
+			"credit": "",
+			"date": "2024-08-31T14:09:48.546Z"
+		},
+		"fedi2.png": {
+			"source": "fedi2.png",
+			"alt": "a black badge with the fediverse logo with text saying follow me on Fedi",
+			"link": "https://social.grat.gay/@Grat10",
+			"credit": "aperture",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"hello-kitty-city.gif": {
+			"source": "hello-kitty-city.gif",
+			"alt": "a shop with a window, and a bear beside the window, the window it's animating Hello, Kitty, City",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-12T21:22:35.157Z"
+		},
+		"ika-musume_banner.gif": {
+			"source": "ika-musume_banner.gif",
+			"alt": "a website badge for Ika Musume in japanese, on the left there's the logo for the show then theres text and on the right there's a a drawing of the squid girl, ika musume. the badge switches between a happy version and a scary version where the squid girl becomes a silluette with a glint in the eye and the text becomes borderless",
+			"link": "",
+			"credit": "",
+			"date": "2023-08-01T19:08:06.917Z"
+		},
+		"kurisusHQ.jpg": {
+			"source": "kurisusHQ.jpg",
+			"alt": "a badge saying Kurisu's HQ with a tiny pixelart sprite of Ika Musume",
+			"link": "https://kurisuvanedge.neocities.org/",
+			"credit": "kurisu",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"lain.gif": {
+			"source": "lain.gif",
+			"alt": "a close up of Lain from Serial experiments lain looking through a blue-cyan static",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T12:28:58.562Z"
+		},
+		"lizzy.png": {
+			"source": "lizzy.png",
+			"alt": "a badge with a bunch of small pixelart surrounding some yellow text saying lizzy, the background is the bisexual flag",
+			"link": "https://ivy.vlhl.dev/~lizzy/",
+			"credit": "lizzy",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"lunospace.gif": {
+			"source": "lunospace.gif",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"lunya.gif": {
+			"source": "lunya.gif",
+			"alt": "Lunya's website videos and coding, lunya.pet with a character on the side",
+			"link": "https://lunya.pet/",
+			"credit": "",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"neobot.png": {
+			"source": "neobot.png",
+			"alt": "a grey neobot kissing with a cyan heart coming out with one eye winking with the text neobot",
+			"link": "https://github.com/SymTrkl/emoji",
+			"credit": "symtrkl",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"netscapenow30.gif": {
+			"source": "netscapenow30.gif",
+			"alt": "an animated badge for netscape navigator 3.0 saying Netscape NOW! where the icon is the N animated with stars falling in the background",
+			"link": "",
+			"credit": "",
+			"date": "2024-11-04T12:26:15.862Z"
+		},
+		"nia88x31.gif": {
+			"source": "nia88x31.gif",
+			"alt": "nia.dog, dog on the web in cyan text against a star like background with a black to cyan background from space to day time, once in awhile yellow illuminati like triangles appear",
+			"link": "https://nia.dog",
+			"credit": "nia",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"ns-best.gif": {
+			"source": "ns-best.gif",
+			"alt": "an grey netscape navigator badge where its moving between two states one saying this page is best viewed with: and another saying Netscape now",
+			"link": "",
+			"credit": "",
+			"date": "2024-08-31T18:01:42.487Z"
+		},
+		"pokemon.gif": {
+			"source": "pokemon.gif",
+			"alt": "a pixelart dancing Jirachi swerving it's head side to side. it's on a starry background with a window border",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T12:48:23.612Z"
+		},
+		"powered-by-estrogen.png": {
+			"source": "powered-by-estrogen.png",
+			"alt": "a grey badge saying powered by estrogen, a vial of estrogen is on the left of the text",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-20T06:59:46.616Z"
+		},
+		"ppc.gif": {
+			"source": "ppc.gif",
+			"alt": "pocket pc thoughts, with a PDA beside the white text, the background of the badge is two toned with light blue and dark blue at the top and bottom",
+			"link": "",
+			"credit": "",
+			"date": "2024-11-04T12:26:57.152Z"
+		},
+		"quarc.png": {
+			"source": "quarc.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"sakoworks_button.gif": {
+			"source": "sakoworks_button.gif",
+			"alt": "a yellow button of a long snake like bunny turning around quickly with text in the corner saying sako works",
+			"link": "https://sako.works/",
+			"credit": "sako",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"slimesnow.png": {
+			"source": "slimesnow.png",
+			"alt": "slimes... Now! with a window of a green slimegirl smiling in a tiny window",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-09T08:30:35.393Z"
+		},
+		"vocaloid.png": {
+			"source": "vocaloid.png",
+			"alt": "Vocaloid now! 1.0 with hatsune miku in the window smiling",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T12:28:47.104Z"
+		}
+	},
+	"blinkers": {
+		"badge_autistic.png": {
+			"source": "badge_autistic.png",
+			"alt": "the autism loop with a field saying autistic on it",
+			"link": "",
+			"credit": "",
+			"date": "2024-05-24T09:35:55.375Z"
+		},
+		"badge_lesbian.png": {
+			"source": "badge_lesbian.png",
+			"alt": "the lesbian flag and the field saying lesbians",
+			"link": "",
+			"credit": "",
+			"date": "2024-05-24T09:35:59.045Z"
+		},
+		"dominoCrew_banner.jpg": {
+			"source": "dominoCrew_banner.jpg",
+			"alt": "a badge for Hatsune Miku x Domino's pizza with pink and white text against a cyan and dark gray background",
+			"link": "",
+			"credit": "",
+			"date": "2025-05-01T08:54:00.251Z"
+		},
+		"kitty.gif": {
+			"source": "kitty.gif",
+			"alt": "a blinking badge that's blinking cute kitty the badge is pink overall",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-12T21:22:39.962Z"
+		},
+		"nonhuman.gif": {
+			"source": "nonhuman.gif",
+			"alt": "a long blinker that's blinking  yellow text that says this user is NON-human",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T13:13:05.634Z"
+		},
+		"rss-feed_banner.png": {
+			"source": "rss-feed_banner.png",
+			"alt": "RSS Feed, RSS has a orange background adn feed has gray",
+			"link": "",
+			"credit": "",
+			"date": "2023-08-04T19:02:09.578Z"
+		}
+	},
+	"blog": {
+		"hello-orbit.md": {
+			"source": "hello-orbit.md",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-28T09:15:40.088Z"
+		},
+		"infowriters-otter-extravaganza.md": {
+			"source": "infowriters-otter-extravaganza.md",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-28T09:13:43.832Z"
+		},
+		"my-love-of-all-things-yester-year.md": {
+			"source": "my-love-of-all-things-yester-year.md",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-28T08:48:55.954Z"
+		},
+		"web-growing-pains.md": {
+			"source": "web-growing-pains.md",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": "2025-06-28T08:48:53.638Z"
+		}
+	},
+	"fanart": {
+		"@HaybeeVT_grat-and-pudding.png": {
+			"source": "@HaybeeVT_grat-and-pudding.png",
+			"alt": "a digital painted drawing of Grat10 of an older design she's wearing a grey sweater, blue shorts and green rubber wadders, behind her there's a typical japanese pudding with choco sauce at the top",
+			"link": "",
+			"credit": "@HaybeeVT",
+			"date": "2023-08-21T18:23:56.119Z"
+		},
+		"@Kobeepb_Grat-chibi.png": {
+			"source": "@Kobeepb_Grat-chibi.png",
+			"alt": "Grat10 hugging a scared pacman ghost it's dark blue with a white scared face, grat is hugging the shark against it's chin with a super happy expression, grat10 is sitting on their knees and their cable is forming a little heart shape",
+			"link": "",
+			"credit": "@Kobeepb",
+			"date": "2024-06-07T05:10:42.651Z"
+		},
+		"@LilRedRonin_grat-birthday-gift-2023.png": {
+			"source": "@LilRedRonin_grat-birthday-gift-2023.png",
+			"alt": "a pixelart drawing of a bust of Grat10 smiling at the camera and a plug shooting out lightning with the text saying HBD Grat!",
+			"link": "",
+			"credit": "@Lil Red Ronin",
+			"date": "2024-04-26T08:22:45.844Z"
+		},
+		"@MimzyyMay_Grat-introscreen.png": {
+			"source": "@MimzyyMay_Grat-introscreen.png",
+			"alt": "Grat10 laying accross the screen doing a gun with their hand and smiling directly at the screen, against an offwhite grey background with gears and such, Grat10 is an blue robot with orange eyes and a white shell",
+			"link": "",
+			"credit": "@Mimzyy May",
+			"date": "2024-06-04T07:03:48.319Z"
+		},
+		"@MimzyyMay_grat-bust .png": {
+			"source": "@MimzyyMay_grat-bust .png",
+			"alt": "Grat10 drawn in digital art Grat10 is a blue haired robot with orange eyes and white shell. she has 4 and tenna with yellow lights at the end, yellow blinkers and a hook in the shape of a heart on their head",
+			"link": "",
+			"credit": "@Mimzyy May",
+			"date": "2024-04-20T07:26:41.065Z"
+		},
+		"@MimzyyMay_yes.png": {
+			"source": "@MimzyyMay_yes.png",
+			"alt": "an MS paint drawing of Grat10, with blue hair and her skarf with the text YES. above them",
+			"link": "",
+			"credit": "@Mimzyy May",
+			"date": "2024-04-20T07:26:41.076Z"
+		},
+		"@Smoki-Dhampir_grat.png": {
+			"source": "@Smoki-Dhampir_grat.png",
+			"alt": "Grat10 doing a pose spreading her arms out and leaning to the side with an open mouth, she's got blue hair and orange eyes, 4 antenna and a hook. she's wearing a gray sweater croptop with purple and pink highlights, same with a gray shorts with pink highlights, she's wearing a black body suit with an orange band on her thigh",
+			"link": "",
+			"credit": "@Smoki Dhampir",
+			"date": "2023-10-23T20:04:32.298Z"
+		},
+		"@SwagpunchLilith_Grat-Slime.png": {
+			"source": "@SwagpunchLilith_Grat-Slime.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"@SwagpunchLilith_gratsketch.jpg": {
+			"source": "@SwagpunchLilith_gratsketch.jpg",
+			"alt": "a paper sketch of Grat10 it's only black and white with a neutral expressions, she's got 4 antenna and a hook. the scarf, it has a zipper on it",
+			"link": "",
+			"credit": "@SwagpunchLilith",
+			"date": "2024-10-20T09:11:42.394Z"
+		}
+	},
+	"friends": {
+		"440729.png": {
+			"source": "440729.png",
+			"alt": "a black badge with a red sword laying across it with text in the blade saying star 440729",
+			"link": "https://999eagle.moe/",
+			"credit": "sophie",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"amy.png": {
+			"source": "amy.png",
+			"alt": "a dark badge with a gradient border with 3 shapes an hexagon, and two triangles with the text beside it saying amy",
+			"link": "https://amy.rip/",
+			"credit": "amy",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"apertown.png": {
+			"source": "apertown.png",
+			"alt": "the apperture science logo with different colors each section alternating between red and purple, with text saying Apertown, on Neocities",
+			"link": "https://apertown.neocities.org/",
+			"credit": "aperture",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"ari_melody.gif": {
+			"source": "ari_melody.gif",
+			"alt": "a dark gray badge with orange text saying ari melody and a small pixelart doodle of a face",
+			"link": "https://arimelody.space/",
+			"credit": "ari-melody",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"kiru_button.png": {
+			"source": "kiru_button.png",
+			"alt": "a simplistic badge with pink text saying kiru.gay the dot in the \"i\" is a heart and the kiru is underlined with a darker pink, the badge is brown",
+			"link": "https://kiru.gay/",
+			"credit": "@Grat10",
+			"date": "2025-05-25T15:42:28.061Z"
+		},
+		"mae.png": {
+			"source": "mae.png",
+			"alt": "a deep purple badge with big text saying Mae, with smaller text underneath saying mae.wtf and a lavender hair colored anime girl with a face mask beside it holding a purple heart with eyes closed smiling",
+			"link": "https://mae.wtf/",
+			"credit": "vimae",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"stel-at-moondvsted.gif": {
+			"source": "stel-at-moondvsted.gif",
+			"alt": "a badge of a terminal with sparkles and a gradient border. Stel @ moondvsted",
+			"link": "https://moondvsted.space",
+			"credit": "stel",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"symtrkl-dot-gay.png": {
+			"source": "symtrkl-dot-gay.png",
+			"alt": "text saying symtrkl-dot-gay over a pink blue pink horizontal gradient",
+			"link": "https://symtrkl.gay/",
+			"credit": "symtrkl",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"thermia.gif": {
+			"source": "thermia.gif",
+			"alt": "a dark badge with orange text saying ~thermia and red curcuit board lines, the letters glow up in a brighter orange once in awhile",
+			"link": "https://girlthi.ng/~thermia/",
+			"credit": "",
+			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"yassie_j.png": {
+			"source": "yassie_j.png",
+			"alt": "a person with blue hair, magenta skin and green eyes smiling with a yellow shirt on",
+			"link": "https://labyrinth.zone/users/yassie_j",
+			"credit": "",
+			"date": "2025-07-27T19:05:30.694Z"
+		}
+	},
+	"hamabead": {
+		"grat-hama.jpg": {
+			"source": "grat-hama.jpg",
+			"alt": "Grat10 as a hamabead artwork, sitting against a cardboard stand in a homemade lightbox, beside the stand with grat there is a receipt with a QR code on it, on the receipt there is a shopping bag with 4 antenna and a smiling face",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-08-05T20:56:37.565Z"
+		},
+		"grat-illu-hama.jpg": {
+			"source": "grat-illu-hama.jpg",
+			"alt": "Grat10 as a hamabead artwork, sitting against a cardboard stand in a homemade lightbox, is a hamabeaded Illu with heart eyes, she has pink hair and an offwhite shell",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-08-05T20:56:37.562Z"
+		},
+		"illu-hama.jpg": {
+			"source": "illu-hama.jpg",
+			"alt": "Illu as a hamabead artwork, sitting against a cardboard stand in a homemade lightbox beside the stand with grat there is a receipt with a QR code on it, on the receipt there is a shopping bag with 4 antenna and a smiling face",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-08-05T20:56:37.567Z"
+		}
+	},
+	"logos": {
+		"admin_pfp.png": {
+			"source": "admin_pfp.png",
+			"alt": "a blue plantoid with a light blue ring and orange moon against a blue noisy background",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-06-21T06:02:51.921Z"
+		},
+		"git_grat_gay.png": {
+			"source": "git_grat_gay.png",
+			"alt": "a few gears intersecting to create the look of a plantoid with a light blue ring and orange gear moon",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-06-21T06:03:04.896Z"
+		},
+		"live_grat_gay_x2.png": {
+			"source": "live_grat_gay_x2.png",
+			"alt": "Grat10's Live logo it's an orange dot in the middle with radio waves out from it rotate vertically and another row off set of horizontal",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-06-21T06:03:12.690Z"
+		}
+	},
+	"lowpoly": {
+		"desert-rain-frog.png": {
+			"source": "desert-rain-frog.png",
+			"alt": "lowpoly artwork of a brown desert rain frog in a desert, it's a clear sky and theres round cacti around of different sizes and a few rocks",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-03T20:28:55.486Z"
+		},
+		"goblin-shark.gif": {
+			"source": "goblin-shark.gif",
+			"alt": "lowpoly artwork of a gray shark spinning around in a light blue void, the shark has small pixel eyes and looks like it's smiling with teeth showing",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:05:59.788Z"
+		},
+		"grat-mebo.gif": {
+			"source": "grat-mebo.gif",
+			"alt": "lowpoly artwork of Grat10 a robot girl with blue hair and green eyes, she's standing on a grey stand and spinning around",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-17T11:30:41.246Z"
+		},
+		"pixel-bolts.gif": {
+			"source": "pixel-bolts.gif",
+			"alt": "three lowply pixelart bolts spinning around in a teal void slowly",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:05:02.988Z"
+		},
+		"strawberry-bot.gif": {
+			"source": "strawberry-bot.gif",
+			"alt": "a lowpoly robot with a pink screen and white eyes and mouth, a robot that's made of wood and scrap metal, it's carrying a vase with a strawberry on it",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:04:56.365Z"
+		},
+		"turto-spinn.gif": {
+			"source": "turto-spinn.gif",
+			"alt": "a lowpoly turtle spinning in sky blue void",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:05:11.054Z"
+		},
+		"wiitri-spin.gif": {
+			"source": "wiitri-spin.gif",
+			"alt": "a lowpoly spinning CRT with a black screen, blue mouth and eyes. its body is grey and has color ribbons all around on it's stand, it's got four wheels and is coverted in personalized stickers",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-16T19:35:05.341Z"
+		}
+	},
+	"pixelart": {
+		"grat-fumo.png": {
+			"source": "grat-fumo.png",
+			"alt": "pixelart of Grat10 as a fumo plushie, it's grat10's older design with warning sign boubles in their hair and scarf, Grat10 is a blue haired robot with blue eyes with 4 antenna and a hook",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-17T11:35:53.314Z"
+		},
+		"grat-mc-skin.png": {
+			"source": "grat-mc-skin.png",
+			"alt": "a screencap from minecraft showing off Grat10's skin she's standing in a forrest with oak and birch behind her, Grat10 has one eye covered with orange hair pins in her hair, a scarf, grey sweater, shorts and black leggings",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-17T11:33:11.625Z"
+		},
+		"lampreyhole.png": {
+			"source": "lampreyhole.png",
+			"alt": "pixelart of lamprey hole a theres a red cone on the left bottom side of the image, a box that's supposed to be animated to fit with beats and an orange warning sign on a signpost, it's all weathered and rust is visible",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-17T11:36:05.146Z"
+		},
+		"offline-screen.png": {
+			"source": "offline-screen.png",
+			"alt": "pixelart of an error screen showing a bunch of test colors like the color test screen on a TV a bunch of small parts of the gradient in the background are glitched out of place and jumbled text saying Connection -209 40, 404 is visible, in the middle of it all there's Grat10's face looking deadpan",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2023-09-17T11:36:10.744Z"
+		},
+		"penumbra.png": {
+			"source": "penumbra.png",
+			"alt": "pixelart of an explorer who has their back towards the camera finding an enterance to a bunker beneath a bunch of snow, the image has a red border the same color as the explorer is wearing",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:09:36.557Z"
+		},
+		"sati-waitscreen.gif": {
+			"source": "sati-waitscreen.gif",
+			"alt": "pixelart of Grat10's logo a blue plantoid with an orange moon and lightblue ring, it also has a white smiling face with pink blush, the planet has a little tooth vissible. the sides of the artwork is animated with stars blinking and moving down the screen",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:10:21.117Z"
+		},
+		"shimeji-chan.png": {
+			"source": "shimeji-chan.png",
+			"alt": "pixelart of shimeji-chan from shimeji simulation she's a black haired girl with a deadpan expression and small shimeji mushrooms growing out of her hair in two spots, she's standing against a background of squares with a few fishes swimming past her slight above and to the left",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:09:05.935Z"
+		},
+		"ufo-idle.gif": {
+			"source": "ufo-idle.gif",
+			"alt": "pixelart of a tiny animated UFO it has a little antenna with a red ball at the tip, it has white eyes and mouth, it's smiling and looking to the left while wobbling up and down, it's dome is blue and the rest of the UFO's body is grey",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:10:51.768Z"
+		}
+	},
+	"sketches": {
+		"glorpi_grat.png": {
+			"source": "glorpi_grat.png",
+			"alt": "a sketch of Grat10 as an alien with big dark eyes with white eyelights she has her 4 antenna but with balls at the ends instead, a hook in the middle of her head is also there but perfectly triangular. her robot ears are longer than normal. there's a few different smaller sketches around too, a small version of her in green just floating. one where she's in a UFO, one where she's just sitting. another where she's holding up a gun stanced up.",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-06-20T07:21:13.991Z"
+		},
+		"grats.png": {
+			"source": "grats.png",
+			"alt": "a bunch of small MSpaint sketches of Grat10 drawn with light blue colors, she has drawn pink blush and smiling faces, theres one where she's in a just chatting screen on twitch with hearts all around here, one where she's hugging a heart while doing a thumbs up and one where she's a cursor with an artists pallette",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:40:13.569Z"
+		},
+		"grot.png": {
+			"source": "grot.png",
+			"alt": "a sketch of Grat10 all up close with a derpy expression she's doing a colon three smile and looking down, she has ther 4 antenna 2 of them darker and with lights, and her hook. she has 2 orange bands in her hair and 2 blinkers on the sides of her head",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:39:45.149Z"
+		},
+		"vocaloids.png": {
+			"source": "vocaloids.png",
+			"alt": "an screencap of an online drawing tool of a bunch of vocaloids, at the bottom there's miku sun bathing with sun glasses on and a bikini. above her there's neru but drawn as nijika from bocchi the rock. beside her there's luka but drawn as she's in minecraft with an axe. then there's rin sitting in a box and doing an evil colon three face. beneath her there's teto smiling and bread beside her with a heart between the two",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2024-04-10T19:40:19.661Z"
+		}
+	},
+	"stamps": {
+		"3DS.webp": {
+			"source": "3DS.webp",
+			"alt": "a stamp of the Nintendo DS logo moving aside to show the 3, and sending out a little red wave as it appears",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:17:43.011Z"
+		},
+		"Wii.webp": {
+			"source": "Wii.webp",
+			"alt": "a stamp of the WII logo and then a little wave of blue gets shot out",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:17:38.457Z"
+		},
+		"aether_fuck_up.gif": {
+			"source": "aether_fuck_up.gif",
+			"alt": "a stamp of someone making an Aether portal out of glowstone and water in an old version of minecraft but they place the water at the top of the portal and it doesn't work, they fiddle with bucket'ing up the water for 3 seconds before making the portal successfully",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:22:19.619Z"
+		},
+		"alloy_pressed.gif": {
+			"source": "alloy_pressed.gif",
+			"alt": "a stamp of red hot metal being pressed down by an allow presser machine, parts of the metal flaking off",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:33:51.300Z"
+		},
+		"amyrose.webp": {
+			"source": "amyrose.webp",
+			"alt": "a stamp showing footage of the new sonic animated series, with knuckles and sonic in the background and amy rose running up close to the camera with a hammer in her hands",
+			"link": "https://www.youtube.com/watch?v=LYvO8eaWJNc",
+			"credit": "",
+			"date": "2024-10-04T14:00:14.173Z"
+		},
+		"anime_howl.png": {
+			"source": "anime_howl.png",
+			"alt": "Howl's moving castle a nailed together mess of different building parts and machines. with the title of Howl's Moving castle in front of it",
+			"link": "https://www.youtube.com/watch?v=ARCQf2CEr8k",
+			"credit": "",
+			"date": "2024-09-08T10:20:10.548Z"
+		},
+		"aquarium.png": {
+			"source": "aquarium.png",
+			"alt": "a stamp showing the inside of an aquarium with small fishes swimming around, and coral and rocks all around",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:20:49.682Z"
+		},
+		"ari_explode.gif": {
+			"source": "ari_explode.gif",
+			"alt": "a stamp of Ari doodle exploding, ari doodle is a little MSpaint like drawing with messy hair and a flower in her hair, she's sitting on a lime green bean bag with a computer and bonsi tree at her sides, against a tiled grey and white background, then there's a missile that shoots in from the top left corner and blows her up in a cartoony way",
+			"link": "https://www.youtube.com/watch?v=JW_J7GqGcLA",
+			"credit": "@Grat10",
+			"date": "2025-06-21T17:49:49.858Z"
+		},
+		"baka.gif": {
+			"source": "baka.gif",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"bandages.png": {
+			"source": "bandages.png",
+			"alt": "a stamp of different pastel colored bandages against a white background. the bandages are arranged messily and all over the place",
+			"link": "",
+			"credit": "",
+			"date": "2023-08-12T07:39:11.982Z"
+		},
+		"big_cable.gif": {
+			"source": "big_cable.gif",
+			"alt": "an animated stamp of someone holding a ginormous connecting cable for an old mainframe computer and slotting it and clamping it in with a big clunk and a bit of force.",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:35:32.480Z"
+		},
+		"blushyy.webp": {
+			"source": "blushyy.webp",
+			"alt": "a stamp of a red haired anime girl with a polka dot ribbon in her hair being flustered and then turning red with dizzy eyes and letting off steam",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:05:59.559Z"
+		},
+		"bridget.webp": {
+			"source": "bridget.webp",
+			"alt": "an animated stamp of bridget from guilty gear playing with her yoyo and then doing a pose smiling",
+			"link": "https://www.youtube.com/watch?v=3GYL5FVpjG4",
+			"credit": "",
+			"date": "2024-10-04T17:07:21.309Z"
+		},
+		"bridget2.webp": {
+			"source": "bridget2.webp",
+			"alt": "an animated stamp of bridget from guilty gear crouching down and rocking side to side while tapping her legs stimming small music notes are popping up around her",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:07:29.230Z"
+		},
+		"cat_angler.webp": {
+			"source": "cat_angler.webp",
+			"alt": "a stamp of a white cat with it's head squished through a hole but it's tail is squish through the hole also making it look like it's got a floppy anglerfish lure, there's also blinking text saying The Nefarious Anglerfish",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:21:45.285Z"
+		},
+		"cat_binky.webp": {
+			"source": "cat_binky.webp",
+			"alt": "an animated stamp of a black cat with a pink pacifier in it's mouth",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:29:18.983Z"
+		},
+		"cat_jump.webp": {
+			"source": "cat_jump.webp",
+			"alt": "an animated stamp of a cat jumping up and down waving it's arms around",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:10:32.812Z"
+		},
+		"cat_slap.webp": {
+			"source": "cat_slap.webp",
+			"alt": "an animated stamp of a cat jumping up into someones lap and being smacked repeatively on the back butt. the cat is kneading into the leg and waving it's tail around happily",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T16:38:27.801Z"
+		},
+		"cat_smile.webp": {
+			"source": "cat_smile.webp",
+			"alt": "an orange cat smiling and blinking at the camera, it's showing off it's theefies",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:29:05.704Z"
+		},
+		"cat_tv.png": {
+			"source": "cat_tv.png",
+			"alt": "a stamp of a cat resting on top of a CRT TV, it's small paws draping down over the border of the TV",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:10:08.863Z"
+		},
+		"cat_yell.gif": {
+			"source": "cat_yell.gif",
+			"alt": "an animated stamp of an orange cat eating the camera chomping at it and at one point biting it, the camera showing inside it's mouth",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:41:29.412Z"
+		},
+		"colors.jpg": {
+			"source": "colors.jpg",
+			"alt": "a stamp showing off a bunch of old Windows programs all with huge palettes",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:18:21.897Z"
+		},
+		"damn_daniel.gif": {
+			"source": "damn_daniel.gif",
+			"alt": "an animated stamp of someone carrying around white vans in a ice pillars biome, a bunch of damn daniels are running up to them attracted to the player till a big group of them are following the player around",
+			"link": "https://mineturtlepls.itch.io/ddwva",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:36:52.327Z"
+		},
+		"doom.webp": {
+			"source": "doom.webp",
+			"alt": "an animated stamp of DOOM the original where the player shoots a guard with a shotgun",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T14:01:14.376Z"
+		},
+		"en-v_logo_spin_black.gif": {
+			"source": "en-v_logo_spin_black.gif",
+			"alt": "a black and white version of the EN-V Arcade logo zooming in and then rotating around",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-04-03T17:38:35.039Z"
+		},
+		"en-v_logo_spin_magenta.gif": {
+			"source": "en-v_logo_spin_magenta.gif",
+			"alt": "a magenta and white version of the EN-V Arcade logo zooming in and then rotating around",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-04-03T17:38:35.040Z"
+		},
+		"error.webp": {
+			"source": "error.webp",
+			"alt": "an animated stamp of a black background with red text saying Error a warning symbol is flashing aswell",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:25:06.797Z"
+		},
+		"fnaf.gif": {
+			"source": "fnaf.gif",
+			"alt": "an animated stamp of the first five nights of freddies game, of Bunny, Freddy Fazbear and Chicka.",
+			"link": "https://www.youtube.com/watch?v=RP4UTOek0-Y",
+			"credit": "",
+			"date": "2025-04-28T12:48:47.818Z"
+		},
+		"game-over.gif": {
+			"source": "game-over.gif",
+			"alt": "an animated glitchy stamp showing a windows 95 like window showing a bunch of 1s and 0s then glitching into a version that says game over",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T12:49:06.278Z"
+		},
+		"game_cryoffear.png": {
+			"source": "game_cryoffear.png",
+			"alt": "a stamp saying Cry of Fear against a dark background, it has a red border",
+			"link": "https://www.cry-of-fear.com/about.html",
+			"credit": "",
+			"date": "2024-09-08T10:17:23.080Z"
+		},
+		"glitch.png": {
+			"source": "glitch.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"gravity_falls.webp": {
+			"source": "gravity_falls.webp",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"imac.gif": {
+			"source": "imac.gif",
+			"alt": "an animated stamp of the Imac rotating 45 degrees inside QuickTime Media player",
+			"link": "https://www.youtube.com/watch?v=7_tcWCrNjo4",
+			"credit": "",
+			"date": "2024-09-08T10:16:20.626Z"
+		},
+		"isopod.png": {
+			"source": "isopod.png",
+			"alt": "a stamp of an Isopod illuminated from a flashlight at the bottom of the sea",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:28:06.763Z"
+		},
+		"jellyfish.webp": {
+			"source": "jellyfish.webp",
+			"alt": "an animated stamp of a Blue & Cyan jellyfish swimming around against an all black background",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:20:25.734Z"
+		},
+		"jerma.webp": {
+			"source": "jerma.webp",
+			"alt": "an animated stamp of Jeramy Elbertson sitting in his chair wearing a black shirt, he looks like he's chatting then screams at the camera angerly",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T13:53:58.406Z"
+		},
+		"jerma2.webp": {
+			"source": "jerma2.webp",
+			"alt": "an animated stamp of Jerma punching the camera several times",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T13:53:52.309Z"
+		},
+		"jerma985.png": {
+			"source": "jerma985.png",
+			"alt": "a stamp of Jerma985, dark cyan background with Jerma's logo above it",
+			"link": "https://www.youtube.com/@Jerma985",
+			"credit": "",
+			"date": "2024-09-08T10:19:35.366Z"
+		},
+		"keyboard.png": {
+			"source": "keyboard.png",
+			"alt": "a stamp of an old keyboard in it's offwhite grey showing several keys around the spacebar and ALT-GR",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:16:36.866Z"
+		},
+		"kittythink.png": {
+			"source": "kittythink.png",
+			"alt": "a stamp of a tiny kitty half way off of the stamp only it's ears showing",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T13:09:48.097Z"
+		},
+		"lagtrain.webp": {
+			"source": "lagtrain.webp",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"lain.webp": {
+			"source": "lain.webp",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"lava_lamp.png": {
+			"source": "lava_lamp.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"lobstor_stamp.gif": {
+			"source": "lobstor_stamp.gif",
+			"alt": "an animated stamp of someone riding a redlobster as a snowbike in a snowy mountainous area",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-03-31T17:49:04.971Z"
+		},
+		"luckystar.gif": {
+			"source": "luckystar.gif",
+			"alt": "an animated stamp of Lucky Star showing the 4 girls smiling and posing at the stamp, then colorful stars taking over the screen",
+			"link": "https://www.youtube.com/watch?v=6iseNlvH2_s",
+			"credit": "",
+			"date": "2025-04-28T12:24:26.682Z"
+		},
+		"luckystar.webp": {
+			"source": "luckystar.webp",
+			"alt": "an animated stamp of lucky star of one of the girls chatting to the other while she's on her computer typing",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:04:11.191Z"
+		},
+		"luckystar2.webp": {
+			"source": "luckystar2.webp",
+			"alt": "an animated stamp of lucky star of all the girls doing their pose before the intro begins",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:04:03.980Z"
+		},
+		"me_going_online.png": {
+			"source": "me_going_online.png",
+			"alt": "a stamp of a cat laying on a bed while on a laptop staring intently at the screen, with the text me going online to do homosexual activities",
+			"link": "",
+			"credit": "",
+			"date": "2025-02-09T19:05:40.999Z"
+		},
+		"me_with_any_character.png": {
+			"source": "me_with_any_character.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"miku1.webp": {
+			"source": "miku1.webp",
+			"alt": "an animated stamp of Miku from Mezmerizer slowly falling into a trance while swerving from side to side, her pupils slowly becoming darker till she clicks and bends her neck",
+			"link": "https://www.youtube.com/watch?v=19y8YTbvri8",
+			"credit": "",
+			"date": "2024-08-25T07:36:40.580Z"
+		},
+		"miku2.webp": {
+			"source": "miku2.webp",
+			"alt": "an animated stamp of Miku from rabbit hole of miku stuck in a wall and her upper body vissible and her head bopping along to the beat while having a neutral expression",
+			"link": "https://www.youtube.com/watch?v=bbDjmuFt7dE",
+			"credit": "",
+			"date": "2024-08-25T07:37:06.983Z"
+		},
+		"miku3.png": {
+			"source": "miku3.png",
+			"alt": "a stamp of Hatsune Miku with a transflag in the background",
+			"link": "",
+			"credit": "",
+			"date": "2024-08-13T09:54:49.105Z"
+		},
+		"miku4.png": {
+			"source": "miku4.png",
+			"alt": "a stamp of Hatsune Miku from how she looked in the Nintendo switch punching game",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:09:58.631Z"
+		},
+		"miku5.png": {
+			"source": "miku5.png",
+			"alt": "a stamp of Miku smiling with a dot background behind her",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T16:39:01.346Z"
+		},
+		"miku6.webp": {
+			"source": "miku6.webp",
+			"alt": "an animated stamp of Miku learning in and kissing Rin, rin reacting by closing her eyes and blushing",
+			"link": "https://youtu.be/kv2Ay_ykyBA?si=JXsgv8hEKmqyd-ro&t=81",
+			"credit": "",
+			"date": "2024-11-07T10:28:18.055Z"
+		},
+		"miku7.png": {
+			"source": "miku7.png",
+			"alt": "a pink stamp of miku with heart eyes and looking into the camera, she's wearing a pink japanese school girl outfit",
+			"link": "",
+			"credit": "",
+			"date": "2025-04-28T13:08:54.120Z"
+		},
+		"miku8.png": {
+			"source": "miku8.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"miku9.png": {
+			"source": "miku9.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"miku_guitar.webp": {
+			"source": "miku_guitar.webp",
+			"alt": "an animated stamp of miku playing a guitar quickly and prefessionally",
+			"link": "https://www.youtube.com/watch?v=ossuGapoSjE",
+			"credit": "",
+			"date": "2024-09-08T10:24:36.299Z"
+		},
+		"needy1.png": {
+			"source": "needy1.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"needy2.webp": {
+			"source": "needy2.webp",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"needy3.png": {
+			"source": "needy3.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"over-the-garden-wall.webp": {
+			"source": "over-the-garden-wall.webp",
+			"alt": "an animated stamp of Over the garden wall, of the beast doing a shrug, the beast is a shadowy figure with white glowy eyes and antlers",
+			"link": "https://en.wikipedia.org/wiki/Over_the_Garden_Wall",
+			"credit": "",
+			"date": "2024-09-18T05:56:02.759Z"
+		},
+		"overthegardenwall2.webp": {
+			"source": "overthegardenwall2.webp",
+			"alt": "an animated stamp of Over the garden wall, of Wirt and Gregory walking through an autumn forrest, wirt is wearing a blue coat and red cone hat, and greg is wearing green overalls and an upside down tea pot as a hat",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T14:01:34.565Z"
+		},
+		"portal_GLADOS.png": {
+			"source": "portal_GLADOS.png",
+			"alt": "a stamp of GlaDOS from portal 2 with a blue tint over it",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:23:03.011Z"
+		},
+		"portal_GLADOS2.gif": {
+			"source": "portal_GLADOS2.gif",
+			"alt": "an animated stamp of GlaDOS swerving from side to side while looking at the player",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:22:37.094Z"
+		},
+		"portal_defec.png": {
+			"source": "portal_defec.png",
+			"alt": "a stamp of a defective turret from portal 2 with text around it saying Bam Bam Bam, i'm Not defective!",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:22:55.328Z"
+		},
+		"portal_logo.webp": {
+			"source": "portal_logo.webp",
+			"alt": "an animated stamp of the Portal 2 Logo appearing out of a grey blue gradient background",
+			"link": "https://www.youtube.com/watch?v=tax4e4hBBZc",
+			"credit": "",
+			"date": "2024-09-08T10:23:19.078Z"
+		},
+		"prehistoric.png": {
+			"source": "prehistoric.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"purple_ufo.webp": {
+			"source": "purple_ufo.webp",
+			"alt": "an animated stamp of a UFO with a light underneath it floating against a purple night sky, the stamp border is gradiented from yellow to purple diagonally",
+			"link": "",
+			"credit": "",
+			"date": "2025-07-01T09:10:13.429Z"
+		},
+		"robot.png": {
+			"source": "robot.png",
+			"alt": "a stamp of a robot with green hair and robot ears that look like white headphones and a deaddpan expression",
+			"link": "",
+			"credit": "",
+			"date": "2024-10-04T17:02:09.116Z"
+		},
+		"sonic_bisexual.png": {
+			"source": "sonic_bisexual.png",
+			"alt": "a stamp of Sonic Riders of Sonic, Knuckles and Tails where sonic is doing a shocked pose with text underneath him saying Woah he's bisexual",
+			"link": "https://www.youtube.com/watch?v=-N-N5f6aRuw",
+			"credit": "",
+			"date": "2024-09-08T10:30:07.608Z"
+		},
+		"spiritphone.png": {
+			"source": "spiritphone.png",
+			"alt": "a stamp of the spirt phone album by lemon demon, of the text Spirit phone and a red drawing of niel ciecerega with a white star in his right eye",
+			"link": "https://www.youtube.com/playlist?list=OLAK5uy_kGJN5TvKfC3V4sO6So4wu9lnUwl_ks4Zc",
+			"credit": "",
+			"date": "2024-09-08T10:24:10.708Z"
+		},
+		"static.webp": {
+			"source": "static.webp",
+			"alt": "an animated stamp of a bunch of tv static",
+			"link": "",
+			"credit": "",
+			"date": "2024-09-08T10:18:17.648Z"
+		},
+		"teto1.webp": {
+			"source": "teto1.webp",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"tf2_intuder.webp": {
+			"source": "tf2_intuder.webp",
+			"alt": "an animated stamp of the intro part to the TF2 video of the spy, showing the Intruder alert sign and soldier running off",
+			"link": "https://www.youtube.com/watch?v=OR4N5OhcY9s",
+			"credit": "",
+			"date": "2024-09-08T10:26:08.193Z"
+		},
+		"tf2_logo.webp": {
+			"source": "tf2_logo.webp",
+			"alt": "a stamp of the Team fortress 2 logo from promotional images",
+			"link": "https://www.teamfortress.com/",
+			"credit": "Valve",
+			"date": "2024-09-08T10:17:26.730Z"
+		},
+		"tf2_mother.webp": {
+			"source": "tf2_mother.webp",
+			"alt": "an animated stamp of Team fortress 2 of the spy and scout talking with spy turning around and saying that would be your mother, before throwing down a folder of images of scouts mom in pornographic positions with the red spy",
+			"link": "https://www.youtube.com/watch?v=OR4N5OhcY9s",
+			"credit": "",
+			"date": "2024-09-08T10:26:01.747Z"
+		},
+		"tf2_scout.gif": {
+			"source": "tf2_scout.gif",
+			"alt": "an animated stamp of the entire Team fortress 2 scout introduction",
+			"link": "https://www.youtube.com/watch?v=geNMz0J9TEQ",
+			"credit": "",
+			"date": "2024-10-02T09:39:30.823Z"
+		},
+		"timmy_turner.png": {
+			"source": "timmy_turner.png",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"you_died.png": {
+			"source": "you_died.png",
+			"alt": "a stamp saying you died! score: 0 from minecraft",
+			"link": "",
+			"credit": "",
+			"date": "2025-02-09T19:05:30.694Z"
+		},
+		"yuri.gif": {
+			"source": "yuri.gif",
+			"alt": "a gif of two girls kissing each other lovingly",
+			"link": "",
+			"credit": "@Grat10",
+			"date": "2025-06-21T10:00:26.470Z"
+		}
+	}
+}
+let twitch_streams = {"error":"Unauthorized","status":401,"message":"Invalid OAuth token"}; 
+let twitch_schdule = {"error":"Unauthorized","status":401,"message":"Invalid OAuth token"}; 

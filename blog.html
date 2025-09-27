@@ -18,12 +18,26 @@
     <link href="styling/common.css" rel="stylesheet", 
      type="text/css", media="all">
      <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
+
+    <!-- OpenGraphProtocol --!>
+    <meta content="blog.html" name="og:title">
+    <meta content="https://grat.gay/blog.html" name="og:url">
+    <meta content="Beep!! awawawa this is a hyperlink to grat.gay the one stop shop for the Vtuber & Artist Grat10! please stay a awawawawhile! -w-" name="og:description">
+    <meta content="https://grat.gay/images/ogp/2025/ogp_blog.webp" name="og:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="#00B8FF" name="theme-color">
+    <link href="https://grat.gay/images/OEmbed.json" type="application/json+oembed">
   </head>
-  <body>
+  <body class="keymotes">
 	<radio></radio>
 	<div id="navbar-deco">
 		<div class="sawtooth sawtooth-top"></div>
 	</div>
+
+    <div id="loading">
+        <!-- some sort of spinning gear? --> 
+    </div>
+
 	<main>
 		<!-- elements / programs sitting above everything -->
 		<div class="program" id="chatbox">
@@ -42,63 +56,117 @@
 			</div>
 		</div>
 
-		<div class="program" id="badges">
+		<div class="program" id="heart-popup">
 			<div class="content">
 				<p>If you have your own site feel free to download my website badge!</p>
 				<p>extended badges is on <a href="links">my links page!</a></p>
 
-				<img src="styling/grat.gay_badge.gif">
-				<img src="styling/grat_gay_badge.png">
-				<img src="styling/grat10_gay_badge_smol.png">
+				<img src="images/share/grat_gay_badge.gif">
+				<img src="images/share/grat_gay_badge.png">
+				<img src="images/share/grat10_gay_badge_smol.png">
 			</div>
 		</div>
 
+        <!-- decorative gears behind content -->
+        <div id="bg-gear-1" class="bg-gear-div">
+            <svg-img class="bg-gear" src="images/icons/gear_filled.svg"></svg-img>
+        </div>
+        <div id="bg-gear-2" class="bg-gear-div">
+            <svg-img class="bg-gear" src="images/icons/gear_filled.svg"></svg-img>
+        </div>
+
 		<!-- start of webpage panel content -->
-		<div class="panel">
+		<div class="panel blog">
 			<div class="flex">
-				<article class="links v-flex">
+				<article class="v-flex">
                     <div>
-                        <hr>
-                        <h1 id="about">Blog posts!</h1>
-                        <p>I'm a Pixelartist and Web-designer from Denmark!
-                        i've made a ton of text tutorials for Aseprite and also dabled
-                        a lot with Live2D and Pixelart Vtuber models</p>
-                        <p>i can't wait to work with you! </p>
-                        <p>inqueries about commissions can be done 
-                        through my Email or my fedi account</p>
+                        <div class="banner">
+                            <div id="blog-banner" src="images/assets/blog_banner.png" alt="">
+                                <h2>Blog Database...</h2>
+                            </div> 
+                        </div>
+                        <hr class="hr">
+                        <div class="buttons">
+                             <a href="gallery.html">Gallery</a>
+                             <a href="gallery.html#projects">Projects</a>
+                             <a href="links.html">Links</a>
+                             <a href="socials.html">Socials</a>
+                             <a href="index.html">Index</a>
+                        </div>
                     </div>
-					<div class="dir">
-						<h4>grat@space:~$ ls</h4>
-						<div>
-						 	<a href="#sites">sites</a>
-							<p>-</p>
-							<a href="#stamps">stamps</a>
-							<p>-</p>
-							<a href="#links">links</a>
-						</div>
-					</div>
 				</article>
 			</div>
-			<hr>
-			<div class="buttons">
-				 <a href="gallery.html">Gallery</a>
-				 <a href="gallery.html#projects">Projects</a>
-				 <a href="links.html">Links</a>
-				 <a href="socials.html">Socials</a>
-				 <a href="index.html">Index</a>
-			</div>
+            <div id="blog-clear" class="keymotes">
+                <h2 id="Hello-World">## Hello World</h2>
+                <p>Welcome to my blog database. this is the directory where you can
+                find some cool reading material, tutorial or just anything else
+                reading related!</p>
+                <p>i yap a lot about technolgy even if i'm not the breast at it!
+                any projects i am doing aswell, link complilations, tutorials
+                on stuff i know about, mainly pixelart. and anything else
+                i have on my mind, for shorter form blogging,
+                micro-blogging please look to my fediverse account!</p>
+                <h2 id="Recent">## Recent blog posts</h2>
+                <a id="blog-post-1" href="blog.html" class="blog-post">
+                    <div></div>
+                    <div>
+                        <h2>Loading blog title. . .</h2>
+                        <p>Loading description. . .</p>
+                    </div>
+                </a>
+                <a id="blog-post-2" href="blog.html" class="blog-post">
+                    <div></div>
+                    <div>
+                        <h2>Loading blog title. . .</h2>
+                        <p>Loading description. . .</p>
+                    </div>
+                </a>
+                <a id="blog-post-3" href="blog.html" class="blog-post">
+                    <div></div>
+                    <div>
+                        <h2>Loading blog title. . .</h2>
+                        <p>Loading description. . .</p>
+                    </div>
+                </a>
+                <div class="moar">
+                    <hr>
+                    <!--<a href="">MOAR</a> -->
+                </div>
+                <h2 id="Recomended">## Recomended reading</h2>
+                <p>Here's a bunch of Manga or other writing i recommend reading!
+                click on a manga cover and it'll take you directly to
+                somewhere where you can read it!</p>
+                <p>feel free to chat to me about what you thought them too,
+                in DMs or on fedi!</p>
+                <div id="manga" class="blog-manga">
+                    <div></div>
+                    <div></div>
+                </div>
+                <p>Other recommended writing</p>
+                <ul>
+                    <li><a href="https://www.scribblehub.com/series/416624/subroutine-manager/">
+                    Subroutine manager (lewd robot stuff)</a></li>
+                    <li><a href="https://borntoworkretail.com/?pg=1#showComic">
+                    Born to work retail (planning to read)</a></li>
+                    <li><a href="https://www.lezhinus.com/en/comic/herpet/p1">
+                    Her pet (really cute story so far! awawaawa)</a></li>
+                    <li><a href="https://pescenomicon.theoryware.net/hypha/takogurashi/p0">
+                    Cute short story by the creator of Shimeji Simulation</a></li>
+                </ul>
+                <hr>
+            </div>
 		</div>
 	<div class="gears">
 		<div id="comments" class="side-gear">
 			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
-		<div id="share" class="side-gear">
+		<div id="heart" class="side-gear">
 			<svg-img class="icon" src="images/icons/heart.svg"></svg-img>
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
 	</div>
-	<div class="squares" id="background"></div>
+	<div class="striped" id="background"></div>
 	<script src="scripts/dom.js"></script>
 	<script src="./styling/scm/nyaaradio.js"></script>
 	<script>
@@ -133,7 +201,10 @@
 	</script>
 	<script defer src="https://social.grat.gay/embed.js"></script>	
 	<script src="info.js"></script>
+    <!-- for parsing markdown and adding social.grat.gay emotes -->
+	<script src="node_modules/marked/marked.min.js"></script>
 	<script src="/scripts/common.js"></script>
+	<script src="/scripts/keymotes.js"></script>
 	<!-- 
 		page unique code 
 	-->
@@ -144,8 +215,8 @@
 		});
 
 		/* make close & ok button set gratchat to display none */
-		$$.id("share").addEventListener("click", () =>  {
-			$$.id("badges").classList.toggle("visible");
+		$$.id("heart").addEventListener("click", () =>  {
+			$$.id("heart-popup").classList.toggle("visible");
 		});
 
 	</script>

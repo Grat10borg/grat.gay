@@ -5,6 +5,45 @@ let params = Object.fromEntries(
     new URLSearchParams(location.search)
 )
 
+// example custom settings!
+let keymotes_settings = {
+	instance: "https://social.grat.gay"
+}
+
+nyaallery_settings = {
+    buttons: {
+        prev: "<img src='images/icons/chevron-back.svg'>",
+        next: "<img src='images/icons/chevron-forward.svg'>",
+        close: "<img src='images/icons/close.svg'>",
+    }
+}
+
+/* code from stack overflow, uhh double check if theres an easier way... */
+Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+    $$.id("loading").classList.remove("shown");
+    $$.id("loading").classList.add("hidden");
+});
+
+document.addEventListener("click", (e) => {
+    let target = e.target.closest("a");
+
+    // don't intercept default behavior if no link element was found, or
+    // there is no link on the element
+    if (! target || ! target.href 
+        || target.target || target.href.includes("#")
+    ) {return}
+
+    e.preventDefault();
+
+    $$.id("loading").classList.remove("hidden");
+    $$.id("loading").classList.add("shown");
+
+    setTimeout(() => {
+        // go to the actual page
+        location.replace(target.href);
+    }, 300)
+})
+
 // remember to add a store link with redbubble
 let redirects = {
     fedi: "https://social.grat.gay/@Grat10",
@@ -43,7 +82,7 @@ function refresh() {
 		if($$.id("favicon").getAttribute("href")
 		.includes("_inactive") == false) {
 			$$.id("favicon").setAttribute("href",	
-			"/images/sprites/favicons/webicon_inactive.png");
+			"/images/sprites/favicons/webicon_inactive.gif");
 		}
 	}	
 	else {
@@ -145,11 +184,7 @@ let objects = {
 
 // get array name from objects that are named after directories
 function random_img(obj, elem,  isList) {
-    let url;
-    let file;
-    let dir;
-    let title;
-    let info;
+    let url, file, dir, title, info;
 
     if(isList == true) {
         let random_int = seeded_random(date.getTime(), 0, Object.keys(obj).length - 1);
@@ -170,7 +205,8 @@ function random_img(obj, elem,  isList) {
             Object.keys(obj).length - 1);
         random_int = Math.round(random_int);
             
-        
+
+
         file = Object.keys(obj)[random_int];
         let res = file.split(".")[0].split("_");
         
@@ -178,16 +214,31 @@ function random_img(obj, elem,  isList) {
         dir = res[0];
         title = res[1].replaceAll("-", " ");
         url = "url('images/media/fanart/"+ file +"'";   
+        
+        // place fanartist's name & link on page
+        let artist = $$.id("artist-name");
+        artist.innerText = info.credit;
+        artist.href = info.link;
+
+        if (! info.link) {
+            artist.removeAttribute("target");
+            artist.removeAttribute("href");
+        }
     }
 
-    $$.log(info);
+    //$$.log(info);
+    elem.closest("a").href=url;
+    if(info.link) { elem.closest("a").href = info.link }
+    else {
+        elem.closest("a").href = url.split("'")[1];
+    }
 
     elem.querySelector(".art-title").innerText = title;
     elem.querySelector(".art-form").innerText = dir;
 
     elem.style.setProperty("--background", url);
     elem.setAttribute("alt", info["alt"]);
-    // elem.setAttribute("title", info["alt"]);
+    elem.setAttribute("title", info["alt"]);
     
 } 
 
@@ -222,9 +273,16 @@ function parse_md(markdown) {
             }
         }
     
-        markdown = lines.join("\n");
+        let markdowntxt = lines.join("\n");
 
-        return {markdown, header}
+
+        markdown = markdowntxt;
+        if($$.id("blog-clear")) {
+            markdown_parsed = marked.parse(markdowntxt);
+        }
+        else { markdown_parsed = ""; }
+
+        return {markdown, markdown_parsed,  header}
     }
 }
 /* add blog titles & short descriptions */
@@ -232,13 +290,16 @@ if($$.id("blog-post-1") != null) {
     (async () => {
     let posts = [...document.querySelectorAll(".blog-post")];
 
-    $$.log(posts);
+    //$$.log(posts);
     for(let i = 0; i < posts.length; i++) {
-        
+
+
         let keys = Object.keys(images["blog"]);
         let blog = images["blog"][keys[i]]    
 
-        $$.log(blog);
+        // stop if there isn't enough blog entries for post previews
+        if(blog == undefined) { continue; }
+
         /* fetching markdown files */
         let markdown = await $$.txt("images/media/blog/"+blog["source"]);
         let header = {};
@@ -248,8 +309,8 @@ if($$.id("blog-post-1") != null) {
 
         /* updating site infomation*/
 
-        $$.log(posts[i]);
-        $$.log(post);
+        //$$.log(posts[i]);
+        //$$.log(post);
 
         if(post.header["image"]) {
             posts[i].children[0].setAttribute("style",
@@ -260,6 +321,9 @@ if($$.id("blog-post-1") != null) {
 
 
 
+        posts[i].setAttribute("href", "blog.html#"+blog["source"]
+        .substring(0, blog["source"].length-3));
+        
         posts[i].querySelector("h2:first-of-type").innerText = blog["source"];
         posts[i].querySelector("p:first-of-type").innerText = post.markdown
         .replaceAll(/^#.*/mg, "") // remove title
@@ -288,10 +352,7 @@ if($$.id("friends")) {
         }
     }
 
-    $$.log(mine);
-
     /* place stamps on page */
-
     function placeStamp(obj, elem, dir, clas) {
         let stamp = $$.make("img");
         let anchor = $$.make("a");
@@ -307,9 +368,22 @@ if($$.id("friends")) {
       
         anchor.append(stamp);
 
-        $$.log(anchor);
         elem.append(anchor);
     } 
+
+    // print out self made stamps / badges
+    for(creation in mine) { 
+        
+        if(images.friends[creation]) {
+            placeStamp(mine[creation], $$.id("selfmade-div"), "friends", "badge-img"); 
+        }
+        if(images.badges[creation]) {
+            placeStamp(mine[creation], $$.id("selfmade-div"), "badges", "badge-img"); 
+        }
+        if(images.stamps[creation]) {
+            placeStamp(mine[creation], $$.id("selfmade-div"), "stamps", "stamp-img"); 
+        }
+    }
 
     for(friend in images.friends) { 
         placeStamp(images.friends[friend], $$.id("friends-div"), "friends", "badge-img"); 
@@ -323,3 +397,87 @@ if($$.id("friends")) {
 }
 
 
+// for blog page
+// for loading blog pages from hashtag
+if($$.id("manga")) {
+
+    blogPlace();
+
+    async function blogPlace() {
+        for(post in images["blog"]) {
+            let post_obj = images.blog[post];
+
+            let hash = window.location.hash.substring(1,
+            window.location.hash.length)+".md";
+            if(hash == post_obj["source"]){
+                
+                $$.id("blog-banner").children[0].innerText = 
+                hash.substring(0, hash.length-3);
+
+                // clear default blog content
+                $$.id("blog-clear").innerHTML = "";
+                $$.id("bg-gear-2").innerHTML = "";
+
+                let blog = images["blog"][hash];   
+
+                /* fetching markdown files */
+                let markdown = await $$.txt("images/media/blog/"+post_obj["source"]);
+                let header = {};
+
+
+                // parse markdown
+                let post = parse_md(markdown);
+
+                /* updating site infomation*/
+
+                //$$.log(posts[i]);
+                //$$.log(post);
+
+                if(post.header["image"]) {
+                    let banner = $$.id("blog-banner");
+                    // change banner image to the thumbnail image & custom styling
+                    banner.setAttribute("style",
+                            `background:        
+                            linear-gradient(
+                                rgba(0, 0, 0, 0.4), 
+                                rgba(0, 0, 0, 0.4)
+                                ),
+                            url('images/assets/thumb/${post.header["image"]}');
+                             background-position: center;
+                             background-size: cover;`);
+                    banner.setAttribute("alt", post.header["alt"] || "");
+                    banner.setAttribute("title", post.header["alt"] || "");
+                }
+
+                $$.id("blog-clear").innerHTML = post.markdown_parsed;
+                keymotes.format($$.id("blog-clear"));
+
+                $$.query_all(".buttons")[0].children[4].href = "blog.html";
+                $$.query_all(".buttons")[0].children[4].innerText = "go back";
+            }
+        }
+    }
+     
+}
+
+// manga importing
+if($$.id("manga")) { 
+    
+    for(manga in images["manga"]) {
+        let manga_obj = images.manga[manga];
+        let rows = $$.id("manga").children;
+        let manga_row;
+
+        if (rows[0].children.length <= rows[1].children.length) {
+            manga_row = rows[0];
+        } else { manga_row = rows[1]; }
+
+        manga_row.innerHTML += `
+            <a id="manga-link" href="${manga_obj.link}">
+                <img class="manga-img" 
+                src="images/media/manga/${manga}" alt="${manga_obj.alt}" 
+                title="${manga_obj.alt}">
+            </a>
+        `
+    }
+}

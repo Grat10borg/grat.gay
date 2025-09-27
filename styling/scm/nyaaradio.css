@@ -93,6 +93,8 @@ radio .list:hover {
 	background-position: center;
 }
 radio .title {
+    min-width: 225px;
+    text-align: center;
 	white-space: pre;
 	margin: 0px 15px;
 	font-family: var(--atkinson);
@@ -182,7 +184,21 @@ playlist track.playing {
 	background: var(--playlist-sel);
 }
 
+/* mobile version */
+@media (max-width: 600px) {
+    radio {
+        justify-content: space-evenly;
+    }
 
+    radio .title {
+        min-width: 35vw;
+        overflow-x: hidden;
+    }
+
+    .duration, radio .time, .volume {
+        display: none;
+    } 
+}
 /* darkmode version*/
 @media (prefers-color-scheme: dark){
     radio {

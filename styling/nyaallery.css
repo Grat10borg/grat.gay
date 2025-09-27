@@ -1,0 +1,106 @@
+nyaallery {
+	--padding: 1em;
+	--radius: 0.5em;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	position: fixed;
+	touch-action: none;
+	transition-property: opacity;
+	transition: var(--nyaallery-speed) ease-in-out;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+nyaallery button {
+	border: none;
+	outline: none;
+	color: #FFFFFF;
+	font-size: 1em;
+	cursor: pointer;
+	padding: var(--padding);
+	background: transparent;
+	-webkit-tap-highlight-color: transparent;
+	transition: var(--nyaallery-speed) ease-in-out;
+}
+
+nyaallery button.hidden {
+	opacity: 0.0;
+	pointer-events: none;
+}
+
+nyaallery .top {
+	top: 0;
+	right: 0;
+	z-index: 115;
+	position: fixed;
+}
+
+nyaallery .prev {left: 0px}
+nyaallery .next {right: 0px}
+nyaallery .prev, nyaallery .next {
+	z-index: 110;
+	height: 100vh;
+	position: fixed;
+	line-height: 100vh;
+	padding: calc(var(--padding) / 2);
+}
+
+nyaallery.hidden {
+	opacity: 0.0;
+	pointer-events: none;
+}
+
+nyaallery images {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	position: fixed;
+	overflow: hidden;
+	touch-action: none;
+	scroll-snap-type: x mandatory;
+}
+
+nyaallery images container {
+	width: 100vw;
+	height: 100vw;
+	flex: 0 0 100%;
+	user-select: none;
+	text-align: center;
+	scroll-snap-align: start;
+}
+
+nyaallery images container .alt-text {
+	--width: min(300px, 80vw);
+
+	color: #FFFFFF;
+	position: absolute;
+	width: var(--width);
+	bottom: var(--padding);
+	border-radius: var(--radius);
+	background: rgba(0, 0, 0, 0.4);
+	padding: calc(var(--padding) / 2);
+	translate: calc(50vw - calc(var(--width) / 2) - calc(var(--padding) / 2)) 0px;
+}
+
+nyaallery images container img {
+	--height: 80vh;
+	margin: 0 auto;
+	max-width: 80vw;
+	user-select: none;
+	position: relative;
+	object-fit: contain;
+	pointer-events: none;
+	height: var(--height);
+	top: calc(calc(100vh - var(--height)) / 2);
+}
+
+.nyaallery-overlay-img {
+	position: fixed;
+	object-fit: contain;
+	transition: var(--nyaallery-speed) ease-in-out;
+}

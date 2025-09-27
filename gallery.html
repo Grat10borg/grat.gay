@@ -11,19 +11,31 @@
     href="./images/sprites/favicons/webicon.gif"/>
 
 	<!-- common styling -->
-    <link href="styling/palette.css" rel="stylesheet", 
-     type="text/css", media="all">
-    <link href="styling/fonts.css" rel="stylesheet", 
-     type="text/css", media="all">
-    <link href="styling/common.css" rel="stylesheet", 
-     type="text/css", media="all">
-     <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
+    <link href="styling/palette.css" rel="stylesheet">
+    <link href="styling/fonts.css" rel="stylesheet">
+    <link href="styling/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
+    <link rel="stylesheet" href="./styling/nyaallery.css">
+
+    <!-- OpenGraphProtocol --!>
+    <meta content="gallery.html" name="og:title">
+    <meta content="https://grat.gay/gallery.html" name="og:url">
+    <meta content="Beep!! awawawa this is a hyperlink to grat.gay the one stop shop for the Vtuber & Artist Grat10! please stay a awawawawhile! -w-" name="og:description">
+    <meta content="https://grat.gay/images/ogp/2025/artist_card.png" name="og:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="#00B8FF" name="theme-color">
+    <link href="https://grat.gay/images/OEmbed.json" type="application/json+oembed">
   </head>
-  <body>
+  <body class="keymotes">
 	<radio></radio>
 	<div id="navbar-deco">
 		<div class="sawtooth sawtooth-top"></div>
 	</div>
+
+    <div id="loading">
+        <!-- some sort of spinning gear? --> 
+    </div>
+
 	<main>
 		<!-- elements / programs sitting above everything -->
 		<div class="program" id="chatbox">
@@ -42,14 +54,14 @@
 			</div>
 		</div>
 
-		<div class="program" id="badges">
+		<div class="program" id="heart-popup">
 			<div class="content">
 				<p>If you have your own site feel free to download my website badge!</p>
 				<p>extended badges is on <a href="links">my links page!</a></p>
 
-				<img src="styling/grat.gay_badge.gif">
-				<img src="styling/grat_gay_badge.png">
-				<img src="styling/grat10_gay_badge_smol.png">
+				<img src="images/share/grat_gay_badge.gif">
+				<img src="images/share/grat_gay_badge.png">
+				<img src="images/share/grat10_gay_badge_smol.png">
 			</div>
 		</div>
 
@@ -131,26 +143,20 @@
                 <hr>
                 <p>booting up creative drives!</p>
             </div>
-            <div class="art-grid">
-                <div>
-                    <div></div> 
-                    <div></div> 
-                    <div></div> 
-                </div>
-                <div>
-                    <div></div> 
-                    <div></div> 
-                    <div></div> 
-                </div>
-                <div>
-                    <div></div> 
-                    <div></div> 
-                    <div></div> 
-                </div>
+            <div class="art-grid nyaallery">
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
+                    <div class="nyaallery-img"></div> 
             </div>
             <div class="moar">
                 <hr>
-                <a href="">MOAR</a>
+                <!-- <a href="">MOAR</a> -->
             </div>
             <div class="seperator">
                 <h3 id="projects">~/projects...</h3>
@@ -202,7 +208,7 @@
 			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
-		<div id="share" class="side-gear">
+		<div id="heart" class="side-gear">
 			<svg-img class="icon" src="images/icons/heart.svg"></svg-img>
 			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
@@ -243,6 +249,8 @@
 	<script defer src="https://social.grat.gay/embed.js"></script>	
 	<script src="info.js"></script>
 	<script src="/scripts/common.js"></script>
+	<script src="/scripts/nyaallery.js"></script>
+	<script src="/scripts/keymotes.js"></script>
 	<!-- 
 		page unique code 
 	-->
@@ -253,8 +261,8 @@
 		});
 
 		/* make close & ok button set gratchat to display none */
-		$$.id("share").addEventListener("click", () =>  {
-			$$.id("badges").classList.toggle("visible");
+		$$.id("heart").addEventListener("click", () =>  {
+			$$.id("heart-popup").classList.toggle("visible");
 		});
 
 	</script>

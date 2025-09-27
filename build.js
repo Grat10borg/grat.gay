@@ -1,3 +1,4 @@
+const { warn } = require("console");
 const fs = require("fs");
 
 // Generate JSON files from files inside art folders
@@ -17,15 +18,15 @@ async function build() {
 
         let images = {}; 
         let files = fs.readdirSync(folder);
-        for (file of files) {
+        for (_file of files) {
             
-            images[file] = {
-                source: file,
+            images[_file] = {
+                source: _file,
                 alt: "",
                 link: "",
                 credit: "",
                 date: "",
-                ...(metadata[file] || {}),
+                ...(metadata[_file] || {}),
             }
         } 
 
@@ -35,6 +36,9 @@ async function build() {
         image_list[dirName] = images;
 
 	});
+
+    /* remove .obsidian vault folder from being indexed */
+    delete image_list["blog"][".obsidian"];
 
     file += `\nlet images = ${JSON.stringify(image_list, null, "\t")}\n`;
 

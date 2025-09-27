@@ -1,30 +1,31 @@
+
 let images = {
 	"artists_pfp": {
 		"grat.png": {
 			"source": "grat.png",
 			"alt": "unused. pass",
-			"link": "",
+			"link": "https://mimzyymay.com/",
 			"credit": "@Mimzyy May",
 			"date": "2024-04-20T07:28:36.434Z"
 		},
 		"hayb.png": {
 			"source": "hayb.png",
 			"alt": "a chicken themed nurse Vtuber with pink hair and dark skin, she has pink eyes and have pink ribbons and yellow highlights on their outfit and hair boubles. she is sitting against a white background",
-			"link": "",
+			"link": "https://www.youtube.com/@haybeeeee/videos",
 			"credit": "@HaybeeVT",
 			"date": "2024-04-20T07:35:27.999Z"
 		},
 		"kobe.jpg": {
 			"source": "kobe.jpg",
 			"alt": "an oni with red skin doing a happy expression, the oni has red horns and green hair, it's doing a cheerleader pose with pom poms against a salmon colored background",
-			"link": "",
+			"link": "https://kobeepb.carrd.co/",
 			"credit": "@Kobepb",
 			"date": "2024-06-07T12:56:22.757Z"
 		},
 		"mimz.png": {
 			"source": "mimz.png",
 			"alt": "a zombie with messy dark blue hair with red and blue highlights, the face is split with one part being dark green and the other a sorta pastel light green, she's wearing a dark purple crop top hoodie with orange highlights and strings, the lower body after the crop top is white bandages",
-			"link": "",
+			"link": "https://mimzyymay.com/",
 			"credit": "@Mimzyy May",
 			"date": "2024-04-20T07:31:55.541Z"
 		},
@@ -38,14 +39,14 @@ let images = {
 		"roni.jpg": {
 			"source": "roni.jpg",
 			"alt": "a human with pink eyes and beige skin, brown hair and a red clothing, with dark blue overalls, their also wearing a red ribbon hair band",
-			"link": "",
+			"link": "https://lilredronin.wixsite.com/main",
 			"credit": "@Lil red ronin",
 			"date": "2024-04-20T08:31:48.446Z"
 		},
 		"smok.jpg": {
 			"source": "smok.jpg",
 			"alt": "a furry with purple and light grey colors, and a boopable blue snout with a gold snout ring. they have dark purple hair and a dark purple sweater, they're doing a happy expression with their eyes closed",
-			"link": "",
+			"link": "https://www.twitch.tv/smokingdhampir04",
 			"credit": "@Smokii Dhampir",
 			"date": "2024-04-20T08:28:07.804Z"
 		}
@@ -54,7 +55,7 @@ let images = {
 		" and_inside_cat_is_a_safe_cat.jpg": {
 			"source": " and_inside_cat_is_a_safe_cat.jpg",
 			"alt": "an inside cat is a safe cat with a tabby cat laying beside the pink text",
-			"link": "https://epicblazed.com/",
+			"link": "",
 			"credit": "",
 			"date": "2025-04-03T06:12:36.855Z"
 		},
@@ -75,7 +76,7 @@ let images = {
 		"EpicBlazedButton.png": {
 			"source": "EpicBlazedButton.png",
 			"alt": "Epic blazed with an image edit of Tim Sweeny with a blunt in his mouth smiling directly at the camera. the Epic is super big and bold and the blazed is a small pixel text",
-			"link": "",
+			"link": "https://epicblazed.com/",
 			"credit": "",
 			"date": "2025-04-29T17:52:47.302Z"
 		},
@@ -179,10 +180,10 @@ let images = {
 		},
 		"lunospace.gif": {
 			"source": "lunospace.gif",
-			"alt": "",
-			"link": "",
+			"alt": "a pastel darkgreen badge with sparkles and winter bell flowers, with text saying Lunospace",
+			"link": "https://lostlove.neocities.org/",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"lunya.gif": {
 			"source": "lunya.gif",
@@ -197,6 +198,13 @@ let images = {
 			"link": "https://github.com/SymTrkl/emoji",
 			"credit": "symtrkl",
 			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"neocat.gif": {
+			"source": "neocat.gif",
+			"alt": "a badge showing a yellow neocat and smaller text saying neocat with red text beneath saying :3 :3 :3 and a transflag on the side, it scrolls up to reveal text saying mewo meow nya nya, meow",
+			"link": "https://www.youtube.com/watch?v=yfUDIPUETUg",
+			"credit": "",
+			"date": "2025-08-16"
 		},
 		"netscapenow30.gif": {
 			"source": "netscapenow30.gif",
@@ -242,10 +250,10 @@ let images = {
 		},
 		"quarc.png": {
 			"source": "quarc.png",
-			"alt": "",
-			"link": "",
-			"credit": "",
-			"date": ""
+			"alt": "a blueish gray stamp with a robot TV head character on the left and text saying QuARC",
+			"link": "https://quarc.neocities.org/",
+			"credit": "@QuARC",
+			"date": "2025-08-16"
 		},
 		"sakoworks_button.gif": {
 			"source": "sakoworks_button.gif",
@@ -314,30 +322,23 @@ let images = {
 		}
 	},
 	"blog": {
+		"beloved-camera.md": {
+			"source": "beloved-camera.md",
+			"alt": "",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
 		"hello-orbit.md": {
 			"source": "hello-orbit.md",
-			"alt": "",
+			"alt": "N/A",
 			"link": "",
 			"credit": "",
 			"date": "2025-06-28T09:15:40.088Z"
 		},
-		"infowriters-otter-extravaganza.md": {
-			"source": "infowriters-otter-extravaganza.md",
-			"alt": "",
-			"link": "",
-			"credit": "",
-			"date": "2025-06-28T09:13:43.832Z"
-		},
-		"my-love-of-all-things-yester-year.md": {
-			"source": "my-love-of-all-things-yester-year.md",
-			"alt": "",
-			"link": "",
-			"credit": "",
-			"date": "2025-06-28T08:48:55.954Z"
-		},
 		"web-growing-pains.md": {
 			"source": "web-growing-pains.md",
-			"alt": "",
+			"alt": "N/A",
 			"link": "",
 			"credit": "",
 			"date": "2025-06-28T08:48:53.638Z"
@@ -347,63 +348,63 @@ let images = {
 		"@HaybeeVT_grat-and-pudding.png": {
 			"source": "@HaybeeVT_grat-and-pudding.png",
 			"alt": "a digital painted drawing of Grat10 of an older design she's wearing a grey sweater, blue shorts and green rubber wadders, behind her there's a typical japanese pudding with choco sauce at the top",
-			"link": "",
+			"link": "https://www.youtube.com/@haybeeeee/videos",
 			"credit": "@HaybeeVT",
 			"date": "2023-08-21T18:23:56.119Z"
 		},
 		"@Kobeepb_Grat-chibi.png": {
 			"source": "@Kobeepb_Grat-chibi.png",
 			"alt": "Grat10 hugging a scared pacman ghost it's dark blue with a white scared face, grat is hugging the shark against it's chin with a super happy expression, grat10 is sitting on their knees and their cable is forming a little heart shape",
-			"link": "",
+			"link": "https://kobeepb.carrd.co/",
 			"credit": "@Kobeepb",
 			"date": "2024-06-07T05:10:42.651Z"
 		},
 		"@LilRedRonin_grat-birthday-gift-2023.png": {
 			"source": "@LilRedRonin_grat-birthday-gift-2023.png",
 			"alt": "a pixelart drawing of a bust of Grat10 smiling at the camera and a plug shooting out lightning with the text saying HBD Grat!",
-			"link": "",
+			"link": "https://lilredronin.wixsite.com/main",
 			"credit": "@Lil Red Ronin",
 			"date": "2024-04-26T08:22:45.844Z"
 		},
 		"@MimzyyMay_Grat-introscreen.png": {
 			"source": "@MimzyyMay_Grat-introscreen.png",
 			"alt": "Grat10 laying accross the screen doing a gun with their hand and smiling directly at the screen, against an offwhite grey background with gears and such, Grat10 is an blue robot with orange eyes and a white shell",
-			"link": "",
+			"link": "https://mimzyymay.com/",
 			"credit": "@Mimzyy May",
 			"date": "2024-06-04T07:03:48.319Z"
 		},
 		"@MimzyyMay_grat-bust .png": {
 			"source": "@MimzyyMay_grat-bust .png",
 			"alt": "Grat10 drawn in digital art Grat10 is a blue haired robot with orange eyes and white shell. she has 4 and tenna with yellow lights at the end, yellow blinkers and a hook in the shape of a heart on their head",
-			"link": "",
+			"link": "https://mimzyymay.com/",
 			"credit": "@Mimzyy May",
 			"date": "2024-04-20T07:26:41.065Z"
 		},
 		"@MimzyyMay_yes.png": {
 			"source": "@MimzyyMay_yes.png",
 			"alt": "an MS paint drawing of Grat10, with blue hair and her skarf with the text YES. above them",
-			"link": "",
+			"link": "https://mimzyymay.com/",
 			"credit": "@Mimzyy May",
 			"date": "2024-04-20T07:26:41.076Z"
 		},
 		"@Smoki-Dhampir_grat.png": {
 			"source": "@Smoki-Dhampir_grat.png",
 			"alt": "Grat10 doing a pose spreading her arms out and leaning to the side with an open mouth, she's got blue hair and orange eyes, 4 antenna and a hook. she's wearing a gray sweater croptop with purple and pink highlights, same with a gray shorts with pink highlights, she's wearing a black body suit with an orange band on her thigh",
-			"link": "",
+			"link": "https://www.twitch.tv/smokingdhampir04",
 			"credit": "@Smoki Dhampir",
 			"date": "2023-10-23T20:04:32.298Z"
 		},
 		"@SwagpunchLilith_Grat-Slime.png": {
 			"source": "@SwagpunchLilith_Grat-Slime.png",
-			"alt": "",
-			"link": "",
-			"credit": "",
-			"date": ""
+			"alt": "a sketch of Grat10 without antenna doing a V smily face with gloopy slime droplets on beneath her",
+			"link": "https://lostinthemail.neocities.org/",
+			"credit": "@SwagpunchLilith",
+			"date": "2025-08-16"
 		},
 		"@SwagpunchLilith_gratsketch.jpg": {
 			"source": "@SwagpunchLilith_gratsketch.jpg",
 			"alt": "a paper sketch of Grat10 it's only black and white with a neutral expressions, she's got 4 antenna and a hook. the scarf, it has a zipper on it",
-			"link": "",
+			"link": "https://lostinthemail.neocities.org/",
 			"credit": "@SwagpunchLilith",
 			"date": "2024-10-20T09:11:42.394Z"
 		}
@@ -577,6 +578,71 @@ let images = {
 			"date": "2023-09-16T19:35:05.341Z"
 		}
 	},
+	"manga": {
+		"Are_We_Engaged.png": {
+			"source": "Are_We_Engaged.png",
+			"alt": "a comic page with a heart with text infront of it saying Are We Engaged? and two girls beneath it, one saying yes. below that is a square from the comic where on of the girls is thinking. To initiate a kiss do i just turn my head? Do i say something?. created by Welcome_To_Heaven",
+			"link": "https://www.webtoons.com/en/canvas/are-we-engaged/ch1-what-happened-last-night/viewer?title_no=1001778&episode_no=1",
+			"credit": "Welcome_To_Heaven",
+			"date": "2025-08-16"
+		},
+		"Jamsel_Quest.png": {
+			"source": "Jamsel_Quest.png",
+			"alt": "a comic page with a panel of two slimes one cyan, the other orange the cyan one is looking surprised saying Ooooo the other is looking back and smiling saying looking fresh! below that is the title saying Jamsel Quest, created by Mel Albino",
+			"link": "https://www.webtoons.com/en/canvas/jamsel-quest/this-is-jamsel-quest/viewer?title_no=1044844&episode_no=1",
+			"credit": "Mel ALbino",
+			"date": "2025-08-16"
+		},
+		"Shimeji_Simulation.png": {
+			"source": "Shimeji_Simulation.png",
+			"alt": "a manga cover of two girls sitting on school chairs one with black hair and a shemiji mushroom in her hair the other blond with a fried egg on their head and orange eyes and glasses. behind them is a big hole with another girl in the hole holding a shovel and another reading a book",
+			"link": "https://mangadex.org/title/28b5d037-175d-4119-96f8-e860e408ebe9/shimeji-simulation",
+			"credit": "Tsukumizu",
+			"date": "2025-08-16"
+		},
+		"Virginity_Android.png": {
+			"source": "Virginity_Android.png",
+			"alt": "a manga cover of two girls hugging closely one unbucking the others bra one looking flustered and one happy, with the title diagonally over them saying Does it count if you lose your verginity to an android? with a heart for the O in android",
+			"link": "https://mangadex.org/title/143a116f-8e1d-4f9b-9794-9fb8fc8f56dc/android-wa-keiken-ninzuu-ni-hairimasu-ka",
+			"credit": "Yakinikuteishoku",
+			"date": "2025-08-16"
+		},
+		"a_girl_who_will_die_one_day.png": {
+			"source": "a_girl_who_will_die_one_day.png",
+			"alt": "a black red and white cover with a girl smiling softly with a red four leafed clover over her mouth she's wearing a beanie",
+			"link": "https://mangadex.org/title/63e87327-e590-4fec-8911-1261a62a8345/itsuka-shinu-shoujo",
+			"credit": "",
+			"date": "2025-08-16"
+		},
+		"bocchi_the_rock.png": {
+			"source": "bocchi_the_rock.png",
+			"alt": "a green manga cover with an image of three girls in a classroom one pink haired and wearing a pink tracksuit the other red hair with a school outfit and the other green hair with a darker more muted color school outfit",
+			"link": "https://mangadex.org/title/2e0fdb3b-632c-4f8f-a311-5b56952db647/bocchi-the-rock",
+			"credit": "",
+			"date": "2025-08-16"
+		},
+		"bocchi_the_rock_kikuri.png": {
+			"source": "bocchi_the_rock_kikuri.png",
+			"alt": "a yellow manga cover with an image of a girl resting against a bench with a bbeer in hand smiling with closed eyes, she has red hair and is wearing it in a braided pony tail",
+			"link": "https://mangadex.org/chapter/e1a1f87e-db73-4be3-a680-93889ab9b8ee",
+			"credit": "",
+			"date": "2025-08-16"
+		},
+		"girls_last_tour.png": {
+			"source": "girls_last_tour.png",
+			"alt": "two girls standing against a two tone background of the night sky and snow, teh two girls are both wearing green military winter coats seen from World War 2, one has black hair and the other blond both with closed eyes",
+			"link": "https://mangadex.org/title/5b93fa0f-0640-49b8-974e-954b9959929b/girls-last-tour",
+			"credit": "Tsukumizu",
+			"date": "2025-08-16"
+		},
+		"watashi_wa_yuri_janai.png": {
+			"source": "watashi_wa_yuri_janai.png",
+			"alt": "a manga cover of a girl being pinned against a wall holding up her hands to defend themselves she is fully flustered and is wearing a typical japanese school girl uniform.",
+			"link": "https://mangadex.org/title/8f3e1818-a015-491d-bd81-3addc4d7d56a/warui-ga-watashi-wa-yuri-ja-nai",
+			"credit": "",
+			"date": "2025-08-16"
+		}
+	},
 	"pixelart": {
 		"grat-fumo.png": {
 			"source": "grat-fumo.png",
@@ -724,10 +790,10 @@ let images = {
 		},
 		"baka.gif": {
 			"source": "baka.gif",
-			"alt": "",
-			"link": "",
+			"alt": "a stamp of Hatsune Miku fisting bumping upward while teto is singing and Neru is playing with her phone",
+			"link": "https://www.youtube.com/watch?v=yqh2VO6kVCM",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"bandages.png": {
 			"source": "bandages.png",
@@ -862,6 +928,13 @@ let images = {
 			"credit": "",
 			"date": "2025-04-28T12:48:47.818Z"
 		},
+		"friday-night.gif": {
+			"source": "friday-night.gif",
+			"alt": "a stamp of the main characters in yakuza zero dancing on a disco floor",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
 		"game-over.gif": {
 			"source": "game-over.gif",
 			"alt": "an animated glitchy stamp showing a windows 95 like window showing a bunch of 1s and 0s then glitching into a version that says game over",
@@ -878,17 +951,17 @@ let images = {
 		},
 		"glitch.png": {
 			"source": "glitch.png",
-			"alt": "",
+			"alt": "a stamp of a colorfulmesh of blues, teals and magentas in a glitchy way",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"gravity_falls.webp": {
 			"source": "gravity_falls.webp",
-			"alt": "",
-			"link": "",
+			"alt": "a stamp of the begining of Gravity Falls with the logo zoming in before the screen blinks and the whole screen rolls down like it's an old film reel",
+			"link": "https://www.youtube.com/watch?v=yfUDIPUETUg",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"imac.gif": {
 			"source": "imac.gif",
@@ -948,24 +1021,24 @@ let images = {
 		},
 		"lagtrain.webp": {
 			"source": "lagtrain.webp",
-			"alt": "",
-			"link": "",
+			"alt": "a stamp of Lagtrain by inabakumori it's a grayscale animation of a girl in black hair of her teleporting back 3 times leaving behind a white silluette of herself which then disappears one by one",
+			"link": "https://www.youtube.com/watch?v=UnIhRpIT7nc",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"lain.webp": {
 			"source": "lain.webp",
-			"alt": "",
-			"link": "",
+			"alt": "a staticy stamp of Lain from Serial Experiments Lain bobbing her head up and down dizzily with sleepy eyes.",
+			"link": "https://www.youtube.com/watch?v=JMxlDSO9bOM&list=PLivZTA_vMCVZ_i8PZLSQudE_stSGpX51w",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"lava_lamp.png": {
 			"source": "lava_lamp.png",
-			"alt": "",
+			"alt": "several red lavalamps side by side in a stamp",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"lobstor_stamp.gif": {
 			"source": "lobstor_stamp.gif",
@@ -1004,10 +1077,10 @@ let images = {
 		},
 		"me_with_any_character.png": {
 			"source": "me_with_any_character.png",
-			"alt": "",
+			"alt": "someone holding up a transflag mug & phone with a transflag on it, and sceaming at the view with text saying: me with any character",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"miku1.webp": {
 			"source": "miku1.webp",
@@ -1060,17 +1133,17 @@ let images = {
 		},
 		"miku8.png": {
 			"source": "miku8.png",
-			"alt": "",
+			"alt": "a miku figurine smiling with an open mouth and it's left eye closed against a white background",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"miku9.png": {
 			"source": "miku9.png",
-			"alt": "",
+			"alt": "a chibi miku figurine with her right eye closed softly smiling her hair is teal",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"miku_guitar.webp": {
 			"source": "miku_guitar.webp",
@@ -1081,24 +1154,24 @@ let images = {
 		},
 		"needy1.png": {
 			"source": "needy1.png",
-			"alt": "",
+			"alt": "Ame from NeedyGirlOverdose smiling to the right with closed eyes, she has black hair worn in a twin tails",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"needy2.webp": {
 			"source": "needy2.webp",
-			"alt": "",
+			"alt": "a glitchy stamp of needy girl overdose of KAngel & Ame-chan dancing with a bunch of staticy effects happening in rapid succession",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"needy3.png": {
 			"source": "needy3.png",
-			"alt": "",
+			"alt": "KAngel from NeedyGirlOverdose smiling to the left she has blond hair with pink and blue strands",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"over-the-garden-wall.webp": {
 			"source": "over-the-garden-wall.webp",
@@ -1144,10 +1217,10 @@ let images = {
 		},
 		"prehistoric.png": {
 			"source": "prehistoric.png",
-			"alt": "",
+			"alt": "a stamp of a Radiodontids, a prehistoric shellfish like animal with two long tendrils and two dark eyes with isopod like features, with text saying I heart Radiodontids",
 			"link": "",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"purple_ufo.webp": {
 			"source": "purple_ufo.webp",
@@ -1177,6 +1250,41 @@ let images = {
 			"credit": "",
 			"date": "2024-09-08T10:24:10.708Z"
 		},
+		"stamp_amphibia.gif": {
+			"source": "stamp_amphibia.gif",
+			"alt": "a stamp of the title card for Amphibia with a shine animation",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"stamp_infinity_train.gif": {
+			"source": "stamp_infinity_train.gif",
+			"alt": "a stamp of the title card for Infinity Train of the logo slowly being written",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"stamp_michiru_1.png": {
+			"source": "stamp_michiru_1.png",
+			"alt": "a stamp of michiru a racoon girl open mouth smiling with a glint in her eyes",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"stamp_michiru_2.png": {
+			"source": "stamp_michiru_2.png",
+			"alt": "a stamp of michiru sticking out her tongue",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
+		"stamp_ryuko.gif": {
+			"source": "stamp_ryuko.gif",
+			"alt": "a stamp of Ryoko from Kill La Kill resting with a hand against her face blinking as sakura petals fall",
+			"link": "",
+			"credit": "",
+			"date": ""
+		},
 		"static.webp": {
 			"source": "static.webp",
 			"alt": "an animated stamp of a bunch of tv static",
@@ -1186,7 +1294,7 @@ let images = {
 		},
 		"teto1.webp": {
 			"source": "teto1.webp",
-			"alt": "",
+			"alt": "a stamp of Teto in Mesmerizer smiling and bobbing her head up and down while confetti is falling down",
 			"link": "",
 			"credit": "",
 			"date": ""
@@ -1221,10 +1329,17 @@ let images = {
 		},
 		"timmy_turner.png": {
 			"source": "timmy_turner.png",
-			"alt": "",
-			"link": "",
+			"alt": "a stock photo of Timmy Turner from the fairy odd parents, against a black background saying 'cosmo, wanda kill everyone'",
+			"link": "https://www.youtube.com/watch?v=jNJR6qJqfAg",
+			"credit": "NINE-UP & cooldisks101",
+			"date": "2025-08-16"
+		},
+		"uncle_dane.gif": {
+			"source": "uncle_dane.gif",
+			"alt": "uncle danes intro of him running down and placing a dispenser and wrenching it as it builds, till it shows a tinier uncle dane head with text underneath it saying uncle dane",
+			"link": "https://www.youtube.com/@UncleDane",
 			"credit": "",
-			"date": ""
+			"date": "2025-08-16"
 		},
 		"you_died.png": {
 			"source": "you_died.png",

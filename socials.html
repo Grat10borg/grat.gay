@@ -17,13 +17,52 @@
      type="text/css", media="all">
     <link href="styling/common.css" rel="stylesheet", 
      type="text/css", media="all">
-     <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
+    <link rel="stylesheet" href="./styling/scm/nyaaradio.css">
+
+    <!-- OpenGraphProtocol --!>
+    <meta content="socials.html" name="og:title">
+    <meta content="https://grat.gay/socials.html" name="og:url">
+    <meta content="Beep!! awawawa this is a hyperlink to grat.gay the one stop shop for the Vtuber & Artist Grat10! please stay a awawawawhile! -w-" name="og:description">
+    <meta content="https://grat.gay/images/ogp/2025/ogp_socials.webp" name="og:image">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="#00B8FF" name="theme-color">
+    <link href="https://grat.gay/images/OEmbed.json" type="application/json+oembed">
   </head>
-  <body>
+  <body class="keymotes">
 	<radio></radio>
 	<div id="navbar-deco">
 		<div class="sawtooth sawtooth-top"></div>
 	</div>
+
+    <div id="loading">
+        <!-- some sort of spinning gear? --> 
+    </div>
+		<!-- elements / programs sitting above everything -->
+		<div class="program" id="chatbox">
+			<div class="content">
+				<iframe id="cbox" 
+                    src="https://www5.cbox.ws/box/?boxid=949923&boxtag=etItIN"
+                    width="100%"
+                    height="800"
+                    allowtransparency="yes"
+                    allow="autoplay"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    scrolling="none">
+				</iframe>
+			</div>
+		</div>
+
+		<div class="program" id="heart-popup">
+			<div class="content">
+				<p>If you have your own site feel free to download my website badge!</p>
+				<p>extended badges is on <a href="links">my links page!</a></p>
+				<img src="images/share/grat_gay_badge.gif">
+				<img src="images/share/grat_gay_badge.png">
+				<img src="images/share/grat10_gay_badge_smol.png">
+			</div>
+		</div>
 	<div>
 		<div class="row">
 			<img id="pfp" src="images/assets/grat_pfp.png">
@@ -96,14 +135,14 @@
 			</a>
 		</div>
 	</div>
-	<div>
-		<div class="side-gear">
+	<div class="gears">
+		<div id="comments" class="side-gear">
 			<svg-img class="icon" src="images/icons/textbubble.svg"></svg-img>	
-			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
+			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
-		<div class="side-gear">
-			<svg-img class="icon" src="images/icons/heart.svg"></svg-img>	
-			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>	
+		<div id="heart" class="side-gear">
+			<svg-img class="icon" src="images/icons/heart.svg"></svg-img>
+			<svg-img class="gear" src="images/icons/gear_filled.svg"></svg-img>
 		</div>
 	</div>
 	<div class="stars" id="background"></div>
@@ -138,6 +177,23 @@
 			playlist_header: "Playlist",
 		});
 	</script>
+	<script src="info.js"></script>
 	<script src="/scripts/common.js"></script>
+	<script src="/scripts/keymotes.js"></script>
+	<!-- 
+		page unique code 
+	-->
+	<script>
+		/* make close & ok button set gratchat to display none */
+		$$.id("comments").addEventListener("click", () =>  {
+			$$.id("chatbox").classList.toggle("visible");
+		});
+
+		/* make close & ok button set gratchat to display none */
+		$$.id("heart").addEventListener("click", () =>  {
+			$$.id("heart-popup").classList.toggle("visible");
+		});
+
+	</script>
   </body>
 </html>

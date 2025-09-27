@@ -306,6 +306,7 @@ footer {
 	width: 100%;
 	content: " ";
 	display: block;
+    transform: translate(0px, -1px);
 	height: calc(var(--sawtooth-size) / 5.5);
     background-size: var(--sawtooth-size)
    	calc(var(--sawtooth-size) / 5.5);

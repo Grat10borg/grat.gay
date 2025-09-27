@@ -684,6 +684,7 @@ a:focus :is(img.badge-img, img.stamp-img) {
 .bg-gear-div {
     z-index: -1;
     position: absolute;
+    overflow: hidden;
 }
 
 #bg-gear-1 {
@@ -859,6 +860,10 @@ a:focus :is(img.badge-img, img.stamp-img) {
         width: 90%;
         height: 180px;
     }
+
+    .bg-gear-div .bg-gear { display: none; }
+
+    .buttons a:first-child { margin-left: 10px; }
 }
 
 /* reduced motion version */

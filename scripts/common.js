@@ -399,65 +399,62 @@ if($$.id("friends")) {
 
 // for blog page
 // for loading blog pages from hashtag
-if($$.id("manga")) {
+if($$.id("manga")) { blogPlace(); }
+window.addEventListener("hashchange", blogPlace() );
 
-    blogPlace();
+async function blogPlace() {
+    for(post in images["blog"]) {
+        let post_obj = images.blog[post];
 
-    async function blogPlace() {
-        for(post in images["blog"]) {
-            let post_obj = images.blog[post];
+        let hash = window.location.hash.substring(1,
+        window.location.hash.length)+".md";
+        if(hash == post_obj["source"]){
+            
+            $$.id("blog-banner").children[0].innerText = 
+            hash.substring(0, hash.length-3);
 
-            let hash = window.location.hash.substring(1,
-            window.location.hash.length)+".md";
-            if(hash == post_obj["source"]){
-                
-                $$.id("blog-banner").children[0].innerText = 
-                hash.substring(0, hash.length-3);
+            // clear default blog content
+            $$.id("blog-clear").innerHTML = "";
+            $$.id("bg-gear-2").innerHTML = "";
 
-                // clear default blog content
-                $$.id("blog-clear").innerHTML = "";
-                $$.id("bg-gear-2").innerHTML = "";
+            let blog = images["blog"][hash];   
 
-                let blog = images["blog"][hash];   
-
-                /* fetching markdown files */
-                let markdown = await $$.txt("images/media/blog/"+post_obj["source"]);
-                let header = {};
+            /* fetching markdown files */
+            let markdown = await $$.txt("images/media/blog/"+post_obj["source"]);
+            let header = {};
 
 
-                // parse markdown
-                let post = parse_md(markdown);
+            // parse markdown
+            let post = parse_md(markdown);
 
-                /* updating site infomation*/
+            /* updating site infomation*/
 
-                //$$.log(posts[i]);
-                //$$.log(post);
+            //$$.log(posts[i]);
+            //$$.log(post);
 
-                if(post.header["image"]) {
-                    let banner = $$.id("blog-banner");
-                    // change banner image to the thumbnail image & custom styling
-                    banner.setAttribute("style",
-                            `background:        
-                            linear-gradient(
-                                rgba(0, 0, 0, 0.4), 
-                                rgba(0, 0, 0, 0.4)
-                                ),
-                            url('images/assets/thumb/${post.header["image"]}');
-                             background-position: center;
-                             background-size: cover;`);
-                    banner.setAttribute("alt", post.header["alt"] || "");
-                    banner.setAttribute("title", post.header["alt"] || "");
-                }
-
-                $$.id("blog-clear").innerHTML = post.markdown_parsed;
-                keymotes.format($$.id("blog-clear"));
-
-                $$.query_all(".buttons")[0].children[4].href = "blog.html";
-                $$.query_all(".buttons")[0].children[4].innerText = "go back";
+            if(post.header["image"]) {
+                let banner = $$.id("blog-banner");
+                // change banner image to the thumbnail image & custom styling
+                banner.setAttribute("style",
+                        `background:        
+                        linear-gradient(
+                            rgba(0, 0, 0, 0.4), 
+                            rgba(0, 0, 0, 0.4)
+                            ),
+                        url('images/assets/thumb/${post.header["image"]}');
+                         background-position: center;
+                         background-size: cover;`);
+                banner.setAttribute("alt", post.header["alt"] || "");
+                banner.setAttribute("title", post.header["alt"] || "");
             }
+
+            $$.id("blog-clear").innerHTML = post.markdown_parsed;
+            keymotes.format($$.id("blog-clear"));
+
+            $$.query_all(".buttons")[0].children[4].href = "blog.html";
+            $$.query_all(".buttons")[0].children[4].innerText = "go back";
         }
     }
-     
 }
 
 // manga importing

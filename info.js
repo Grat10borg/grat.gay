@@ -117,7 +117,7 @@ let images = {
 		},
 		"e-browser_now.gif": {
 			"source": "e-browser_now.gif",
-			"alt": "this page is best viewd with: Ebrowser now, on there's a lesbian flag in the top left corner, and a trans flag in the bottom right corner, and in the window there's a purple estrogen pill",
+			"alt": "this page is best viewd with: ebrowser now, on there's a lesbian flag in the top left corner, and a trans flag in the bottom right corner, and in the window there's a purple estrogen pill",
 			"link": "",
 			"credit": "",
 			"date": "2025-03-29T09:21:16.604Z"
@@ -202,7 +202,7 @@ let images = {
 		"neocat.gif": {
 			"source": "neocat.gif",
 			"alt": "a badge showing a yellow neocat and smaller text saying neocat with red text beneath saying :3 :3 :3 and a transflag on the side, it scrolls up to reveal text saying mewo meow nya nya, meow",
-			"link": "https://www.youtube.com/watch?v=yfUDIPUETUg",
+			"link": "",
 			"credit": "",
 			"date": "2025-08-16"
 		},

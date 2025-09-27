@@ -536,19 +536,9 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; }
     color: var(--border-color);
 }
 
-/* artwork grid */
-.art-grid {
-    display: flex;
-    align-items: space-evenly;
-    flex-direction: column;
-    margin:  auto;
-    width: 100%;
-}
-
 .art-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
     margin: 10px 0px;
 }
 
@@ -861,14 +851,14 @@ a:focus :is(img.badge-img, img.stamp-img) {
         flex-direction: column;
     }
 
-    .art-grid > div {
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-    }
-    .art-grid > div div { width: 80%; height: 250px; margin-bottom: 20px; }
-
     .blog .blog-manga { flex-direction: row; }
+
+    /* gallery */
+    .art-grid { grid-template-columns: 1fr; }
+    .art-grid > div {
+        width: 90%;
+        height: 180px;
+    }
 }
 
 /* reduced motion version */
@@ -904,6 +894,6 @@ a:focus :is(img.badge-img, img.stamp-img) {
     /* socials page colors */
     .btn-main { background: #1F5AC1; }
     .row .btn-main:last-child:not(:first-child):hover { background-color: #2473A8; }
-
+    
 
 }

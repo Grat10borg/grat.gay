@@ -400,7 +400,7 @@ if($$.id("friends")) {
 // for blog page
 // for loading blog pages from hashtag
 if($$.id("manga")) { blogPlace(); }
-window.addEventListener("hashchange", window.refresh() );
+window.addEventListener("hashchange", location.reload() );
 
 async function blogPlace() {
     for(post in images["blog"]) {

@@ -864,6 +864,7 @@ a:focus :is(img.badge-img, img.stamp-img) {
     .bg-gear-div .bg-gear { display: none; }
 
     .buttons a:first-child { margin-left: 10px; }
+    .buttons a:last-child { margin-right: 10px; }
 }
 
 /* reduced motion version */
@@ -887,6 +888,12 @@ a:focus :is(img.badge-img, img.stamp-img) {
 		--hr-panel-color: #96BAE6;
 		--updates-bg: #153C80;
         --updates-thumb: #005986;
+
+        --gradient-1: #0E5DA5;
+        --gradient-2: #2183A7;
+        --gradient-3: #30A2CB;
+        --gradient-4: #33BCBC;
+        --gradient-5: #33BC93;
 	}
 
     .diamond { background-image: url("images/assets/diamond_bg_dark.png"); }

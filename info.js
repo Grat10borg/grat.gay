@@ -59,6 +59,13 @@ let images = {
 			"credit": "",
 			"date": "2025-04-03T06:12:36.855Z"
 		},
+		"88x31-eri-is-gay.png": {
+			"source": "88x31-eri-is-gay.png",
+			"alt": "a mostly dark badge with white text saying eriis.gay, there's left and right border on the badge of the lesbian flag",
+			"link": "https://eriis.gay/",
+			"credit": "",
+			"date": ""
+		},
 		"88x31_autism_acceptance_now.png": {
 			"source": "88x31_autism_acceptance_now.png",
 			"alt": "a purple badge with the autism loop in a window on the left with pink text saying autism acceptance now the now! is in red text and is extra bold",
@@ -142,6 +149,13 @@ let images = {
 			"link": "https://social.grat.gay/@Grat10",
 			"credit": "aperture",
 			"date": "2025-07-27T19:05:30.694Z"
+		},
+		"grillout31-2.gif": {
+			"source": "grillout31-2.gif",
+			"alt": "a pink badge with a cat beside some text with a fire ontop their head. the magenta text says. just a regular grill online! The GrillOut",
+			"link": "https://literalgrill.com",
+			"credit": "TheGrillOut",
+			"date": ""
 		},
 		"hello-kitty-city.gif": {
 			"source": "hello-kitty-city.gif",

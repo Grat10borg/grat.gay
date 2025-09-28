@@ -869,7 +869,10 @@ a:focus :is(img.badge-img, img.stamp-img) {
 
 /* reduced motion version */
 @media (prefers-reduced-motion: reduce) {
-	#background { animation-play-state: paused; }
+	#background { animation-play-state: paused;}
+
+    .gear svg,
+    .bg-gear-div .bg-gear { animation-play-state: paused; }
 } 
 
 /* darkmode version*/

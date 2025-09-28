@@ -892,11 +892,11 @@ a:focus :is(img.badge-img, img.stamp-img) {
 		--updates-bg: #153C80;
         --updates-thumb: #005986;
 
-        --gradient-1: #0E5DA5;
-        --gradient-2: #2183A7;
-        --gradient-3: #30A2CB;
-        --gradient-4: #33BCBC;
-        --gradient-5: #33BC93;
+        --gradient-1: #1A84E3;
+        --gradient-2: #2CACDB;
+        --gradient-3: #59D3FF;
+        --gradient-4: #3AE8E8;
+        --gradient-5: #3BD7A8;
 	}
 
     .diamond { background-image: url("images/assets/diamond_bg_dark.png"); }

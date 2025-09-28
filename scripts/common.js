@@ -40,7 +40,7 @@ document.addEventListener("click", (e) => {
 
     setTimeout(() => {
         // go to the actual page
-        location.replace(target.href);
+        location.assign(target.href);
     }, 300)
 })
 
